@@ -15,6 +15,7 @@
 		0529E04123C95095004707FD /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0529E03F23C95095004707FD /* LaunchScreen.storyboard */; };
 		0529E04C23C95095004707FD /* ScoutingApp2020Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0529E04B23C95095004707FD /* ScoutingApp2020Tests.swift */; };
 		0529E05723C95095004707FD /* ScoutingApp2020UITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0529E05623C95095004707FD /* ScoutingApp2020UITests.swift */; };
+		0529E06523C952AF004707FD /* GHS Robotics Logo.png in Resources */ = {isa = PBXBuildFile; fileRef = 0529E06423C952AF004707FD /* GHS Robotics Logo.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +50,7 @@
 		0529E05223C95095004707FD /* ScoutingApp2020UITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ScoutingApp2020UITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		0529E05623C95095004707FD /* ScoutingApp2020UITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScoutingApp2020UITests.swift; sourceTree = "<group>"; };
 		0529E05823C95095004707FD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		0529E06423C952AF004707FD /* GHS Robotics Logo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "GHS Robotics Logo.png"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -106,6 +108,7 @@
 				0529E03F23C95095004707FD /* LaunchScreen.storyboard */,
 				0529E04223C95095004707FD /* Info.plist */,
 				0529E03A23C95094004707FD /* ScoutingApp2020.xcdatamodeld */,
+				0529E06423C952AF004707FD /* GHS Robotics Logo.png */,
 			);
 			path = ScoutingApp2020;
 			sourceTree = "<group>";
@@ -232,6 +235,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0529E06523C952AF004707FD /* GHS Robotics Logo.png in Resources */,
 				0529E04123C95095004707FD /* LaunchScreen.storyboard in Resources */,
 				0529E03E23C95095004707FD /* Assets.xcassets in Resources */,
 				0529E03923C95094004707FD /* Main.storyboard in Resources */,
