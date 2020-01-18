@@ -29,6 +29,26 @@ class EnterData2ViewController: UIViewController {
     @IBOutlet weak var trenchMinusButton: UIButton!
     @IBOutlet weak var shieldAddButton: UIButton!
     @IBOutlet weak var shieldMinusButton: UIButton!
+    
+    @IBAction func lowGoalAddPressed(_ sender: Any) {
+    }
+    @IBAction func lowGoalMinusPressed(_ sender: Any) {
+    }
+    
+    @IBAction func highGoalAddPressed(_ sender: Any) {
+    }
+    @IBAction func highGoalMinusPressed(_ sender: Any) {
+    }
+    
+    @IBAction func trenchAddPressed(_ sender: Any) {
+    }
+    @IBAction func trenchMinusPressed(_ sender: Any) {
+    }
+    @IBAction func shieldAddPressed(_ sender: Any) {
+    }
+    @IBAction func shieldMinusPressed(_ sender: Any) {
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 

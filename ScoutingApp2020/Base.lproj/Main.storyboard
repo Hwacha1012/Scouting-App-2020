@@ -50,21 +50,33 @@
                                 <rect key="frame" x="453" y="321" width="46" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Button"/>
+                                <connections>
+                                    <action selector="lowGoalAddPressed:" destination="PyS-zn-Gn5" eventType="touchUpInside" id="CaG-9V-Bqw"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ma5-7k-YCB">
                                 <rect key="frame" x="453" y="473" width="46" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Button"/>
+                                <connections>
+                                    <action selector="highGoalAddPressed:" destination="PyS-zn-Gn5" eventType="touchUpInside" id="7Ad-pq-4Vf"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tM4-nh-ibs">
                                 <rect key="frame" x="569" y="321" width="46" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Button"/>
+                                <connections>
+                                    <action selector="lowGoalMinusPressed:" destination="PyS-zn-Gn5" eventType="touchUpInside" id="iAT-FW-Ju5"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0Qb-T5-KOO">
                                 <rect key="frame" x="569" y="477" width="46" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Button"/>
+                                <connections>
+                                    <action selector="highGoalMinusPressed:" destination="PyS-zn-Gn5" eventType="touchUpInside" id="zX2-fz-DYf"/>
+                                </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="UNLIMITED POWER" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kEl-uA-hDo">
                                 <rect key="frame" x="262" y="565" width="153" height="21"/>
@@ -91,11 +103,17 @@
                                 <rect key="frame" x="141" y="766" width="46" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Button"/>
+                                <connections>
+                                    <action selector="trenchAddPressed:" destination="PyS-zn-Gn5" eventType="touchUpInside" id="s92-Bk-Vx6"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Q4n-Tf-Lvp">
                                 <rect key="frame" x="199" y="766" width="46" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Button"/>
+                                <connections>
+                                    <action selector="trenchMinusPressed:" destination="PyS-zn-Gn5" eventType="touchUpInside" id="nCH-3w-mvu"/>
+                                </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Shield Generator" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HBI-Lj-Gsj">
                                 <rect key="frame" x="483" y="736" width="129" height="21"/>
@@ -108,11 +126,17 @@
                                 <rect key="frame" x="483" y="765" width="46" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Button"/>
+                                <connections>
+                                    <action selector="shieldAddPressed:" destination="PyS-zn-Gn5" eventType="touchUpInside" id="taP-db-Smw"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eof-Yu-cb0">
                                 <rect key="frame" x="566" y="765" width="46" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Button"/>
+                                <connections>
+                                    <action selector="shieldMinusPressed:" destination="PyS-zn-Gn5" eventType="touchUpInside" id="F1d-TA-1gA"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
@@ -138,7 +162,7 @@
                         <outlet property="powerLabel" destination="kEl-uA-hDo" id="MNh-Gz-QJd"/>
                         <outlet property="shieldAddButton" destination="fNc-64-zNK" id="1Uf-Tu-m70"/>
                         <outlet property="shieldGenLabel" destination="HBI-Lj-Gsj" id="Glw-JA-xXt"/>
-                        <outlet property="shieldMinusButton" destination="eof-Yu-cb0" id="xMZ-nn-13a"/>
+                        <outlet property="shieldMinusButton" destination="mue-Tm-pTd" id="d52-a0-YmZ"/>
                         <outlet property="titleLabel" destination="24U-4h-m8E" id="SiZ-Lf-PEU"/>
                         <outlet property="trenchAddButton" destination="ZF2-VB-B2y" id="s1p-Kt-xlz"/>
                         <outlet property="trenchLabel" destination="kWW-Y5-vdh" id="2HN-wb-nql"/>
