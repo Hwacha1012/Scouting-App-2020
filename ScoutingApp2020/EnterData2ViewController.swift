@@ -9,7 +9,26 @@
 import UIKit
 
 class EnterData2ViewController: UIViewController {
+    @IBOutlet weak var titleLabel: UILabel!
+    @IBOutlet weak var lineLabel: UILabel!
+    @IBOutlet weak var crossedSwitch: UISwitch!
+    @IBOutlet weak var lowGoalLabel: UILabel!
+    
+    @IBOutlet weak var highGoalLabel: UILabel!
+    @IBOutlet weak var powerLabel: UILabel!
+    @IBOutlet weak var powerCellsLabel: UILabel!
+    @IBOutlet weak var trenchLabel: UILabel!
 
+    @IBOutlet weak var shieldGenLabel: UILabel!
+    @IBOutlet weak var lowAddButton: UIButton!
+    @IBOutlet weak var lowMinusButton: UIButton!
+    @IBOutlet weak var highAddButton: UIButton!
+    @IBOutlet weak var highMinusButton: UIButton!
+    
+    @IBOutlet weak var trenchAddButton: UIButton!
+    @IBOutlet weak var trenchMinusButton: UIButton!
+    @IBOutlet weak var shieldAddButton: UIButton!
+    @IBOutlet weak var shieldMinusButton: UIButton!
     override func viewDidLoad() {
         super.viewDidLoad()
 
