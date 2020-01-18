@@ -128,7 +128,7 @@
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0Qb-T5-KOO">
                                 <rect key="frame" x="559" y="472" width="53" height="38"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Button" image="minusbutton.png"/>
+                                <state key="normal" backgroundImage="minusbutton.png"/>
                                 <connections>
                                     <action selector="highGoalMinusPressed:" destination="PyS-zn-Gn5" eventType="touchUpInside" id="zX2-fz-DYf"/>
                                 </connections>
@@ -184,6 +184,22 @@
                     <view key="view" contentMode="scaleToFill" id="iha-7B-CBu">
                         <rect key="frame" x="0.0" y="0.0" width="712" height="984"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Tele-Op" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="UZu-WA-zM4">
+                                <rect key="frame" x="-33" y="20" width="922" height="98.5"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="Futura-MediumItalic" family="Futura" pointSize="60"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="C04-bs-RZc">
+                                <rect key="frame" x="20" y="117" width="171" height="81"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <viewLayoutGuide key="safeArea" id="NIJ-05-VPw"/>
                     </view>
@@ -191,7 +207,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="HVx-Q2-9Z9" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="131" y="-752"/>
+            <point key="canvasLocation" x="130.46875" y="-752.34375"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
