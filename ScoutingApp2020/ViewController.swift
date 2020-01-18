@@ -9,7 +9,7 @@
 import UIKit
 var teamList = [String]()
 var pitScoutList = [String]()
-
+var intakeType = 0
 
 // "2170; 1", 
 

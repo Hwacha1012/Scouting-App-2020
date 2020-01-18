@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15705" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15702" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
     <device id="ipad9_7" orientation="portrait" layout="fullscreen" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15706"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15704"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -14,15 +14,6 @@
                     <view key="view" contentMode="scaleToFill" id="VaL-Xf-n67">
                         <rect key="frame" x="0.0" y="0.0" width="712" height="984"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text=" Titanium Tomahawks 2" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="Wu3-B9-aNN">
-                                <rect key="frame" x="-107" y="141" width="922" height="79"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" name="Futura-MediumItalic" family="Futura" pointSize="60"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                        </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <viewLayoutGuide key="safeArea" id="zc3-gW-pkc"/>
                     </view>
@@ -143,25 +134,48 @@
                         <rect key="frame" x="0.0" y="0.0" width="712" height="984"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text=" Titanium Tomahawks" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="4UT-rh-ZXU">
-                                <rect key="frame" x="-120" y="20" width="922" height="77"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Data Type" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="4UT-rh-ZXU">
+                                <rect key="frame" x="-105" y="20" width="922" height="98.5"/>
                                 <fontDescription key="fontDescription" name="Futura-MediumItalic" family="Futura" pointSize="60"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uV6-G5-nMK">
+                                <rect key="frame" x="148" y="174" width="355" height="236"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Match Data"/>
+                                <connections>
+                                    <action selector="matchDataPressed:" destination="oF4-Xv-MdE" eventType="touchUpInside" id="el5-Gd-9z8"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HYW-Ga-Sat">
+                                <rect key="frame" x="201" y="548" width="355" height="236"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Pit Scouting"/>
+                                <connections>
+                                    <action selector="pitScoutPressed:" destination="oF4-Xv-MdE" eventType="touchUpInside" id="ODS-kJ-9r1"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="4UT-rh-ZXU" firstAttribute="centerX" secondItem="BZb-rD-eAm" secondAttribute="centerX" id="9cJ-Uz-pSf"/>
+                            <constraint firstItem="4UT-rh-ZXU" firstAttribute="height" secondItem="SZq-pA-V5h" secondAttribute="height" multiplier="0.1" id="Hhr-rN-WKC"/>
+                            <constraint firstItem="4UT-rh-ZXU" firstAttribute="width" secondItem="SZq-pA-V5h" secondAttribute="width" multiplier="1.29494" id="NLS-6V-k2N"/>
+                            <constraint firstItem="4UT-rh-ZXU" firstAttribute="top" secondItem="BZb-rD-eAm" secondAttribute="top" constant="20" id="XHs-Bb-REy"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="BZb-rD-eAm"/>
                     </view>
                     <navigationItem key="navigationItem" id="DgW-jK-6Z0"/>
                     <connections>
+                        <outlet property="matchData" destination="uV6-G5-nMK" id="Jgp-qc-BF4"/>
+                        <outlet property="pitScouting" destination="HYW-Ga-Sat" id="iX8-Qa-Dc2"/>
                         <segue destination="PyS-zn-Gn5" kind="show" identifier="EnterData1ToEnterData2" id="A94-ve-GRX"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="eJi-zH-2hc" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-658" y="53"/>
+            <point key="canvasLocation" x="-658.59375" y="52.734375"/>
         </scene>
     </scenes>
 </document>
