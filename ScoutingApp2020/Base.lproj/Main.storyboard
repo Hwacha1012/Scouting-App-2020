@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15702" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15705" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
     <device id="ipad9_7" orientation="portrait" layout="fullscreen" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15704"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15706"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -46,36 +46,28 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mue-Tm-pTd">
-                                <rect key="frame" x="453" y="321" width="46" height="30"/>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mue-Tm-pTd">
+                                <rect key="frame" x="453" y="313" width="67" height="36"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Button"/>
+                                <state key="normal" title="Button" image="download.png"/>
                                 <connections>
                                     <action selector="lowGoalAddPressed:" destination="PyS-zn-Gn5" eventType="touchUpInside" id="CaG-9V-Bqw"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ma5-7k-YCB">
-                                <rect key="frame" x="453" y="473" width="46" height="30"/>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ma5-7k-YCB">
+                                <rect key="frame" x="453" y="471" width="67" height="36"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Button"/>
+                                <state key="normal" title="Button" image="download.png"/>
                                 <connections>
                                     <action selector="highGoalAddPressed:" destination="PyS-zn-Gn5" eventType="touchUpInside" id="7Ad-pq-4Vf"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tM4-nh-ibs">
-                                <rect key="frame" x="569" y="321" width="46" height="30"/>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tM4-nh-ibs">
+                                <rect key="frame" x="559" y="313" width="53" height="39"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Button"/>
+                                <state key="normal" title="Button" image="minusbutton.png"/>
                                 <connections>
                                     <action selector="lowGoalMinusPressed:" destination="PyS-zn-Gn5" eventType="touchUpInside" id="iAT-FW-Ju5"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0Qb-T5-KOO">
-                                <rect key="frame" x="569" y="477" width="46" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Button"/>
-                                <connections>
-                                    <action selector="highGoalMinusPressed:" destination="PyS-zn-Gn5" eventType="touchUpInside" id="zX2-fz-DYf"/>
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="UNLIMITED POWER" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kEl-uA-hDo">
@@ -138,6 +130,14 @@
                                     <action selector="shieldMinusPressed:" destination="PyS-zn-Gn5" eventType="touchUpInside" id="F1d-TA-1gA"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0Qb-T5-KOO">
+                                <rect key="frame" x="559" y="472" width="53" height="38"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button" image="minusbutton.png"/>
+                                <connections>
+                                    <action selector="highGoalMinusPressed:" destination="PyS-zn-Gn5" eventType="touchUpInside" id="zX2-fz-DYf"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
@@ -174,6 +174,21 @@
             <point key="canvasLocation" x="-637.5" y="-752.34375"/>
         </scene>
         <!--View Controller-->
+        <scene sceneID="r4T-Jr-nNv">
+            <objects>
+                <viewController id="VIn-uM-yeP" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="iha-7B-CBu">
+                        <rect key="frame" x="0.0" y="0.0" width="768" height="1024"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <viewLayoutGuide key="safeArea" id="NIJ-05-VPw"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="HVx-Q2-9Z9" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="131" y="-752"/>
+        </scene>
+        <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="ScoutingApp2020" customModuleProvider="target" sceneMemberID="viewController">
@@ -188,28 +203,28 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZvV-4T-U5G">
-                                <rect key="frame" x="441" y="225" width="307" height="307"/>
+                                <rect key="frame" x="441" y="1959" width="307" height="2908.5"/>
                                 <state key="normal" title="Button"/>
                                 <connections>
                                     <action selector="viewDataPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Exh-Zm-uYR"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="InL-4J-CGo">
-                                <rect key="frame" x="441" y="582" width="307" height="307"/>
+                                <rect key="frame" x="441" y="4917.5" width="307" height="2908"/>
                                 <state key="normal" title="Button"/>
                                 <connections>
                                     <action selector="exportDataPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Ojl-3n-gli"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HIY-XU-3kR">
-                                <rect key="frame" x="20" y="225" width="307" height="307"/>
+                                <rect key="frame" x="20" y="1959" width="307" height="2908.5"/>
                                 <state key="normal" title="Button"/>
                                 <connections>
                                     <action selector="enterDataPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Qd3-Ma-M9P"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="z4I-Fh-uXN">
-                                <rect key="frame" x="20" y="582" width="307" height="307"/>
+                                <rect key="frame" x="20" y="4917.5" width="307" height="2908"/>
                                 <state key="normal" title="Button"/>
                                 <connections>
                                     <action selector="importDataPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="fNU-x8-5AQ"/>
@@ -334,5 +349,7 @@
     </scenes>
     <resources>
         <image name="GHSRoboticsLogo2170.png" width="1600" height="1600"/>
+        <image name="download.png" width="69" height="36"/>
+        <image name="minusbutton.png" width="69" height="69"/>
     </resources>
 </document>
