@@ -80,6 +80,7 @@ class EnterData2ViewController: UIViewController {
     }
     
     @IBAction func switchChanged(_ sender: Any) {
+        autoLine = crossedSwitch.isOn
     }
     override func viewDidLoad() {
         super.viewDidLoad()
