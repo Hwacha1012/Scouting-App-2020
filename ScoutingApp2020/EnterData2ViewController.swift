@@ -78,6 +78,8 @@ class EnterData2ViewController: UIViewController {
         }
     }
     
+    @IBAction func switchChanged(_ sender: Any) {
+    }
     override func viewDidLoad() {
         super.viewDidLoad()
         if (matchPosition > 1){
