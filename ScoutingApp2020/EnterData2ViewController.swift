@@ -31,30 +31,88 @@ class EnterData2ViewController: UIViewController {
     @IBOutlet weak var shieldMinusButton: UIButton!
     
     @IBAction func lowGoalAddPressed(_ sender: Any) {
+        autoLowGoal += 1
+        updateLabels()
     }
     @IBAction func lowGoalMinusPressed(_ sender: Any) {
+        //can't go below 0
+        if (autoLowGoal > 0){
+            autoLowGoal -= 1
+            updateLabels()
+        }
+        
     }
     
     @IBAction func highGoalAddPressed(_ sender: Any) {
+        autoHighGoal += 1
+        updateLabels()
     }
     @IBAction func highGoalMinusPressed(_ sender: Any) {
+        //can't go below 0
+        if (autoHighGoal > 0){
+            autoHighGoal -= 1
+            updateLabels()
+        }
     }
     
     @IBAction func trenchAddPressed(_ sender: Any) {
+        autoTrenchBalls += 1
+        updateLabels()
     }
     @IBAction func trenchMinusPressed(_ sender: Any) {
+        //can't go below 0
+        if (autoTrenchBalls > 0){
+            autoTrenchBalls -= 1
+            updateLabels()
+        }
     }
     @IBAction func shieldAddPressed(_ sender: Any) {
+        autoShieldBalls += 1
+        updateLabels()
     }
     @IBAction func shieldMinusPressed(_ sender: Any) {
+        //can't go below 0
+        if (autoShieldBalls > 0){
+            autoShieldBalls -= 1
+            updateLabels()
+        }
     }
     
+    @IBAction func switchChanged(_ sender: Any) {
+    }
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        if (matchPosition > 1){
+            //load previous data
+            updateLabels()
+        }
+        else{
+            //have new data
+            lowGoalLabel.text = "Low Goal Balls: 0"
+            highGoalLabel.text = "High Goal Balls: 0"
+            trenchLabel.text = "Trench Run Balls Grabbed: 0"
+            shieldGenLabel.text = "Shield Generator Balls Grabbed: 0"
+            autoHighGoal = 0
+            autoLowGoal = 0
+            autoTrenchBalls = 0
+            autoShieldBalls = 0
+            crossedSwitch.setOn(false, animated: false)
+            autoLine = false
+            
+        }
+        
+        
+        
         // Do any additional setup after loading the view.
     }
     
+    func updateLabels(){
+        crossedSwitch.setOn(autoLine, animated: false)
+        lowGoalLabel.text = "Low Goal Balls: \(autoLowGoal)"
+        highGoalLabel.text = "High Goal Balls: \(autoHighGoal)"
+        trenchLabel.text = "Trench Run Balls Grabbed: \(autoTrenchBalls)"
+        shieldGenLabel.text = "Shield Generator Balls Grabbed: \(autoShieldBalls)"
+    }
 
     /*
     // MARK: - Navigation
