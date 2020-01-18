@@ -9,9 +9,28 @@
 import UIKit
 var teamList = [String]()
 var pitScoutList = [String]()
-var intakeType = 0
+var intakeType = ""
+
+var autoLine = false
+var autoLowGoal = 0
+var autoHighGoal = 0
+var autoTrenchBalls = 0
+var autoShieldBalls = 0
+
+var controlPanel = ""
+var lowGoalMade = 0
+var lowGoalTaken = 0
+var highGoalMade = [Int]()
+var highGoalTaken = [Int]()
+var defenseTime = 0
+var climbing = false
+var climbingOtherRobots = 0
+var climbBalanced = false
+
+
 
 // "2170; 1", 
+
 
 
 //UIColor teamColor = UIColor.init(red: 0.0431372549, green: 0.1294117647, blue: 0.50196078431, alpha: 1.0)
@@ -74,7 +93,7 @@ class ViewController: UIViewController {
             titleLabel2.font = UIFont.init(name: "Futura-MediumItalic", size: 75)
         }
         
-        var bColor = UIColor.init(red: 0.0431372549, green: 0.1294117647, blue: 0.50196078431, alpha: 1.0)
+       // var bColor = UIColor.init(red: 0.0431372549, green: 0.1294117647, blue: 0.50196078431, alpha: 1.0)
 
         
         
