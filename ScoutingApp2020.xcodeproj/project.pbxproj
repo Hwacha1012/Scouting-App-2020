@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 51;
+	objectVersion = 52;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -15,9 +15,9 @@
 		0529E04123C95095004707FD /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0529E03F23C95095004707FD /* LaunchScreen.storyboard */; };
 		0529E04C23C95095004707FD /* ScoutingApp2020Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0529E04B23C95095004707FD /* ScoutingApp2020Tests.swift */; };
 		0529E05723C95095004707FD /* ScoutingApp2020UITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0529E05623C95095004707FD /* ScoutingApp2020UITests.swift */; };
-		055F4B1323D272B6001C3581 /* GHSRoboticsLogo.png in Resources */ = {isa = PBXBuildFile; fileRef = 055F4B1223D272B6001C3581 /* GHSRoboticsLogo.png */; };
 		055F4B1523D27621001C3581 /* EnterData1ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 055F4B1423D27621001C3581 /* EnterData1ViewController.swift */; };
 		055F4B1723D27A9B001C3581 /* EnterData2ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 055F4B1623D27A9B001C3581 /* EnterData2ViewController.swift */; };
+		055F4B1B23D34D7E001C3581 /* GHSRoboticsLogo2170.png in Resources */ = {isa = PBXBuildFile; fileRef = 055F4B1A23D34D7E001C3581 /* GHSRoboticsLogo2170.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -52,9 +52,9 @@
 		0529E05223C95095004707FD /* ScoutingApp2020UITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ScoutingApp2020UITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		0529E05623C95095004707FD /* ScoutingApp2020UITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScoutingApp2020UITests.swift; sourceTree = "<group>"; };
 		0529E05823C95095004707FD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		055F4B1223D272B6001C3581 /* GHSRoboticsLogo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = GHSRoboticsLogo.png; path = ../../GHSRoboticsLogo.png; sourceTree = "<group>"; };
 		055F4B1423D27621001C3581 /* EnterData1ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EnterData1ViewController.swift; sourceTree = "<group>"; };
 		055F4B1623D27A9B001C3581 /* EnterData2ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EnterData2ViewController.swift; sourceTree = "<group>"; };
+		055F4B1A23D34D7E001C3581 /* GHSRoboticsLogo2170.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = GHSRoboticsLogo2170.png; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -114,7 +114,7 @@
 				0529E03F23C95095004707FD /* LaunchScreen.storyboard */,
 				0529E04223C95095004707FD /* Info.plist */,
 				0529E03A23C95094004707FD /* ScoutingApp2020.xcdatamodeld */,
-				055F4B1223D272B6001C3581 /* GHSRoboticsLogo.png */,
+				055F4B1A23D34D7E001C3581 /* GHSRoboticsLogo2170.png */,
 			);
 			path = ScoutingApp2020;
 			sourceTree = "<group>";
@@ -217,7 +217,7 @@
 				};
 			};
 			buildConfigurationList = 0529E02B23C95094004707FD /* Build configuration list for PBXProject "ScoutingApp2020" */;
-			compatibilityVersion = "Xcode 10.0";
+			compatibilityVersion = "Xcode 11.0";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
 			knownRegions = (
@@ -241,9 +241,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				055F4B1B23D34D7E001C3581 /* GHSRoboticsLogo2170.png in Resources */,
 				0529E04123C95095004707FD /* LaunchScreen.storyboard in Resources */,
 				0529E03E23C95095004707FD /* Assets.xcassets in Resources */,
-				055F4B1323D272B6001C3581 /* GHSRoboticsLogo.png in Resources */,
 				0529E03923C95094004707FD /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -451,6 +451,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 5494GRQ5MD;
 				INFOPLIST_FILE = ScoutingApp2020/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -469,6 +470,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 5494GRQ5MD;
 				INFOPLIST_FILE = ScoutingApp2020/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

@@ -72,7 +72,7 @@ class ViewController: UIViewController {
 
         
         
-        imageView.image = UIImage(named: "GHSRoboticsLogo.png")
+        imageView.image = UIImage(named: "GHSRoboticsLogo2170.png")
                 view.sendSubviewToBack(imageView)
         
         enterData.titleLabel!.minimumScaleFactor = 0.01
