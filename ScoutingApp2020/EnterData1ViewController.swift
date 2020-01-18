@@ -25,6 +25,8 @@ class EnterData1ViewController: UIViewController {
         // Do any additional setup after loading the view.
     }
     
+   // touch
+    
  //   override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
      //   performSegue(withIdentifier: "EnterData1ToEnterData2", sender: nil)
    // }

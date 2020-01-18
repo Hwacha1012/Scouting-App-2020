@@ -29,6 +29,7 @@ class EnterData2ViewController: UIViewController {
     @IBOutlet weak var trenchMinusButton: UIButton!
     @IBOutlet weak var shieldAddButton: UIButton!
     @IBOutlet weak var shieldMinusButton: UIButton!
+    @IBOutlet weak var teleOpButton: UIButton!
     
     @IBAction func lowGoalAddPressed(_ sender: Any) {
         autoLowGoal += 1
@@ -81,6 +82,10 @@ class EnterData2ViewController: UIViewController {
     
     @IBAction func switchChanged(_ sender: Any) {
         autoLine = crossedSwitch.isOn
+    }
+    @IBAction func teleOpButtonPressed(_ sender: Any) {
+        performSegue(withIdentifier: "AutoToTeleOp", sender: nil)
+        
     }
     override func viewDidLoad() {
         super.viewDidLoad()
