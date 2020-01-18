@@ -27,6 +27,8 @@ var climbing = false
 var climbingOtherRobots = 0
 var climbBalanced = false
 
+var matchPosition = 0
+
 
 
 // "2170; 1", 
@@ -48,7 +50,7 @@ class ViewController: UIViewController {
         //EnterData1ViewController.present(<#T##self: UIViewController##UIViewController#>)
         //EnterData1ViewController.modalPresentationStyle = .fullScreen
         //present(EnterData1ViewController, animated: true)
-        
+        matchPosition = 0
        performSegue(withIdentifier: "viewToEnterData1", sender: nil)
     }
     @IBAction func viewDataPressed(_ sender: Any) {
