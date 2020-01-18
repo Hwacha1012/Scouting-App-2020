@@ -49,6 +49,7 @@ class EnterData2ViewController: UIViewController {
     }
     @IBAction func highGoalMinusPressed(_ sender: Any) {
         //can't go below 0
+        //print("pressed")
         if (autoHighGoal > 0){
             autoHighGoal -= 1
             updateLabels()
