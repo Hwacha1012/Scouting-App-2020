@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15705" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15702" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
     <device id="ipad9_7" orientation="portrait" layout="fullscreen" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15706"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15704"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -14,7 +14,21 @@
                     <view key="view" contentMode="scaleToFill" id="VaL-Xf-n67">
                         <rect key="frame" x="0.0" y="0.0" width="712" height="984"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Auto" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="24U-4h-m8E">
+                                <rect key="frame" x="-105" y="0.0" width="922" height="98.5"/>
+                                <fontDescription key="fontDescription" name="Futura-MediumItalic" family="Futura" pointSize="60"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="24U-4h-m8E" firstAttribute="width" secondItem="VaL-Xf-n67" secondAttribute="width" multiplier="1.29494" id="578-PG-nRp"/>
+                            <constraint firstItem="24U-4h-m8E" firstAttribute="top" secondItem="zc3-gW-pkc" secondAttribute="top" id="HFk-KW-wb0"/>
+                            <constraint firstItem="24U-4h-m8E" firstAttribute="centerX" secondItem="zc3-gW-pkc" secondAttribute="centerX" id="RBm-UV-Gog"/>
+                            <constraint firstItem="24U-4h-m8E" firstAttribute="height" secondItem="VaL-Xf-n67" secondAttribute="height" multiplier="0.100102" id="gxz-QJ-A2X"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="zc3-gW-pkc"/>
                     </view>
                     <navigationItem key="navigationItem" id="IKg-bI-jhL"/>
