@@ -15,7 +15,9 @@
 		0529E04123C95095004707FD /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0529E03F23C95095004707FD /* LaunchScreen.storyboard */; };
 		0529E04C23C95095004707FD /* ScoutingApp2020Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0529E04B23C95095004707FD /* ScoutingApp2020Tests.swift */; };
 		0529E05723C95095004707FD /* ScoutingApp2020UITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0529E05623C95095004707FD /* ScoutingApp2020UITests.swift */; };
-		0529E06523C952AF004707FD /* GHS Robotics Logo.png in Resources */ = {isa = PBXBuildFile; fileRef = 0529E06423C952AF004707FD /* GHS Robotics Logo.png */; };
+		055F4B1323D272B6001C3581 /* GHSRoboticsLogo.png in Resources */ = {isa = PBXBuildFile; fileRef = 055F4B1223D272B6001C3581 /* GHSRoboticsLogo.png */; };
+		055F4B1523D27621001C3581 /* EnterData1ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 055F4B1423D27621001C3581 /* EnterData1ViewController.swift */; };
+		055F4B1723D27A9B001C3581 /* EnterData2ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 055F4B1623D27A9B001C3581 /* EnterData2ViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -50,7 +52,9 @@
 		0529E05223C95095004707FD /* ScoutingApp2020UITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ScoutingApp2020UITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		0529E05623C95095004707FD /* ScoutingApp2020UITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScoutingApp2020UITests.swift; sourceTree = "<group>"; };
 		0529E05823C95095004707FD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		0529E06423C952AF004707FD /* GHS Robotics Logo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "GHS Robotics Logo.png"; sourceTree = "<group>"; };
+		055F4B1223D272B6001C3581 /* GHSRoboticsLogo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = GHSRoboticsLogo.png; path = ../../GHSRoboticsLogo.png; sourceTree = "<group>"; };
+		055F4B1423D27621001C3581 /* EnterData1ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EnterData1ViewController.swift; sourceTree = "<group>"; };
+		055F4B1623D27A9B001C3581 /* EnterData2ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EnterData2ViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -103,12 +107,14 @@
 			children = (
 				0529E03323C95094004707FD /* AppDelegate.swift */,
 				0529E03523C95094004707FD /* ViewController.swift */,
+				055F4B1423D27621001C3581 /* EnterData1ViewController.swift */,
+				055F4B1623D27A9B001C3581 /* EnterData2ViewController.swift */,
 				0529E03723C95094004707FD /* Main.storyboard */,
 				0529E03D23C95095004707FD /* Assets.xcassets */,
 				0529E03F23C95095004707FD /* LaunchScreen.storyboard */,
 				0529E04223C95095004707FD /* Info.plist */,
 				0529E03A23C95094004707FD /* ScoutingApp2020.xcdatamodeld */,
-				0529E06423C952AF004707FD /* GHS Robotics Logo.png */,
+				055F4B1223D272B6001C3581 /* GHSRoboticsLogo.png */,
 			);
 			path = ScoutingApp2020;
 			sourceTree = "<group>";
@@ -235,9 +241,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				0529E06523C952AF004707FD /* GHS Robotics Logo.png in Resources */,
 				0529E04123C95095004707FD /* LaunchScreen.storyboard in Resources */,
 				0529E03E23C95095004707FD /* Assets.xcassets in Resources */,
+				055F4B1323D272B6001C3581 /* GHSRoboticsLogo.png in Resources */,
 				0529E03923C95094004707FD /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -264,6 +270,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				0529E03623C95094004707FD /* ViewController.swift in Sources */,
+				055F4B1723D27A9B001C3581 /* EnterData2ViewController.swift in Sources */,
+				055F4B1523D27621001C3581 /* EnterData1ViewController.swift in Sources */,
 				0529E03C23C95094004707FD /* ScoutingApp2020.xcdatamodeld in Sources */,
 				0529E03423C95094004707FD /* AppDelegate.swift in Sources */,
 			);
