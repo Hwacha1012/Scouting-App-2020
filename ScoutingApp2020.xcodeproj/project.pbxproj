@@ -18,8 +18,8 @@
 		055F4B1523D27621001C3581 /* EnterData1ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 055F4B1423D27621001C3581 /* EnterData1ViewController.swift */; };
 		055F4B1723D27A9B001C3581 /* EnterData2ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 055F4B1623D27A9B001C3581 /* EnterData2ViewController.swift */; };
 		055F4B1D23D35510001C3581 /* GHSRoboticsLogo2170.png in Resources */ = {isa = PBXBuildFile; fileRef = 055F4B1C23D35510001C3581 /* GHSRoboticsLogo2170.png */; };
-		DF28846C23D3677000572749 /* download.png in Resources */ = {isa = PBXBuildFile; fileRef = DF28846B23D3677000572749 /* download.png */; };
-		DF28847A23D3707E00572749 /* minusbutton.png in Resources */ = {isa = PBXBuildFile; fileRef = DF28847923D3707E00572749 /* minusbutton.png */; };
+		055F4B2023D38FA6001C3581 /* plus.png in Resources */ = {isa = PBXBuildFile; fileRef = 055F4B1E23D38FA6001C3581 /* plus.png */; };
+		055F4B2123D38FA6001C3581 /* minus.png in Resources */ = {isa = PBXBuildFile; fileRef = 055F4B1F23D38FA6001C3581 /* minus.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -57,8 +57,8 @@
 		055F4B1423D27621001C3581 /* EnterData1ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EnterData1ViewController.swift; sourceTree = "<group>"; };
 		055F4B1623D27A9B001C3581 /* EnterData2ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EnterData2ViewController.swift; sourceTree = "<group>"; };
 		055F4B1C23D35510001C3581 /* GHSRoboticsLogo2170.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = GHSRoboticsLogo2170.png; sourceTree = "<group>"; };
-		DF28846B23D3677000572749 /* download.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = download.png; sourceTree = "<group>"; };
-		DF28847923D3707E00572749 /* minusbutton.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = minusbutton.png; sourceTree = "<group>"; };
+		055F4B1E23D38FA6001C3581 /* plus.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = plus.png; sourceTree = "<group>"; };
+		055F4B1F23D38FA6001C3581 /* minus.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = minus.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -119,8 +119,8 @@
 				0529E04223C95095004707FD /* Info.plist */,
 				0529E03A23C95094004707FD /* ScoutingApp2020.xcdatamodeld */,
 				055F4B1C23D35510001C3581 /* GHSRoboticsLogo2170.png */,
-				DF28846B23D3677000572749 /* download.png */,
-				DF28847923D3707E00572749 /* minusbutton.png */,
+				055F4B1F23D38FA6001C3581 /* minus.png */,
+				055F4B1E23D38FA6001C3581 /* plus.png */,
 			);
 			path = ScoutingApp2020;
 			sourceTree = "<group>";
@@ -247,9 +247,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				DF28847A23D3707E00572749 /* minusbutton.png in Resources */,
 				055F4B1D23D35510001C3581 /* GHSRoboticsLogo2170.png in Resources */,
-				DF28846C23D3677000572749 /* download.png in Resources */,
+				055F4B2023D38FA6001C3581 /* plus.png in Resources */,
+				055F4B2123D38FA6001C3581 /* minus.png in Resources */,
 				0529E04123C95095004707FD /* LaunchScreen.storyboard in Resources */,
 				0529E03E23C95095004707FD /* Assets.xcassets in Resources */,
 				0529E03923C95094004707FD /* Main.storyboard in Resources */,
