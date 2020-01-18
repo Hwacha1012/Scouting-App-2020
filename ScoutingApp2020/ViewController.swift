@@ -14,6 +14,7 @@ var intakeType = 0
 // "2170; 1", 
 
 
+
 //UIColor teamColor = UIColor.init(red: 0.0431372549, green: 0.1294117647, blue: 0.50196078431, alpha: 1.0)
 
 class ViewController: UIViewController {
@@ -74,7 +75,7 @@ class ViewController: UIViewController {
             titleLabel2.font = UIFont.init(name: "Futura-MediumItalic", size: 75)
         }
         
-        var bColor = UIColor.init(red: 0.0431372549, green: 0.1294117647, blue: 0.50196078431, alpha: 1.0)
+       // var bColor = UIColor.init(red: 0.0431372549, green: 0.1294117647, blue: 0.50196078431, alpha: 1.0)
 
         
         
