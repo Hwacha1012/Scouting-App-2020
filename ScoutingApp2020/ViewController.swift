@@ -9,7 +9,25 @@
 import UIKit
 var teamList = [String]()
 var pitScoutList = [String]()
-var intakeType = 0
+var intakeType = ""
+
+var autoLine = false
+var autoLowGoal = 0
+var autoHighGoal = 0
+var autoTrenchBalls = 0
+var autoShieldBalls = 0
+
+var controlPanel = ""
+var lowGoalMade = 0
+var lowGoalTaken = 0
+var highGoalMade = [Int]()
+var highGoalTaken = [Int]()
+var defenseTime = 0
+var climbing = false
+var climbingOtherRobots = 0
+var climbBalanced = false
+
+
 
 // "2170; 1", 
 
