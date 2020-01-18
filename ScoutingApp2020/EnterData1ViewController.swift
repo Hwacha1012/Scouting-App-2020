@@ -16,7 +16,7 @@ class EnterData1ViewController: UIViewController {
         performSegue(withIdentifier: "EnterData1ToEnterData2", sender: nil)
     }
     @IBAction func pitScoutPressed(_ sender: Any) {
-    }
+    } 
     override func viewDidLoad() {
         super.viewDidLoad()
 
