@@ -19,6 +19,7 @@ class MatchDataViewController: UIViewController {
     @IBOutlet weak var teamText: UITextField!
     @IBOutlet weak var matchText: UITextField!
     @IBOutlet weak var colorSegmentedControl: UISegmentedControl!
+    @IBOutlet weak var autoButtons: UIButton!
     @IBAction func segmentedChanged(_ sender: Any) {
         if(colorSegmentedControl.selectedSegmentIndex == 0){
             teamColor = true
@@ -27,7 +28,11 @@ class MatchDataViewController: UIViewController {
             teamColor = false
         }
         
-        update()
+        updateValues()
+    }
+    @IBAction func autoButtonPressed(_ sender: Any) {
+        matchPosition = 2
+        performSegue(withIdentifier: "MatchToData2", sender: nil)
     }
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -49,7 +54,21 @@ class MatchDataViewController: UIViewController {
         
     }
     
+    func updateValues(){
+        scoutName = scoutText.text!
+        teamNumber = Int(teamText.text!) ?? 0
+        matchNumber = Int(matchText.text!) ?? 0
+        
+        if(teamColor){
+            colorSegmentedControl.selectedSegmentIndex = 0
+        }
+        else{
+            colorSegmentedControl.selectedSegmentIndex = 1
+        }
+    }
+    
     func update(){
+        
         scoutText.text = scoutName
         teamText.text = "\(teamNumber)"
         matchText.text = "\(matchNumber)"
@@ -61,6 +80,15 @@ class MatchDataViewController: UIViewController {
         }
         
         
+    }
+    
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        view.endEditing(true)
+    }
+    
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        self.view.endEditing(true)
+        return false
     }
 
     /*
