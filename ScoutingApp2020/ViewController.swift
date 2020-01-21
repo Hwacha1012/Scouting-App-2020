@@ -9,7 +9,14 @@
 import UIKit
 var teamList = [String]()
 var pitScoutList = [String]()
+
+var scoutName = ""
+var teamNumber = 0
+var matchNumber = 0
+var teamColor = true
+
 var intakeType = ""
+
 
 var autoLine = false
 var autoLowGoal = 0
