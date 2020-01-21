@@ -106,7 +106,7 @@ class EnterData2ViewController: UIViewController {
             crossedSwitch.setOn(false, animated: false)
             autoLine = false
             
-        }
+        } 
         
         
         
