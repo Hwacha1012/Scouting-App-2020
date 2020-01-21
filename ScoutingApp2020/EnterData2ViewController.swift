@@ -89,7 +89,7 @@ class EnterData2ViewController: UIViewController {
     }
     override func viewDidLoad() {
         super.viewDidLoad()
-        if (matchPosition > 1){
+        if (matchPosition > 2){
             //load previous data
             updateLabels()
         }

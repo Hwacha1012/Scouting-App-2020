@@ -20,14 +20,48 @@ class MatchDataViewController: UIViewController {
     @IBOutlet weak var matchText: UITextField!
     @IBOutlet weak var colorSegmentedControl: UISegmentedControl!
     @IBAction func segmentedChanged(_ sender: Any) {
+        if(colorSegmentedControl.selectedSegmentIndex == 0){
+            teamColor = true
+        }
+        else{
+            teamColor = false
+        }
         
+        update()
     }
     override func viewDidLoad() {
         super.viewDidLoad()
-
         // Do any additional setup after loading the view.
+        
+        if (matchPosition > 1){
+            //load previous data
+            update()
+        }
+        else{
+            //have new data
+            
+            scoutName = ""
+            teamNumber = 0
+            matchNumber = 0
+            teamColor = true
+            
+        }
+        
     }
     
+    func update(){
+        scoutText.text = scoutName
+        teamText.text = "\(teamNumber)"
+        matchText.text = "\(matchNumber)"
+        if(teamColor){
+            colorSegmentedControl.selectedSegmentIndex = 0
+        }
+        else{
+            colorSegmentedControl.selectedSegmentIndex = 1
+        }
+        
+        
+    }
 
     /*
     // MARK: - Navigation

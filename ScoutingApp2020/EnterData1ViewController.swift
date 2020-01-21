@@ -15,7 +15,7 @@ class EnterData1ViewController: UIViewController {
     @IBOutlet weak var pitScouting: UIButton!
     @IBAction func matchDataPressed(_ sender: Any) {
         matchPosition = 1
-        performSegue(withIdentifier: "EnterData1ToEnterData2", sender: nil)
+        performSegue(withIdentifier: "EnterData1ToMatchData", sender: nil)
     }
     @IBAction func pitScoutPressed(_ sender: Any) {
     } 
