@@ -9,6 +9,7 @@
 import UIKit
 
 class EnterData1ViewController: UIViewController {
+    @IBOutlet weak var dataType: UILabel!
     @IBOutlet weak var matchData: UIButton!
     
     @IBOutlet weak var pitScouting: UIButton!
@@ -23,6 +24,10 @@ class EnterData1ViewController: UIViewController {
 
         
         // Do any additional setup after loading the view.
+        pitScouting.titleLabel!.font = UIFont.init( name: "Gujarati MT", size: 65)
+        matchData.titleLabel!.font = UIFont.init( name: "Gujarati MT", size: 65)
+        dataType.font = UIFont.init( name: "Forgotton Futurist Bold", size: 150)
+        
     }
     
    // touch

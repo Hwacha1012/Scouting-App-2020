@@ -421,6 +421,7 @@
                     </view>
                     <navigationItem key="navigationItem" id="DgW-jK-6Z0"/>
                     <connections>
+                        <outlet property="dataType" destination="4UT-rh-ZXU" id="dCe-2b-Z3Y"/>
                         <outlet property="matchData" destination="uV6-G5-nMK" id="Jgp-qc-BF4"/>
                         <outlet property="pitScouting" destination="HYW-Ga-Sat" id="iX8-Qa-Dc2"/>
                         <segue destination="PyS-zn-Gn5" kind="show" identifier="EnterData1ToEnterData2" id="A94-ve-GRX"/>
