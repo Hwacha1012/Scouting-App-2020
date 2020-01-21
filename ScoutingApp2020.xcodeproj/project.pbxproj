@@ -20,6 +20,7 @@
 		055F4B1D23D35510001C3581 /* GHSRoboticsLogo2170.png in Resources */ = {isa = PBXBuildFile; fileRef = 055F4B1C23D35510001C3581 /* GHSRoboticsLogo2170.png */; };
 		055F4B2023D38FA6001C3581 /* plus.png in Resources */ = {isa = PBXBuildFile; fileRef = 055F4B1E23D38FA6001C3581 /* plus.png */; };
 		055F4B2123D38FA6001C3581 /* minus.png in Resources */ = {isa = PBXBuildFile; fileRef = 055F4B1F23D38FA6001C3581 /* minus.png */; };
+		055F4B2523D7B20D001C3581 /* TeleOpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 055F4B2423D7B20D001C3581 /* TeleOpViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -59,6 +60,7 @@
 		055F4B1C23D35510001C3581 /* GHSRoboticsLogo2170.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = GHSRoboticsLogo2170.png; sourceTree = "<group>"; };
 		055F4B1E23D38FA6001C3581 /* plus.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = plus.png; sourceTree = "<group>"; };
 		055F4B1F23D38FA6001C3581 /* minus.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = minus.png; sourceTree = "<group>"; };
+		055F4B2423D7B20D001C3581 /* TeleOpViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TeleOpViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -113,6 +115,7 @@
 				0529E03523C95094004707FD /* ViewController.swift */,
 				055F4B1423D27621001C3581 /* EnterData1ViewController.swift */,
 				055F4B1623D27A9B001C3581 /* EnterData2ViewController.swift */,
+				055F4B2423D7B20D001C3581 /* TeleOpViewController.swift */,
 				0529E03723C95094004707FD /* Main.storyboard */,
 				0529E03D23C95095004707FD /* Assets.xcassets */,
 				0529E03F23C95095004707FD /* LaunchScreen.storyboard */,
@@ -280,6 +283,7 @@
 				0529E03623C95094004707FD /* ViewController.swift in Sources */,
 				055F4B1723D27A9B001C3581 /* EnterData2ViewController.swift in Sources */,
 				055F4B1523D27621001C3581 /* EnterData1ViewController.swift in Sources */,
+				055F4B2523D7B20D001C3581 /* TeleOpViewController.swift in Sources */,
 				0529E03C23C95094004707FD /* ScoutingApp2020.xcdatamodeld in Sources */,
 				0529E03423C95094004707FD /* AppDelegate.swift in Sources */,
 			);
