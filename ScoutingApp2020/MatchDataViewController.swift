@@ -52,6 +52,8 @@ class MatchDataViewController: UIViewController {
             
         }
         
+        //colorSegmentedControl.
+        
     }
     
     func updateValues(){
