@@ -16,6 +16,7 @@ class TeleOpViewController: UIViewController {
     @IBOutlet weak var climbingButton: UIButton!
     @IBOutlet weak var arrowImage: UIButton!
     @IBOutlet weak var controlPanelButton: UIButton!
+    @IBOutlet weak var backgroundImage: UIImageView!
     
     @IBAction func closeButtonPressed(_ sender: Any) {
     }
