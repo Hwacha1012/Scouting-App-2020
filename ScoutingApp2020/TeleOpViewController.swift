@@ -9,7 +9,27 @@
 import UIKit
 
 class TeleOpViewController: UIViewController {
-
+    @IBOutlet weak var closeButton: UIButton!
+    @IBOutlet weak var sortaCloseButton: UIButton!
+    @IBOutlet weak var trenchButton: UIButton!
+    @IBOutlet weak var farButton: UIButton!
+    @IBOutlet weak var climbingButton: UIButton!
+    @IBOutlet weak var arrowImage: UIButton!
+    @IBOutlet weak var controlPanelButton: UIButton!
+    
+    @IBAction func closeButtonPressed(_ sender: Any) {
+    }
+    @IBAction func sortaCloseButtonPressed(_ sender: Any) {
+    }
+    @IBAction func trenchButtonPressed(_ sender: Any) {
+    }
+    @IBAction func farButtonPressed(_ sender: Any) {
+    }
+    @IBAction func climbingButtonPressed(_ sender: Any) {
+    }
+    
+    @IBAction func controlPanelButtonPressed(_ sender: Any) {
+    }
     override func viewDidLoad() {
         super.viewDidLoad()
 

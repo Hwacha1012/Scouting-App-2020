@@ -22,6 +22,8 @@
 		055F4B2123D38FA6001C3581 /* minus.png in Resources */ = {isa = PBXBuildFile; fileRef = 055F4B1F23D38FA6001C3581 /* minus.png */; };
 		055F4B2723D7B2CE001C3581 /* TeleOpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 055F4B2623D7B2CE001C3581 /* TeleOpViewController.swift */; };
 		055F4B2923D7B445001C3581 /* MatchDataViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 055F4B2823D7B445001C3581 /* MatchDataViewController.swift */; };
+		055F4B2E23DBAE99001C3581 /* TopViewRed.png in Resources */ = {isa = PBXBuildFile; fileRef = 055F4B2C23DBAE99001C3581 /* TopViewRed.png */; };
+		055F4B2F23DBAE99001C3581 /* TopViewBlue.png in Resources */ = {isa = PBXBuildFile; fileRef = 055F4B2D23DBAE99001C3581 /* TopViewBlue.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -63,6 +65,8 @@
 		055F4B1F23D38FA6001C3581 /* minus.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = minus.png; sourceTree = "<group>"; };
 		055F4B2623D7B2CE001C3581 /* TeleOpViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TeleOpViewController.swift; sourceTree = "<group>"; };
 		055F4B2823D7B445001C3581 /* MatchDataViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MatchDataViewController.swift; sourceTree = "<group>"; };
+		055F4B2C23DBAE99001C3581 /* TopViewRed.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = TopViewRed.png; sourceTree = "<group>"; };
+		055F4B2D23DBAE99001C3581 /* TopViewBlue.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = TopViewBlue.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -127,6 +131,8 @@
 				055F4B1C23D35510001C3581 /* GHSRoboticsLogo2170.png */,
 				055F4B1F23D38FA6001C3581 /* minus.png */,
 				055F4B1E23D38FA6001C3581 /* plus.png */,
+				055F4B2D23DBAE99001C3581 /* TopViewBlue.png */,
+				055F4B2C23DBAE99001C3581 /* TopViewRed.png */,
 			);
 			path = ScoutingApp2020;
 			sourceTree = "<group>";
@@ -253,9 +259,11 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				055F4B2F23DBAE99001C3581 /* TopViewBlue.png in Resources */,
 				055F4B1D23D35510001C3581 /* GHSRoboticsLogo2170.png in Resources */,
 				055F4B2023D38FA6001C3581 /* plus.png in Resources */,
 				055F4B2123D38FA6001C3581 /* minus.png in Resources */,
+				055F4B2E23DBAE99001C3581 /* TopViewRed.png in Resources */,
 				0529E04123C95095004707FD /* LaunchScreen.storyboard in Resources */,
 				0529E03E23C95095004707FD /* Assets.xcassets in Resources */,
 				0529E03923C95094004707FD /* Main.storyboard in Resources */,
