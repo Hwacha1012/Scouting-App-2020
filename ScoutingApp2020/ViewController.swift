@@ -16,6 +16,7 @@ var matchNumber = 0
 var teamColor = true
 
 var intakeType = ""
+var runType = 2
 
 
 var autoLine = false
@@ -70,7 +71,7 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
-        var runType = 2
+        
         
         if UIDevice.current.model.range(of:"iPad") != nil{
             //device is iPad
