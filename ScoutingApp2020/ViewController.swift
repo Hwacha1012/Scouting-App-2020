@@ -84,24 +84,22 @@ class ViewController: UIViewController {
       //  print("deviceName is \(deviceName)!")
         
         if(runType == 1){
-            enterData.titleLabel!.font = UIFont.init(name: "American Typewriter-BoldItalic", size: 65)
-            viewData.titleLabel!.font = UIFont.init(name: "Gujarati MT-BoldItalic", size: 65)
-            exportData.titleLabel!.font = UIFont.init(name: "Gujarati MT-BoldItalic", size: 65)
-            importData.titleLabel!.font = UIFont.init(name: "Gujarati MT-BoldItalic", size: 65)
-            
-
-        //pitScouting.titleLabel!.font = UIFont.init(name: "Gujarati MT-BoldItalic", size: 65)
-            titleLabel.font = UIFont.init(name: "Forgotten Futurist Bold-MediumItalic", size: 120)
-            titleLabel2.font = UIFont.init(name: "Forgotten Futurist Bold-MediumItalic", size: 120)
+            enterData.titleLabel!.font = UIFont.init(name: "Optima-BoldItalic", size: 65)
+            viewData.titleLabel!.font = UIFont.init(name: "Optima-BoldItalic", size: 65)
+            exportData.titleLabel!.font = UIFont.init(name: "Optima-BoldItalic", size: 65)
+            importData.titleLabel!.font = UIFont.init(name: "Optima-BoldItalic", size: 65)
+           // pitScoutingButton.titleLabel!.font = UIFont.init(name: "Optima-BoldItalic", size: 65)
+            titleLabel.font = UIFont.init(name: "Futura-MediumItalic", size: 120)
+            titleLabel2.font = UIFont.init(name: "Futura-MediumItalic", size: 120)
         }
         else{
-            enterData.titleLabel!.font = UIFont.init(name: "Gujarati MT-BoldItalic", size: 40)
-            viewData.titleLabel!.font = UIFont.init(name: "Gujarati MT-BoldItalic", size: 40)
-            exportData.titleLabel!.font = UIFont.init(name: "Gujarati MT-BoldItalic", size: 40)
-            importData.titleLabel!.font = UIFont.init(name: "Gujarati MT-BoldItalic", size: 40)
+            enterData.titleLabel!.font = UIFont.init(name: "Optima-BoldItalic", size: 40)
+            viewData.titleLabel!.font = UIFont.init(name: "Optima-BoldItalic", size: 40)
+            exportData.titleLabel!.font = UIFont.init(name: "Optima-BoldItalic", size: 40)
+            importData.titleLabel!.font = UIFont.init(name: "Optima-BoldItalic", size: 40)
             // pitScoutingButton.titleLabel!.font = UIFont.init(name: "Optima-BoldItalic", size: 65)
-            titleLabel.font = UIFont.init(name: "Forgotten Futurist Bold-MediumItalic", size: 75)
-            titleLabel2.font = UIFont.init(name: "Forgotten Futurist Bold-MediumItalic", size: 75)
+            titleLabel.font = UIFont.init(name: "Futura-MediumItalic", size: 75)
+            titleLabel2.font = UIFont.init(name: "Futura-MediumItalic", size: 75)
         }
         
        // var bColor = UIColor.init(red: 0.0431372549, green: 0.1294117647, blue: 0.50196078431, alpha: 1.0)
@@ -115,21 +113,21 @@ class ViewController: UIViewController {
         enterData.titleLabel!.numberOfLines = 2
         enterData.titleLabel!.adjustsFontSizeToFitWidth = true
         enterData.titleLabel!.textAlignment = NSTextAlignment.center
-        enterData.setTitleColor(UIColor.init(red: 1, green: 0, blue: 1, alpha: 1.0), for: .normal)
+        enterData.setTitleColor(UIColor.init(red: 0.6328642, green: 0, blue: 1, alpha: 1.0), for: .normal)
         enterData.setTitle("Enter Data", for: .normal)
         
         viewData.titleLabel!.minimumScaleFactor = 0.01
         viewData.titleLabel!.numberOfLines = 2
         viewData.titleLabel!.adjustsFontSizeToFitWidth = true
         viewData.titleLabel!.textAlignment = NSTextAlignment.center
-        viewData.setTitleColor(UIColor.init(red: 1, green: 0, blue: 1, alpha: 1.0), for: .normal)
+        viewData.setTitleColor(UIColor.init(red: 0.6328642, green: 0, blue: 1, alpha: 1.0), for: .normal)
         
         
         importData.titleLabel!.minimumScaleFactor = 0.01
         importData.titleLabel!.numberOfLines = 2
         importData.titleLabel!.adjustsFontSizeToFitWidth = true
         importData.titleLabel!.textAlignment = NSTextAlignment.center
-        importData.setTitleColor(UIColor.init(red: 1, green: 0, blue: 1, alpha: 1.0), for: .normal)
+        importData.setTitleColor(UIColor.init(red: 0.6328642, green: 0, blue: 1, alpha: 1.0), for: .normal)
         
         
         
@@ -137,7 +135,7 @@ class ViewController: UIViewController {
         exportData.titleLabel!.numberOfLines = 2
         exportData.titleLabel!.adjustsFontSizeToFitWidth = true
         exportData.titleLabel!.textAlignment = NSTextAlignment.center
-        exportData.setTitleColor(UIColor.init(red: 1, green: 0, blue: 1, alpha: 1.0), for: .normal)
+        exportData.setTitleColor(UIColor.init(red: 0.6328642, green: 0, blue: 1, alpha: 1.0), for: .normal)
         
         
     

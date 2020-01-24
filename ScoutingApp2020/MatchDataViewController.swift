@@ -37,6 +37,7 @@ class MatchDataViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
+        //scoutLabel.titlelabel!.ode 
         
         if (matchPosition > 1){
             //load previous data
