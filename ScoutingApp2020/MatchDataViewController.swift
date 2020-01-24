@@ -36,8 +36,16 @@ class MatchDataViewController: UIViewController {
     }
     override func viewDidLoad() {
         super.viewDidLoad()
+
+        
+        if (runType == 2) {
+            
         // Do any additional setup after loading the view.
-        //scoutLabel.titlelabel!.ode 
+            scoutLabel.font = UIFont.init(name: "Optima-BoldItalic", size: 65 )
+            teamLabel.font = UIFont.init(name: "Optima-BoldItalic", size: 65)
+            
+            
+        }
         
         if (matchPosition > 1){
             //load previous data
