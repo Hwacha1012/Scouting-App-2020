@@ -235,13 +235,16 @@
 				TargetAttributes = {
 					0529E02F23C95094004707FD = {
 						CreatedOnToolsVersion = 10.1;
+						LastSwiftMigration = 1130;
 					};
 					0529E04623C95095004707FD = {
 						CreatedOnToolsVersion = 10.1;
+						LastSwiftMigration = 1130;
 						TestTargetID = 0529E02F23C95094004707FD;
 					};
 					0529E05123C95095004707FD = {
 						CreatedOnToolsVersion = 10.1;
+						LastSwiftMigration = 1130;
 						TestTargetID = 0529E02F23C95094004707FD;
 					};
 				};
@@ -498,7 +501,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = hwacha.ScoutingApp2020;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.2;
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
@@ -517,7 +520,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = hwacha.ScoutingApp2020;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.2;
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
@@ -537,7 +540,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = hwacha.ScoutingApp2020Tests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.2;
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/ScoutingApp2020.app/ScoutingApp2020";
 			};
@@ -558,7 +561,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = hwacha.ScoutingApp2020Tests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.2;
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/ScoutingApp2020.app/ScoutingApp2020";
 			};
@@ -578,7 +581,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = hwacha.ScoutingApp2020UITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.2;
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				TEST_TARGET_NAME = ScoutingApp2020;
 			};
@@ -598,7 +601,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = hwacha.ScoutingApp2020UITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.2;
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				TEST_TARGET_NAME = ScoutingApp2020;
 			};

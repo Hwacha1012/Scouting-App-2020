@@ -25,12 +25,20 @@ class TeleOpViewController: UIViewController {
     
     @IBOutlet weak var nextButton: UIButton!
     @IBAction func closeButtonPressed(_ sender: Any) {
+        location = 0
+        shootHigh()
     }
     @IBAction func sortaCloseButtonPressed(_ sender: Any) {
+        location = 1
+        shootHigh()
     }
     @IBAction func trenchButtonPressed(_ sender: Any) {
+        location = 2
+        shootHigh()
     }
     @IBAction func farButtonPressed(_ sender: Any) {
+        location = 3
+        shootHigh()
     }
     @IBAction func climbingButtonPressed(_ sender: Any) {
     }
@@ -66,8 +74,12 @@ class TeleOpViewController: UIViewController {
     
     func shootHigh(){
         popupView.isHidden = false
+       // popupLabel1.isHidden = false
+       // popupLabel2.isHidden = false
+        // popupLabel3.isHidden = false
         if(location == 0){
             popupLabel1.text = "High Shooting From Sector"
+            
         }
         else if (location == 1){
             popupLabel1.text = "High Shooting From Close Shield Generator"
@@ -79,8 +91,10 @@ class TeleOpViewController: UIViewController {
             popupLabel1.text = "High Shooting From Far Shield Generator"
         }
         
+        popupLabel2.text = "Number of Balls Shot: 0"
+        popupLabel3.text = "Number of Balls Made: 0"
         
-       
+        
         
     }
     
