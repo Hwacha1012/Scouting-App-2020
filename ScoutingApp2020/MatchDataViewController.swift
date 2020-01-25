@@ -36,19 +36,25 @@ class MatchDataViewController: UIViewController {
     }
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        
-        if (runType == 1) {
-            
         // Do any additional setup after loading the view.
+        
+     
+        if (runType == 1) {
+            scoutLabel.font = UIFont.init(name: "Optima-BoldItalic", size: 60 )
+            teamLabel.font = UIFont.init(name: "Optima-BoldItalic", size: 60 )
+            matchLabel.font = UIFont.init(name: "Optima-BoldItalic", size: 60 )
+            colorLabel.font = UIFont.init(name: "Optima-BoldItalic", size: 45 )
+            autoButtons.titleLabel?.font = UIFont.init(name: "Optima-BoldItalic", size: 60 )
+            
+        }
+        else{
             scoutLabel.font = UIFont.init(name: "Optima-BoldItalic", size: 35 )
             teamLabel.font = UIFont.init(name: "Optima-BoldItalic", size: 35 )
             matchLabel.font = UIFont.init(name: "Optima-BoldItalic", size: 35 )
-            colorLabel.font = UIFont.init(name:"Optimia-BoldItalic", size: 35 )
+            colorLabel.font = UIFont.init(name: "Optima-BoldItalic", size: 35 )
+            autoButtons.titleLabel?.font = UIFont.init(name: "Optima-BoldItalic", size: 35 )
         }
-        else{
-            
-        }
+        
         
         if (matchPosition > 1){
             //load previous data
@@ -61,6 +67,9 @@ class MatchDataViewController: UIViewController {
             teamNumber = 0
             matchNumber = 0
             teamColor = true
+            colorSegmentedControl.selectedSegmentTintColor = UIColor.blue
+            //colorSegmentedControl.selectedSegmentTintColor
+            //colorSegmentedControl.tintColor =
             
         }
         
@@ -74,10 +83,14 @@ class MatchDataViewController: UIViewController {
         matchNumber = Int(matchText.text!) ?? 0
         
         if(teamColor){
+            colorSegmentedControl.selectedSegmentTintColor = UIColor.blue
             colorSegmentedControl.selectedSegmentIndex = 0
+            
         }
         else{
+            colorSegmentedControl.selectedSegmentTintColor = UIColor.red
             colorSegmentedControl.selectedSegmentIndex = 1
+            
         }
     }
     
@@ -87,10 +100,14 @@ class MatchDataViewController: UIViewController {
         teamText.text = "\(teamNumber)"
         matchText.text = "\(matchNumber)"
         if(teamColor){
+            colorSegmentedControl.selectedSegmentTintColor = UIColor.blue
             colorSegmentedControl.selectedSegmentIndex = 0
+            
         }
         else{
+            colorSegmentedControl.selectedSegmentTintColor = UIColor.red
             colorSegmentedControl.selectedSegmentIndex = 1
+            
         }
         
         
