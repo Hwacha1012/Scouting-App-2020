@@ -517,7 +517,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="HVx-Q2-9Z9" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1295" y="-158"/>
+            <point key="canvasLocation" x="709" y="-623"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
@@ -535,28 +535,28 @@
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZvV-4T-U5G">
                                 <rect key="frame" x="441" y="225" width="307" height="307"/>
-                                <state key="normal" title="Button"/>
+                                <state key="normal" title="View Data"/>
                                 <connections>
                                     <action selector="viewDataPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Exh-Zm-uYR"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="InL-4J-CGo">
                                 <rect key="frame" x="441" y="582" width="307" height="307"/>
-                                <state key="normal" title="Button"/>
+                                <state key="normal" title="Export"/>
                                 <connections>
                                     <action selector="exportDataPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Ojl-3n-gli"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HIY-XU-3kR">
                                 <rect key="frame" x="20" y="225" width="307" height="307"/>
-                                <state key="normal" title="Button"/>
+                                <state key="normal" title="Enter Data"/>
                                 <connections>
                                     <action selector="enterDataPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Qd3-Ma-M9P"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="z4I-Fh-uXN">
                                 <rect key="frame" x="20" y="582" width="307" height="307"/>
-                                <state key="normal" title="Button"/>
+                                <state key="normal" title="Import"/>
                                 <connections>
                                     <action selector="importDataPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="fNU-x8-5AQ"/>
                                 </connections>
@@ -701,7 +701,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="RFw-54-DiM" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1417" y="850"/>
+            <point key="canvasLocation" x="-1273" y="940"/>
         </scene>
     </scenes>
     <resources>
