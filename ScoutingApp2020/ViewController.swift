@@ -115,7 +115,9 @@ class ViewController: UIViewController {
         enterData.titleLabel!.textAlignment = NSTextAlignment.center
         enterData.setTitleColor(UIColor.init(red: 0.6328642, green: 0, blue: 1, alpha: 1.0), for: .normal)
         enterData.setTitle("Enter Data", for: .normal)
-        
+        viewData.setTitle("View Data", for: .normal)
+        exportData.setTitle("Enter Data", for: .normal)
+        importData.setTitle("View Data", for: .normal)
         viewData.titleLabel!.minimumScaleFactor = 0.01
         viewData.titleLabel!.numberOfLines = 2
         viewData.titleLabel!.adjustsFontSizeToFitWidth = true
