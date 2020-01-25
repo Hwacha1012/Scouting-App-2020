@@ -24,6 +24,8 @@
 		055F4B2923D7B445001C3581 /* MatchDataViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 055F4B2823D7B445001C3581 /* MatchDataViewController.swift */; };
 		055F4B2E23DBAE99001C3581 /* TopViewRed.png in Resources */ = {isa = PBXBuildFile; fileRef = 055F4B2C23DBAE99001C3581 /* TopViewRed.png */; };
 		055F4B2F23DBAE99001C3581 /* TopViewBlue.png in Resources */ = {isa = PBXBuildFile; fileRef = 055F4B2D23DBAE99001C3581 /* TopViewBlue.png */; };
+		DF28847E23DBBE4400572749 /* BorderNorth1.png in Resources */ = {isa = PBXBuildFile; fileRef = DF28847D23DBBE4400572749 /* BorderNorth1.png */; };
+		DF28848023DBBE8500572749 /* BorderNorth&South2.png in Resources */ = {isa = PBXBuildFile; fileRef = DF28847F23DBBE8400572749 /* BorderNorth&South2.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -67,6 +69,8 @@
 		055F4B2823D7B445001C3581 /* MatchDataViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MatchDataViewController.swift; sourceTree = "<group>"; };
 		055F4B2C23DBAE99001C3581 /* TopViewRed.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = TopViewRed.png; sourceTree = "<group>"; };
 		055F4B2D23DBAE99001C3581 /* TopViewBlue.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = TopViewBlue.png; sourceTree = "<group>"; };
+		DF28847D23DBBE4400572749 /* BorderNorth1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = BorderNorth1.png; sourceTree = "<group>"; };
+		DF28847F23DBBE8400572749 /* BorderNorth&South2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "BorderNorth&South2.png"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -133,6 +137,8 @@
 				055F4B1E23D38FA6001C3581 /* plus.png */,
 				055F4B2D23DBAE99001C3581 /* TopViewBlue.png */,
 				055F4B2C23DBAE99001C3581 /* TopViewRed.png */,
+				DF28847D23DBBE4400572749 /* BorderNorth1.png */,
+				DF28847F23DBBE8400572749 /* BorderNorth&South2.png */,
 			);
 			path = ScoutingApp2020;
 			sourceTree = "<group>";
@@ -260,6 +266,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				055F4B2F23DBAE99001C3581 /* TopViewBlue.png in Resources */,
+				DF28848023DBBE8500572749 /* BorderNorth&South2.png in Resources */,
+				DF28847E23DBBE4400572749 /* BorderNorth1.png in Resources */,
 				055F4B1D23D35510001C3581 /* GHSRoboticsLogo2170.png in Resources */,
 				055F4B2023D38FA6001C3581 /* plus.png in Resources */,
 				055F4B2123D38FA6001C3581 /* minus.png in Resources */,
