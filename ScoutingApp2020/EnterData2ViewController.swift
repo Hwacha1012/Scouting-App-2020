@@ -108,6 +108,9 @@ class EnterData2ViewController: UIViewController {
             
         } 
         
+        if (runType == 2) {
+            lineLabel.font = UIFont.init(name: "Optimia-BoldItalic", size: 35)
+        }
         
         
         // Do any additional setup after loading the view.
