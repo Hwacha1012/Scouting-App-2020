@@ -402,8 +402,8 @@
                                     <action selector="nextButtonPressed:" destination="VIn-uM-yeP" eventType="touchUpInside" id="nx4-GM-qCJ"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BI4-Ui-jya">
-                                <rect key="frame" x="121" y="649" width="470" height="126"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BI4-Ui-jya">
+                                <rect key="frame" x="121" y="652" width="470" height="126"/>
                                 <state key="normal" backgroundImage="BorderNorth&amp;South2.png"/>
                                 <connections>
                                     <action selector="farButtonPressed:" destination="VIn-uM-yeP" eventType="touchUpInside" id="v7n-YV-zm9"/>
@@ -442,8 +442,8 @@
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="arrow.up.left" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="m2D-ZM-iUb">
                                 <rect key="frame" x="545" y="573.5" width="107" height="74"/>
                             </imageView>
-                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4Eg-fA-TpO">
-                                <rect key="frame" x="611" y="579" width="101" height="167"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4Eg-fA-TpO">
+                                <rect key="frame" x="611" y="595.5" width="101" height="167"/>
                                 <state key="normal" title="Control Panel"/>
                                 <connections>
                                     <action selector="controlPanelButtonPressed:" destination="VIn-uM-yeP" eventType="touchUpInside" id="hLd-bs-1R4"/>
@@ -583,6 +583,7 @@
                             <constraint firstItem="VGl-bK-rbT" firstAttribute="top" secondItem="Wl8-QM-o2c" secondAttribute="bottom" constant="1" id="2hb-UQ-rjG"/>
                             <constraint firstItem="pfa-UJ-xGD" firstAttribute="top" secondItem="NIJ-05-VPw" secondAttribute="top" id="2hx-Iu-aJC"/>
                             <constraint firstItem="cPW-xS-PH9" firstAttribute="width" secondItem="Wl8-QM-o2c" secondAttribute="width" id="31f-8s-ybQ"/>
+                            <constraint firstItem="BI4-Ui-jya" firstAttribute="top" secondItem="MpM-g2-Fvt" secondAttribute="bottom" constant="1" id="4k5-5n-Jtv"/>
                             <constraint firstItem="NIJ-05-VPw" firstAttribute="trailing" secondItem="Rec-kU-RFq" secondAttribute="trailing" constant="120" id="5Vk-sC-RFn"/>
                             <constraint firstItem="MpM-g2-Fvt" firstAttribute="width" secondItem="Rec-kU-RFq" secondAttribute="width" multiplier="3.65" id="6Oj-xK-cX3"/>
                             <constraint firstItem="EnW-AW-AhU" firstAttribute="height" secondItem="yBZ-EZ-Eg2" secondAttribute="height" multiplier="0.6" id="Dx5-DZ-4QE"/>
@@ -602,6 +603,7 @@
                             <constraint firstItem="m2D-ZM-iUb" firstAttribute="width" secondItem="Rec-kU-RFq" secondAttribute="width" multiplier="1.30864" id="eOY-IA-yg5"/>
                             <constraint firstItem="BI4-Ui-jya" firstAttribute="width" secondItem="Wl8-QM-o2c" secondAttribute="width" id="eYo-8R-Z1t"/>
                             <constraint firstItem="MpM-g2-Fvt" firstAttribute="height" secondItem="Rec-kU-RFq" secondAttribute="height" id="eqx-u3-4En"/>
+                            <constraint firstItem="4Eg-fA-TpO" firstAttribute="top" secondItem="m2D-ZM-iUb" secondAttribute="top" constant="25" id="f0K-Js-wjo"/>
                             <constraint firstItem="m2D-ZM-iUb" firstAttribute="height" secondItem="Rec-kU-RFq" secondAttribute="height" multiplier="0.255556" id="gjV-i5-f2c"/>
                             <constraint firstItem="NIJ-05-VPw" firstAttribute="trailing" secondItem="OV2-XV-ZJQ" secondAttribute="trailing" constant="31" id="hJ0-MH-wym"/>
                             <constraint firstItem="4Eg-fA-TpO" firstAttribute="leading" secondItem="BI4-Ui-jya" secondAttribute="trailing" constant="20" id="he3-xn-H1M"/>
@@ -655,11 +657,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="HVx-Q2-9Z9" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-
             <point key="canvasLocation" x="709" y="-623"/>
-=======
-            <point key="canvasLocation" x="1294.53125" y="-158.203125"/>
->>>>>>> 6a47dde61ce6681c0d9b21290003af5b09fd7978
         </scene>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
@@ -684,11 +682,7 @@
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="InL-4J-CGo">
                                 <rect key="frame" x="441" y="582" width="307" height="307"/>
-
                                 <state key="normal" title="Export"/>
-=======
-                                <state key="normal" title="Import Data"/>
->>>>>>> 6a47dde61ce6681c0d9b21290003af5b09fd7978
                                 <connections>
                                     <action selector="exportDataPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Ojl-3n-gli"/>
                                 </connections>
@@ -702,11 +696,7 @@
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="z4I-Fh-uXN">
                                 <rect key="frame" x="20" y="582" width="307" height="307"/>
-
                                 <state key="normal" title="Import"/>
-=======
-                                <state key="normal" title="Export Data"/>
->>>>>>> 6a47dde61ce6681c0d9b21290003af5b09fd7978
                                 <connections>
                                     <action selector="importDataPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="fNU-x8-5AQ"/>
                                 </connections>

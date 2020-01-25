@@ -63,9 +63,15 @@ class TeleOpViewController: UIViewController {
     @IBAction func cancelPressed(_ sender: Any) {
     }
     
+    func shootHigh(){
+        
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        popupView.isHidden = true
+        
         if (matchPosition > 3){
             //load previous data
             //updateLabels()
