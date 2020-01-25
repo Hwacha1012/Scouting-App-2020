@@ -28,6 +28,7 @@
 		DF28848023DBBE8500572749 /* BorderNorth&South2.png in Resources */ = {isa = PBXBuildFile; fileRef = DF28847F23DBBE8400572749 /* BorderNorth&South2.png */; };
 		DF28848223DBBFD300572749 /* ShieldGen.png in Resources */ = {isa = PBXBuildFile; fileRef = DF28848123DBBFD300572749 /* ShieldGen.png */; };
 		DF28848423DBC0C700572749 /* ControlPanel.png in Resources */ = {isa = PBXBuildFile; fileRef = DF28848323DBC0C700572749 /* ControlPanel.png */; };
+		DF28848623DCC19B00572749 /* PitScoutingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF28848523DCC19B00572749 /* PitScoutingViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -75,6 +76,7 @@
 		DF28847F23DBBE8400572749 /* BorderNorth&South2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "BorderNorth&South2.png"; sourceTree = "<group>"; };
 		DF28848123DBBFD300572749 /* ShieldGen.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ShieldGen.png; sourceTree = "<group>"; };
 		DF28848323DBC0C700572749 /* ControlPanel.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ControlPanel.png; sourceTree = "<group>"; };
+		DF28848523DCC19B00572749 /* PitScoutingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PitScoutingViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -132,6 +134,7 @@
 				055F4B1623D27A9B001C3581 /* EnterData2ViewController.swift */,
 				055F4B2623D7B2CE001C3581 /* TeleOpViewController.swift */,
 				0529E03723C95094004707FD /* Main.storyboard */,
+				DF28848523DCC19B00572749 /* PitScoutingViewController.swift */,
 				0529E03D23C95095004707FD /* Assets.xcassets */,
 				0529E03F23C95095004707FD /* LaunchScreen.storyboard */,
 				0529E04223C95095004707FD /* Info.plist */,
@@ -312,6 +315,7 @@
 			files = (
 				0529E03623C95094004707FD /* ViewController.swift in Sources */,
 				055F4B1723D27A9B001C3581 /* EnterData2ViewController.swift in Sources */,
+				DF28848623DCC19B00572749 /* PitScoutingViewController.swift in Sources */,
 				055F4B1523D27621001C3581 /* EnterData1ViewController.swift in Sources */,
 				055F4B2923D7B445001C3581 /* MatchDataViewController.swift in Sources */,
 				055F4B2723D7B2CE001C3581 /* TeleOpViewController.swift in Sources */,
@@ -494,7 +498,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 5494GRQ5MD;
 				INFOPLIST_FILE = ScoutingApp2020/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -513,7 +517,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 5494GRQ5MD;
 				INFOPLIST_FILE = ScoutingApp2020/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
