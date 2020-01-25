@@ -655,7 +655,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="HVx-Q2-9Z9" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-<<<<<<< HEAD
+
             <point key="canvasLocation" x="709" y="-623"/>
 =======
             <point key="canvasLocation" x="1294.53125" y="-158.203125"/>
@@ -684,7 +684,7 @@
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="InL-4J-CGo">
                                 <rect key="frame" x="441" y="582" width="307" height="307"/>
-<<<<<<< HEAD
+
                                 <state key="normal" title="Export"/>
 =======
                                 <state key="normal" title="Import Data"/>
@@ -702,7 +702,7 @@
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="z4I-Fh-uXN">
                                 <rect key="frame" x="20" y="582" width="307" height="307"/>
-<<<<<<< HEAD
+
                                 <state key="normal" title="Import"/>
 =======
                                 <state key="normal" title="Export Data"/>
