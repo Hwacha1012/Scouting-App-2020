@@ -26,6 +26,8 @@
 		055F4B2F23DBAE99001C3581 /* TopViewBlue.png in Resources */ = {isa = PBXBuildFile; fileRef = 055F4B2D23DBAE99001C3581 /* TopViewBlue.png */; };
 		DF28847E23DBBE4400572749 /* BorderNorth1.png in Resources */ = {isa = PBXBuildFile; fileRef = DF28847D23DBBE4400572749 /* BorderNorth1.png */; };
 		DF28848023DBBE8500572749 /* BorderNorth&South2.png in Resources */ = {isa = PBXBuildFile; fileRef = DF28847F23DBBE8400572749 /* BorderNorth&South2.png */; };
+		DF28848223DBBFD300572749 /* ShieldGen.png in Resources */ = {isa = PBXBuildFile; fileRef = DF28848123DBBFD300572749 /* ShieldGen.png */; };
+		DF28848423DBC0C700572749 /* ControlPanel.png in Resources */ = {isa = PBXBuildFile; fileRef = DF28848323DBC0C700572749 /* ControlPanel.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -71,6 +73,8 @@
 		055F4B2D23DBAE99001C3581 /* TopViewBlue.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = TopViewBlue.png; sourceTree = "<group>"; };
 		DF28847D23DBBE4400572749 /* BorderNorth1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = BorderNorth1.png; sourceTree = "<group>"; };
 		DF28847F23DBBE8400572749 /* BorderNorth&South2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "BorderNorth&South2.png"; sourceTree = "<group>"; };
+		DF28848123DBBFD300572749 /* ShieldGen.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ShieldGen.png; sourceTree = "<group>"; };
+		DF28848323DBC0C700572749 /* ControlPanel.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ControlPanel.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -138,7 +142,9 @@
 				055F4B2D23DBAE99001C3581 /* TopViewBlue.png */,
 				055F4B2C23DBAE99001C3581 /* TopViewRed.png */,
 				DF28847D23DBBE4400572749 /* BorderNorth1.png */,
+				DF28848323DBC0C700572749 /* ControlPanel.png */,
 				DF28847F23DBBE8400572749 /* BorderNorth&South2.png */,
+				DF28848123DBBFD300572749 /* ShieldGen.png */,
 			);
 			path = ScoutingApp2020;
 			sourceTree = "<group>";
@@ -265,6 +271,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DF28848423DBC0C700572749 /* ControlPanel.png in Resources */,
 				055F4B2F23DBAE99001C3581 /* TopViewBlue.png in Resources */,
 				DF28848023DBBE8500572749 /* BorderNorth&South2.png in Resources */,
 				DF28847E23DBBE4400572749 /* BorderNorth1.png in Resources */,
@@ -275,6 +282,7 @@
 				0529E04123C95095004707FD /* LaunchScreen.storyboard in Resources */,
 				0529E03E23C95095004707FD /* Assets.xcassets in Resources */,
 				0529E03923C95094004707FD /* Main.storyboard in Resources */,
+				DF28848223DBBFD300572749 /* ShieldGen.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
