@@ -10,32 +10,31 @@ import UIKit
 var teamList = [String]()
 var pitScoutList = [String]()
 
-var scoutName = ""
-var teamNumber = 0
-var matchNumber = 0
-var teamColor = true
+var scoutName = "" //Name of the Scout
+var teamNumber = 0 //ex;2170
+var matchNumber = 0 //ex;69
+var teamColor = true //true is blue, false is red
 
-var intakeType = ""
-var runType = 2
+var intakeType = "" //from floor or feeding station
+var runType = 1 //running as ipad
 
 
-var autoLine = false
-var autoLowGoal = 0
-var autoHighGoal = 0
-var autoTrenchBalls = 0
-var autoShieldBalls = 0
+var autoLine = false //do they cross the line in auto
+var autoLowGoal = 0 //low goals scored in auto
+var autoHighGoal = 0 //high goals scored in auto
+var autoTrenchBalls = 0 //trench balls picked up in auto
+var autoShieldBalls = 0 //balls you get from sheild generator
 
-var controlPanel = ""
-var lowGoalMade = 0
-var lowGoalTaken = 0
-var highGoalMade = [Int]()
-var highGoalTaken = [Int]()
-var defenseTime = 0
-var climbing = false
-var climbingOtherRobots = 0
-var climbBalanced = false
-
-var matchPosition = 0
+var controlPanel = "" //what did they do with the control panel ex. no, spin, select
+var lowGoalMade = 0 //low goals made in teleop
+var lowGoalTaken = 0 //shots taken intended for low goal taken in teleop
+var highGoalMade = [Int]() //low goals made in teleop array specifies location shot was taken from
+var highGoalTaken = [Int]() //shots taken intended for low goal taken in teleop array specifies location shot was taken from
+var defenseTime = 0 //amount of time playing defense in seconds(increments of 5)
+var climbing = false //do they climb
+var climbingOtherRobots = 0 //how many other robots they climbed with
+var climbBalanced = false //was the climb balanced
+var matchPosition = 0 // 1 is Match Data, 2 is Enter Data, 3 teleop
 
 
 
