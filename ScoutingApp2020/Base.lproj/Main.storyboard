@@ -404,14 +404,14 @@
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BI4-Ui-jya">
                                 <rect key="frame" x="121" y="649" width="470" height="126"/>
-                                <state key="normal" title="Button"/>
+                                <state key="normal" backgroundImage="BorderNorth&amp;South2.png"/>
                                 <connections>
                                     <action selector="farButtonPressed:" destination="VIn-uM-yeP" eventType="touchUpInside" id="v7n-YV-zm9"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Rec-kU-RFq">
-                                <rect key="frame" x="511" y="336" width="81" height="315"/>
-                                <state key="normal" title="Button">
+                                <rect key="frame" x="510" y="336" width="82" height="315"/>
+                                <state key="normal" backgroundImage="ControlPanel.png">
                                     <color key="titleColor" systemColor="linkColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
                                 <connections>
@@ -419,31 +419,28 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MpM-g2-Fvt">
-                                <rect key="frame" x="210.5" y="336" width="291" height="315"/>
-                                <state key="normal" title="Button"/>
+                                <rect key="frame" x="207" y="336" width="298.5" height="315"/>
+                                <state key="normal" backgroundImage="ShieldGen.png"/>
                                 <connections>
                                     <action selector="climbingButtonPressed:" destination="VIn-uM-yeP" eventType="touchUpInside" id="tn6-8t-oL9"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VGl-bK-rbT">
                                 <rect key="frame" x="121" y="209" width="470" height="126"/>
-                                <state key="normal" title="Button"/>
+                                <state key="normal" backgroundImage="BorderNorth&amp;South2.png"/>
                                 <connections>
                                     <action selector="sortaCloseButtonPressed:" destination="VIn-uM-yeP" eventType="touchUpInside" id="tcv-Rh-PNK"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Wl8-QM-o2c">
                                 <rect key="frame" x="121" y="0.0" width="470" height="208"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" secondItem="Wl8-QM-o2c" secondAttribute="height" multiplier="235:104" id="gRb-oA-Eg4"/>
-                                </constraints>
-                                <state key="normal" title="Button"/>
+                                <state key="normal" backgroundImage="BorderNorth1.png"/>
                                 <connections>
                                     <action selector="closeButtonPressed:" destination="VIn-uM-yeP" eventType="touchUpInside" id="4zP-zz-HsD"/>
                                 </connections>
                             </button>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="arrow.up.left" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="m2D-ZM-iUb">
-                                <rect key="frame" x="546" y="573.5" width="106" height="74"/>
+                                <rect key="frame" x="545" y="573.5" width="107" height="74"/>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4Eg-fA-TpO">
                                 <rect key="frame" x="611" y="579" width="101" height="167"/>
@@ -453,7 +450,7 @@
                                 </connections>
                             </button>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="arrow.left" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="OV2-XV-ZJQ">
-                                <rect key="frame" x="399" y="2.5" width="282" height="56"/>
+                                <rect key="frame" x="399" y="2.5" width="282" height="68.5"/>
                             </imageView>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
@@ -463,18 +460,18 @@
                             <constraint firstItem="pfa-UJ-xGD" firstAttribute="top" secondItem="NIJ-05-VPw" secondAttribute="top" id="2hx-Iu-aJC"/>
                             <constraint firstItem="cPW-xS-PH9" firstAttribute="width" secondItem="Wl8-QM-o2c" secondAttribute="width" id="31f-8s-ybQ"/>
                             <constraint firstItem="NIJ-05-VPw" firstAttribute="trailing" secondItem="Rec-kU-RFq" secondAttribute="trailing" constant="120" id="5Vk-sC-RFn"/>
-                            <constraint firstItem="MpM-g2-Fvt" firstAttribute="width" secondItem="Rec-kU-RFq" secondAttribute="width" multiplier="3.59259" id="6Oj-xK-cX3"/>
+                            <constraint firstItem="MpM-g2-Fvt" firstAttribute="width" secondItem="Rec-kU-RFq" secondAttribute="width" multiplier="3.65" id="6Oj-xK-cX3"/>
                             <constraint firstItem="NIJ-05-VPw" firstAttribute="bottom" secondItem="yBZ-EZ-Eg2" secondAttribute="bottom" id="Ece-cx-yaV"/>
                             <constraint firstItem="NIJ-05-VPw" firstAttribute="trailing" secondItem="yBZ-EZ-Eg2" secondAttribute="trailing" id="Kri-1X-AOA"/>
                             <constraint firstItem="OV2-XV-ZJQ" firstAttribute="width" secondItem="pfa-UJ-xGD" secondAttribute="width" multiplier="1.97203" id="Lln-Kl-EYE"/>
                             <constraint firstItem="VGl-bK-rbT" firstAttribute="width" secondItem="Wl8-QM-o2c" secondAttribute="width" id="NRY-Jr-Aqf"/>
-                            <constraint firstItem="OV2-XV-ZJQ" firstAttribute="height" secondItem="pfa-UJ-xGD" secondAttribute="height" multiplier="0.580952" id="QPu-cH-TtX"/>
+                            <constraint firstItem="OV2-XV-ZJQ" firstAttribute="height" secondItem="pfa-UJ-xGD" secondAttribute="height" multiplier="0.7" id="QPu-cH-TtX"/>
                             <constraint firstItem="VGl-bK-rbT" firstAttribute="height" secondItem="iha-7B-CBu" secondAttribute="height" multiplier="0.128049" id="RsR-m7-Zbu"/>
                             <constraint firstItem="Wl8-QM-o2c" firstAttribute="centerX" secondItem="iha-7B-CBu" secondAttribute="centerX" id="YCW-ab-puF"/>
                             <constraint firstItem="Rec-kU-RFq" firstAttribute="top" secondItem="VGl-bK-rbT" secondAttribute="bottom" constant="1" id="YLi-e3-OnK"/>
                             <constraint firstItem="Wl8-QM-o2c" firstAttribute="top" secondItem="NIJ-05-VPw" secondAttribute="top" id="Ywb-yH-pXd"/>
                             <constraint firstItem="cPW-xS-PH9" firstAttribute="centerX" secondItem="Wl8-QM-o2c" secondAttribute="centerX" id="ben-WU-SJH"/>
-                            <constraint firstItem="Rec-kU-RFq" firstAttribute="width" secondItem="BI4-Ui-jya" secondAttribute="width" multiplier="0.17234" id="cC9-Bu-ouG"/>
+                            <constraint firstItem="Rec-kU-RFq" firstAttribute="width" secondItem="BI4-Ui-jya" secondAttribute="width" multiplier="0.174" id="cC9-Bu-ouG"/>
                             <constraint firstItem="pfa-UJ-xGD" firstAttribute="height" secondItem="4Eg-fA-TpO" secondAttribute="height" multiplier="0.628743" id="cJL-Yh-f2e"/>
                             <constraint firstItem="m2D-ZM-iUb" firstAttribute="width" secondItem="Rec-kU-RFq" secondAttribute="width" multiplier="1.30864" id="eOY-IA-yg5"/>
                             <constraint firstItem="BI4-Ui-jya" firstAttribute="width" secondItem="Wl8-QM-o2c" secondAttribute="width" id="eYo-8R-Z1t"/>
@@ -682,7 +679,11 @@
         </scene>
     </scenes>
     <resources>
+        <image name="BorderNorth&amp;South2.png" width="235" height="63"/>
+        <image name="BorderNorth1.png" width="235" height="104"/>
+        <image name="ControlPanel.png" width="32" height="105"/>
         <image name="GHSRoboticsLogo2170.png" width="1600" height="1600"/>
+        <image name="ShieldGen.png" width="97" height="105"/>
         <image name="TopViewBlue.png" width="1449" height="2758"/>
         <image name="arrow.left" catalog="system" width="64" height="48"/>
         <image name="arrow.up.left" catalog="system" width="64" height="54"/>
