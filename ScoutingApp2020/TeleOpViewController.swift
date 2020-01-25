@@ -10,6 +10,9 @@ import UIKit
 var location = 0
 
 class TeleOpViewController: UIViewController {
+    var tempMade = 0
+    var tempTaken = 0
+    
     @IBOutlet weak var closeButton: UIButton!
     @IBOutlet weak var sortaCloseButton: UIButton!
     @IBOutlet weak var trenchButton: UIButton!
@@ -46,6 +49,9 @@ class TeleOpViewController: UIViewController {
     @IBAction func controlPanelButtonPressed(_ sender: Any) {
     }
     @IBAction func lowGoalButtonPressed(_ sender: Any) {
+        location = 4
+        shootLow()
+        
     }
     @IBAction func nextButtonPressed(_ sender: Any) {
     }
@@ -60,16 +66,77 @@ class TeleOpViewController: UIViewController {
     @IBOutlet weak var enterButton: UIButton!
     @IBOutlet weak var cancelButton: UIButton!
     @IBAction func popupAdd1Pressed(_ sender: Any) {
+        if(location < 4){
+            tempTaken += 1
+            popupLabel2.text = "Number of Balls Shot: \(highGoalTaken[location] + tempTaken)"
+        }
+        else if(location == 4){
+            tempTaken += 1
+            popupLabel2.text = "Number of Balls Shot: \(lowGoalTaken + tempTaken)"
+        }
     }
     @IBAction func popupMinus1Pressed(_ sender: Any) {
+        if(location < 4){
+            if(highGoalTaken[location] + tempTaken > 0){
+                tempTaken -= 1
+                popupLabel2.text = "Number of Balls Shot: \(highGoalTaken[location] + tempTaken)"
+            }
+        }
+        else if(location == 4){
+            if(lowGoalTaken + tempTaken > 0){
+                tempTaken -= 1
+                popupLabel2.text = "Number of Balls Shot: \(lowGoalTaken + tempTaken)"
+            }
+            
+        }
+        
     }
     @IBAction func popupAdd2Pressed(_ sender: Any) {
+        if(location < 4){
+            tempMade += 1
+            popupLabel3.text = "Number of Balls Made: \(highGoalMade[location] + tempMade)"
+        }
+        else if(location == 4){
+            tempMade += 1
+            popupLabel3.text = "Number of Balls Made: \(lowGoalMade + tempTaken)"
+        }
     }
     @IBAction func popupMinus2Pressed(_ sender: Any) {
+        if(location < 4){
+            if(highGoalMade[location] + tempMade > 0){
+                tempMade -= 1
+                popupLabel3.text = "Number of Balls Made: \(highGoalMade[location] + tempMade)"
+            }
+        }
+        else if(location == 4){
+            if(lowGoalMade + tempMade > 0){
+                tempMade -= 1
+                popupLabel2.text = "Number of Balls Made: \(lowGoalMade + tempMade)"
+            }
+            
+        }
     }
+    
     @IBAction func enterPressed(_ sender: Any) {
+        if(location < 4){
+            highGoalTaken[location] += tempTaken
+            highGoalMade[location] += tempMade
+        }
+        else if (location == 4){
+            lowGoalTaken += tempTaken
+            lowGoalMade += tempMade
+        }
+        
+        tempTaken = 0
+        tempMade = 0
+        popupView.isHidden = true
+         
     }
     @IBAction func cancelPressed(_ sender: Any) {
+        tempTaken = 0
+        tempMade = 0
+        popupView.isHidden = true
+        
     }
     
     func shootHigh(){
@@ -91,17 +158,33 @@ class TeleOpViewController: UIViewController {
             popupLabel1.text = "High Shooting From Far Shield Generator"
         }
         
-        popupLabel2.text = "Number of Balls Shot: 0"
-        popupLabel3.text = "Number of Balls Made: 0"
-        
-        
+        popupLabel2.text = "Number of Balls Shot: \(highGoalTaken[location])"
+        popupLabel3.text = "Number of Balls Made: \(highGoalMade[location])"
+
+    }
+    
+    func shootLow(){
+        popupView.isHidden = false
+        popupLabel1.text = "Low Goal Shooting"
+        popupLabel2.text = "Number of Balls Shot: \(lowGoalTaken)"
+        popupLabel3.text = "Number of Balls Made: \(lowGoalMade)"
         
     }
+    
+    //func updateLabels(){
+        
+    //}
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
         popupView.isHidden = true
+        if(teamColor){
+            backgroundImage.image = UIImage(named: "TopViewBlue.png")
+        }
+        else{
+            backgroundImage.image = UIImage(named: "TopViewRed.png")
+        }
         
         
         if (matchPosition > 3){
@@ -111,6 +194,12 @@ class TeleOpViewController: UIViewController {
         }
         else{
             //have new data
+            for i in 0...3{
+                highGoalMade[i] = 0
+                highGoalTaken[i] = 0
+            }
+
+            
           /*  lowGoalLabel.text = "Low Goal Balls: 0"
             highGoalLabel.text = "High Goal Balls: 0"
             trenchLabel.text = "Trench Run Balls Grabbed: 0"
