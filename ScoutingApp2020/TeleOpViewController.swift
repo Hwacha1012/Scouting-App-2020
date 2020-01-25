@@ -7,6 +7,7 @@
 //
 
 import UIKit
+var location = 0
 
 class TeleOpViewController: UIViewController {
     @IBOutlet weak var closeButton: UIButton!
@@ -64,6 +65,22 @@ class TeleOpViewController: UIViewController {
     }
     
     func shootHigh(){
+        popupView.isHidden = false
+        if(location == 0){
+            popupLabel1.text = "High Shooting From Sector"
+        }
+        else if (location == 1){
+            popupLabel1.text = "High Shooting From Close Shield Generator"
+        }
+        else if (location == 2){
+            popupLabel1.text = "High Shooting From Trench"
+        }
+        else{
+            popupLabel1.text = "High Shooting From Far Shield Generator"
+        }
+        
+        
+       
         
     }
     
@@ -71,6 +88,7 @@ class TeleOpViewController: UIViewController {
         super.viewDidLoad()
         
         popupView.isHidden = true
+        
         
         if (matchPosition > 3){
             //load previous data
