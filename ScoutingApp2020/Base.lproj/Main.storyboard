@@ -452,10 +452,23 @@
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="arrow.left" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="OV2-XV-ZJQ">
                                 <rect key="frame" x="399" y="2.5" width="282" height="68.5"/>
                             </imageView>
-                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="EnW-AW-AhU">
-                                <rect key="frame" x="191" y="284" width="240" height="128"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="EnW-AW-AhU">
+                                <rect key="frame" x="35.5" y="197" width="641" height="590"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="X98-F5-mRa">
+                                        <rect key="frame" x="20" y="20" width="601" height="59"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" systemColor="systemGrayColor" red="0.5568627451" green="0.5568627451" blue="0.57647058819999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstItem="X98-F5-mRa" firstAttribute="top" secondItem="EnW-AW-AhU" secondAttribute="top" constant="20" id="KFG-1U-hAt"/>
+                                    <constraint firstItem="X98-F5-mRa" firstAttribute="leading" secondItem="EnW-AW-AhU" secondAttribute="leading" constant="20" id="nDE-ra-nqG"/>
+                                    <constraint firstItem="X98-F5-mRa" firstAttribute="height" secondItem="EnW-AW-AhU" secondAttribute="height" multiplier="0.1" id="pvd-hh-dHu"/>
+                                    <constraint firstAttribute="trailing" secondItem="X98-F5-mRa" secondAttribute="trailing" constant="20" id="qLN-OE-X2y"/>
+                                </constraints>
                             </view>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
@@ -466,6 +479,7 @@
                             <constraint firstItem="cPW-xS-PH9" firstAttribute="width" secondItem="Wl8-QM-o2c" secondAttribute="width" id="31f-8s-ybQ"/>
                             <constraint firstItem="NIJ-05-VPw" firstAttribute="trailing" secondItem="Rec-kU-RFq" secondAttribute="trailing" constant="120" id="5Vk-sC-RFn"/>
                             <constraint firstItem="MpM-g2-Fvt" firstAttribute="width" secondItem="Rec-kU-RFq" secondAttribute="width" multiplier="3.65" id="6Oj-xK-cX3"/>
+                            <constraint firstItem="EnW-AW-AhU" firstAttribute="height" secondItem="yBZ-EZ-Eg2" secondAttribute="height" multiplier="0.6" id="Dx5-DZ-4QE"/>
                             <constraint firstItem="NIJ-05-VPw" firstAttribute="bottom" secondItem="yBZ-EZ-Eg2" secondAttribute="bottom" id="Ece-cx-yaV"/>
                             <constraint firstItem="NIJ-05-VPw" firstAttribute="trailing" secondItem="yBZ-EZ-Eg2" secondAttribute="trailing" id="Kri-1X-AOA"/>
                             <constraint firstItem="OV2-XV-ZJQ" firstAttribute="width" secondItem="pfa-UJ-xGD" secondAttribute="width" multiplier="1.97203" id="Lln-Kl-EYE"/>
@@ -478,6 +492,7 @@
                             <constraint firstItem="cPW-xS-PH9" firstAttribute="centerX" secondItem="Wl8-QM-o2c" secondAttribute="centerX" id="ben-WU-SJH"/>
                             <constraint firstItem="Rec-kU-RFq" firstAttribute="width" secondItem="BI4-Ui-jya" secondAttribute="width" multiplier="0.174" id="cC9-Bu-ouG"/>
                             <constraint firstItem="pfa-UJ-xGD" firstAttribute="height" secondItem="4Eg-fA-TpO" secondAttribute="height" multiplier="0.628743" id="cJL-Yh-f2e"/>
+                            <constraint firstItem="EnW-AW-AhU" firstAttribute="centerY" secondItem="iha-7B-CBu" secondAttribute="centerY" id="ch6-3Q-3MW"/>
                             <constraint firstItem="m2D-ZM-iUb" firstAttribute="width" secondItem="Rec-kU-RFq" secondAttribute="width" multiplier="1.30864" id="eOY-IA-yg5"/>
                             <constraint firstItem="BI4-Ui-jya" firstAttribute="width" secondItem="Wl8-QM-o2c" secondAttribute="width" id="eYo-8R-Z1t"/>
                             <constraint firstItem="MpM-g2-Fvt" firstAttribute="height" secondItem="Rec-kU-RFq" secondAttribute="height" id="eqx-u3-4En"/>
@@ -491,6 +506,8 @@
                             <constraint firstItem="4Eg-fA-TpO" firstAttribute="height" secondItem="yBZ-EZ-Eg2" secondAttribute="height" multiplier="0.169715" id="lsL-dF-UAe"/>
                             <constraint firstItem="VGl-bK-rbT" firstAttribute="centerX" secondItem="Wl8-QM-o2c" secondAttribute="centerX" id="m0d-z7-uS7"/>
                             <constraint firstItem="yBZ-EZ-Eg2" firstAttribute="top" secondItem="NIJ-05-VPw" secondAttribute="top" id="m2M-4I-dSC"/>
+                            <constraint firstItem="EnW-AW-AhU" firstAttribute="centerX" secondItem="iha-7B-CBu" secondAttribute="centerX" id="n7n-ee-c0v"/>
+                            <constraint firstItem="EnW-AW-AhU" firstAttribute="width" secondItem="yBZ-EZ-Eg2" secondAttribute="width" multiplier="0.9" id="nRP-GV-WcX"/>
                             <constraint firstItem="MpM-g2-Fvt" firstAttribute="top" secondItem="VGl-bK-rbT" secondAttribute="bottom" constant="1" id="qQM-sV-X7W"/>
                             <constraint firstItem="MpM-g2-Fvt" firstAttribute="centerX" secondItem="iha-7B-CBu" secondAttribute="centerX" id="qj5-u7-woZ"/>
                             <constraint firstItem="Rec-kU-RFq" firstAttribute="height" secondItem="BI4-Ui-jya" secondAttribute="height" multiplier="2.5" id="swQ-aR-Rew"/>
@@ -522,7 +539,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="HVx-Q2-9Z9" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1295" y="-158"/>
+            <point key="canvasLocation" x="1294.53125" y="-158.203125"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
@@ -540,28 +557,28 @@
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZvV-4T-U5G">
                                 <rect key="frame" x="441" y="225" width="307" height="307"/>
-                                <state key="normal" title="Button"/>
+                                <state key="normal" title="View Data"/>
                                 <connections>
                                     <action selector="viewDataPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Exh-Zm-uYR"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="InL-4J-CGo">
                                 <rect key="frame" x="441" y="582" width="307" height="307"/>
-                                <state key="normal" title="Button"/>
+                                <state key="normal" title="Import Data"/>
                                 <connections>
                                     <action selector="exportDataPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Ojl-3n-gli"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HIY-XU-3kR">
                                 <rect key="frame" x="20" y="225" width="307" height="307"/>
-                                <state key="normal" title="Button"/>
+                                <state key="normal" title="Enter Data"/>
                                 <connections>
                                     <action selector="enterDataPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Qd3-Ma-M9P"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="z4I-Fh-uXN">
                                 <rect key="frame" x="20" y="582" width="307" height="307"/>
-                                <state key="normal" title="Button"/>
+                                <state key="normal" title="Export Data"/>
                                 <connections>
                                     <action selector="importDataPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="fNU-x8-5AQ"/>
                                 </connections>

@@ -84,6 +84,7 @@ class EnterData2ViewController: UIViewController {
         autoLine = crossedSwitch.isOn
     }
     @IBAction func teleOpButtonPressed(_ sender: Any) {
+        matchPosition = 3
         performSegue(withIdentifier: "AutoToTeleOp", sender: nil)
         
     }
