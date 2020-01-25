@@ -17,7 +17,9 @@ class EnterData1ViewController: UIViewController {
         matchPosition = 1
         performSegue(withIdentifier: "EnterData1ToMatchData", sender: nil)
     }
+    
     @IBAction func pitScoutPressed(_ sender: Any) {
+        performSegue(withIdentifier: "Pit Scouting", sender: nil);
     } 
     override func viewDidLoad() {
         super.viewDidLoad()
