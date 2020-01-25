@@ -17,6 +17,7 @@ var teamColor = true //true is blue, false is red
 
 var intakeType = "" //from floor or feeding station
 var runType = 1 //running as ipad
+//
 
 
 var autoLine = false //do they cross the line in auto
