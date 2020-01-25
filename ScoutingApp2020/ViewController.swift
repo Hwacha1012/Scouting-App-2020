@@ -113,21 +113,23 @@ class ViewController: UIViewController {
         enterData.titleLabel!.numberOfLines = 2
         enterData.titleLabel!.adjustsFontSizeToFitWidth = true
         enterData.titleLabel!.textAlignment = NSTextAlignment.center
-        enterData.setTitleColor(UIColor.init(red: 0.6328642, green: 0, blue: 1, alpha: 1.0), for: .normal)
+        enterData.setTitleColor(UIColor.init(red: 0, green: 0, blue: 0.5, alpha: 1.0), for: .normal)
         enterData.setTitle("Enter Data", for: .normal)
-        
+        viewData.setTitle("View Data", for: .normal)
+        exportData.setTitle("Export Data", for: .normal)
+        importData.setTitle("Import Data", for: .normal)
         viewData.titleLabel!.minimumScaleFactor = 0.01
         viewData.titleLabel!.numberOfLines = 2
         viewData.titleLabel!.adjustsFontSizeToFitWidth = true
         viewData.titleLabel!.textAlignment = NSTextAlignment.center
-        viewData.setTitleColor(UIColor.init(red: 0.6328642, green: 0, blue: 1, alpha: 1.0), for: .normal)
+        viewData.setTitleColor(UIColor.init(red: 0, green: 0, blue: 0.5, alpha: 1.0), for: .normal)
         
         
         importData.titleLabel!.minimumScaleFactor = 0.01
         importData.titleLabel!.numberOfLines = 2
         importData.titleLabel!.adjustsFontSizeToFitWidth = true
         importData.titleLabel!.textAlignment = NSTextAlignment.center
-        importData.setTitleColor(UIColor.init(red: 0.6328642, green: 0, blue: 1, alpha: 1.0), for: .normal)
+        importData.setTitleColor(UIColor.init(red: 0, green: 0, blue: 0.5, alpha: 1.0), for: .normal)
         
         
         
@@ -135,7 +137,7 @@ class ViewController: UIViewController {
         exportData.titleLabel!.numberOfLines = 2
         exportData.titleLabel!.adjustsFontSizeToFitWidth = true
         exportData.titleLabel!.textAlignment = NSTextAlignment.center
-        exportData.setTitleColor(UIColor.init(red: 0.6328642, green: 0, blue: 1, alpha: 1.0), for: .normal)
+        exportData.setTitleColor(UIColor.init(red: 0, green: 0, blue: 0.5, alpha: 1.0), for: .normal)
         
         
     

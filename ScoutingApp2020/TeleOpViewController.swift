@@ -40,6 +40,30 @@ class TeleOpViewController: UIViewController {
     }
     @IBAction func nextButtonPressed(_ sender: Any) {
     }
+    @IBOutlet weak var popupView: UIView!
+    @IBOutlet weak var popupLabel1: UILabel!
+    @IBOutlet weak var popupLabel2: UILabel!
+    @IBOutlet weak var popupAdd1: UIButton!
+    @IBOutlet weak var popupMinus1: UIButton!
+    @IBOutlet weak var popupLabel3: UILabel!
+    @IBOutlet weak var popupAdd2: UIButton!
+    @IBOutlet weak var popupMinus2: UIButton!
+    @IBOutlet weak var enterButton: UIButton!
+    @IBOutlet weak var cancelButton: UIButton!
+    @IBAction func popupAdd1Pressed(_ sender: Any) {
+    }
+    @IBAction func popupMinus1Pressed(_ sender: Any) {
+    }
+    @IBAction func popupAdd2Pressed(_ sender: Any) {
+    }
+    @IBAction func popupMinus2Pressed(_ sender: Any) {
+    }
+    @IBAction func enterPressed(_ sender: Any) {
+    }
+    @IBAction func cancelPressed(_ sender: Any) {
+    }
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         if (matchPosition > 3){
