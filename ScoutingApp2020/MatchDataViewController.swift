@@ -46,6 +46,9 @@ class MatchDataViewController: UIViewController {
             
             
         }
+        else{
+            
+        }
         
         if (matchPosition > 1){
             //load previous data
