@@ -42,7 +42,29 @@ class TeleOpViewController: UIViewController {
     }
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        if (matchPosition > 3){
+            //load previous data
+            //updateLabels()
+            
+        }
+        else{
+            //have new data
+          /*  lowGoalLabel.text = "Low Goal Balls: 0"
+            highGoalLabel.text = "High Goal Balls: 0"
+            trenchLabel.text = "Trench Run Balls Grabbed: 0"
+            shieldGenLabel.text = "Shield Generator Balls Grabbed: 0"
+            autoHighGoal = 0
+            autoLowGoal = 0
+            autoTrenchBalls = 0
+            autoShieldBalls = 0
+            crossedSwitch.setOn(false, animated: false)
+            autoLine = false
+ */
+            
+        }
+        
+       
+        
         // Do any additional setup after loading the view.
     }
     
