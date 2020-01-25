@@ -38,7 +38,7 @@ class MatchDataViewController: UIViewController {
         super.viewDidLoad()
 
         
-        if (runType == 2) {
+        if (runType == 1) {
             
         // Do any additional setup after loading the view.
             scoutLabel.font = UIFont.init(name: "Optima-BoldItalic", size: 65 )
