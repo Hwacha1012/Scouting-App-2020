@@ -122,7 +122,7 @@ class TeleOpViewController: UIViewController {
             highGoalTaken[location] += tempTaken
             highGoalMade[location] += tempMade
         }
-        else if (location = 4){
+        else if (location == 4){
             lowGoalTaken += tempTaken
             lowGoalMade += tempMade
         }
