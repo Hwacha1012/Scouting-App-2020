@@ -98,7 +98,7 @@ class TeleOpViewController: UIViewController {
         }
         else if(location == 4){
             tempMade += 1
-            popupLabel3.text = "Number of Balls Made: \(lowGoalMade + tempTaken)"
+            popupLabel3.text = "Number of Balls Made: \(lowGoalMade + tempMade)"
         }
     }
     @IBAction func popupMinus2Pressed(_ sender: Any) {

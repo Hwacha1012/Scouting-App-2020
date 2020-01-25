@@ -90,6 +90,7 @@ class EnterData2ViewController: UIViewController {
     }
     override func viewDidLoad() {
         super.viewDidLoad()
+        // Do any additional setup after loading the view.
         if (matchPosition > 2){
             //load previous data
             updateLabels()
@@ -109,12 +110,32 @@ class EnterData2ViewController: UIViewController {
             
         } 
         
-        if (runType == 2) {
-            lineLabel.font = UIFont.init(name: "Optimia-BoldItalic", size: 35)
+        if (runType == 1) {
+           
+            titleLabel.font = UIFont.init( name: "Futura-MediumItalic", size: 75)
+            lineLabel.font = UIFont.init(name: "Optima-BoldItalic", size: 45)
+            lowGoalLabel.font = UIFont.init(name: "Optima-BoldItalic", size: 45)
+            highGoalLabel.font = UIFont.init(name: "Optima-BoldItalic", size: 45)
+            powerLabel.font = UIFont.init(name: "Optima-BoldItalic", size: 50)
+            powerCellsLabel.font = UIFont.init(name: "Optima-BoldItalic", size: 45)
+            trenchLabel.font = UIFont.init(name: "Optima-BoldItalic", size: 45)
+            shieldGenLabel.font = UIFont.init(name: "Optima-BoldItalic", size: 45)
+            
+        }
+        else{
+            titleLabel.font = UIFont.init( name: "Futura-MediumItalic", size: 60)
+            lineLabel.font = UIFont.init(name: "Optima-BoldItalic", size: 35)
+            lowGoalLabel.font = UIFont.init(name: "Optima-BoldItalic", size: 35)
+            highGoalLabel.font = UIFont.init(name: "Optima-BoldItalic", size: 35)
+            powerLabel.font = UIFont.init(name: "Optima-BoldItalic", size: 40)
+            powerCellsLabel.font = UIFont.init(name: "Optima-BoldItalic", size: 35)
+            trenchLabel.font = UIFont.init(name: "Optima-BoldItalic", size: 35)
+            shieldGenLabel.font = UIFont.init(name: "Optima-BoldItalic", size: 35)
+            
         }
         
         
-        // Do any additional setup after loading the view.
+        
     }
     
     func updateLabels(){

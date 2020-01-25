@@ -26,9 +26,17 @@ class EnterData1ViewController: UIViewController {
 
         
         // Do any additional setup after loading the view.
-        pitScouting.titleLabel!.font = UIFont.init( name: "Optima-BoldItalic", size: 35)
-        matchData.titleLabel!.font = UIFont.init( name: "Optima-BoldItalic", size: 35)
-        dataType.font = UIFont.init( name: "Futura-MediumItalic", size: 150)
+        if(runType == 1){
+            pitScouting.titleLabel!.font = UIFont.init( name: "Optima-BoldItalic", size: 40)
+            matchData.titleLabel!.font = UIFont.init( name: "Optima-BoldItalic", size: 40)
+            dataType.font = UIFont.init( name: "Futura-MediumItalic", size: 150)
+        }
+        else{
+            pitScouting.titleLabel!.font = UIFont.init( name: "Optima-BoldItalic", size: 30)
+            matchData.titleLabel!.font = UIFont.init( name: "Optima-BoldItalic", size: 30)
+            dataType.font = UIFont.init( name: "Futura-MediumItalic", size: 100)
+        }
+        
         
     }
     
