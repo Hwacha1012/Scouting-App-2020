@@ -676,11 +676,37 @@
                         <outlet property="matchData" destination="uV6-G5-nMK" id="Jgp-qc-BF4"/>
                         <outlet property="pitScouting" destination="HYW-Ga-Sat" id="iX8-Qa-Dc2"/>
                         <segue destination="Jqb-qg-JOm" kind="show" identifier="EnterData1ToMatchData" id="6Iz-zd-EOe"/>
+                        <segue destination="NX4-JB-Ugf" kind="show" identifier="Pit Scouting" id="7ri-77-WWC"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="eJi-zH-2hc" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-1273" y="162"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="0jm-Xk-ZKj">
+            <objects>
+                <viewController id="NX4-JB-Ugf" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Cda-eR-HCc">
+                        <rect key="frame" x="0.0" y="0.0" width="712" height="984"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Robot Information" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="cjI-Hg-B8R">
+                                <rect key="frame" x="0.0" y="58" width="672" height="78.5"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="Futura-MediumItalic" family="Futura" pointSize="60"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <viewLayoutGuide key="safeArea" id="XMA-9l-li8"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="GsD-kL-hPc"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="RFw-54-DiM" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1417" y="850"/>
         </scene>
     </scenes>
     <resources>
