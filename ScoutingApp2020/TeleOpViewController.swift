@@ -48,6 +48,7 @@ class TeleOpViewController: UIViewController {
     }
     
     @IBAction func controlPanelButtonPressed(_ sender: Any) {
+        controlPanel()
         
     }
     @IBAction func lowGoalButtonPressed(_ sender: Any) {
@@ -139,12 +140,20 @@ class TeleOpViewController: UIViewController {
         tempMade = 0
         popupView.isHidden = true
         
+        
     }
     @IBAction func wheelControlChanged(_ sender: Any) {
+        if(wheelSegmentedControl.selectedSegmentIndex == 0){
+            
+        }
+        
     }
     
     func shootHigh(){
         popupView.isHidden = false
+        wheelSegmentedControl.isHidden = true
+        popupAdd1.isHidden = false
+        popupMinus1.isHidden = false
        // popupLabel1.isHidden = false
        // popupLabel2.isHidden = false
         // popupLabel3.isHidden = false
@@ -169,9 +178,21 @@ class TeleOpViewController: UIViewController {
     
     func shootLow(){
         popupView.isHidden = false
+        wheelSegmentedControl.isHidden = true
+        popupAdd1.isHidden = false
+        popupMinus1.isHidden = false
         popupLabel1.text = "Low Goal Shooting"
         popupLabel2.text = "Number of Balls Shot: \(lowGoalTaken)"
         popupLabel3.text = "Number of Balls Made: \(lowGoalMade)"
+        
+    }
+    
+    func controlPanel(){
+        popupView.isHidden = false
+        wheelSegmentedControl.isHidden = false
+        popupAdd1.isHidden = true
+        popupMinus1.isHidden = true
+        
         
     }
     
@@ -216,7 +237,7 @@ class TeleOpViewController: UIViewController {
     
 
     /*
-    // MARK: - Navigation
+    // MARK: - BRUH
 
     // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
