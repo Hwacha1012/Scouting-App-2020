@@ -99,8 +99,8 @@ class EnterData2ViewController: UIViewController {
             //have new data
             lowGoalLabel.text = "Low Goal Balls: 0"
             highGoalLabel.text = "High Goal Balls: 0"
-            trenchLabel.text = "Trench Run Balls Grabbed: 0"
-            shieldGenLabel.text = "Shield Generator Balls Grabbed: 0"
+            trenchLabel.text = "Trench Run Balls: 0"
+            shieldGenLabel.text = "Shield Gen Balls: 0"
             autoHighGoal = 0
             autoLowGoal = 0
             autoTrenchBalls = 0
@@ -118,8 +118,8 @@ class EnterData2ViewController: UIViewController {
             highGoalLabel.font = UIFont.init(name: "Optima-BoldItalic", size: 45)
             powerLabel.font = UIFont.init(name: "Optima-BoldItalic", size: 50)
             powerCellsLabel.font = UIFont.init(name: "Optima-BoldItalic", size: 45)
-            trenchLabel.font = UIFont.init(name: "Optima-BoldItalic", size: 45)
-            shieldGenLabel.font = UIFont.init(name: "Optima-BoldItalic", size: 45)
+            trenchLabel.font = UIFont.init(name: "Optima-BoldItalic", size: 32)
+            shieldGenLabel.font = UIFont.init(name: "Optima-BoldItalic", size: 32)
             
         }
         else{
@@ -129,8 +129,8 @@ class EnterData2ViewController: UIViewController {
             highGoalLabel.font = UIFont.init(name: "Optima-BoldItalic", size: 35)
             powerLabel.font = UIFont.init(name: "Optima-BoldItalic", size: 40)
             powerCellsLabel.font = UIFont.init(name: "Optima-BoldItalic", size: 35)
-            trenchLabel.font = UIFont.init(name: "Optima-BoldItalic", size: 35)
-            shieldGenLabel.font = UIFont.init(name: "Optima-BoldItalic", size: 35)
+            trenchLabel.font = UIFont.init(name: "Optima-BoldItalic", size: 23)
+            shieldGenLabel.font = UIFont.init(name: "Optima-BoldItalic", size: 23)
             
         }
         
@@ -142,8 +142,8 @@ class EnterData2ViewController: UIViewController {
         crossedSwitch.setOn(autoLine, animated: false)
         lowGoalLabel.text = "Low Goal Balls: \(autoLowGoal)"
         highGoalLabel.text = "High Goal Balls: \(autoHighGoal)"
-        trenchLabel.text = "Trench Run Balls Grabbed: \(autoTrenchBalls)"
-        shieldGenLabel.text = "Shield Generator Balls Grabbed: \(autoShieldBalls)"
+        trenchLabel.text = "Trench Run Balls: \(autoTrenchBalls)"
+        shieldGenLabel.text = "Shield Gen Balls: \(autoShieldBalls)"
     }
 
     /*

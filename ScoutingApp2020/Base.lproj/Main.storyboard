@@ -217,7 +217,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Trench" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kWW-Y5-vdh">
-                                <rect key="frame" x="20" y="662" width="317" height="53"/>
+                                <rect key="frame" x="20" y="662" width="332" height="53"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -233,14 +233,14 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Q4n-Tf-Lvp">
-                                <rect key="frame" x="204" y="715" width="133" height="133"/>
+                                <rect key="frame" x="219" y="715" width="133" height="133"/>
                                 <state key="normal" backgroundImage="minus.png"/>
                                 <connections>
                                     <action selector="trenchMinusPressed:" destination="PyS-zn-Gn5" eventType="touchUpInside" id="nCH-3w-mvu"/>
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Shield Generator" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HBI-Lj-Gsj">
-                                <rect key="frame" x="375" y="662" width="317" height="53"/>
+                                <rect key="frame" x="360" y="662" width="332" height="53"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -260,7 +260,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fNc-64-zNK">
-                                <rect key="frame" x="375" y="715" width="133" height="133"/>
+                                <rect key="frame" x="360" y="715" width="133" height="133"/>
                                 <state key="normal" backgroundImage="plus.png"/>
                                 <connections>
                                     <action selector="shieldAddPressed:" destination="PyS-zn-Gn5" eventType="touchUpInside" id="taP-db-Smw"/>
@@ -296,7 +296,7 @@
                             <constraint firstItem="Q4n-Tf-Lvp" firstAttribute="height" secondItem="ZF2-VB-B2y" secondAttribute="height" id="D3q-wp-EPv"/>
                             <constraint firstItem="kWW-Y5-vdh" firstAttribute="top" secondItem="Vc7-mp-yaO" secondAttribute="bottom" constant="10" id="EPB-Dj-4LQ"/>
                             <constraint firstItem="HpE-f9-yJQ" firstAttribute="width" secondItem="24U-4h-m8E" secondAttribute="width" multiplier="0.4" id="Fai-5b-cZ8"/>
-                            <constraint firstItem="kWW-Y5-vdh" firstAttribute="width" secondItem="2Eu-uN-Czu" secondAttribute="width" multiplier="0.86" id="Gji-59-h0k"/>
+                            <constraint firstItem="kWW-Y5-vdh" firstAttribute="width" secondItem="2Eu-uN-Czu" secondAttribute="width" multiplier="0.9" id="Gji-59-h0k"/>
                             <constraint firstItem="Q4n-Tf-Lvp" firstAttribute="centerY" secondItem="ZF2-VB-B2y" secondAttribute="centerY" id="Gyc-Yp-2Gq"/>
                             <constraint firstItem="24U-4h-m8E" firstAttribute="top" secondItem="zc3-gW-pkc" secondAttribute="top" id="HFk-KW-wb0"/>
                             <constraint firstItem="2Eu-uN-Czu" firstAttribute="height" secondItem="wwR-TH-pHh" secondAttribute="height" id="ICa-2Q-SNe"/>

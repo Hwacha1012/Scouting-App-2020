@@ -179,6 +179,9 @@ class TeleOpViewController: UIViewController {
         super.viewDidLoad()
         
         popupView.isHidden = true
+        enterButton.setTitle("Enter Data", for: .normal)
+        cancelButton.setTitle("Cancel", for: .normal)
+        
         if(teamColor){
             backgroundImage.image = UIImage(named: "TopViewBlue.png")
         }
@@ -198,21 +201,9 @@ class TeleOpViewController: UIViewController {
                 highGoalMade[i] = 0
                 highGoalTaken[i] = 0
             }
-
-            
-          /*  lowGoalLabel.text = "Low Goal Balls: 0"
-            highGoalLabel.text = "High Goal Balls: 0"
-            trenchLabel.text = "Trench Run Balls Grabbed: 0"
-            shieldGenLabel.text = "Shield Generator Balls Grabbed: 0"
-            autoHighGoal = 0
-            autoLowGoal = 0
-            autoTrenchBalls = 0
-            autoShieldBalls = 0
-            crossedSwitch.setOn(false, animated: false)
-            autoLine = false
- */
-            
         }
+        
+        
         
        
         
