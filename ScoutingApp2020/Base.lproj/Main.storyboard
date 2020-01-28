@@ -653,11 +653,28 @@
                         <outlet property="popupView" destination="EnW-AW-AhU" id="nh5-Z2-TvG"/>
                         <outlet property="sortaCloseButton" destination="VGl-bK-rbT" id="P29-eA-EfF"/>
                         <outlet property="trenchButton" destination="Rec-kU-RFq" id="GOZ-jE-nNe"/>
+                        <segue destination="etm-05-Ffo" kind="show" identifier="TeleOpToFinish" id="MFm-cP-sNz"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="HVx-Q2-9Z9" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="709" y="-623"/>
+        </scene>
+        <!--Finish Match Data View Controller-->
+        <scene sceneID="2X4-5U-Ofe">
+            <objects>
+                <viewController id="etm-05-Ffo" customClass="FinishMatchDataViewController" customModule="ScoutingApp2020" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="qv0-Rz-yym">
+                        <rect key="frame" x="0.0" y="0.0" width="712" height="984"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <viewLayoutGuide key="safeArea" id="2QB-Yg-aFW"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="XN9-S6-JUx"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="zco-Nj-7Ol" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1502" y="-643"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
