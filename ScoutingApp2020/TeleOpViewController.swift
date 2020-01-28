@@ -27,6 +27,7 @@ class TeleOpViewController: UIViewController {
     @IBOutlet weak var backgroundImage: UIImageView!
     
     @IBOutlet weak var nextButton: UIButton!
+    @IBOutlet weak var wheelSegmentedControl: UISegmentedControl!
     @IBAction func closeButtonPressed(_ sender: Any) {
         location = 0
         shootHigh()
@@ -47,6 +48,7 @@ class TeleOpViewController: UIViewController {
     }
     
     @IBAction func controlPanelButtonPressed(_ sender: Any) {
+        
     }
     @IBAction func lowGoalButtonPressed(_ sender: Any) {
         location = 4
@@ -137,6 +139,8 @@ class TeleOpViewController: UIViewController {
         tempMade = 0
         popupView.isHidden = true
         
+    }
+    @IBAction func wheelControlChanged(_ sender: Any) {
     }
     
     func shootHigh(){

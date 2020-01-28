@@ -531,12 +531,24 @@
                                             <action selector="cancelPressed:" destination="VIn-uM-yeP" eventType="touchUpInside" id="7Uu-AO-sM5"/>
                                         </connections>
                                     </button>
+                                    <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="QVH-Ul-jWY">
+                                        <rect key="frame" x="20" y="171" width="601" height="107.5"/>
+                                        <segments>
+                                            <segment title="None"/>
+                                            <segment title="Rotation"/>
+                                            <segment title="Position"/>
+                                        </segments>
+                                        <connections>
+                                            <action selector="wheelControlChanged:" destination="VIn-uM-yeP" eventType="valueChanged" id="Ftd-vu-Rkt"/>
+                                        </connections>
+                                    </segmentedControl>
                                 </subviews>
                                 <color key="backgroundColor" systemColor="systemGrayColor" red="0.5568627451" green="0.5568627451" blue="0.57647058819999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstItem="2zN-cL-IKs" firstAttribute="width" secondItem="KVx-Oy-BMm" secondAttribute="width" id="20g-Ie-Ebu"/>
                                     <constraint firstAttribute="trailing" secondItem="9RH-aV-YHZ" secondAttribute="trailing" constant="20" id="2T4-fo-vfW"/>
                                     <constraint firstItem="r0R-oZ-1Gu" firstAttribute="width" secondItem="r0R-oZ-1Gu" secondAttribute="height" multiplier="1:1" id="5K7-iL-4zh"/>
+                                    <constraint firstAttribute="trailing" secondItem="QVH-Ul-jWY" secondAttribute="trailing" constant="20" id="8Xf-GK-BFw"/>
                                     <constraint firstItem="KVx-Oy-BMm" firstAttribute="height" secondItem="X98-F5-mRa" secondAttribute="height" id="9G6-5m-dUk"/>
                                     <constraint firstItem="9RH-aV-YHZ" firstAttribute="width" secondItem="Ylc-fS-tbc" secondAttribute="width" id="EfZ-fI-CPf"/>
                                     <constraint firstItem="2zN-cL-IKs" firstAttribute="centerX" secondItem="KVx-Oy-BMm" secondAttribute="centerX" id="F8d-4q-fH2"/>
@@ -563,16 +575,19 @@
                                     <constraint firstItem="KVx-Oy-BMm" firstAttribute="width" secondItem="X98-F5-mRa" secondAttribute="width" id="fkX-kk-Gdc"/>
                                     <constraint firstItem="2zN-cL-IKs" firstAttribute="height" secondItem="KVx-Oy-BMm" secondAttribute="height" id="gmy-5K-2ew"/>
                                     <constraint firstItem="M2J-3C-lqY" firstAttribute="width" secondItem="M2J-3C-lqY" secondAttribute="height" multiplier="1:1" id="ha2-nR-fEr"/>
+                                    <constraint firstItem="QVH-Ul-jWY" firstAttribute="centerY" secondItem="r0R-oZ-1Gu" secondAttribute="centerY" id="hcX-Ei-AEy"/>
                                     <constraint firstItem="cLr-0v-uoQ" firstAttribute="centerY" secondItem="r0R-oZ-1Gu" secondAttribute="centerY" id="l7l-YB-r0U"/>
                                     <constraint firstItem="cLr-0v-uoQ" firstAttribute="width" secondItem="cLr-0v-uoQ" secondAttribute="height" multiplier="1:1" id="lY2-GT-VEf"/>
                                     <constraint firstItem="X98-F5-mRa" firstAttribute="leading" secondItem="EnW-AW-AhU" secondAttribute="leading" constant="20" id="nDE-ra-nqG"/>
                                     <constraint firstItem="GCF-9z-XjF" firstAttribute="width" secondItem="GCF-9z-XjF" secondAttribute="height" multiplier="1:1" id="pAy-jX-cSW"/>
+                                    <constraint firstItem="QVH-Ul-jWY" firstAttribute="height" secondItem="r0R-oZ-1Gu" secondAttribute="height" multiplier="0.8" id="pST-Y9-d3D"/>
                                     <constraint firstItem="GCF-9z-XjF" firstAttribute="top" secondItem="2zN-cL-IKs" secondAttribute="bottom" constant="10" id="pXv-3W-xgo"/>
                                     <constraint firstItem="X98-F5-mRa" firstAttribute="height" secondItem="EnW-AW-AhU" secondAttribute="height" multiplier="0.1" id="pvd-hh-dHu"/>
                                     <constraint firstItem="r0R-oZ-1Gu" firstAttribute="top" secondItem="KVx-Oy-BMm" secondAttribute="bottom" constant="10" id="q19-nF-hh0"/>
                                     <constraint firstItem="r0R-oZ-1Gu" firstAttribute="leading" secondItem="EnW-AW-AhU" secondAttribute="leading" constant="150" id="q7q-Nj-Kf7"/>
                                     <constraint firstAttribute="trailing" secondItem="X98-F5-mRa" secondAttribute="trailing" constant="20" id="qLN-OE-X2y"/>
                                     <constraint firstItem="r0R-oZ-1Gu" firstAttribute="width" secondItem="EnW-AW-AhU" secondAttribute="width" multiplier="0.207488" id="tIN-bt-cjd"/>
+                                    <constraint firstItem="QVH-Ul-jWY" firstAttribute="leading" secondItem="EnW-AW-AhU" secondAttribute="leading" constant="20" id="vQS-rl-Z76"/>
                                     <constraint firstItem="GCF-9z-XjF" firstAttribute="width" secondItem="r0R-oZ-1Gu" secondAttribute="width" id="zR7-g8-FNy"/>
                                 </constraints>
                             </view>
@@ -653,12 +668,13 @@
                         <outlet property="popupView" destination="EnW-AW-AhU" id="nh5-Z2-TvG"/>
                         <outlet property="sortaCloseButton" destination="VGl-bK-rbT" id="P29-eA-EfF"/>
                         <outlet property="trenchButton" destination="Rec-kU-RFq" id="GOZ-jE-nNe"/>
+                        <outlet property="wheelSegmentedControl" destination="QVH-Ul-jWY" id="i3X-Fh-idf"/>
                         <segue destination="etm-05-Ffo" kind="show" identifier="TeleOpToFinish" id="MFm-cP-sNz"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="HVx-Q2-9Z9" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="709" y="-623"/>
+            <point key="canvasLocation" x="708.59375" y="-623.4375"/>
         </scene>
         <!--Finish Match Data View Controller-->
         <scene sceneID="2X4-5U-Ofe">
@@ -674,7 +690,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="zco-Nj-7Ol" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1502" y="-643"/>
+            <point key="canvasLocation" x="1478" y="-617"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
