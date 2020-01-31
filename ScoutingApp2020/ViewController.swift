@@ -72,6 +72,7 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
         
+        // MARK: - RunType is set
         
         if UIDevice.current.model.range(of:"iPad") != nil{
             //device is iPad
