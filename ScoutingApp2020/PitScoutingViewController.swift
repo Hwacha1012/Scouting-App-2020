@@ -10,7 +10,28 @@ import UIKit
 
 class PitScoutingViewController: UIViewController {
 
-
+    @IBOutlet weak var RobotNumber: UITextField!
+    
+    
+    @IBOutlet weak var DrivetrainType: UISegmentedControl!
+    
+    
+    @IBOutlet weak var Intake: UISegmentedControl!
+    
+    
+    @IBOutlet weak var Capacity: UISegmentedControl!
+    
+    
+    @IBOutlet weak var AutoLineCrossing: UISwitch!
+    
+    
+    @IBOutlet weak var AutoHighGoalBalls: UITextField!
+    
+    
+    @IBOutlet weak var AutoLowGoalBalls: UITextField!
+    
+    @IBOutlet weak var Next: UIButton!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
