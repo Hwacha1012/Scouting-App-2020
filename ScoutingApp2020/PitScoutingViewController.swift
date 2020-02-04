@@ -9,6 +9,8 @@
 import UIKit
 
 import Foundation
+//import Alamofire
+//import SwiftyJSON
 
 class PitScoutingData: Codable {
    public var robotNumber:String
@@ -65,7 +67,7 @@ class PitScoutingViewController: UIViewController {
     
     
     @IBOutlet weak var Climbing: UISwitch!
-    func Serialize(teamNumber:String, driveTrainType:String, intake:String, capacity:String, AutoLineCrossing:Bool, AutoHighBalls:String, AutoLowBalls:String, climb:Bool, notes:String,pretty:Bool)
+    func Serialize(teamNumber:String, driveTrainType:String, intake:String, capacity:String, AutoLineCrossing:Bool, AutoHighBalls:String, AutoLowBalls:String, climb:Bool, notes:String,pretty:Bool) -> String
     {
        pitScoutingDataObj = PitScoutingData(robotNumber: teamNumber, driveTrainType:driveTrainType, intake:intake, capacity:capacity, AutoLineCrossing:AutoLineCrossing, AutoHighBalls:AutoHighBalls, AutoLowBalls:AutoLowBalls, climb:climb, notes:notes)
         let encoder = JSONEncoder()
@@ -76,6 +78,7 @@ class PitScoutingViewController: UIViewController {
         let data = try! encoder.encode(pitScoutingDataObj)
         let jsonString = String(data: data, encoding: .utf8)!
         print(jsonString)
+        return jsonString
     }
     func Deserialize(jsonString:String) ->
         PitScoutingData{
@@ -95,6 +98,7 @@ class PitScoutingViewController: UIViewController {
            }
         return result
     }
+
 
     @IBAction func buttonPressed(_ sender: Any) {
       print("You may enter")
@@ -148,6 +152,7 @@ class PitScoutingViewController: UIViewController {
             // correct password
             print("Success.");
            AutoHighGoalBalls.backgroundColor = UIColor.green
+            pitScoutingDataObj.AutoHighBalls = AutoHighGoalBalls.text!
 
         } else {
             print("Failed");
@@ -157,12 +162,17 @@ class PitScoutingViewController: UIViewController {
         
     }
     
+     @IBAction func NotesText_Changed(_ sender: Any) {
+        pitScoutingDataObj.notes =  Notes.text!
+    
+     }
     
     @IBAction func autoLowBalls_Changed(_ sender: Any) {
         if(validateNumber(text: AutoLowGoalBalls.text!)) {
             // correct password
             print("Success.");
            AutoLowGoalBalls.backgroundColor = UIColor.green
+            pitScoutingDataObj.AutoLowBalls = AutoLowGoalBalls.text!
 
         } else {
             print("Failed");
@@ -189,7 +199,10 @@ class PitScoutingViewController: UIViewController {
                climb: pitScoutingDataObj.climb,
                notes: pitScoutingDataObj.notes,
                pretty: false)
-           print(payload)
+        print(payload);
+        let defaults = UserDefaults.standard
+        defaults.set(payload, forKey: "\(teamNumber), PitScouting")
+        
     }
     
     override func viewDidLoad() {
