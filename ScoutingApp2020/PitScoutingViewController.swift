@@ -61,6 +61,7 @@ class PitScoutingViewController: UIViewController {
     @IBOutlet weak var Next: UIButton!
     
     
+    @IBOutlet weak var Notes: UITextView!
     
     
     @IBOutlet weak var Climbing: UISwitch!
@@ -193,7 +194,8 @@ class PitScoutingViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-            
+        Notes.text = "Type here..."
+        
         
         // Do any additional setup after loading the view.
     }
