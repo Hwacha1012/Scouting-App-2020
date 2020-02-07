@@ -45,10 +45,13 @@ class TeleOpViewController: UIViewController {
         shootHigh()
     }
     @IBAction func climbingButtonPressed(_ sender: Any) {
+        location = 6
+        climbingClicked()
     }
     
     @IBAction func controlPanelButtonPressed(_ sender: Any) {
-        controlPanel()
+        location = 5
+        controlPanelClicked()
         
     }
     @IBAction func lowGoalButtonPressed(_ sender: Any) {
@@ -57,6 +60,12 @@ class TeleOpViewController: UIViewController {
         
     }
     @IBAction func nextButtonPressed(_ sender: Any) {
+        location = 5
+        if(controlPanel == ""){
+            controlPanel = "None"
+        }
+        performSegue(withIdentifier: "TeleOpToFinish", sender: nil)
+        
     }
     @IBOutlet weak var popupView: UIView!
     @IBOutlet weak var popupLabel1: UILabel!
@@ -103,6 +112,14 @@ class TeleOpViewController: UIViewController {
             tempMade += 1
             popupLabel3.text = "Number of Balls Made: \(lowGoalMade + tempMade)"
         }
+        else if (location == 6){
+            if(climbingOtherRobots < 2){
+                climbingOtherRobots = climbingOtherRobots + 1
+            }
+            
+           
+        }
+        
     }
     @IBAction func popupMinus2Pressed(_ sender: Any) {
         if(location < 4){
@@ -118,6 +135,12 @@ class TeleOpViewController: UIViewController {
             }
             
         }
+        else if (location == 6){
+            if(climbingOtherRobots > 0){
+                climbingOtherRobots = climbingOtherRobots - 1
+            }
+        }
+        
     }
     
     @IBAction func enterPressed(_ sender: Any) {
@@ -143,9 +166,55 @@ class TeleOpViewController: UIViewController {
         
     }
     @IBAction func wheelControlChanged(_ sender: Any) {
-        if(wheelSegmentedControl.selectedSegmentIndex == 0){
+        if(location == 5){
+            //control panel
+            if(wheelSegmentedControl.selectedSegmentIndex == 0){
+                controlPanel = "None"
+            }
+            else if(wheelSegmentedControl.selectedSegmentIndex == 1){
+                controlPanel = "Rotation"
+            }
+            else{
+                controlPanel = "Position"
+            }
+        }
+        else{
+            //climbing
+            if(wheelSegmentedControl.selectedSegmentIndex == 0){
+                climbing = false
+                climbBalanced = false
+            }
+            else if(wheelSegmentedControl.selectedSegmentIndex == 1){
+                climbing = true
+                climbBalanced = false
+            }
+            else{
+                climbing = true
+                climbBalanced = true
+            }
             
         }
+        
+        
+        
+        
+        
+    }
+    
+    func climbingClicked(){
+        popupView.isHidden = false
+        wheelSegmentedControl.isHidden = false
+        popupAdd1.isHidden = true
+        popupMinus1.isHidden = true
+        popupAdd2.isHidden = false
+        popupMinus2.isHidden = false
+        
+        wheelSegmentedControl.setTitle("No Climb", forSegmentAt: 0)
+        wheelSegmentedControl.setTitle("Climbing", forSegmentAt: 1)
+        wheelSegmentedControl.setTitle("Climbing + Balanced", forSegmentAt: 2)
+        
+        popupLabel3.text = "Number of Additional Robots Climbing: 0"
+        
         
     }
     
@@ -187,11 +256,15 @@ class TeleOpViewController: UIViewController {
         
     }
     
-    func controlPanel(){
+    func controlPanelClicked(){
         popupView.isHidden = false
         wheelSegmentedControl.isHidden = false
         popupAdd1.isHidden = true
         popupMinus1.isHidden = true
+        
+        wheelSegmentedControl.setTitle("None", forSegmentAt: 0)
+        wheelSegmentedControl.setTitle("Rotation", forSegmentAt: 1)
+        wheelSegmentedControl.setTitle("Position", forSegmentAt: 2)
         
         
     }
