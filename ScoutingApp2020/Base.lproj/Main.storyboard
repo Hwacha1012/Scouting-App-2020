@@ -706,13 +706,6 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZvV-4T-U5G">
-                                <rect key="frame" x="441" y="225" width="307" height="307"/>
-                                <state key="normal" title="View Data"/>
-                                <connections>
-                                    <action selector="viewDataPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Exh-Zm-uYR"/>
-                                </connections>
-                            </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="InL-4J-CGo">
                                 <rect key="frame" x="441" y="582" width="307" height="307"/>
                                 <state key="normal" title="Export"/>
@@ -746,6 +739,13 @@
                                     <constraint firstAttribute="width" secondItem="WBk-7D-ilI" secondAttribute="height" multiplier="1:1" id="D2K-SB-XMZ"/>
                                 </constraints>
                             </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZvV-4T-U5G">
+                                <rect key="frame" x="441" y="225" width="307" height="307"/>
+                                <state key="normal" title="View Data"/>
+                                <connections>
+                                    <action selector="viewDataPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Exh-Zm-uYR"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
@@ -788,11 +788,12 @@
                         <outlet property="titleLabel2" destination="eeg-7c-YnV" id="aGL-HS-zjl"/>
                         <outlet property="viewData" destination="ZvV-4T-U5G" id="J6r-ot-fLN"/>
                         <segue destination="oF4-Xv-MdE" kind="show" identifier="viewToEnterData1" id="Fmd-ax-w9U"/>
+                        <segue destination="mo4-ge-izQ" kind="show" id="mqp-zD-KHQ"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-284" y="162"/>
+            <point key="canvasLocation" x="-284" y="172"/>
         </scene>
         <!--Enter Data1 View Controller-->
         <scene sceneID="PxC-6L-jjQ">
@@ -1068,6 +1069,58 @@
             </objects>
             <point key="canvasLocation" x="-1273.4375" y="939.84374999999989"/>
         </scene>
+        <!--View Controller-->
+        <scene sceneID="JCf-Im-OnM">
+            <objects>
+                <viewController id="mo4-ge-izQ" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="ugI-hl-AGl">
+                        <rect key="frame" x="0.0" y="0.0" width="712" height="984"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="ikY-L5-6Du">
+                                <rect key="frame" x="0.0" y="0.0" width="712" height="984"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationWidth="0.0" reuseIdentifier="Cell" id="Jid-mT-wdr">
+                                        <rect key="frame" x="0.0" y="28" width="712" height="43.5"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Jid-mT-wdr" id="iyY-91-F5t">
+                                            <rect key="frame" x="0.0" y="0.0" width="712" height="43.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Team Number " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uL7-6j-0fR">
+                                                    <rect key="frame" x="15" y="11" width="112" height="21"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bF1-nt-s2F">
+                                                    <rect key="frame" x="550" y="6" width="147" height="30"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <state key="normal" title="Change Entered Data"/>
+                                                </button>
+                                            </subviews>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="WCw-aZ-CO0" firstAttribute="bottom" secondItem="ikY-L5-6Du" secondAttribute="bottom" id="4oF-CE-Ke9"/>
+                            <constraint firstItem="ikY-L5-6Du" firstAttribute="leading" secondItem="WCw-aZ-CO0" secondAttribute="leading" id="5a6-Mk-QLZ"/>
+                            <constraint firstItem="WCw-aZ-CO0" firstAttribute="trailing" secondItem="ikY-L5-6Du" secondAttribute="trailing" id="8Lx-4P-cXo"/>
+                            <constraint firstItem="ikY-L5-6Du" firstAttribute="top" secondItem="WCw-aZ-CO0" secondAttribute="top" id="R21-cg-mK6"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="WCw-aZ-CO0"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="bow-eM-Kfe"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="CmX-Lg-8Gm" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="405.46875" y="161.71875"/>
+        </scene>
     </scenes>
     <resources>
         <image name="BorderNorth&amp;South2.png" width="235" height="63"/>
@@ -1082,6 +1135,6 @@
         <image name="plus.png" width="512" height="512"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="u25-rs-TZd"/>
+        <segue reference="Fmd-ax-w9U"/>
     </inferredMetricsTieBreakers>
 </document>
