@@ -162,11 +162,6 @@ class PitScoutingViewController: UIViewController {
         
     }
     
-     @IBAction func NotesText_Changed(_ sender: Any) {
-        pitScoutingDataObj.notes =  Notes.text!
-    
-     }
-    
     @IBAction func autoLowBalls_Changed(_ sender: Any) {
         if(validateNumber(text: AutoLowGoalBalls.text!)) {
             // correct password
@@ -186,8 +181,10 @@ class PitScoutingViewController: UIViewController {
 
     
     @IBAction func submit(_ sender: Any) {
-        
-
+        if (Notes.text! == "Type here...") {
+            Notes.text! = ""
+        }
+        pitScoutingDataObj.notes =  Notes.text!
         let payload =  Serialize(
                teamNumber: pitScoutingDataObj.robotNumber,
                driveTrainType: pitScoutingDataObj.driveTrainType,
@@ -202,8 +199,6 @@ class PitScoutingViewController: UIViewController {
         print(payload);
         let defaults = UserDefaults.standard
         defaults.set(payload, forKey: "\(teamNumber), PitScouting")
-        
-        
     }
     
     override func viewDidLoad() {
