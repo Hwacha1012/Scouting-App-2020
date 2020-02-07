@@ -8,6 +8,22 @@
 
 import UIKit
 
+class MatchData: Codable {
+   public var teamText:String
+    public var matchText:String
+    public var colorSegmentedControl:String
+    public var scoutText:String
+ 
+    init(teamText: String, matchText:String, colorSegmentedControl:String, scoutText:String) {
+        self.matchText = matchText
+        self.teamText = teamText
+        self.colorSegmentedControl = colorSegmentedControl
+        self.scoutText = scoutText
+        
+    }
+}
+
+
 class MatchDataViewController: UIViewController {
     @IBOutlet weak var titleLabel: UILabel!
     
