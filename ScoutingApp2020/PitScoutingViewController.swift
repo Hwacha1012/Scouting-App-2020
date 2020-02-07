@@ -203,6 +203,7 @@ class PitScoutingViewController: UIViewController {
         let defaults = UserDefaults.standard
         defaults.set(payload, forKey: "\(teamNumber), PitScouting")
         
+        
     }
     
     override func viewDidLoad() {
