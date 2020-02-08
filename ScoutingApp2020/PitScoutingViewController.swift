@@ -9,6 +9,7 @@
 import UIKit
 
 import Foundation
+var breakLoop: Bool!
 //import Alamofire
 //import SwiftyJSON
 
@@ -199,6 +200,54 @@ class PitScoutingViewController: UIViewController {
         print(payload);
         let defaults = UserDefaults.standard
         defaults.set(payload, forKey: "\(teamNumber), PitScouting")
+       if UserDefaults.standard.array(forKey: "pitScoutList") == nil{
+            // teamList = UserDefaults.standard.object(forKey: "teamList") as! [String]
+            pitScoutList.append("\(teamNumber), PitScouting")
+           // print("teamlist is \(teamList)!")
+            UserDefaults.standard.set(pitScoutList, forKey: "pitScoutList")
+            
+        }
+        else if UserDefaults.standard.array(forKey: "pitScoutList")!.isEmpty == false{
+            
+            //commented code overwrites previous entries with same team number
+            pitScoutList = UserDefaults.standard.array(forKey: "pitScoutList") as! [String]
+            breakLoop = false
+            for index in 0...teamList.count - 1 {
+                let testString = "\(teamNumber), PitScouting"
+                if testString == pitScoutList[index]{
+                    breakLoop = true
+                    
+                }
+            }
+            print("breakLoop is \(breakLoop!)")
+            if breakLoop == false{
+                pitScoutList.append("\(teamNumber), PitScouting")
+                //print(teamList)
+                UserDefaults.standard.set(pitScoutList, forKey: "pitScoutList")
+            }
+            else if breakLoop == true{
+                let indexOfElement = pitScoutList.index(of: "\(teamNumber), PitScouting")
+                pitScoutList.remove(at: indexOfElement!)
+                pitScoutList.append("\(teamNumber), PitScouting")
+               // print(teamList)
+                UserDefaults.standard.set(pitScoutList, forKey: "pitScoutList")
+                
+            }
+            
+            
+            //comment below code to when you uncomment the above
+            //  teamList = UserDefaults.standard.array(forKey: "teamList") as! [String]
+            //  teamList.append("\(teamNumber); \(matchNumber)")
+            //  UserDefaults.standard.set(teamList, forKey: "teamList")
+        }
+        else{
+            pitScoutList = UserDefaults.standard.array(forKey: "pitScoutList") as! [String]
+            pitScoutList.append("\(teamNumber), PitScouting")
+           // print("pitScoutList is \(pitScoutList)")
+            UserDefaults.standard.set(pitScoutList, forKey: "pitScoutList")
+        }
+        
+        performSegue(withIdentifier: "PitScoutToMenu", sender: nil)
     }
     
     override func viewDidLoad() {

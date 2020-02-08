@@ -62,6 +62,7 @@ class ViewController: UIViewController {
        performSegue(withIdentifier: "viewToEnterData1", sender: nil)
     }
     @IBAction func viewDataPressed(_ sender: Any) {
+        performSegue(withIdentifier: "viewDataSegue", sender: nil)
     }
     @IBAction func importDataPressed(_ sender: Any) {
     }
