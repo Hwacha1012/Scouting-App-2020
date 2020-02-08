@@ -9,7 +9,7 @@
 import UIKit
 var teamList = [String]()
 var pitScoutList = [String]()
-
+var matchDataList = [String]()
 var scoutName = "" //Name of the Scout
 var teamNumber = 0 //ex;2170
 var matchNumber = 0 //ex;69
@@ -20,25 +20,27 @@ var runType = 1 //running as ipad
 
 
 
+
 var autoLine = false //do they cross the line in auto
 var autoLowGoal = 0 //low goals scored in auto
 var autoHighGoal = 0 //high goals scored in auto
 var autoTrenchBalls = 0 //trench balls picked up in auto
-var autoShieldBalls = 0 //balls you get from sheild generator
+var autoShieldBalls = 0 //balls you get from shield generator
 
 var controlPanel = "" //what did they do with the control panel ex. no, spin, select
 var lowGoalMade = 0 //low goals made in teleop
 var lowGoalTaken = 0 //shots taken intended for low goal taken in teleop
 var highGoalMade = [0, 0, 0, 0] //low goals made in teleop array specifies location shot was taken from
 var highGoalTaken = [0, 0, 0, 0] //shots taken intended for low goal taken in teleop array specifies location shot was taken from
-var defenseTime = 0 //amount of time playing defense in seconds(increments of 5)
 var climbing = false //do they climb
 var climbingOtherRobots = 0 //how many other robots they climbed with
 var climbBalanced = false //was the climb balanced
 var matchPosition = 0 // 1 is Match Data, 2 is Enter Data, 3 teleop
 
 
-var changeData = false
+var changeData = false //changing data from tableView?
+
+var qrImage: UIImage!
 
 
 // "2170; 1", 
@@ -48,6 +50,8 @@ var changeData = false
 //UIColor teamColor = UIColor.init(red: 0.0431372549, green: 0.1294117647, blue: 0.50196078431, alpha: 1.0)
 
 class ViewController: UIViewController {
+    var selectedMode = 0
+    
     @IBOutlet weak var titleLabel: UILabel!
     @IBOutlet weak var titleLabel2: UILabel!
     @IBOutlet weak var imageView: UIImageView!
@@ -56,19 +60,69 @@ class ViewController: UIViewController {
     @IBOutlet weak var importData: UIButton!
  
     @IBOutlet weak var exportData: UIButton!
+    
+    
+    @IBOutlet weak var popupView: UIView!
+    @IBOutlet weak var popupLabel: UILabel!
+
+    @IBOutlet weak var popupButton1: UIButton!
+    @IBOutlet weak var popupButton2: UIButton!
+    
+    @IBAction func popup1Clicked(_ sender: Any) {
+        if(selectedMode == 1){
+            matchPosition = 1
+            popupView.isHidden = true
+            performSegue(withIdentifier: "MatchDataSegue", sender: nil)
+        }
+        else if(selectedMode == 2){
+            popupView.isHidden = true
+            performSegue(withIdentifier: "QRExportSegue", sender: nil)
+        }
+    }
+    
+    @IBAction func popup2Clicked(_ sender: Any) {
+        if(selectedMode == 1){
+           // matchPosition = 1
+            popupView.isHidden = true
+            performSegue(withIdentifier: "PitScoutSegue", sender: nil)
+        }
+        else if(selectedMode == 2){
+            popupView.isHidden = true
+            performSegue(withIdentifier: "WebExportSegue", sender: nil)
+        }
+    }
+    
     @IBAction func enterDataPressed(_ sender: Any) {
-        //EnterData1ViewController.present(<#T##self: UIViewController##UIViewController#>)
-        //EnterData1ViewController.modalPresentationStyle = .fullScreen
-        //present(EnterData1ViewController, animated: true)
-        matchPosition = 0
-       performSegue(withIdentifier: "viewToEnterData1", sender: nil)
+
+        popupView.isHidden = false
+        popupLabel.text = "Enter Data"
+        popupButton1.setTitle("Match Data", for: .normal)
+        popupButton2.setTitle("Pit Scouting Data", for: .normal)
+        selectedMode = 1
+       // matchPosition = 0
+      // performSegue(withIdentifier: "viewToEnterData1", sender: nil)
+        
+        
     }
     @IBAction func viewDataPressed(_ sender: Any) {
+      //  let x = "Bruh" + "hsdf"
+        
+        
         performSegue(withIdentifier: "viewDataSegue", sender: nil)
     }
     @IBAction func importDataPressed(_ sender: Any) {
     }
     @IBAction func exportDataPressed(_ sender: Any) {
+        popupView.isHidden = false
+        popupLabel.text = "Export Data"
+        popupButton1.setTitle("QR Export", for: .normal)
+        popupButton2.setTitle("Web Server Export", for: .normal)
+        selectedMode = 2
+       // performSegue(withIdentifier: "QRExportSegue", sender: nil)
+    }
+    
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        popupView.isHidden = true
     }
     
     override func viewDidLoad() {
@@ -101,6 +155,14 @@ class ViewController: UIViewController {
            // pitScoutingButton.titleLabel!.font = UIFont.init(name: "Optima-BoldItalic", size: 65)
             titleLabel.font = UIFont.init(name: "Futura-MediumItalic", size: 120)
             titleLabel2.font = UIFont.init(name: "Futura-MediumItalic", size: 120)
+            
+            
+                popupButton1.titleLabel!.font = UIFont.init( name: "Optima-BoldItalic", size: 65)
+                popupButton2.titleLabel!.font = UIFont.init( name: "Optima-BoldItalic", size: 65)
+                popupLabel.font = UIFont.init( name: "Futura-MediumItalic", size: 70)
+            
+      
+            
         }
         else{
             enterData.titleLabel!.font = UIFont.init(name: "Optima-BoldItalic", size: 40)
@@ -110,7 +172,12 @@ class ViewController: UIViewController {
             // pitScoutingButton.titleLabel!.font = UIFont.init(name: "Optima-BoldItalic", size: 65)
             titleLabel.font = UIFont.init(name: "Futura-MediumItalic", size: 75)
             titleLabel2.font = UIFont.init(name: "Futura-MediumItalic", size: 75)
+            popupButton1.titleLabel!.font = UIFont.init( name: "Optima-BoldItalic", size: 40)
+            popupButton2.titleLabel!.font = UIFont.init( name: "Optima-BoldItalic", size: 40)
+            popupLabel.font = UIFont.init( name: "Futura-MediumItalic", size: 75)
         }
+        
+        
         
        // var bColor = UIColor.init(red: 0.0431372549, green: 0.1294117647, blue: 0.50196078431, alpha: 1.0)
 
@@ -150,6 +217,9 @@ class ViewController: UIViewController {
         exportData.setTitleColor(UIColor.init(red: 0, green: 0, blue: 0.5, alpha: 1.0), for: .normal)
         
         changeData = false
+        
+        
+        popupView.isHidden = true
         
         
     
