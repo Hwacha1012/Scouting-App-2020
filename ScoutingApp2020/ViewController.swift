@@ -17,7 +17,7 @@ var teamColor = true //true is blue, false is red
 
 var intakeType = "" //from floor or feeding station
 var runType = 1 //running as ipad
-//
+
 
 
 var autoLine = false //do they cross the line in auto
@@ -36,6 +36,8 @@ var climbingOtherRobots = 0 //how many other robots they climbed with
 var climbBalanced = false //was the climb balanced
 var matchPosition = 0 // 1 is Match Data, 2 is Enter Data, 3 teleop
 
+
+var changeData = false
 
 
 // "2170; 1", 
@@ -72,7 +74,9 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
         
-        
+     //   let d =  UserDefaults.standard
+      // d.removeObject(forKey: "pitScoutList")
+     //   d.synchronize()
         
         // MARK: - RunType is set
         
@@ -143,6 +147,8 @@ class ViewController: UIViewController {
         exportData.titleLabel!.adjustsFontSizeToFitWidth = true
         exportData.titleLabel!.textAlignment = NSTextAlignment.center
         exportData.setTitleColor(UIColor.init(red: 0, green: 0, blue: 0.5, alpha: 1.0), for: .normal)
+        
+        changeData = false
         
         
     
