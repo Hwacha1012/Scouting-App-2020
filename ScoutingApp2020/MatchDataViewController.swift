@@ -18,8 +18,17 @@ class MatchData: Codable {
     public var autoHighGoal:Int
     public var autoTrenchBalls:Int
     public var autoSheildBalls:Int
- 
-    init(teamText: String, matchText:String, colorSegmentedControl:String, scoutText:String, autoLowGoal:Int, autoHighGoal:Int, crossedSwitch:String, autoTrenchBalls:Int, autoSheildBalls:Int) {
+    public var controlPanel:String
+    public var climbing:String
+    public var autoLine:Bool
+    public var climbBalanced:Bool
+    public var climbingOtherRobots:Int
+    
+    init(teamText: String, matchText:String, colorSegmentedControl:String, scoutText:String, autoLowGoal:Int, autoHighGoal:Int, crossedSwitch:String, autoTrenchBalls:Int, autoSheildBalls:Int, controlPanel:String,climbing:String, autoLine:Bool, climbBalanced:Bool, climbingOtherRobots:Int) {
+        self.climbing = climbing
+        self.climbBalanced = climbBalanced
+        self.autoLine = autoLine
+        self.climbingOtherRobots = climbingOtherRobots
         self.matchText = matchText
         self.teamText = teamText
         self.colorSegmentedControl = colorSegmentedControl
@@ -29,6 +38,7 @@ class MatchData: Codable {
         self.crossedSwitch = crossedSwitch
         self.autoTrenchBalls = autoTrenchBalls
         self.autoSheildBalls = autoSheildBalls
+        self.controlPanel = controlPanel
         
     }
 }

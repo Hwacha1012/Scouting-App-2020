@@ -703,12 +703,20 @@
                                 <rect key="frame" x="281" y="417" width="98" height="76"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Submit"/>
+                                <connections>
+                                    <action selector="submit_Pressed:" destination="etm-05-Ffo" eventType="touchUpInside" id="FTl-ms-2du"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <viewLayoutGuide key="safeArea" id="2QB-Yg-aFW"/>
                     </view>
                     <navigationItem key="navigationItem" id="XN9-S6-JUx"/>
+                    <connections>
+                        <outlet property="Notes" destination="Qoe-nz-rFt" id="76g-XL-xcL"/>
+                        <outlet property="submit" destination="AJT-pb-A3d" id="nMT-Ts-9MZ"/>
+                        <outlet property="submitPressed" destination="AJT-pb-A3d" id="yZm-bq-2iA"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="zco-Nj-7Ol" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
