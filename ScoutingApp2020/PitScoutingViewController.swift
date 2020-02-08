@@ -212,7 +212,7 @@ class PitScoutingViewController: UIViewController {
             //commented code overwrites previous entries with same team number
             pitScoutList = UserDefaults.standard.array(forKey: "pitScoutList") as! [String]
             breakLoop = false
-            for index in 0...teamList.count - 1 {
+            for index in 0...pitScoutList.count - 1 {
                 let testString = "\(teamNumber), PitScouting"
                 if testString == pitScoutList[index]{
                     breakLoop = true
@@ -252,7 +252,85 @@ class PitScoutingViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        Notes.text = "Type here..."
+        
+        if(changeData){
+            //entered viewController from viewData
+            let defaults = UserDefaults.standard
+            
+            if(teamNumberFromButton.contains("PitScouting")){
+                if UserDefaults.standard.array(forKey: "pitScoutList") != nil{
+                    pitScoutList = UserDefaults.standard.object(forKey: "pitScoutList") as! [String]
+                    print("\(pitScoutList) and \(pitScoutList.count)")
+                               
+                }
+                else{
+                    print("pitScoutList is nil")
+                }
+                var counter = 0
+                
+                for i in 0...pitScoutList.count - 1{
+                    if(teamNumberFromButton == pitScoutList[i]){
+                        counter = i
+                        break
+                    }
+                }
+                //print(pitScoutList[counter])
+                
+                
+                var data = Deserialize(jsonString: defaults.object(forKey: pitScoutList[counter]) as! String)
+                RobotNumber.text = data.robotNumber
+                RobotNumber.backgroundColor = UIColor.green
+                if(data.driveTrainType == "Tank"){
+                    DrivetrainType.selectedSegmentIndex = 0
+                }
+                else if(data.driveTrainType == "Mech"){
+                    DrivetrainType.selectedSegmentIndex = 1
+                }
+                else if(data.driveTrainType == "HDrive"){
+                    DrivetrainType.selectedSegmentIndex = 2
+                }
+                
+                if(data.intake == "Floor"){
+                    Intake.selectedSegmentIndex = 0
+                
+                }
+                else{
+                    Intake.selectedSegmentIndex = 1
+                }
+                
+                Capacity.selectedSegmentIndex = (Int(data.capacity) ?? 1) - 1
+                AutoLineCrossing.isOn = data.AutoLineCrossing
+                AutoHighGoalBalls.text = data.AutoHighBalls
+                AutoHighGoalBalls.backgroundColor = UIColor.green
+                AutoLowGoalBalls.text = data.AutoLowBalls
+                AutoLowGoalBalls.backgroundColor = UIColor.green
+                Climbing.isOn = data.climb
+                Notes.text = data.notes
+                
+            }
+            else{
+                if UserDefaults.standard.array(forKey: "teamList") != nil{
+                    teamList = UserDefaults.standard.object(forKey: "teamList") as! [String]
+                    print("\(teamList) and \(teamList.count)")
+                    
+                }
+                else{
+                    print("teamList is nil")
+                }
+            }
+            
+            
+           
+            
+            
+            
+            
+            
+        }
+        else{
+            Notes.text = "Type here..."
+        }
+        
         
         
         // Do any additional setup after loading the view.

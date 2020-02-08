@@ -9,6 +9,7 @@
 import UIKit
 var teamNumberFromButton = ""
 
+
 class ViewDataViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
 
     @IBAction func changeDataPressed(_ sender: Any) {
@@ -30,7 +31,8 @@ class ViewDataViewController: UIViewController, UITableViewDataSource, UITableVi
             
             print("teamNumberFromButton is \(teamNumberFromButton)")
             print(indexPath1![1])
-            performSegue(withIdentifier: "segueToIndTeamData", sender: nil)
+            changeData = true
+            performSegue(withIdentifier: "showPitScouting", sender: nil)
     }
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         
@@ -110,6 +112,7 @@ class ViewDataViewController: UIViewController, UITableViewDataSource, UITableVi
             print("pitScoutList is nil")
         }
         tableView.rowHeight = 60
+        //teamList.removeFirst()
        // teamList.append("Test")
        // print(teamList[0])
             
