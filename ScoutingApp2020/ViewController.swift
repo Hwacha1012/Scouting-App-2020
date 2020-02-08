@@ -75,9 +75,9 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
         
-     //   let d =  UserDefaults.standard
-      // d.removeObject(forKey: "pitScoutList")
-     //   d.synchronize()
+     //  let d =  UserDefaults.standard
+     //  d.removeObject(forKey: "pitScoutList")
+    //    d.synchronize()
         
         // MARK: - RunType is set
         

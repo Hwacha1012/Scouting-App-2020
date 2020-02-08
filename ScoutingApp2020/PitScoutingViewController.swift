@@ -185,6 +185,7 @@ class PitScoutingViewController: UIViewController {
         if (Notes.text! == "Type here...") {
             Notes.text! = ""
         }
+      // print("teamnum is \(teamNumber)" )
         PitScoutingViewController.pitScoutingDataObj.notes =  Notes.text!
         let payload =  Serialize(
             teamNumber: PitScoutingViewController.pitScoutingDataObj.robotNumber,
@@ -199,10 +200,10 @@ class PitScoutingViewController: UIViewController {
                pretty: false)
         print(payload);
         let defaults = UserDefaults.standard
-        defaults.set(payload, forKey: "\(teamNumber), PitScouting")
+        defaults.set(payload, forKey: "\(PitScoutingViewController.pitScoutingDataObj.robotNumber), PitScouting")
        if UserDefaults.standard.array(forKey: "pitScoutList") == nil{
             // teamList = UserDefaults.standard.object(forKey: "teamList") as! [String]
-            pitScoutList.append("\(teamNumber), PitScouting")
+        pitScoutList.append("\(PitScoutingViewController.pitScoutingDataObj.robotNumber), PitScouting")
            // print("teamlist is \(teamList)!")
             UserDefaults.standard.set(pitScoutList, forKey: "pitScoutList")
             
@@ -213,7 +214,7 @@ class PitScoutingViewController: UIViewController {
             pitScoutList = UserDefaults.standard.array(forKey: "pitScoutList") as! [String]
             breakLoop = false
             for index in 0...pitScoutList.count - 1 {
-                let testString = "\(teamNumber), PitScouting"
+                let testString = "\(PitScoutingViewController.pitScoutingDataObj.robotNumber), PitScouting"
                 if testString == pitScoutList[index]{
                     breakLoop = true
                     
@@ -221,14 +222,14 @@ class PitScoutingViewController: UIViewController {
             }
             print("breakLoop is \(breakLoop!)")
             if breakLoop == false{
-                pitScoutList.append("\(teamNumber), PitScouting")
+                pitScoutList.append("\(PitScoutingViewController.pitScoutingDataObj.robotNumber), PitScouting")
                 //print(teamList)
                 UserDefaults.standard.set(pitScoutList, forKey: "pitScoutList")
             }
             else if breakLoop == true{
-                let indexOfElement = pitScoutList.index(of: "\(teamNumber), PitScouting")
+                let indexOfElement = pitScoutList.index(of: "\(PitScoutingViewController.pitScoutingDataObj.robotNumber), PitScouting")
                 pitScoutList.remove(at: indexOfElement!)
-                pitScoutList.append("\(teamNumber), PitScouting")
+                pitScoutList.append("\(PitScoutingViewController.pitScoutingDataObj.robotNumber), PitScouting")
                // print(teamList)
                 UserDefaults.standard.set(pitScoutList, forKey: "pitScoutList")
                 
@@ -242,7 +243,7 @@ class PitScoutingViewController: UIViewController {
         }
         else{
             pitScoutList = UserDefaults.standard.array(forKey: "pitScoutList") as! [String]
-            pitScoutList.append("\(teamNumber), PitScouting")
+            pitScoutList.append("\(PitScoutingViewController.pitScoutingDataObj.robotNumber), PitScouting")
            // print("pitScoutList is \(pitScoutList)")
             UserDefaults.standard.set(pitScoutList, forKey: "pitScoutList")
         }
@@ -280,16 +281,19 @@ class PitScoutingViewController: UIViewController {
                 var data = Deserialize(jsonString: defaults.object(forKey: pitScoutList[counter]) as! String)
                 RobotNumber.text = data.robotNumber
                 RobotNumber.backgroundColor = UIColor.green
+                print("driveTrain type is \(data.driveTrainType)")
                 if(data.driveTrainType == "Tank"){
                     DrivetrainType.selectedSegmentIndex = 0
                 }
-                else if(data.driveTrainType == "Mech"){
+                else if(data.driveTrainType == "Mechanum"){
                     DrivetrainType.selectedSegmentIndex = 1
                 }
-                else if(data.driveTrainType == "HDrive"){
+                else if(data.driveTrainType == "H-Drive"){
                     DrivetrainType.selectedSegmentIndex = 2
                 }
-                
+                else if(data.driveTrainType == "Swerve"){
+                    DrivetrainType.selectedSegmentIndex = 2
+                }
                 if(data.intake == "Floor"){
                     Intake.selectedSegmentIndex = 0
                 
