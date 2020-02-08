@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		05264F4D23EE2A2E00B461D2 /* ViewDataViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05264F4C23EE2A2E00B461D2 /* ViewDataViewController.swift */; };
 		0529E03423C95094004707FD /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0529E03323C95094004707FD /* AppDelegate.swift */; };
 		0529E03623C95094004707FD /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0529E03523C95094004707FD /* ViewController.swift */; };
 		0529E03923C95094004707FD /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0529E03723C95094004707FD /* Main.storyboard */; };
@@ -51,6 +52,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		05264F4C23EE2A2E00B461D2 /* ViewDataViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewDataViewController.swift; sourceTree = "<group>"; };
 		0529E03023C95094004707FD /* ScoutingApp2020.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ScoutingApp2020.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0529E03323C95094004707FD /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		0529E03523C95094004707FD /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -139,6 +141,7 @@
 				055F4B2623D7B2CE001C3581 /* TeleOpViewController.swift */,
 				0552504323E0EC7B0084F28C /* FinishMatchDataViewController.swift */,
 				DF28848523DCC19B00572749 /* PitScoutingViewController.swift */,
+				05264F4C23EE2A2E00B461D2 /* ViewDataViewController.swift */,
 				0529E03723C95094004707FD /* Main.storyboard */,
 				0529E03D23C95095004707FD /* Assets.xcassets */,
 				0529E03F23C95095004707FD /* LaunchScreen.storyboard */,
@@ -325,6 +328,7 @@
 				DF28848623DCC19B00572749 /* PitScoutingViewController.swift in Sources */,
 				055F4B1523D27621001C3581 /* EnterData1ViewController.swift in Sources */,
 				055F4B2923D7B445001C3581 /* MatchDataViewController.swift in Sources */,
+				05264F4D23EE2A2E00B461D2 /* ViewDataViewController.swift in Sources */,
 				0552504423E0EC7B0084F28C /* FinishMatchDataViewController.swift in Sources */,
 				055F4B2723D7B2CE001C3581 /* TeleOpViewController.swift in Sources */,
 				0529E03C23C95094004707FD /* ScoutingApp2020.xcdatamodeld in Sources */,
