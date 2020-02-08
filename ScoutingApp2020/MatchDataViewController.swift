@@ -13,15 +13,23 @@ class MatchData: Codable {
     public var matchText:String
     public var colorSegmentedControl:String
     public var scoutText:String
+    public var crossedSwitch:String
+    public var autoLowGoal:Int
+    public var autoHighGoal:Int
  
-    init(teamText: String, matchText:String, colorSegmentedControl:String, scoutText:String) {
+    init(teamText: String, matchText:String, colorSegmentedControl:String, scoutText:String, autoLowGoal:Int, autoHighGoal:Int) {
         self.matchText = matchText
         self.teamText = teamText
         self.colorSegmentedControl = colorSegmentedControl
         self.scoutText = scoutText
+        self.autoLowGoal = autoLowGoal
+        self.autoHighGoal = autoHighGoal
         
     }
 }
+
+
+
 
 
 class MatchDataViewController: UIViewController {
