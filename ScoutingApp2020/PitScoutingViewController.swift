@@ -68,6 +68,8 @@ class PitScoutingViewController: UIViewController {
     
     
     @IBOutlet weak var Climbing: UISwitch!
+    
+    
     func Serialize(teamNumber:String, driveTrainType:String, intake:String, capacity:String, AutoLineCrossing:Bool, AutoHighBalls:String, AutoLowBalls:String, climb:Bool, notes:String,pretty:Bool) -> String
     {
         PitScoutingViewController.pitScoutingDataObj = PitScoutingData(robotNumber: teamNumber, driveTrainType:driveTrainType, intake:intake, capacity:capacity, AutoLineCrossing:AutoLineCrossing, AutoHighBalls:AutoHighBalls, AutoLowBalls:AutoLowBalls, climb:climb, notes:notes)
@@ -81,6 +83,8 @@ class PitScoutingViewController: UIViewController {
         print(jsonString)
         return jsonString
     }
+    
+    
     func Deserialize(jsonString:String) ->
         PitScoutingData{
         let jsonData = jsonString.data(using: .utf8)!

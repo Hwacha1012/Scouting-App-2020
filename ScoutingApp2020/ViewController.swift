@@ -9,7 +9,7 @@
 import UIKit
 var teamList = [String]()
 var pitScoutList = [String]()
-
+var matchDataList = [String]()
 var scoutName = "" //Name of the Scout
 var teamNumber = 0 //ex;2170
 var matchNumber = 0 //ex;69
@@ -24,7 +24,7 @@ var autoLine = false //do they cross the line in auto
 var autoLowGoal = 0 //low goals scored in auto
 var autoHighGoal = 0 //high goals scored in auto
 var autoTrenchBalls = 0 //trench balls picked up in auto
-var autoShieldBalls = 0 //balls you get from sheild generator
+var autoShieldBalls = 0 //balls you get from shield generator
 
 var controlPanel = "" //what did they do with the control panel ex. no, spin, select
 var lowGoalMade = 0 //low goals made in teleop
