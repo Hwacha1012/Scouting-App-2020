@@ -38,7 +38,7 @@ class PitScoutingData: Codable {
 
 class PitScoutingViewController: UIViewController {
     
-    public var pitScoutingDataObj = PitScoutingData(robotNumber: "", driveTrainType:"Tank", intake:"Floor", capacity:"1", AutoLineCrossing:true, AutoHighBalls:"", AutoLowBalls:"", climb:true, notes:"")
+    public static var pitScoutingDataObj = PitScoutingData(robotNumber: "", driveTrainType:"Tank", intake:"Floor", capacity:"1", AutoLineCrossing:true, AutoHighBalls:"", AutoLowBalls:"", climb:true, notes:"")
     
     
     @IBOutlet weak var RobotNumber: UITextField!
@@ -70,13 +70,13 @@ class PitScoutingViewController: UIViewController {
     @IBOutlet weak var Climbing: UISwitch!
     func Serialize(teamNumber:String, driveTrainType:String, intake:String, capacity:String, AutoLineCrossing:Bool, AutoHighBalls:String, AutoLowBalls:String, climb:Bool, notes:String,pretty:Bool) -> String
     {
-       pitScoutingDataObj = PitScoutingData(robotNumber: teamNumber, driveTrainType:driveTrainType, intake:intake, capacity:capacity, AutoLineCrossing:AutoLineCrossing, AutoHighBalls:AutoHighBalls, AutoLowBalls:AutoLowBalls, climb:climb, notes:notes)
+        PitScoutingViewController.pitScoutingDataObj = PitScoutingData(robotNumber: teamNumber, driveTrainType:driveTrainType, intake:intake, capacity:capacity, AutoLineCrossing:AutoLineCrossing, AutoHighBalls:AutoHighBalls, AutoLowBalls:AutoLowBalls, climb:climb, notes:notes)
         let encoder = JSONEncoder()
         if (pretty == true)
         {
         encoder.outputFormatting = .prettyPrinted // if necessary
         }
-        let data = try! encoder.encode(pitScoutingDataObj)
+        let data = try! encoder.encode(PitScoutingViewController.pitScoutingDataObj)
         let jsonString = String(data: data, encoding: .utf8)!
         print(jsonString)
         return jsonString
@@ -85,8 +85,8 @@ class PitScoutingViewController: UIViewController {
         PitScoutingData{
         let jsonData = jsonString.data(using: .utf8)!
         let decoder = JSONDecoder()
-        pitScoutingDataObj = try! decoder.decode(PitScoutingData.self, from: jsonData);
-        return dump(pitScoutingDataObj)
+            PitScoutingViewController.pitScoutingDataObj = try! decoder.decode(PitScoutingData.self, from: jsonData);
+            return dump(PitScoutingViewController.pitScoutingDataObj)
     }
     
     func validateNumber(text: String) -> Bool {
@@ -111,7 +111,7 @@ class PitScoutingViewController: UIViewController {
             // correct password
             print("Success.");
            RobotNumber.backgroundColor = UIColor.green
-            pitScoutingDataObj.robotNumber = RobotNumber.text!
+            PitScoutingViewController.pitScoutingDataObj.robotNumber = RobotNumber.text!
 
         } else {
             print("Failed");
@@ -124,28 +124,28 @@ class PitScoutingViewController: UIViewController {
 
     @IBAction func driveTrainType_Selected(_ sender: Any) {
         let title = DrivetrainType.titleForSegment(at: DrivetrainType.selectedSegmentIndex)
-        pitScoutingDataObj.driveTrainType = title!
+        PitScoutingViewController.pitScoutingDataObj.driveTrainType = title!
     }
     
     @IBAction func intake_Selected(_ sender: Any) {
 
         let title = Intake.titleForSegment(at: Intake.selectedSegmentIndex)
-        pitScoutingDataObj.intake = title!
+        PitScoutingViewController.pitScoutingDataObj.intake = title!
     }
     
     
     @IBAction func capacity_Selected(_ sender: Any) {
         let title = Capacity.titleForSegment(at: Capacity.selectedSegmentIndex)
-        pitScoutingDataObj.capacity = title!
+        PitScoutingViewController.pitScoutingDataObj.capacity = title!
     }
     
     
     @IBAction func autoLineCrossing_Selected(_ sender: Any) {
-        pitScoutingDataObj.AutoLineCrossing = AutoLineCrossing.isOn
+        PitScoutingViewController.pitScoutingDataObj.AutoLineCrossing = AutoLineCrossing.isOn
     }
     
     @IBAction func Climbing(_ sender: Any) {
-        pitScoutingDataObj.climb = Climbing.isOn
+        PitScoutingViewController.pitScoutingDataObj.climb = Climbing.isOn
     }
     
     @IBAction func AutoHighGoalBalls_Changed(_ sender: Any) {
@@ -153,7 +153,7 @@ class PitScoutingViewController: UIViewController {
             // correct password
             print("Success.");
            AutoHighGoalBalls.backgroundColor = UIColor.green
-            pitScoutingDataObj.AutoHighBalls = AutoHighGoalBalls.text!
+            PitScoutingViewController.pitScoutingDataObj.AutoHighBalls = AutoHighGoalBalls.text!
 
         } else {
             print("Failed");
@@ -168,7 +168,7 @@ class PitScoutingViewController: UIViewController {
             // correct password
             print("Success.");
            AutoLowGoalBalls.backgroundColor = UIColor.green
-            pitScoutingDataObj.AutoLowBalls = AutoLowGoalBalls.text!
+            PitScoutingViewController.pitScoutingDataObj.AutoLowBalls = AutoLowGoalBalls.text!
 
         } else {
             print("Failed");
@@ -185,17 +185,17 @@ class PitScoutingViewController: UIViewController {
         if (Notes.text! == "Type here...") {
             Notes.text! = ""
         }
-        pitScoutingDataObj.notes =  Notes.text!
+        PitScoutingViewController.pitScoutingDataObj.notes =  Notes.text!
         let payload =  Serialize(
-               teamNumber: pitScoutingDataObj.robotNumber,
-               driveTrainType: pitScoutingDataObj.driveTrainType,
-               intake: pitScoutingDataObj.intake,
-               capacity: pitScoutingDataObj.capacity,
-               AutoLineCrossing: pitScoutingDataObj.AutoLineCrossing,
-               AutoHighBalls: pitScoutingDataObj.AutoHighBalls,
-               AutoLowBalls: pitScoutingDataObj.AutoLowBalls,
-               climb: pitScoutingDataObj.climb,
-               notes: pitScoutingDataObj.notes,
+            teamNumber: PitScoutingViewController.pitScoutingDataObj.robotNumber,
+            driveTrainType: PitScoutingViewController.pitScoutingDataObj.driveTrainType,
+            intake: PitScoutingViewController.pitScoutingDataObj.intake,
+            capacity: PitScoutingViewController.pitScoutingDataObj.capacity,
+            AutoLineCrossing: PitScoutingViewController.pitScoutingDataObj.AutoLineCrossing,
+            AutoHighBalls: PitScoutingViewController.pitScoutingDataObj.AutoHighBalls,
+            AutoLowBalls: PitScoutingViewController.pitScoutingDataObj.AutoLowBalls,
+            climb: PitScoutingViewController.pitScoutingDataObj.climb,
+            notes: PitScoutingViewController.pitScoutingDataObj.notes,
                pretty: false)
         print(payload);
         let defaults = UserDefaults.standard
