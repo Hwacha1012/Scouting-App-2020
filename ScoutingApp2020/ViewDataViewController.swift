@@ -15,7 +15,7 @@ class ViewDataViewController: UIViewController, UITableViewDataSource, UITableVi
         let buttonPosition:CGPoint = (sender as AnyObject).convert(CGPoint.zero, to:self.tableView)
             let indexPath1 = self.tableView.indexPathForRow(at: buttonPosition)
             
-            teamNumberFromButton = teamList[(indexPath1![1])]
+           // teamNumberFromButton = teamList[(indexPath1![1])]
             
             
             
