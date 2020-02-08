@@ -7,10 +7,34 @@
 //
 
 import UIKit
+var teamNumberFromButton = ""
 
 class ViewDataViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
+
+    @IBAction func changeDataPressed(_ sender: Any) {
+        let buttonPosition:CGPoint = (sender as AnyObject).convert(CGPoint.zero, to:self.tableView)
+            let indexPath1 = self.tableView.indexPathForRow(at: buttonPosition)
+            
+            teamNumberFromButton = teamList[(indexPath1![1])]
+            
+            
+            
+            if indexPath1![1] < teamList.count {
+                teamNumberFromButton = teamList[(indexPath1![1])]
+            }
+            else {
+                teamNumberFromButton = pitScoutList[(indexPath1![1] - teamList.count)]
+            }
+            
+            
+            
+            print("teamNumberFromButton is \(teamNumberFromButton)")
+            print(indexPath1![1])
+            performSegue(withIdentifier: "segueToIndTeamData", sender: nil)
+    }
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         
+        print(pitScoutList.count + teamList.count)
         return (pitScoutList.count + teamList.count)
     }
     
@@ -85,6 +109,9 @@ class ViewDataViewController: UIViewController, UITableViewDataSource, UITableVi
         else{
             print("pitScoutList is nil")
         }
+        tableView.rowHeight = 60
+       // teamList.append("Test")
+       // print(teamList[0])
             
     }
     
