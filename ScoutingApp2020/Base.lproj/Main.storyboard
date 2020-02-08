@@ -684,28 +684,41 @@
                         <rect key="frame" x="0.0" y="0.0" width="712" height="984"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Notes" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Bge-N5-FGu">
-                                <rect key="frame" x="165" y="53" width="92" height="21"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Notes" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Bge-N5-FGu">
+                                <rect key="frame" x="178" y="20" width="356" height="69"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" text="Type here..." textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="Qoe-nz-rFt">
-                                <rect key="frame" x="20" y="82" width="672" height="263"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="AJT-pb-A3d">
+                                <rect key="frame" x="213.5" y="679" width="285" height="285"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="AJT-pb-A3d" secondAttribute="height" multiplier="1:1" id="YPZ-n2-zfr"/>
+                                </constraints>
+                                <state key="normal" title="Submit"/>
+                            </button>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="Type here..." textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="Qoe-nz-rFt">
+                                <rect key="frame" x="18" y="139" width="676" height="520"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                 <color key="textColor" systemColor="labelColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="AJT-pb-A3d">
-                                <rect key="frame" x="281" y="417" width="98" height="76"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Submit"/>
-                            </button>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="Bge-N5-FGu" firstAttribute="height" secondItem="qv0-Rz-yym" secondAttribute="height" multiplier="0.07" id="0Qb-Nb-E9k"/>
+                            <constraint firstItem="Qoe-nz-rFt" firstAttribute="centerX" secondItem="Bge-N5-FGu" secondAttribute="centerX" id="Big-Og-adH"/>
+                            <constraint firstItem="AJT-pb-A3d" firstAttribute="top" secondItem="Qoe-nz-rFt" secondAttribute="bottom" constant="20" id="EHL-Jr-DqY"/>
+                            <constraint firstItem="Qoe-nz-rFt" firstAttribute="width" secondItem="qv0-Rz-yym" secondAttribute="width" multiplier="0.95" id="Tgh-4w-iYa"/>
+                            <constraint firstItem="Qoe-nz-rFt" firstAttribute="top" secondItem="Bge-N5-FGu" secondAttribute="bottom" constant="50" id="ZWr-ke-LoH"/>
+                            <constraint firstItem="Bge-N5-FGu" firstAttribute="width" secondItem="qv0-Rz-yym" secondAttribute="width" multiplier="0.5" id="ezm-3B-oIB"/>
+                            <constraint firstItem="Bge-N5-FGu" firstAttribute="top" secondItem="2QB-Yg-aFW" secondAttribute="top" constant="20" id="pIt-93-BkD"/>
+                            <constraint firstItem="2QB-Yg-aFW" firstAttribute="bottom" secondItem="AJT-pb-A3d" secondAttribute="bottom" constant="20" id="qDI-Tc-hJm"/>
+                            <constraint firstItem="Bge-N5-FGu" firstAttribute="centerX" secondItem="qv0-Rz-yym" secondAttribute="centerX" id="rqZ-kL-ZX7"/>
+                            <constraint firstItem="AJT-pb-A3d" firstAttribute="width" secondItem="qv0-Rz-yym" secondAttribute="width" multiplier="0.4" id="ufM-Tt-oIf"/>
+                            <constraint firstItem="AJT-pb-A3d" firstAttribute="centerX" secondItem="qv0-Rz-yym" secondAttribute="centerX" id="wge-u5-Kad"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="2QB-Yg-aFW"/>
                     </view>
                     <navigationItem key="navigationItem" id="XN9-S6-JUx"/>
