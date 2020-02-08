@@ -71,14 +71,30 @@ class PitScoutingViewController: UIViewController {
     func Serialize(teamNumber:String, driveTrainType:String, intake:String, capacity:String, AutoLineCrossing:Bool, AutoHighBalls:String, AutoLowBalls:String, climb:Bool, notes:String,pretty:Bool) -> String
     {
         PitScoutingViewController.pitScoutingDataObj = PitScoutingData(robotNumber: teamNumber, driveTrainType:driveTrainType, intake:intake, capacity:capacity, AutoLineCrossing:AutoLineCrossing, AutoHighBalls:AutoHighBalls, AutoLowBalls:AutoLowBalls, climb:climb, notes:notes)
+        /*
         let encoder = JSONEncoder()
         if (pretty == true)
         {
         encoder.outputFormatting = .prettyPrinted // if necessary
         }
+        
         let data = try! encoder.encode(PitScoutingViewController.pitScoutingDataObj)
+        
         let jsonString = String(data: data, encoding: .utf8)!
+         */
+        let jStrArray = ["robotNumber="+PitScoutingViewController.pitScoutingDataObj.robotNumber,
+                         "driveTrainType="+PitScoutingViewController.pitScoutingDataObj.driveTrainType,
+                         "intake="+PitScoutingViewController.pitScoutingDataObj.intake,
+                         "capacity="+PitScoutingViewController.pitScoutingDataObj.capacity,
+                         "AutoLineCrossing="+String(PitScoutingViewController.pitScoutingDataObj.AutoLineCrossing),
+                         "AutoHighBalls="+PitScoutingViewController.pitScoutingDataObj.AutoHighBalls,
+                         "AutoLowBalls="+PitScoutingViewController.pitScoutingDataObj.AutoLowBalls,
+                         "climb="+String(PitScoutingViewController.pitScoutingDataObj.climb),
+                         "notes="+PitScoutingViewController.pitScoutingDataObj.notes]
+        let jsonString = jStrArray.joined(separator: "&")
         print(jsonString)
+        let s = send_post(jsonStr:jsonString)
+        let s2 = send_get()
         return jsonString
     }
     func Deserialize(jsonString:String) ->
@@ -87,6 +103,60 @@ class PitScoutingViewController: UIViewController {
         let decoder = JSONDecoder()
             PitScoutingViewController.pitScoutingDataObj = try! decoder.decode(PitScoutingData.self, from: jsonData);
             return dump(PitScoutingViewController.pitScoutingDataObj)
+    }
+    func send_post(jsonStr:String)-> String
+    {
+        var result = jsonStr
+        let requestUrl = URL(string:"http://ec2-52-71-196-37.compute-1.amazonaws.com/pitscouting")!
+        var request = URLRequest(url: requestUrl)
+        request.httpMethod = "POST"
+        let postString=jsonStr;
+        request.httpBody = postString.data(using:String.Encoding.utf8);
+        let task = URLSession.shared.dataTask(with:request) {
+            (data,response,error) in
+            if let error = error{
+                print("ERROR FOUD")
+                return
+            }
+            if let data = data,let dataString = String(data:data,encoding:.utf8){
+                print("Response data String:\n \(dataString)")
+            }
+        }
+        task.resume()
+        return result
+    }
+    
+    func send_get() -> String
+    {
+        let dataString = ""
+        let url = URL(string: "http://ec2-52-71-196-37.compute-1.amazonaws.com/pitscouting")
+        guard let requestUrl = url else { fatalError() }
+        // Create URL Request
+        var request = URLRequest(url: requestUrl)
+        // Specify HTTP Method to use
+        request.httpMethod = "GET"
+        // Send HTTP Request
+        let task = URLSession.shared.dataTask(with: request) { (data, response, error) in
+            
+            // Check if Error took place
+            if let error = error {
+                print("Error took place \(error)")
+                return
+            }
+            
+            // Read HTTP Response Status code
+            if let response = response as? HTTPURLResponse {
+                print("Response HTTP Status code: \(response.statusCode)")
+            }
+            
+            // Convert HTTP Response Data to a simple String
+            if let data = data, let dataString = String(data: data, encoding: .utf8) {
+                print("Response data string:\n \(dataString)")
+            }
+            
+        }
+        task.resume()
+        return dataString
     }
     
     func validateNumber(text: String) -> Bool {
@@ -206,7 +276,6 @@ class PitScoutingViewController: UIViewController {
         pitScoutList.append("\(PitScoutingViewController.pitScoutingDataObj.robotNumber), PitScouting")
            // print("teamlist is \(teamList)!")
             UserDefaults.standard.set(pitScoutList, forKey: "pitScoutList")
-            
         }
         else if UserDefaults.standard.array(forKey: "pitScoutList")!.isEmpty == false{
             
