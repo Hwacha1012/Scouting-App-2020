@@ -195,7 +195,8 @@ class TeleOpViewController: UIViewController {
             
         }
         
-        
+        popupLabel2.isHidden = false
+        popupLabel3.isHidden = false
         
         
         
@@ -208,12 +209,15 @@ class TeleOpViewController: UIViewController {
         popupMinus1.isHidden = true
         popupAdd2.isHidden = false
         popupMinus2.isHidden = false
+        popupLabel1.text = "Climbing"
         
         wheelSegmentedControl.setTitle("No Climb", forSegmentAt: 0)
         wheelSegmentedControl.setTitle("Climbing", forSegmentAt: 1)
         wheelSegmentedControl.setTitle("Climbing + Balanced", forSegmentAt: 2)
         
         popupLabel3.text = "Number of Additional Robots Climbing: 0"
+        popupLabel2.isHidden = true
+        popupLabel3.isHidden = false
         
         
     }
@@ -242,6 +246,8 @@ class TeleOpViewController: UIViewController {
         
         popupLabel2.text = "Number of Balls Shot: \(highGoalTaken[location])"
         popupLabel3.text = "Number of Balls Made: \(highGoalMade[location])"
+        popupLabel2.isHidden = false
+        popupLabel3.isHidden = false
 
     }
     
@@ -253,6 +259,8 @@ class TeleOpViewController: UIViewController {
         popupLabel1.text = "Low Goal Shooting"
         popupLabel2.text = "Number of Balls Shot: \(lowGoalTaken)"
         popupLabel3.text = "Number of Balls Made: \(lowGoalMade)"
+        popupLabel2.isHidden = false
+        popupLabel3.isHidden = false
         
     }
     
@@ -261,6 +269,12 @@ class TeleOpViewController: UIViewController {
         wheelSegmentedControl.isHidden = false
         popupAdd1.isHidden = true
         popupMinus1.isHidden = true
+        popupAdd2.isHidden = true
+        popupMinus2.isHidden = true
+        popupLabel1.text = "Control Panel"
+        popupLabel2.isHidden = true
+        popupLabel3.isHidden = true
+       // popupLabel2.text = "Control Panel"
         
         wheelSegmentedControl.setTitle("None", forSegmentAt: 0)
         wheelSegmentedControl.setTitle("Rotation", forSegmentAt: 1)
@@ -300,6 +314,28 @@ class TeleOpViewController: UIViewController {
                 highGoalTaken[i] = 0
             }
         }
+        
+        if(runType == 1){
+                   controlPanelButton.titleLabel!.font = UIFont.init(name: "Optima-BoldItalic", size: 24)
+                   lowGoalButton.titleLabel!.font = UIFont.init(name: "Optima-BoldItalic", size: 24)
+                   nextButton.titleLabel!.font = UIFont.init(name: "Optima-BoldItalic", size: 24)
+                    popupLabel1.font = UIFont.init(name: "Futura-MediumItalic", size: 30)
+                   popupLabel2.font = UIFont.init(name: "Futura-MediumItalic", size: 30)
+                   popupLabel3.font = UIFont.init(name: "Futura-MediumItalic", size: 30)
+                   
+   
+                   
+             
+                   
+               }
+               else{
+                   controlPanelButton.titleLabel!.font = UIFont.init(name: "Optima-BoldItalic", size: 20)
+                   lowGoalButton.titleLabel!.font = UIFont.init(name: "Optima-BoldItalic", size: 20)
+                   nextButton.titleLabel!.font = UIFont.init(name: "Optima-BoldItalic", size: 20)
+                    popupLabel1.font = UIFont.init(name: "Futura-MediumItalic", size: 24)
+                   popupLabel2.font = UIFont.init(name: "Futura-MediumItalic", size: 24)
+                   popupLabel3.font = UIFont.init(name: "Futura-MediumItalic", size: 24)
+               }
         
         
         
