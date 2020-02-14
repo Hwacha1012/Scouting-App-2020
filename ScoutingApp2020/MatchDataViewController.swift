@@ -10,42 +10,6 @@ import UIKit
 
 
 
-class MatchData: Codable {
-   public var teamText:String
-    public var matchText:String
-    public var colorSegmentedControl:String
-    public var scoutText:String
-    public var crossedSwitch:String
-    public var autoLowGoal:Int
-    public var autoHighGoal:Int
-    public var autoTrenchBalls:Int
-    public var autoShieldBalls:Int
-    public var controlPanel:String
-    public var climbing:String
-    public var autoLine:Bool
-    public var climbBalanced:Bool
-    public var climbingOtherRobots:Int
-    
-    init(teamText: String, matchText:String, colorSegmentedControl:String, scoutText:String, autoLowGoal:Int, autoHighGoal:Int, crossedSwitch:String, autoTrenchBalls:Int, autoShieldBalls:Int, controlPanel:String,climbing:String, autoLine:Bool, climbBalanced:Bool, climbingOtherRobots:Int) {
-        self.climbing = climbing
-        self.climbBalanced = climbBalanced
-        self.autoLine = autoLine
-        self.climbingOtherRobots = climbingOtherRobots
-        self.matchText = matchText
-        self.teamText = teamText
-        self.colorSegmentedControl = colorSegmentedControl
-        self.scoutText = scoutText
-        self.autoLowGoal = autoLowGoal
-        self.autoHighGoal = autoHighGoal
-        self.crossedSwitch = crossedSwitch
-        self.autoTrenchBalls = autoTrenchBalls
-        self.autoShieldBalls = autoShieldBalls
-        self.controlPanel = controlPanel
-        
-    }
-}
-
-
 
 
 
