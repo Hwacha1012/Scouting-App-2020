@@ -68,7 +68,7 @@ class FinishMatchDataViewController: UIViewController {
                 //commented code overwrites previous entries with same team number
                 matchDataList = UserDefaults.standard.array(forKey: "matchDataList") as! [String]
                 breakLoop = false
-                for index in 0...teamList.count - 1 {
+                for index in 0...matchDataList.count - 1 {
                     let testString = "\(teamNumber), MatchData"
                     if testString == matchDataList[index]{
                         breakLoop = true

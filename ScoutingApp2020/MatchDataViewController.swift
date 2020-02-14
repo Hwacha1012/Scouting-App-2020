@@ -76,6 +76,7 @@ class MatchDataViewController: UIViewController {
     }
     @IBAction func autoButtonPressed(_ sender: Any) {
         matchPosition = 2
+        updateValues()
         performSegue(withIdentifier: "MatchToData2", sender: nil)
     }
     override func viewDidLoad() {
