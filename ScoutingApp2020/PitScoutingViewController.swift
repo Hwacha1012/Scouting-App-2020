@@ -40,6 +40,14 @@ class PitScoutingViewController: UIViewController {
     
     public static var pitScoutingDataObj = PitScoutingData(robotNumber: "", driveTrainType:"Tank", intake:"Floor", capacity:"1", AutoLineCrossing:true, AutoHighBalls:"", AutoLowBalls:"", climb:true, notes:"")
     
+    public struct Throwable<T: Decodable>: Decodable {
+        let result: Result<T, Error>
+
+        init(from decoder: Decoder) throws {
+            result = Result(catching: { try T(from: decoder) })
+        }
+    }
+    
     
     @IBOutlet weak var RobotNumber: UITextField!
     
@@ -101,12 +109,22 @@ class PitScoutingViewController: UIViewController {
     }
     
     
-    func Deserialize(jsonString:String) ->
-        PitScoutingData{
+    func DeserializeList(jsonString:String) ->
+        [Throwable<PitScoutingData>]{
         let jsonData = jsonString.data(using: .utf8)!
         let decoder = JSONDecoder()
-            PitScoutingViewController.pitScoutingDataObj = try! decoder.decode(PitScoutingData.self, from: jsonData);
-            return dump(PitScoutingViewController.pitScoutingDataObj)
+        var teamData = try! decoder.decode([Throwable<PitScoutingData>].self, from: jsonData);
+        print(teamData)
+        // let products = throwables.compactMap { try? $0.result.get() }
+
+        return teamData
+    }
+    func Deserialize(jsonString:String) ->
+            PitScoutingData{
+            let jsonData = jsonString.data(using: .utf8)!
+            let decoder = JSONDecoder()
+                PitScoutingViewController.pitScoutingDataObj = try! decoder.decode(PitScoutingData.self, from: jsonData);
+                return dump(PitScoutingViewController.pitScoutingDataObj)
     }
     func send_post(jsonStr:String)-> String
     {
@@ -130,8 +148,9 @@ class PitScoutingViewController: UIViewController {
         return result
     }
     
-    func send_get() -> String
+    func send_get() -> [Throwable<PitScoutingData>]
     {
+        var teamData: [Throwable<PitScoutingData>] = Array()
         let dataString = ""
         let url = URL(string: "http://ec2-52-71-196-37.compute-1.amazonaws.com/pitscouting")
         guard let requestUrl = url else { fatalError() }
@@ -155,12 +174,12 @@ class PitScoutingViewController: UIViewController {
             
             // Convert HTTP Response Data to a simple String
             if let data = data, let dataString = String(data: data, encoding: .utf8) {
-                print("Response data string:\n \(dataString)")
+                teamData = self.DeserializeList(jsonString:dataString)
             }
             
         }
         task.resume()
-        return dataString
+        return teamData
     }
     
     func validateNumber(text: String) -> Bool {
