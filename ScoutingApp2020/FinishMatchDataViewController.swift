@@ -5,45 +5,15 @@
 //  Created by Leonard Liu on 1/28/20.
 //  Copyright © 2020 Leonard Liu. All rights reserved.
 //
+//
+//  FinishMatchDataViewController.swift
+//  ScoutingApp2020
+//
+//  Created by Leonard Liu on 1/28/20.
+//  Copyright © 2020 Leonard Liu. All rights reserved.
+//
 
 import UIKit
-
-
-
-class MatchData: Codable {
-   public var teamText:String
-    public var matchText:String
-    public var colorSegmentedControl:String
-    public var scoutText:String
-    public var crossedSwitch:String
-    public var autoLowGoal:Int
-    public var autoHighGoal:Int
-    public var autoTrenchBalls:Int
-    public var autoShieldBalls:Int
-    public var controlPanel:String
-    public var climbing:String
-    public var autoLine:Bool
-    public var climbBalanced:Bool
-    public var climbingOtherRobots:Int
-    
-    init(teamText: String, matchText:String, colorSegmentedControl:String, scoutText:String, autoLowGoal:Int, autoHighGoal:Int, crossedSwitch:String, autoTrenchBalls:Int, autoShieldBalls:Int, controlPanel:String,climbing:String, autoLine:Bool, climbBalanced:Bool, climbingOtherRobots:Int) {
-        self.climbing = climbing
-        self.climbBalanced = climbBalanced
-        self.autoLine = autoLine
-        self.climbingOtherRobots = climbingOtherRobots
-        self.matchText = matchText
-        self.teamText = teamText
-        self.colorSegmentedControl = colorSegmentedControl
-        self.scoutText = scoutText
-        self.autoLowGoal = autoLowGoal
-        self.autoHighGoal = autoHighGoal
-        self.crossedSwitch = crossedSwitch
-        self.autoTrenchBalls = autoTrenchBalls
-        self.autoShieldBalls = autoShieldBalls
-        self.controlPanel = controlPanel
-        
-    }
-}
 
 
 
@@ -52,22 +22,30 @@ class FinishMatchDataViewController: UIViewController {
     @IBOutlet weak var Notes: UITextView!
     
     @IBOutlet weak var submit: UIButton!
+    /*
+    public static var  matchDataObj = MatchData(teamText: "", matchText:"", colorSegmentedControl:"", scoutText:"", autoLowGoal:0, autoHighGoal:0, crossedSwitch:"", autoTrenchBalls:0, autoShieldBalls:0, controlPanel:"",climbing:"", autoLine:false, climbBalanced:false, climbingOtherRobots:0, teamColor:true)
+    */
     
-    public static var  matchDataObj = MatchData(teamText: "", matchText:"", colorSegmentedControl:"", scoutText:"", autoLowGoal:0, autoHighGoal:0, crossedSwitch:"", autoTrenchBalls:0, autoShieldBalls:0, controlPanel:"",climbing:"", autoLine:false, climbBalanced:false, climbingOtherRobots:0)
     
-    
-    
-    func Serialize(teamText:String, matchText:String, colorSegmentedControl:String, scoutText:String, autoLowGoal:Int, autoHighGoal:Int, crossedSwitch:String, autoTrenchBalls:Int , autoShieldBalls:Int, controlPanel:String, climbing:String,autoLine:Bool, climbBalanced:Bool, climbingOtherRobots:Int, pretty:Bool) -> String
+    func Serialize(teamText:String, matchText:String, colorSegmentedControl:String, scoutText:String, autoLowGoal:Int, autoHighGoal:Int, crossedSwitch:String, autoTrenchBalls:Int , autoShieldBalls:Int, controlPanel:String, climbing:String,autoLine:Bool, climbBalanced:Bool, climbingOtherRobots:Int, teamColor:Bool, pretty:Bool) -> String
     {
+
         FinishMatchDataViewController.matchDataObj = MatchData(teamText: teamText, matchText:matchText, colorSegmentedControl:colorSegmentedControl, scoutText:scoutText, autoLowGoal:autoLowGoal, autoHighGoal:autoHighGoal, crossedSwitch:crossedSwitch, autoTrenchBalls:autoTrenchBalls, autoShieldBalls:autoShieldBalls, controlPanel:controlPanel, climbing:climbing, autoLine:autoLine, climbBalanced:climbBalanced, climbingOtherRobots:climbingOtherRobots)
+
+        MatchDataViewController.matchDataObj = MatchData(teamText: teamText, matchText:matchText, colorSegmentedControl:colorSegmentedControl, scoutText:scoutText, autoLowGoal:autoLowGoal, autoHighGoal:autoHighGoal, crossedSwitch:crossedSwitch, autoTrenchBalls:autoTrenchBalls , autoShieldBalls:autoShieldBalls, controlPanel:controlPanel, climbing:climbing, autoLine:autoLine, climbBalanced:climbBalanced, climbingOtherRobots:climbingOtherRobots, teamColor:teamColor)
+
         let encoder = JSONEncoder()
         if (pretty == true)
         {
         encoder.outputFormatting = .prettyPrinted // if necessary
         }
+
         let data = try! encoder.encode(FinishMatchDataViewController.matchDataObj)
         
         
+
+        let data = try! encoder.encode(MatchDataViewController.matchDataObj)
+
         let jsonString = String(data: data, encoding: .utf8)!
         print(jsonString)
         return jsonString
@@ -78,20 +56,22 @@ class FinishMatchDataViewController: UIViewController {
         
         
             let payload =  Serialize(
-                teamText: FinishMatchDataViewController.matchDataObj.teamText,
-                matchText: FinishMatchDataViewController.matchDataObj.matchText,
-                colorSegmentedControl: FinishMatchDataViewController.matchDataObj.matchText,
-                scoutText: FinishMatchDataViewController.matchDataObj.scoutText,
-                autoLowGoal: FinishMatchDataViewController.matchDataObj.autoLowGoal,
-                autoHighGoal: FinishMatchDataViewController.matchDataObj.autoHighGoal,
-                crossedSwitch: FinishMatchDataViewController.matchDataObj.crossedSwitch,
-                autoTrenchBalls: FinishMatchDataViewController.matchDataObj.autoTrenchBalls,
-                autoShieldBalls: FinishMatchDataViewController.matchDataObj.autoShieldBalls,
-                controlPanel: FinishMatchDataViewController.matchDataObj.controlPanel,
-                climbing: FinishMatchDataViewController.matchDataObj.climbing,
-                autoLine: FinishMatchDataViewController.matchDataObj.autoLine,
-                climbBalanced: FinishMatchDataViewController.matchDataObj.climbBalanced,
-                climbingOtherRobots:FinishMatchDataViewController.matchDataObj.climbingOtherRobots, pretty: false)
+                teamText: MatchDataViewController.matchDataObj.teamText,
+                matchText: MatchDataViewController.matchDataObj.matchText,
+                colorSegmentedControl: MatchDataViewController.matchDataObj.matchText,
+                scoutText: MatchDataViewController.matchDataObj.scoutText,
+                autoLowGoal: MatchDataViewController.matchDataObj.autoLowGoal,
+                autoHighGoal: MatchDataViewController.matchDataObj.autoHighGoal,
+                crossedSwitch: MatchDataViewController.matchDataObj.crossedSwitch,
+                autoTrenchBalls: MatchDataViewController.matchDataObj.autoTrenchBalls,
+                autoShieldBalls: MatchDataViewController.matchDataObj.autoShieldBalls,
+                controlPanel: MatchDataViewController.matchDataObj.controlPanel,
+                climbing: MatchDataViewController.matchDataObj.climbing,
+                autoLine: MatchDataViewController.matchDataObj.autoLine,
+                climbBalanced: MatchDataViewController.matchDataObj.climbBalanced,
+              climbingOtherRobots:MatchDataViewController.matchDataObj.climbingOtherRobots,
+              teamColor: MatchDataViewController.matchDataObj.teamColor,
+              pretty: false)
         
             print(payload);
             let defaults = UserDefaults.standard
@@ -165,4 +145,3 @@ class FinishMatchDataViewController: UIViewController {
     */
 
 }
-
