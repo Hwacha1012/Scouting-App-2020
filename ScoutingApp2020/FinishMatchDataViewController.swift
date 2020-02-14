@@ -15,11 +15,16 @@ class FinishMatchDataViewController: UIViewController {
     @IBOutlet weak var Notes: UITextView!
     
     @IBOutlet weak var submit: UIButton!
+<<<<<<< HEAD
     
     public static var  matchDataObj = MatchData(teamText: "", matchText:"", colorSegmentedControl:"", scoutText:"", autoLowGoal:0, autoHighGoal:0, crossedSwitch:"", autoTrenchBalls:0, autoShieldBalls:0, controlPanel:"",climbing:"", autoLine:false, climbBalanced:false, climbingOtherRobots:0)
     
+=======
+>>>>>>> parent of f69dffd... Reverted Leo's dumb changes to my code
     
+    public static var  matchDataObj = MatchData(teamText: "", matchText:"", colorSegmentedControl:"", scoutText:"", autoLowGoal:0, autoHighGoal:0, crossedSwitch:"", autoTrenchBalls:0, autoShieldBalls:0, controlPanel:"",climbing:"", autoLine:false, climbBalanced:false, climbingOtherRobots:0)
     
+<<<<<<< HEAD
     func Serialize(teamText:String, matchText:String, colorSegmentedControl:String, scoutText:String, autoLowGoal:Int, autoHighGoal:Int, crossedSwitch:String, autoTrenchBalls:Int , autoShieldBalls:Int, controlPanel:String, climbing:String,autoLine:Bool, climbBalanced:Bool, climbingOtherRobots:Int, pretty:Bool) -> String
     {
 
@@ -35,11 +40,19 @@ class FinishMatchDataViewController: UIViewController {
         MatchDataViewController.matchDataObj = MatchData(teamText: teamText, matchText:matchText, colorSegmentedControl:colorSegmentedControl, scoutText:scoutText, autoLowGoal:autoLowGoal, autoHighGoal:autoHighGoal, crossedSwitch:crossedSwitch, autoTrenchBalls:autoTrenchBalls , autoShieldBalls:autoShieldBalls, controlPanel:controlPanel, climbing:climbing, autoLine:autoLine, climbBalanced:climbBalanced, climbingOtherRobots:climbingOtherRobots, teamColor:teamColor)
 
 
+=======
+    
+    
+    func Serialize(teamText:String, matchText:String, colorSegmentedControl:String, scoutText:String, autoLowGoal:Int, autoHighGoal:Int, crossedSwitch:String, autoTrenchBalls:Int , autoShieldBalls:Int, controlPanel:String, climbing:String,autoLine:Bool, climbBalanced:Bool, climbingOtherRobots:Int, pretty:Bool) -> String
+    {
+        FinishMatchDataViewController.matchDataObj = MatchData(teamText: teamText, matchText:matchText, colorSegmentedControl:colorSegmentedControl, scoutText:scoutText, autoLowGoal:autoLowGoal, autoHighGoal:autoHighGoal, crossedSwitch:crossedSwitch, autoTrenchBalls:autoTrenchBalls , autoShieldBalls:autoShieldBalls, controlPanel:controlPanel, climbing:climbing, autoLine:autoLine, climbBalanced:climbBalanced, climbingOtherRobots:climbingOtherRobots)
+>>>>>>> parent of f69dffd... Reverted Leo's dumb changes to my code
         let encoder = JSONEncoder()
         if (pretty == true)
         {
         encoder.outputFormatting = .prettyPrinted // if necessary
         }
+<<<<<<< HEAD
 
         let data = try! encoder.encode(FinishMatchDataViewController.matchDataObj)
 
@@ -51,6 +64,9 @@ class FinishMatchDataViewController: UIViewController {
         let data = try! encoder.encode(MatchDataViewController.matchDataObj)
 
 
+=======
+        let data = try! encoder.encode(FinishMatchDataViewController.matchDataObj)
+>>>>>>> parent of f69dffd... Reverted Leo's dumb changes to my code
         let jsonString = String(data: data, encoding: .utf8)!
         print(jsonString)
         return jsonString
