@@ -25,8 +25,9 @@ class MatchData: Codable {
     public var autoLine:Bool
     public var climbBalanced:Bool
     public var climbingOtherRobots:Int
+    public var teamColor:Bool
     
-    init(teamText: String, matchText:String, colorSegmentedControl:String, scoutText:String, autoLowGoal:Int, autoHighGoal:Int, crossedSwitch:String, autoTrenchBalls:Int, autoShieldBalls:Int, controlPanel:String,climbing:String, autoLine:Bool, climbBalanced:Bool, climbingOtherRobots:Int) {
+    init(teamText: String, matchText:String, colorSegmentedControl:String, scoutText:String, autoLowGoal:Int, autoHighGoal:Int, crossedSwitch:String, autoTrenchBalls:Int, autoShieldBalls:Int, controlPanel:String,climbing:String, autoLine:Bool, climbBalanced:Bool, climbingOtherRobots:Int, teamColor:Bool) {
         self.climbing = climbing
         self.climbBalanced = climbBalanced
         self.autoLine = autoLine
@@ -41,6 +42,7 @@ class MatchData: Codable {
         self.autoTrenchBalls = autoTrenchBalls
         self.autoShieldBalls = autoShieldBalls
         self.controlPanel = controlPanel
+        self.teamColor = teamColor
         
     }
 }
@@ -50,9 +52,9 @@ class MatchData: Codable {
 
 
 class MatchDataViewController: UIViewController {
-    /*
-    public static var  matchDataObj = MatchData(teamText: "", matchText:"", colorSegmentedControl:"", scoutText:"", autoLowGoal:0, autoHighGoal:0, crossedSwitch:"", autoTrenchBalls:0, autoShieldBalls:0, controlPanel:"",climbing:"", autoLine:false, climbBalanced:false, climbingOtherRobots:0)
-    */
+    
+    public static var  matchDataObj = MatchData(teamText: "", matchText:"", colorSegmentedControl:"", scoutText:"", autoLowGoal:0, autoHighGoal:0, crossedSwitch:"", autoTrenchBalls:0, autoShieldBalls:0, controlPanel:"",climbing:"", autoLine:false, climbBalanced:false, climbingOtherRobots:0, teamColor:true)
+
     
     @IBOutlet weak var titleLabel: UILabel!
     @IBOutlet weak var scoutLabel: UILabel!
