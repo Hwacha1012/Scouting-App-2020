@@ -115,6 +115,7 @@ class TeleOpViewController: UIViewController {
         else if (location == 6){
             if(climbingOtherRobots < 2){
                 climbingOtherRobots = climbingOtherRobots + 1
+                popupLabel3.text = "Number of Additional Robots Climbing: \(climbingOtherRobots)"
             }
             
            
@@ -138,6 +139,7 @@ class TeleOpViewController: UIViewController {
         else if (location == 6){
             if(climbingOtherRobots > 0){
                 climbingOtherRobots = climbingOtherRobots - 1
+                popupLabel3.text = "Number of Additional Robots Climbing: \(climbingOtherRobots)"
             }
         }
         
@@ -248,6 +250,8 @@ class TeleOpViewController: UIViewController {
         popupLabel3.text = "Number of Balls Made: \(highGoalMade[location])"
         popupLabel2.isHidden = false
         popupLabel3.isHidden = false
+        popupAdd2.isHidden = false
+        popupMinus2.isHidden = false
 
     }
     
@@ -261,7 +265,8 @@ class TeleOpViewController: UIViewController {
         popupLabel3.text = "Number of Balls Made: \(lowGoalMade)"
         popupLabel2.isHidden = false
         popupLabel3.isHidden = false
-        
+        popupAdd2.isHidden = false
+        popupMinus2.isHidden = false
     }
     
     func controlPanelClicked(){

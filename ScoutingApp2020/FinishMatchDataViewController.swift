@@ -20,6 +20,7 @@ class FinishMatchDataViewController: UIViewController {
     public static var  matchDataObj = MatchData(teamText: "", matchText:"", colorSegmentedControl:"", scoutText:"", autoLowGoal:0, autoHighGoal:0, crossedSwitch:"", autoTrenchBalls:0, autoShieldBalls:0, controlPanel:"",climbing:"", autoLine:false, climbBalanced:false, climbingOtherRobots:0)
     
     
+    
     func Serialize(teamText:String, matchText:String, colorSegmentedControl:String, scoutText:String, autoLowGoal:Int, autoHighGoal:Int, crossedSwitch:String, autoTrenchBalls:Int , autoShieldBalls:Int, controlPanel:String, climbing:String,autoLine:Bool, climbBalanced:Bool, climbingOtherRobots:Int, pretty:Bool) -> String
     {
         FinishMatchDataViewController.matchDataObj = MatchData(teamText: teamText, matchText:matchText, colorSegmentedControl:colorSegmentedControl, scoutText:scoutText, autoLowGoal:autoLowGoal, autoHighGoal:autoHighGoal, crossedSwitch:crossedSwitch, autoTrenchBalls:autoTrenchBalls , autoShieldBalls:autoShieldBalls, controlPanel:controlPanel, climbing:climbing, autoLine:autoLine, climbBalanced:climbBalanced, climbingOtherRobots:climbingOtherRobots)
@@ -33,7 +34,6 @@ class FinishMatchDataViewController: UIViewController {
         print(jsonString)
         return jsonString
     }
-    
     
     
     @IBAction func submit_Pressed(_ sender: Any) {
