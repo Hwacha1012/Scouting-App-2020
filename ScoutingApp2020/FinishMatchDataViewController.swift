@@ -16,6 +16,7 @@ class FinishMatchDataViewController: UIViewController {
     
     @IBOutlet weak var submit: UIButton!
 <<<<<<< HEAD
+<<<<<<< HEAD
     
     public static var  matchDataObj = MatchData(teamText: "", matchText:"", colorSegmentedControl:"", scoutText:"", autoLowGoal:0, autoHighGoal:0, crossedSwitch:"", autoTrenchBalls:0, autoShieldBalls:0, controlPanel:"",climbing:"", autoLine:false, climbBalanced:false, climbingOtherRobots:0)
     
