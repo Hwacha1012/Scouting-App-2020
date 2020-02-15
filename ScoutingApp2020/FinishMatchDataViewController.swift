@@ -24,8 +24,9 @@ class MatchData: Codable {
     public var climbBalanced:Bool
     public var climbingOtherRobots:Int
     public var teamColor:Bool
+    public var Notes:String
     
-    init(teamText: String, matchText:String, scoutText:String, autoLowGoal:Int, autoHighGoal:Int, autoTrenchBalls:Int, autoShieldBalls:Int, controlPanel:String,climbing:String, autoLine:Bool, climbBalanced:Bool, climbingOtherRobots:Int, teamColor:Bool) {
+    init(teamText: String, matchText:String, scoutText:String, autoLowGoal:Int, autoHighGoal:Int, autoTrenchBalls:Int, autoShieldBalls:Int, controlPanel:String,climbing:String, autoLine:Bool, climbBalanced:Bool, climbingOtherRobots:Int, teamColor:Bool, Notes:String) {
         self.climbing = climbing
         self.climbBalanced = climbBalanced
         self.autoLine = autoLine
@@ -39,22 +40,22 @@ class MatchData: Codable {
         self.autoShieldBalls = autoShieldBalls
         self.controlPanel = controlPanel
         self.teamColor = teamColor
-        
+        self.Notes = Notes
     }
 }
 
 
 class FinishMatchDataViewController: UIViewController {
 
-    public static var  matchDataObj = MatchData(teamText: "", matchText:"",  scoutText:"", autoLowGoal:0, autoHighGoal:0,  autoTrenchBalls:0, autoShieldBalls:0, controlPanel:"",climbing:"", autoLine:false, climbBalanced:false, climbingOtherRobots:0, teamColor:true)
+    public static var  matchDataObj = MatchData(teamText: "", matchText:"",  scoutText:"", autoLowGoal:0, autoHighGoal:0,  autoTrenchBalls:0, autoShieldBalls:0, controlPanel:"",climbing:"", autoLine:false, climbBalanced:false, climbingOtherRobots:0, teamColor:true, Notes:"")
     
     @IBOutlet weak var Notes: UITextView!
     
     @IBOutlet weak var submit: UIButton!
     
-    func Serialize(teamText:String, matchText:String, scoutText:String, autoLowGoal:Int, autoHighGoal:Int, autoTrenchBalls:Int , autoShieldBalls:Int, controlPanel:String, climbing:String,autoLine:Bool, climbBalanced:Bool, climbingOtherRobots:Int, pretty:Bool) -> String
+    func Serialize(teamText:String, matchText:String, scoutText:String, autoLowGoal:Int, autoHighGoal:Int, autoTrenchBalls:Int , autoShieldBalls:Int, controlPanel:String, climbing:String,autoLine:Bool, climbBalanced:Bool, climbingOtherRobots:Int, Notes:String, pretty:Bool) -> String
     {
-        FinishMatchDataViewController.matchDataObj = MatchData(teamText: teamText, matchText:matchText, scoutText:scoutText, autoLowGoal:autoLowGoal, autoHighGoal:autoHighGoal, autoTrenchBalls:autoTrenchBalls , autoShieldBalls:autoShieldBalls, controlPanel:controlPanel, climbing:climbing, autoLine:autoLine, climbBalanced:climbBalanced, climbingOtherRobots:climbingOtherRobots, teamColor: teamColor)
+        FinishMatchDataViewController.matchDataObj = MatchData(teamText: teamText, matchText:matchText, scoutText:scoutText, autoLowGoal:autoLowGoal, autoHighGoal:autoHighGoal, autoTrenchBalls:autoTrenchBalls , autoShieldBalls:autoShieldBalls, controlPanel:controlPanel, climbing:climbing, autoLine:autoLine, climbBalanced:climbBalanced, climbingOtherRobots:climbingOtherRobots, teamColor: teamColor, Notes:Notes)
         
         let encoder = JSONEncoder()
         if (pretty == true)
@@ -74,12 +75,11 @@ class FinishMatchDataViewController: UIViewController {
     @IBAction func submit_Pressed(_ sender: Any) {
         
         
-        FinishMatchDataViewController.matchDataObj = MatchData(teamText: "\(teamNumber)", matchText:"\(matchNumber)", scoutText:scoutName, autoLowGoal:autoLowGoal, autoHighGoal:autoHighGoal, autoTrenchBalls:autoTrenchBalls, autoShieldBalls:autoShieldBalls, controlPanel:controlPanel,climbing:"\(climbing)", autoLine:autoLine, climbBalanced:climbBalanced, climbingOtherRobots:climbingOtherRobots, teamColor:teamColor)
+        FinishMatchDataViewController.matchDataObj = MatchData(teamText: "\(teamNumber)", matchText:"\(matchNumber)", scoutText:scoutName, autoLowGoal:autoLowGoal, autoHighGoal:autoHighGoal, autoTrenchBalls:autoTrenchBalls, autoShieldBalls:autoShieldBalls, controlPanel:controlPanel,climbing:"\(climbing)", autoLine:autoLine, climbBalanced:climbBalanced, climbingOtherRobots:climbingOtherRobots, teamColor:teamColor, Notes:)
         
             let payload =  Serialize(
                 teamText: FinishMatchDataViewController.matchDataObj.teamText,
                 matchText: FinishMatchDataViewController.matchDataObj.matchText,
-           
                 scoutText: FinishMatchDataViewController.matchDataObj.scoutText,
                 autoLowGoal: FinishMatchDataViewController.matchDataObj.autoLowGoal,
                 autoHighGoal: FinishMatchDataViewController.matchDataObj.autoHighGoal,
@@ -89,7 +89,9 @@ class FinishMatchDataViewController: UIViewController {
                 climbing: FinishMatchDataViewController.matchDataObj.climbing,
                 autoLine: FinishMatchDataViewController.matchDataObj.autoLine,
                 climbBalanced: FinishMatchDataViewController.matchDataObj.climbBalanced,
-                climbingOtherRobots:FinishMatchDataViewController.matchDataObj.climbingOtherRobots, pretty: false)
+                climbingOtherRobots:FinishMatchDataViewController.matchDataObj.climbingOtherRobots,
+                Notes:FinishMatchDataViewController.matchDataObj.Notes,
+                pretty: false)
         
             print(payload);
             let defaults = UserDefaults.standard
@@ -147,7 +149,7 @@ class FinishMatchDataViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        Notes.text = "Type here..."
         // Do any additional setup after loading the view.
     }
     
