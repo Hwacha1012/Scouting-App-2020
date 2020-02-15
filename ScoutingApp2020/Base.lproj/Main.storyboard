@@ -728,6 +728,8 @@
                     </view>
                     <navigationItem key="navigationItem" id="XN9-S6-JUx"/>
                     <connections>
+                        <outlet property="notes" destination="Qoe-nz-rFt" id="shh-Wy-9Gw"/>
+                        <outlet property="submitButton" destination="AJT-pb-A3d" id="yHg-Ym-v9w"/>
                         <segue destination="BYZ-38-t0r" kind="show" identifier="MatchDataToMenu" id="mDG-xP-MNm"/>
                     </connections>
                 </viewController>

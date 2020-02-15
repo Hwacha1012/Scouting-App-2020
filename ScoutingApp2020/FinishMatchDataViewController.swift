@@ -24,9 +24,9 @@ class MatchData: Codable {
     public var climbBalanced:Bool
     public var climbingOtherRobots:Int
     public var teamColor:Bool
-    public var Notes:String
+    public var notes:String
     
-    init(teamText: String, matchText:String, scoutText:String, autoLowGoal:Int, autoHighGoal:Int, autoTrenchBalls:Int, autoShieldBalls:Int, controlPanel:String,climbing:String, autoLine:Bool, climbBalanced:Bool, climbingOtherRobots:Int, teamColor:Bool, Notes:String) {
+    init(teamText: String, matchText:String, scoutText:String, autoLowGoal:Int, autoHighGoal:Int, autoTrenchBalls:Int, autoShieldBalls:Int, controlPanel:String,climbing:String, autoLine:Bool, climbBalanced:Bool, climbingOtherRobots:Int, teamColor:Bool, notes:String) {
         self.climbing = climbing
         self.climbBalanced = climbBalanced
         self.autoLine = autoLine
@@ -40,22 +40,28 @@ class MatchData: Codable {
         self.autoShieldBalls = autoShieldBalls
         self.controlPanel = controlPanel
         self.teamColor = teamColor
-        self.Notes = Notes
+        self.notes = notes
     }
 }
 
 
+
 class FinishMatchDataViewController: UIViewController {
 
-    public static var  matchDataObj = MatchData(teamText: "", matchText:"",  scoutText:"", autoLowGoal:0, autoHighGoal:0,  autoTrenchBalls:0, autoShieldBalls:0, controlPanel:"",climbing:"", autoLine:false, climbBalanced:false, climbingOtherRobots:0, teamColor:true, Notes:"")
+    public static var  matchDataObj = MatchData(teamText: "", matchText:"",  scoutText:"", autoLowGoal:0, autoHighGoal:0,  autoTrenchBalls:0, autoShieldBalls:0, controlPanel:"",climbing:"", autoLine:false, climbBalanced:false, climbingOtherRobots:0, teamColor:true, notes:"")
     
-    @IBOutlet weak var Notes: UITextView!
     
-    @IBOutlet weak var submit: UIButton!
+    @IBOutlet weak var notes: UITextView!
+    
+    
+    @IBOutlet weak var submitButton: UIButton!
+    
+ 
     
     func Serialize(teamText:String, matchText:String, scoutText:String, autoLowGoal:Int, autoHighGoal:Int, autoTrenchBalls:Int , autoShieldBalls:Int, controlPanel:String, climbing:String,autoLine:Bool, climbBalanced:Bool, climbingOtherRobots:Int, Notes:String, pretty:Bool) -> String
     {
-        FinishMatchDataViewController.matchDataObj = MatchData(teamText: teamText, matchText:matchText, scoutText:scoutText, autoLowGoal:autoLowGoal, autoHighGoal:autoHighGoal, autoTrenchBalls:autoTrenchBalls , autoShieldBalls:autoShieldBalls, controlPanel:controlPanel, climbing:climbing, autoLine:autoLine, climbBalanced:climbBalanced, climbingOtherRobots:climbingOtherRobots, teamColor: teamColor, Notes:Notes)
+
+        FinishMatchDataViewController.matchDataObj = MatchData(teamText: teamText, matchText:matchText, scoutText:scoutText, autoLowGoal:autoLowGoal, autoHighGoal:autoHighGoal, autoTrenchBalls:autoTrenchBalls , autoShieldBalls:autoShieldBalls, controlPanel:controlPanel, climbing:climbing, autoLine:autoLine, climbBalanced:climbBalanced, climbingOtherRobots:climbingOtherRobots, teamColor: teamColor, notes: notes.text)
         
         let encoder = JSONEncoder()
         if (pretty == true)
@@ -75,7 +81,11 @@ class FinishMatchDataViewController: UIViewController {
     @IBAction func submit_Pressed(_ sender: Any) {
         
         
-        FinishMatchDataViewController.matchDataObj = MatchData(teamText: "\(teamNumber)", matchText:"\(matchNumber)", scoutText:scoutName, autoLowGoal:autoLowGoal, autoHighGoal:autoHighGoal, autoTrenchBalls:autoTrenchBalls, autoShieldBalls:autoShieldBalls, controlPanel:controlPanel,climbing:"\(climbing)", autoLine:autoLine, climbBalanced:climbBalanced, climbingOtherRobots:climbingOtherRobots, teamColor:teamColor, Notes:)
+        if (notes.text == "Type here...") {
+         notes.text = ""
+         }
+        
+        FinishMatchDataViewController.matchDataObj = MatchData(teamText: "\(teamNumber)", matchText:"\(matchNumber)", scoutText:scoutName, autoLowGoal:autoLowGoal, autoHighGoal:autoHighGoal, autoTrenchBalls:autoTrenchBalls, autoShieldBalls:autoShieldBalls, controlPanel:controlPanel,climbing:"\(climbing)", autoLine:autoLine, climbBalanced:climbBalanced, climbingOtherRobots:climbingOtherRobots, teamColor:teamColor, notes:notes.text)
         
             let payload =  Serialize(
                 teamText: FinishMatchDataViewController.matchDataObj.teamText,
@@ -90,43 +100,43 @@ class FinishMatchDataViewController: UIViewController {
                 autoLine: FinishMatchDataViewController.matchDataObj.autoLine,
                 climbBalanced: FinishMatchDataViewController.matchDataObj.climbBalanced,
                 climbingOtherRobots:FinishMatchDataViewController.matchDataObj.climbingOtherRobots,
-                Notes:FinishMatchDataViewController.matchDataObj.Notes,
+                Notes:FinishMatchDataViewController.matchDataObj.notes,
                 pretty: false)
         
             print(payload);
             let defaults = UserDefaults.standard
             defaults.set(payload, forKey: "\(teamNumber), MatchData")
-           if UserDefaults.standard.array(forKey: "matchDataList") == nil{
+           if UserDefaults.standard.array(forKey: "teamList") == nil{
                 // teamList = UserDefaults.standard.object(forKey: "teamList") as! [String]
-                matchDataList.append("\(teamNumber), MatchData")
+                teamList.append("\(teamNumber), MatchData")
                // print("teamlist is \(teamList)!")
-                UserDefaults.standard.set(matchDataList, forKey: "matchDataList")
+                UserDefaults.standard.set(teamList, forKey: "teamList")
                 
             }
-            else if UserDefaults.standard.array(forKey: "matchDataList")!.isEmpty == false{
+            else if UserDefaults.standard.array(forKey: "teamList")!.isEmpty == false{
                 
                 //commented code overwrites previous entries with same team number
-                matchDataList = UserDefaults.standard.array(forKey: "matchDataList") as! [String]
+                teamList = UserDefaults.standard.array(forKey: "teamList") as! [String]
                 breakLoop = false
-                for index in 0...matchDataList.count - 1 {
+                for index in 0...teamList.count - 1 {
                     let testString = "\(teamNumber), MatchData"
-                    if testString == matchDataList[index]{
+                    if testString == teamList[index]{
                         breakLoop = true
                         
                     }
                 }
                 print("breakLoop is \(breakLoop!)")
                 if breakLoop == false{
-                    matchDataList.append("\(teamNumber), MatchData")
+                    teamList.append("\(teamNumber), MatchData")
                     //print(teamList)
-                    UserDefaults.standard.set(matchDataList, forKey: "matchDataList")
+                    UserDefaults.standard.set(teamList, forKey: "teamList")
                 }
                 else if breakLoop == true{
-                    let indexOfElement = matchDataList.index(of: "\(teamNumber), MatchData")
-                    matchDataList.remove(at: indexOfElement!)
-                    matchDataList.append("\(teamNumber), MatchData")
+                    let indexOfElement = teamList.index(of: "\(teamNumber), MatchData")
+                    teamList.remove(at: indexOfElement!)
+                    teamList.append("\(teamNumber), MatchData")
                    // print(teamList)
-                    UserDefaults.standard.set(matchDataList, forKey: "MatchDataList")
+                    UserDefaults.standard.set(teamList, forKey: "teamList")
                     
                 }
                 
@@ -137,10 +147,10 @@ class FinishMatchDataViewController: UIViewController {
                 //  UserDefaults.standard.set(teamList, forKey: "teamList")
             }
             else{
-                matchDataList = UserDefaults.standard.array(forKey: "matchDataList") as! [String]
-                matchDataList.append("\(teamNumber), MatchData")
-               // print("matchDataList is \(matchDataList)")
-                UserDefaults.standard.set(matchDataList, forKey: "matchDataList")
+                teamList = UserDefaults.standard.array(forKey: "teamList") as! [String]
+                teamList.append("\(teamNumber), MatchData")
+               // print("teamList is \(teamList)")
+                UserDefaults.standard.set(teamList, forKey: "teamList")
             }
             
             performSegue(withIdentifier: "MatchDataToMenu", sender: nil)
@@ -149,7 +159,7 @@ class FinishMatchDataViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        Notes.text = "Type here..."
+  
         // Do any additional setup after loading the view.
     }
     
