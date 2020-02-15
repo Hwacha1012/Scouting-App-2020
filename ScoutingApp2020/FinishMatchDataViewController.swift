@@ -15,88 +15,20 @@ class FinishMatchDataViewController: UIViewController {
     @IBOutlet weak var Notes: UITextView!
     
     @IBOutlet weak var submit: UIButton!
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-    
-    public static var  matchDataObj = MatchData(teamText: "", matchText:"", colorSegmentedControl:"", scoutText:"", autoLowGoal:0, autoHighGoal:0, crossedSwitch:"", autoTrenchBalls:0, autoShieldBalls:0, controlPanel:"",climbing:"", autoLine:false, climbBalanced:false, climbingOtherRobots:0)
-    
-=======
->>>>>>> parent of f69dffd... Reverted Leo's dumb changes to my code
-    
-    public static var  matchDataObj = MatchData(teamText: "", matchText:"", colorSegmentedControl:"", scoutText:"", autoLowGoal:0, autoHighGoal:0, crossedSwitch:"", autoTrenchBalls:0, autoShieldBalls:0, controlPanel:"",climbing:"", autoLine:false, climbBalanced:false, climbingOtherRobots:0)
-    
-<<<<<<< HEAD
-    func Serialize(teamText:String, matchText:String, colorSegmentedControl:String, scoutText:String, autoLowGoal:Int, autoHighGoal:Int, crossedSwitch:String, autoTrenchBalls:Int , autoShieldBalls:Int, controlPanel:String, climbing:String,autoLine:Bool, climbBalanced:Bool, climbingOtherRobots:Int, pretty:Bool) -> String
-    {
-
-        MatchDataViewController.matchDataObj = MatchData(teamText: teamText, matchText:matchText, colorSegmentedControl:colorSegmentedControl, scoutText:scoutText, autoLowGoal:autoLowGoal, autoHighGoal:autoHighGoal, crossedSwitch:crossedSwitch, autoTrenchBalls:autoTrenchBalls , autoShieldBalls:autoShieldBalls, controlPanel:controlPanel, climbing:climbing, autoLine:autoLine, climbBalanced:climbBalanced, climbingOtherRobots:climbingOtherRobots, teamColor:teamColor) 
-
-        FinishMatchDataViewController.matchDataObj = MatchData(teamText: teamText, matchText:matchText, colorSegmentedControl:colorSegmentedControl, scoutText:scoutText, autoLowGoal:autoLowGoal, autoHighGoal:autoHighGoal, crossedSwitch:crossedSwitch, autoTrenchBalls:autoTrenchBalls , autoShieldBalls:autoShieldBalls, controlPanel:controlPanel, climbing:climbing, autoLine:autoLine, climbBalanced:climbBalanced, climbingOtherRobots:climbingOtherRobots)
-
-        FinishMatchDataViewController.matchDataObj = MatchData(teamText: teamText, matchText:matchText, colorSegmentedControl:colorSegmentedControl, scoutText:scoutText, autoLowGoal:autoLowGoal, autoHighGoal:autoHighGoal, crossedSwitch:crossedSwitch, autoTrenchBalls:autoTrenchBalls , autoShieldBalls:autoShieldBalls, controlPanel:controlPanel, climbing:climbing, autoLine:autoLine, climbBalanced:climbBalanced, climbingOtherRobots:climbingOtherRobots)
-
-
-        FinishMatchDataViewController.matchDataObj = MatchData(teamText: teamText, matchText:matchText, colorSegmentedControl:colorSegmentedControl, scoutText:scoutText, autoLowGoal:autoLowGoal, autoHighGoal:autoHighGoal, crossedSwitch:crossedSwitch, autoTrenchBalls:autoTrenchBalls, autoShieldBalls:autoShieldBalls, controlPanel:controlPanel, climbing:climbing, autoLine:autoLine, climbBalanced:climbBalanced, climbingOtherRobots:climbingOtherRobots)
-
-        MatchDataViewController.matchDataObj = MatchData(teamText: teamText, matchText:matchText, colorSegmentedControl:colorSegmentedControl, scoutText:scoutText, autoLowGoal:autoLowGoal, autoHighGoal:autoHighGoal, crossedSwitch:crossedSwitch, autoTrenchBalls:autoTrenchBalls , autoShieldBalls:autoShieldBalls, controlPanel:controlPanel, climbing:climbing, autoLine:autoLine, climbBalanced:climbBalanced, climbingOtherRobots:climbingOtherRobots, teamColor:teamColor)
-
-
-=======
-    
     
     func Serialize(teamText:String, matchText:String, colorSegmentedControl:String, scoutText:String, autoLowGoal:Int, autoHighGoal:Int, crossedSwitch:String, autoTrenchBalls:Int , autoShieldBalls:Int, controlPanel:String, climbing:String,autoLine:Bool, climbBalanced:Bool, climbingOtherRobots:Int, pretty:Bool) -> String
     {
-        FinishMatchDataViewController.matchDataObj = MatchData(teamText: teamText, matchText:matchText, colorSegmentedControl:colorSegmentedControl, scoutText:scoutText, autoLowGoal:autoLowGoal, autoHighGoal:autoHighGoal, crossedSwitch:crossedSwitch, autoTrenchBalls:autoTrenchBalls , autoShieldBalls:autoShieldBalls, controlPanel:controlPanel, climbing:climbing, autoLine:autoLine, climbBalanced:climbBalanced, climbingOtherRobots:climbingOtherRobots)
->>>>>>> parent of f69dffd... Reverted Leo's dumb changes to my code
-=======
-    
-    public static var  matchDataObj = MatchData(teamText: "", matchText:"", colorSegmentedControl:"", scoutText:"", autoLowGoal:0, autoHighGoal:0, crossedSwitch:"", autoTrenchBalls:0, autoShieldBalls:0, controlPanel:"",climbing:"", autoLine:false, climbBalanced:false, climbingOtherRobots:0)
-    
-    
-    
-    func Serialize(teamText:String, matchText:String, colorSegmentedControl:String, scoutText:String, autoLowGoal:Int, autoHighGoal:Int, crossedSwitch:String, autoTrenchBalls:Int , autoShieldBalls:Int, controlPanel:String, climbing:String,autoLine:Bool, climbBalanced:Bool, climbingOtherRobots:Int, pretty:Bool) -> String
-    {
-        FinishMatchDataViewController.matchDataObj = MatchData(teamText: teamText, matchText:matchText, colorSegmentedControl:colorSegmentedControl, scoutText:scoutText, autoLowGoal:autoLowGoal, autoHighGoal:autoHighGoal, crossedSwitch:crossedSwitch, autoTrenchBalls:autoTrenchBalls , autoShieldBalls:autoShieldBalls, controlPanel:controlPanel, climbing:climbing, autoLine:autoLine, climbBalanced:climbBalanced, climbingOtherRobots:climbingOtherRobots)
->>>>>>> parent of f69dffd... Reverted Leo's dumb changes to my code
-=======
-    
-    public static var  matchDataObj = MatchData(teamText: "", matchText:"", colorSegmentedControl:"", scoutText:"", autoLowGoal:0, autoHighGoal:0, crossedSwitch:"", autoTrenchBalls:0, autoShieldBalls:0, controlPanel:"",climbing:"", autoLine:false, climbBalanced:false, climbingOtherRobots:0)
-    
-    
-    
-    func Serialize(teamText:String, matchText:String, colorSegmentedControl:String, scoutText:String, autoLowGoal:Int, autoHighGoal:Int, crossedSwitch:String, autoTrenchBalls:Int , autoShieldBalls:Int, controlPanel:String, climbing:String,autoLine:Bool, climbBalanced:Bool, climbingOtherRobots:Int, pretty:Bool) -> String
-    {
-        FinishMatchDataViewController.matchDataObj = MatchData(teamText: teamText, matchText:matchText, colorSegmentedControl:colorSegmentedControl, scoutText:scoutText, autoLowGoal:autoLowGoal, autoHighGoal:autoHighGoal, crossedSwitch:crossedSwitch, autoTrenchBalls:autoTrenchBalls , autoShieldBalls:autoShieldBalls, controlPanel:controlPanel, climbing:climbing, autoLine:autoLine, climbBalanced:climbBalanced, climbingOtherRobots:climbingOtherRobots)
->>>>>>> parent of f69dffd... Reverted Leo's dumb changes to my code
+        MatchDataViewController.matchDataObj = MatchData(teamText: teamText, matchText:matchText, colorSegmentedControl:colorSegmentedControl, scoutText:scoutText, autoLowGoal:autoLowGoal, autoHighGoal:autoHighGoal, crossedSwitch:crossedSwitch, autoTrenchBalls:autoTrenchBalls , autoShieldBalls:autoShieldBalls, controlPanel:controlPanel, climbing:climbing, autoLine:autoLine, climbBalanced:climbBalanced, climbingOtherRobots:climbingOtherRobots)
+        
         let encoder = JSONEncoder()
         if (pretty == true)
         {
         encoder.outputFormatting = .prettyPrinted // if necessary
         }
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-        let data = try! encoder.encode(FinishMatchDataViewController.matchDataObj)
-
-
-        let data = try! encoder.encode(FinishMatchDataViewController.matchDataObj)
-        
-        
 
         let data = try! encoder.encode(MatchDataViewController.matchDataObj)
 
-
-=======
-        let data = try! encoder.encode(FinishMatchDataViewController.matchDataObj)
->>>>>>> parent of f69dffd... Reverted Leo's dumb changes to my code
-=======
-        let data = try! encoder.encode(FinishMatchDataViewController.matchDataObj)
->>>>>>> parent of f69dffd... Reverted Leo's dumb changes to my code
-=======
-        let data = try! encoder.encode(FinishMatchDataViewController.matchDataObj)
->>>>>>> parent of f69dffd... Reverted Leo's dumb changes to my code
         let jsonString = String(data: data, encoding: .utf8)!
         print(jsonString)
         return jsonString
@@ -107,20 +39,20 @@ class FinishMatchDataViewController: UIViewController {
         
         
             let payload =  Serialize(
-                teamText: FinishMatchDataViewController.matchDataObj.teamText,
-                matchText: FinishMatchDataViewController.matchDataObj.matchText,
-                colorSegmentedControl: FinishMatchDataViewController.matchDataObj.matchText,
-                scoutText: FinishMatchDataViewController.matchDataObj.scoutText,
-                autoLowGoal: FinishMatchDataViewController.matchDataObj.autoLowGoal,
-                autoHighGoal: FinishMatchDataViewController.matchDataObj.autoHighGoal,
-                crossedSwitch: FinishMatchDataViewController.matchDataObj.crossedSwitch,
-                autoTrenchBalls: FinishMatchDataViewController.matchDataObj.autoTrenchBalls,
-                autoShieldBalls: FinishMatchDataViewController.matchDataObj.autoShieldBalls,
-                controlPanel: FinishMatchDataViewController.matchDataObj.controlPanel,
-                climbing: FinishMatchDataViewController.matchDataObj.climbing,
-                autoLine: FinishMatchDataViewController.matchDataObj.autoLine,
-                climbBalanced: FinishMatchDataViewController.matchDataObj.climbBalanced,
-                climbingOtherRobots:FinishMatchDataViewController.matchDataObj.climbingOtherRobots, pretty: false)
+                teamText: MatchDataViewController.matchDataObj.teamText,
+                matchText: MatchDataViewController.matchDataObj.matchText,
+                colorSegmentedControl: MatchDataViewController.matchDataObj.matchText,
+                scoutText: MatchDataViewController.matchDataObj.scoutText,
+                autoLowGoal: MatchDataViewController.matchDataObj.autoLowGoal,
+                autoHighGoal: MatchDataViewController.matchDataObj.autoHighGoal,
+                crossedSwitch: MatchDataViewController.matchDataObj.crossedSwitch,
+                autoTrenchBalls: MatchDataViewController.matchDataObj.autoTrenchBalls,
+                autoShieldBalls: MatchDataViewController.matchDataObj.autoShieldBalls,
+                controlPanel: MatchDataViewController.matchDataObj.controlPanel,
+                climbing: MatchDataViewController.matchDataObj.climbing,
+                autoLine: MatchDataViewController.matchDataObj.autoLine,
+                climbBalanced: MatchDataViewController.matchDataObj.climbBalanced,
+                climbingOtherRobots:MatchDataViewController.matchDataObj.climbingOtherRobots, pretty: false)
         
             print(payload);
             let defaults = UserDefaults.standard
