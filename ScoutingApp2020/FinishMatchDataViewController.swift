@@ -79,11 +79,12 @@ class FinishMatchDataViewController: UIViewController {
     
     
     @IBAction func submit_Pressed(_ sender: Any) {
-        
+        breakLoop = false
         
         if (notes.text == "Type here...") {
          notes.text = ""
          }
+        
         
         FinishMatchDataViewController.matchDataObj = MatchData(teamText: "\(teamNumber)", matchText:"\(matchNumber)", scoutText:scoutName, autoLowGoal:autoLowGoal, autoHighGoal:autoHighGoal, autoTrenchBalls:autoTrenchBalls, autoShieldBalls:autoShieldBalls, controlPanel:controlPanel,climbing:"\(climbing)", autoLine:autoLine, climbBalanced:climbBalanced, climbingOtherRobots:climbingOtherRobots, teamColor:teamColor, notes:notes.text)
         
@@ -105,10 +106,10 @@ class FinishMatchDataViewController: UIViewController {
         
             print(payload);
             let defaults = UserDefaults.standard
-            defaults.set(payload, forKey: "\(teamNumber), MatchData")
+            defaults.set(payload, forKey: "\(teamNumber), \(matchNumber)")
            if UserDefaults.standard.array(forKey: "teamList") == nil{
                 // teamList = UserDefaults.standard.object(forKey: "teamList") as! [String]
-                teamList.append("\(teamNumber), MatchData")
+                teamList.append("\(teamNumber), \(matchNumber)")
                // print("teamlist is \(teamList)!")
                 UserDefaults.standard.set(teamList, forKey: "teamList")
                 
@@ -119,7 +120,7 @@ class FinishMatchDataViewController: UIViewController {
                 teamList = UserDefaults.standard.array(forKey: "teamList") as! [String]
                 breakLoop = false
                 for index in 0...teamList.count - 1 {
-                    let testString = "\(teamNumber), MatchData"
+                    let testString = "\(teamNumber), \(matchNumber)"
                     if testString == teamList[index]{
                         breakLoop = true
                         
@@ -127,14 +128,14 @@ class FinishMatchDataViewController: UIViewController {
                 }
                 print("breakLoop is \(breakLoop!)")
                 if breakLoop == false{
-                    teamList.append("\(teamNumber), MatchData")
+                    teamList.append("\(teamNumber), \(matchNumber)")
                     //print(teamList)
                     UserDefaults.standard.set(teamList, forKey: "teamList")
                 }
                 else if breakLoop == true{
-                    let indexOfElement = teamList.index(of: "\(teamNumber), MatchData")
+                    let indexOfElement = teamList.index(of: "\(teamNumber), \(matchNumber)")
                     teamList.remove(at: indexOfElement!)
-                    teamList.append("\(teamNumber), MatchData")
+                    teamList.append("\(teamNumber), \(matchNumber)")
                    // print(teamList)
                     UserDefaults.standard.set(teamList, forKey: "teamList")
                     
@@ -148,7 +149,7 @@ class FinishMatchDataViewController: UIViewController {
             }
             else{
                 teamList = UserDefaults.standard.array(forKey: "teamList") as! [String]
-                teamList.append("\(teamNumber), MatchData")
+                teamList.append("\(teamNumber), \(matchNumber)")
                // print("teamList is \(teamList)")
                 UserDefaults.standard.set(teamList, forKey: "teamList")
             }
