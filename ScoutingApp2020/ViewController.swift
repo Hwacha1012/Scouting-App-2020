@@ -9,7 +9,6 @@
 import UIKit
 var teamList = [String]()
 var pitScoutList = [String]()
-var matchDataList = [String]()
 var scoutName = "" //Name of the Scout
 var teamNumber = 0 //ex;2170
 var matchNumber = 0 //ex;69
