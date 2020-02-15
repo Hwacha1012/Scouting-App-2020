@@ -25,8 +25,13 @@ class MatchData: Codable {
     public var climbingOtherRobots:Int
     public var teamColor:Bool
     public var notes:String
+    public var lowGoalTaken:Int
+    public var lowGoalMade:Int
+    public var highGoalTaken = [0,0,0,0]
+    public var highGoalMade = [0,0,0,0]
     
-    init(teamText: String, matchText:String, scoutText:String, autoLowGoal:Int, autoHighGoal:Int, autoTrenchBalls:Int, autoShieldBalls:Int, controlPanel:String,climbing:String, autoLine:Bool, climbBalanced:Bool, climbingOtherRobots:Int, teamColor:Bool, notes:String) {
+    
+    init(teamText: String, matchText:String, scoutText:String, autoLowGoal:Int, autoHighGoal:Int, autoTrenchBalls:Int, autoShieldBalls:Int, controlPanel:String,climbing:String, autoLine:Bool, climbBalanced:Bool, climbingOtherRobots:Int, teamColor:Bool, lowGoalTaken:Int, lowGoalMade:Int, highGoalTaken:Array<Int>, highGoalMade:Array<Int>,  notes:String) {
         self.climbing = climbing
         self.climbBalanced = climbBalanced
         self.autoLine = autoLine
@@ -41,6 +46,10 @@ class MatchData: Codable {
         self.controlPanel = controlPanel
         self.teamColor = teamColor
         self.notes = notes
+        self.highGoalMade = highGoalMade
+        self.highGoalTaken = highGoalTaken
+        self.lowGoalMade = lowGoalMade
+        self.lowGoalTaken = lowGoalTaken
     }
 }
 
@@ -48,7 +57,15 @@ class MatchData: Codable {
 
 class FinishMatchDataViewController: UIViewController {
 
-    public static var  matchDataObj = MatchData(teamText: "", matchText:"",  scoutText:"", autoLowGoal:0, autoHighGoal:0,  autoTrenchBalls:0, autoShieldBalls:0, controlPanel:"",climbing:"", autoLine:false, climbBalanced:false, climbingOtherRobots:0, teamColor:true, notes:"")
+    public static var  matchDataObj = MatchData(teamText: "", matchText:"",  scoutText:"", autoLowGoal:0, autoHighGoal:0,  autoTrenchBalls:0, autoShieldBalls:0, controlPanel:"",climbing:"", autoLine:false, climbBalanced:false, climbingOtherRobots:0, teamColor:true, lowGoalTaken:0, lowGoalMade:0, highGoalTaken:[0, 0, 0, 0], highGoalMade:[0, 0, 0, 0], notes:"")
+    
+    public struct Throwable<T: Decodable>: Decodable {
+        let result: Result<T, Error>
+
+        init(from decoder: Decoder) throws {
+            result = Result(catching: { try T(from: decoder) })
+        }
+    }
     
     
     @IBOutlet weak var notes: UITextView!
@@ -58,10 +75,10 @@ class FinishMatchDataViewController: UIViewController {
     
  
     
-    func Serialize(teamText:String, matchText:String, scoutText:String, autoLowGoal:Int, autoHighGoal:Int, autoTrenchBalls:Int , autoShieldBalls:Int, controlPanel:String, climbing:String,autoLine:Bool, climbBalanced:Bool, climbingOtherRobots:Int, Notes:String, pretty:Bool) -> String
+    func Serialize(teamText:String, matchText:String, scoutText:String, autoLowGoal:Int, autoHighGoal:Int, autoTrenchBalls:Int , autoShieldBalls:Int, controlPanel:String, climbing:String,autoLine:Bool, climbBalanced:Bool, climbingOtherRobots:Int, lowGoalTaken:Int, lowGoalMade:Int, highGoalTaken:Array<Int>, highGoalMade:Array<Int>, Notes:String, pretty:Bool) -> String
     {
 
-        FinishMatchDataViewController.matchDataObj = MatchData(teamText: teamText, matchText:matchText, scoutText:scoutText, autoLowGoal:autoLowGoal, autoHighGoal:autoHighGoal, autoTrenchBalls:autoTrenchBalls , autoShieldBalls:autoShieldBalls, controlPanel:controlPanel, climbing:climbing, autoLine:autoLine, climbBalanced:climbBalanced, climbingOtherRobots:climbingOtherRobots, teamColor: teamColor, notes: notes.text)
+        FinishMatchDataViewController.matchDataObj = MatchData(teamText: teamText, matchText:matchText, scoutText:scoutText, autoLowGoal:autoLowGoal, autoHighGoal:autoHighGoal, autoTrenchBalls:autoTrenchBalls , autoShieldBalls:autoShieldBalls, controlPanel:controlPanel, climbing:climbing, autoLine:autoLine, climbBalanced:climbBalanced, climbingOtherRobots:climbingOtherRobots, teamColor: teamColor, lowGoalTaken:lowGoalTaken,lowGoalMade:lowGoalMade,highGoalTaken:highGoalTaken, highGoalMade:highGoalMade, notes: notes.text)
         
         let encoder = JSONEncoder()
         if (pretty == true)
@@ -70,12 +87,161 @@ class FinishMatchDataViewController: UIViewController {
         }
 
 
-        let data = try! encoder.encode(FinishMatchDataViewController.matchDataObj)
-
-        let jsonString = String(data: data, encoding: .utf8)!
+        // let data = try! encoder.encode(FinishMatchDataViewController.matchDataObj)
+        var temp_string = "climbing="
+        temp_string += FinishMatchDataViewController.matchDataObj.climbing
+        temp_string += "&"
+        temp_string += "climbBalanced="
+        temp_string += String(FinishMatchDataViewController.matchDataObj.climbBalanced)
+        temp_string += "&"
+        temp_string += "autoLine="
+        temp_string += String(FinishMatchDataViewController.matchDataObj.autoLine)
+        temp_string += "&"
+        temp_string += "climbingOtherRobots="
+        temp_string += String(FinishMatchDataViewController.matchDataObj.climbingOtherRobots)
+        temp_string += "&"
+        temp_string += "matchText="
+        temp_string += FinishMatchDataViewController.matchDataObj.matchText
+        temp_string += "&"
+        temp_string += "teamText="
+        temp_string += FinishMatchDataViewController.matchDataObj.teamText
+        temp_string += "&"
+        temp_string += "scoutText="
+        temp_string += FinishMatchDataViewController.matchDataObj.scoutText
+        temp_string += "&"
+        
+        
+        
+        
+        temp_string += "autoLowGoal="
+        temp_string += String(FinishMatchDataViewController.matchDataObj.autoLowGoal)
+        temp_string += "&"
+        temp_string += "autoHighGoal="
+        temp_string += String(FinishMatchDataViewController.matchDataObj.autoHighGoal)
+        temp_string += "&"
+        temp_string += "autoTrenchBalls="
+        temp_string += String(FinishMatchDataViewController.matchDataObj.autoTrenchBalls)
+        temp_string += "&"
+        temp_string += "autoShieldBalls="
+        temp_string += String(FinishMatchDataViewController.matchDataObj.autoShieldBalls)
+        temp_string += "&"
+        temp_string += "teamColor="
+        temp_string += String(FinishMatchDataViewController.matchDataObj.teamColor)
+        temp_string += "&"
+        temp_string += "controlPanel="
+        temp_string += FinishMatchDataViewController.matchDataObj.controlPanel
+        temp_string += "&"
+        temp_string += "lowGoalTaken="
+        temp_string += String(FinishMatchDataViewController.matchDataObj.lowGoalTaken)
+        temp_string += "&"
+        temp_string += "lowGoalMade="
+        temp_string += String(FinishMatchDataViewController.matchDataObj.lowGoalMade)
+        temp_string += "&"
+        temp_string += "highGoalTaken="
+        temp_string += "["
+        temp_string  += String(FinishMatchDataViewController.matchDataObj.highGoalTaken[0])
+        temp_string  += ","
+        temp_string  += String(FinishMatchDataViewController.matchDataObj.highGoalTaken[1])
+        temp_string  += ","
+        temp_string  += String(FinishMatchDataViewController.matchDataObj.highGoalTaken[2])
+        temp_string  += ","
+        temp_string  += String(FinishMatchDataViewController.matchDataObj.highGoalTaken[3])
+        temp_string += "]"
+        temp_string += "&"
+        temp_string += "highGoalMade="
+        temp_string += "["
+        temp_string  += String(FinishMatchDataViewController.matchDataObj.highGoalMade[0])
+        temp_string  += ","
+        temp_string  += String(FinishMatchDataViewController.matchDataObj.highGoalMade[1])
+        temp_string  += ","
+        temp_string  += String(FinishMatchDataViewController.matchDataObj.highGoalMade[2])
+        temp_string  += ","
+        temp_string  += String(FinishMatchDataViewController.matchDataObj.highGoalMade[3])
+        temp_string += "]"
+        temp_string += "&"
+        temp_string += "notes="
+        temp_string += String(FinishMatchDataViewController.matchDataObj.notes)
+        let jsonString = temp_string
         print(jsonString)
+        let s = send_post(jsonStr:jsonString)
+        let s2 = send_get()
         return jsonString
     }
+    func send_post(jsonStr:String)-> String
+     {
+         var result = jsonStr
+         let requestUrl = URL(string:"http://ec2-52-71-196-37.compute-1.amazonaws.com/pitscouting")!
+         var request = URLRequest(url: requestUrl)
+         request.httpMethod = "POST"
+         let postString=jsonStr;
+         request.httpBody = postString.data(using:String.Encoding.utf8);
+         let task = URLSession.shared.dataTask(with:request) {
+             (data,response,error) in
+             if let error = error{
+                 print("ERROR FOUD")
+                 return
+             }
+             if let data = data,let dataString = String(data:data,encoding:.utf8){
+                 print("Response data String:\n \(dataString)")
+             }
+         }
+         task.resume()
+         return result
+     }
+    
+    
+    
+    func send_get() -> [Throwable<PitScoutingData>]
+    {
+        var teamData: [Throwable<PitScoutingData>] = Array()
+        let dataString = ""
+        let url = URL(string: "http://ec2-52-71-196-37.compute-1.amazonaws.com/pitscouting")
+        guard let requestUrl = url else { fatalError() }
+        // Create URL Request
+        var request = URLRequest(url: requestUrl)
+        // Specify HTTP Method to use
+        request.httpMethod = "GET"
+        // Send HTTP Request
+        let task = URLSession.shared.dataTask(with: request) { (data, response, error) in
+            
+            // Check if Error took place
+            if let error = error {
+                print("Error took place \(error)")
+                return
+            }
+            
+            // Read HTTP Response Status code
+            if let response = response as? HTTPURLResponse {
+                print("Response HTTP Status code: \(response.statusCode)")
+            }
+            
+            // Convert HTTP Response Data to a simple String
+            if let data = data, let dataString = String(data: data, encoding: .utf8) {
+                teamData = self.DeserializeList(jsonString:dataString)
+            }
+            
+        }
+        task.resume()
+        return teamData
+    }
+    
+    
+    func DeserializeList(jsonString:String) ->
+        [Throwable<PitScoutingData>]{
+        let jsonData = jsonString.data(using: .utf8)!
+        let decoder = JSONDecoder()
+        var teamData = try! decoder.decode([Throwable<PitScoutingData>].self, from: jsonData);
+        print(teamData)
+        // let products = throwables.compactMap { try? $0.result.get() }
+
+        return teamData
+    }
+    
+    
+    
+    
+    
+    
     
     
     @IBAction func submit_Pressed(_ sender: Any) {
@@ -86,7 +252,7 @@ class FinishMatchDataViewController: UIViewController {
          }
         
         
-        FinishMatchDataViewController.matchDataObj = MatchData(teamText: "\(teamNumber)", matchText:"\(matchNumber)", scoutText:scoutName, autoLowGoal:autoLowGoal, autoHighGoal:autoHighGoal, autoTrenchBalls:autoTrenchBalls, autoShieldBalls:autoShieldBalls, controlPanel:controlPanel,climbing:"\(climbing)", autoLine:autoLine, climbBalanced:climbBalanced, climbingOtherRobots:climbingOtherRobots, teamColor:teamColor, notes:notes.text)
+        FinishMatchDataViewController.matchDataObj = MatchData(teamText: "\(teamNumber)", matchText:"\(matchNumber)", scoutText:scoutName, autoLowGoal:autoLowGoal, autoHighGoal:autoHighGoal, autoTrenchBalls:autoTrenchBalls, autoShieldBalls:autoShieldBalls, controlPanel:controlPanel,climbing:"\(climbing)", autoLine:autoLine, climbBalanced:climbBalanced, climbingOtherRobots:climbingOtherRobots, teamColor:teamColor, lowGoalTaken: lowGoalTaken, lowGoalMade: lowGoalMade, highGoalTaken: highGoalTaken, highGoalMade: highGoalMade, notes:notes.text)
         
             let payload =  Serialize(
                 teamText: FinishMatchDataViewController.matchDataObj.teamText,
@@ -101,6 +267,10 @@ class FinishMatchDataViewController: UIViewController {
                 autoLine: FinishMatchDataViewController.matchDataObj.autoLine,
                 climbBalanced: FinishMatchDataViewController.matchDataObj.climbBalanced,
                 climbingOtherRobots:FinishMatchDataViewController.matchDataObj.climbingOtherRobots,
+                lowGoalTaken: FinishMatchDataViewController.matchDataObj.lowGoalTaken,
+                lowGoalMade: FinishMatchDataViewController.matchDataObj.lowGoalMade,
+                highGoalTaken: FinishMatchDataViewController.matchDataObj.highGoalTaken,
+                highGoalMade:  FinishMatchDataViewController.matchDataObj.highGoalMade,
                 Notes:FinishMatchDataViewController.matchDataObj.notes,
                 pretty: false)
         
@@ -133,7 +303,7 @@ class FinishMatchDataViewController: UIViewController {
                     UserDefaults.standard.set(teamList, forKey: "teamList")
                 }
                 else if breakLoop == true{
-                    let indexOfElement = teamList.index(of: "\(teamNumber), \(matchNumber)")
+                    let indexOfElement = teamList.firstIndex(of: "\(teamNumber), \(matchNumber)")
                     teamList.remove(at: indexOfElement!)
                     teamList.append("\(teamNumber), \(matchNumber)")
                    // print(teamList)
