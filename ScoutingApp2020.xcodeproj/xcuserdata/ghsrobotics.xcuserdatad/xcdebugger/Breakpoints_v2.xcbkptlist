@@ -596,5 +596,37 @@
             landmarkType = "3">
          </BreakpointContent>
       </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "11D1FA4A-6DDA-42BF-B7F2-EAC3679965F6"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "ScoutingApp2020/FinishMatchDataViewController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "91"
+            endingLineNumber = "91"
+            landmarkName = "Serialize(teamText:matchText:scoutText:autoLowGoal:autoHighGoal:autoTrenchBalls:autoShieldBalls:controlPanel:climbing:autoLine:climbBalanced:climbingOtherRobots:lowGoalTaken:lowGoalMade:highGoalTaken:highGoalMade:Notes:pretty:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "47BBF85B-C459-4D14-AE20-57043661F127"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "ScoutingApp2020/FinishMatchDataViewController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "164"
+            endingLineNumber = "164"
+            landmarkName = "Serialize(teamText:matchText:scoutText:autoLowGoal:autoHighGoal:autoTrenchBalls:autoShieldBalls:controlPanel:climbing:autoLine:climbBalanced:climbingOtherRobots:lowGoalTaken:lowGoalMade:highGoalTaken:highGoalMade:Notes:pretty:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
    </Breakpoints>
 </Bucket>
