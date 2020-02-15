@@ -30,7 +30,7 @@ class ViewDataViewController: UIViewController, UITableViewDataSource, UITableVi
             
             
             print("teamNumberFromButton is \(teamNumberFromButton)")
-            print(indexPath1![1])
+           // print(indexPath1![1])
             changeData = true
             performSegue(withIdentifier: "showPitScouting", sender: nil)
     }

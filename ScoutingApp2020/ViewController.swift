@@ -69,26 +69,33 @@ class ViewController: UIViewController {
     @IBOutlet weak var popupButton2: UIButton!
     
     @IBAction func popup1Clicked(_ sender: Any) {
+        popupView.isHidden = true
         if(selectedMode == 1){
             matchPosition = 1
-            popupView.isHidden = true
             performSegue(withIdentifier: "MatchDataSegue", sender: nil)
         }
         else if(selectedMode == 2){
-            popupView.isHidden = true
             performSegue(withIdentifier: "QRExportSegue", sender: nil)
+        }
+        else if (selectedMode == 3){
+            performSegue(withIdentifier: "viewDataSegue", sender: nil)
         }
     }
     
     @IBAction func popup2Clicked(_ sender: Any) {
+        popupView.isHidden = true
         if(selectedMode == 1){
-           // matchPosition = 1
-            popupView.isHidden = true
+            
             performSegue(withIdentifier: "PitScoutSegue", sender: nil)
         }
         else if(selectedMode == 2){
-            popupView.isHidden = true
+            
             performSegue(withIdentifier: "WebExportSegue", sender: nil)
+        }
+        else if(selectedMode == 3){
+            if let url = URL(string: "google.com") {
+                UIApplication.shared.open(url)
+            }
         }
     }
     
@@ -106,9 +113,13 @@ class ViewController: UIViewController {
     }
     @IBAction func viewDataPressed(_ sender: Any) {
       //  let x = "Bruh" + "hsdf"
+        popupView.isHidden = false
+        popupLabel.text = "View Data"
+        popupButton1.setTitle("View Local Data", for: .normal)
+        popupButton2.setTitle("View Cloud Data", for: .normal)
+        selectedMode = 3
         
         
-        performSegue(withIdentifier: "viewDataSegue", sender: nil)
     }
     @IBAction func importDataPressed(_ sender: Any) {
     }
