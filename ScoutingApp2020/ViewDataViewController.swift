@@ -16,23 +16,23 @@ class ViewDataViewController: UIViewController, UITableViewDataSource, UITableVi
         let buttonPosition:CGPoint = (sender as AnyObject).convert(CGPoint.zero, to:self.tableView)
             let indexPath1 = self.tableView.indexPathForRow(at: buttonPosition)
             
-           // teamNumberFromButton = teamList[(indexPath1![1])]
-            
-            
-            
             if indexPath1![1] < teamList.count {
                 teamNumberFromButton = teamList[(indexPath1![1])]
+                changeData = true
+                performSegue(withIdentifier: "editMatchData", sender: nil)
             }
             else {
                 teamNumberFromButton = pitScoutList[(indexPath1![1] - teamList.count)]
+                changeData = true
+                performSegue(withIdentifier: "showPitScouting", sender: nil)
             }
             
             
             
-            print("teamNumberFromButton is \(teamNumberFromButton)")
+           // print("teamNumberFromButton is \(teamNumberFromButton)")
            // print(indexPath1![1])
-            changeData = true
-            performSegue(withIdentifier: "showPitScouting", sender: nil)
+            
+           
     }
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         

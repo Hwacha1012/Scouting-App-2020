@@ -92,7 +92,7 @@ class ViewController: UIViewController {
             performSegue(withIdentifier: "WebExportSegue", sender: nil)
         }
         else if(selectedMode == 3){
-            if let url = URL(string: "google.com") {
+            if let url = URL(string: "https://www.google.com") {
                 UIApplication.shared.open(url)
             }
         }
