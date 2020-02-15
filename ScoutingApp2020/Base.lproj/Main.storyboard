@@ -1259,6 +1259,7 @@
                     <connections>
                         <outlet property="tableView" destination="ikY-L5-6Du" id="DiV-4M-8kX"/>
                         <segue destination="NX4-JB-Ugf" kind="show" identifier="showPitScouting" id="Kaz-JP-RpN"/>
+                        <segue destination="Jqb-qg-JOm" kind="show" identifier="editMatchData" id="KS7-jH-7QA"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="CmX-Lg-8Gm" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -1279,7 +1280,8 @@
         <image name="plus.png" width="512" height="512"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="tCm-xV-nx9"/>
+        <segue reference="Kaz-JP-RpN"/>
         <segue reference="mDG-xP-MNm"/>
+        <segue reference="KS7-jH-7QA"/>
     </inferredMetricsTieBreakers>
 </document>
