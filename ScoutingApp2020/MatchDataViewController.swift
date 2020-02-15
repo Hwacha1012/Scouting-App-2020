@@ -9,15 +9,8 @@
 import UIKit
 
 
-
-
-
-
-
 class MatchDataViewController: UIViewController {
     
-
-
     
     @IBOutlet weak var titleLabel: UILabel!
     @IBOutlet weak var scoutLabel: UILabel!
