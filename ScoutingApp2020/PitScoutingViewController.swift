@@ -92,15 +92,25 @@ class PitScoutingViewController: UIViewController {
         
         let jsonString = String(data: data, encoding: .utf8)!
          */
-        let jStrArray = ["robotNumber="+PitScoutingViewController.pitScoutingDataObj.robotNumber,
-                         "driveTrainType="+PitScoutingViewController.pitScoutingDataObj.driveTrainType,
-                         "intake="+PitScoutingViewController.pitScoutingDataObj.intake,
-                         "capacity="+PitScoutingViewController.pitScoutingDataObj.capacity,
-                         "AutoLineCrossing="+String(PitScoutingViewController.pitScoutingDataObj.AutoLineCrossing),
-                         "AutoHighBalls="+PitScoutingViewController.pitScoutingDataObj.AutoHighBalls,
-                         "AutoLowBalls="+PitScoutingViewController.pitScoutingDataObj.AutoLowBalls,
-                         "climb="+String(PitScoutingViewController.pitScoutingDataObj.climb),
-                         "notes="+PitScoutingViewController.pitScoutingDataObj.notes]
+       
+        if ( PitScoutingViewController.pitScoutingDataObj.notes == "")
+        {
+             PitScoutingViewController.pitScoutingDataObj.notes = "NONE"
+        }
+        
+
+            let jStrArray = ["robotNumber="+PitScoutingViewController.pitScoutingDataObj.robotNumber,
+            "driveTrainType="+PitScoutingViewController.pitScoutingDataObj.driveTrainType,
+            "intake="+PitScoutingViewController.pitScoutingDataObj.intake,
+            "capacity="+PitScoutingViewController.pitScoutingDataObj.capacity,
+            "AutoLineCrossing="+String(PitScoutingViewController.pitScoutingDataObj.AutoLineCrossing),
+            "AutoHighBalls="+PitScoutingViewController.pitScoutingDataObj.AutoHighBalls,
+            "AutoLowBalls="+PitScoutingViewController.pitScoutingDataObj.AutoLowBalls,
+            "climb="+String(PitScoutingViewController.pitScoutingDataObj.climb),
+            "notes="+PitScoutingViewController.pitScoutingDataObj.notes]
+        
+        
+        
         let jsonString = jStrArray.joined(separator: "&")
         print(jsonString)
         //let s = send_post(jsonStr:jsonString)
