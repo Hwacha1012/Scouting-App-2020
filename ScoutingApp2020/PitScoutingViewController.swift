@@ -103,8 +103,8 @@ class PitScoutingViewController: UIViewController {
                          "notes="+PitScoutingViewController.pitScoutingDataObj.notes]
         let jsonString = jStrArray.joined(separator: "&")
         print(jsonString)
-        let s = send_post(jsonStr:jsonString)
-        let s2 = send_get()
+        //let s = send_post(jsonStr:jsonString)
+        //let s2 = send_get()
         return jsonString
     }
     
