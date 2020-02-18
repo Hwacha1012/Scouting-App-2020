@@ -18,6 +18,7 @@ var arrayOfValues = [String]()
 var arrayOfMatchTeams = [String]()
 var arrayOfPitTeams = [String]()
 var arrayOfSuperTeams = [String]()
+var teamName = ""
 
 class QRReaderViewController: UIViewController {
 
@@ -103,14 +104,14 @@ class QRReaderViewController: UIViewController {
            //  let testString = "sjndakfhiwaejksdfn sdhfijwerda"
            
            
-           arraySeperatedByCommas = dataToAdd.components(separatedBy: ",")
+          // arraySeperatedByCommas = dataToAdd.components(separatedBy: ",")
            //arraySeperatedByCommas = testString.components(separatedBy: ",")
-           print(arraySeperatedByCommas)
+         //  print(arraySeperatedByCommas)
            
            //  teamNum = arraySeperatedByCommas[0]
-           teamNumber = "\(arraySeperatedByCommas[0]); \(arraySeperatedByCommas[1])"
+        //   teamNumber = "\(arraySeperatedByCommas[0]); \(arraySeperatedByCommas[1])"
            
-           print(arraySeperatedByCommas.count)
+        //   print(arraySeperatedByCommas.count)
         
                
           // else if arraySeperatedByCommas.count > 26{
@@ -124,16 +125,20 @@ class QRReaderViewController: UIViewController {
                if arrayOfMatchTeams.count > 1{
                    for index in 1...arrayOfMatchTeams.count - 2{
                        
-                       arrayOfValues = arrayOfMatchTeams[index].components(separatedBy: ",")
+                      // arrayOfValues = arrayOfMatchTeams[index].components(separatedBy: ",")
                        
                        //teamNum = arrayOfValues[0]
-                       teamNum = "\(arrayOfValues[0]); \(arrayOfValues[1])"
+                  //     teamNum = "\(arrayOfValues[0]); \(arrayOfValues[1])"
                       // print("team Number is \(teamNum)!!!!!!!")
-                       if teamNum != ""{
+                    //   if teamNum != ""{
                          //  print("got here")
+                  //  teamName = 
+                    
                            if UserDefaults.standard.array(forKey: "teamList") == nil{
                                // teamList = UserDefaults.standard.object(forKey: "teamList") as! [String]
-                               print("teamNum is \(teamNum)")
+                              // print("teamNum is \(teamNum)")
+                            
+                            
                                teamList.append(teamNum)
                                print("teamlist is \(teamList)!")
                                UserDefaults.standard.set(teamList, forKey: "teamList")
@@ -187,7 +192,7 @@ class QRReaderViewController: UIViewController {
                            }
                            
                            
-                       }
+                      // }
                    }
                    
                    
