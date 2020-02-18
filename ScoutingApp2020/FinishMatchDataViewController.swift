@@ -165,7 +165,7 @@ class FinishMatchDataViewController: UIViewController {
         temp_string += String(FinishMatchDataViewController.matchDataObj.notes)
         let jsonString = temp_string
         print(jsonString)
-        let s = send_post(jsonStr:jsonString)
+        //let s = send_post(jsonStr:jsonString)
         //let s2 = send_get()
         return jsonString
     }
