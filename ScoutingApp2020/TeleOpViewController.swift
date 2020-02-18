@@ -197,8 +197,8 @@ class TeleOpViewController: UIViewController {
             
         }
         
-        popupLabel2.isHidden = false
-        popupLabel3.isHidden = false
+        popupLabel2.isHidden = true
+        popupLabel3.isHidden = true
         
         
         
