@@ -27,6 +27,7 @@
 		055F4B2923D7B445001C3581 /* MatchDataViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 055F4B2823D7B445001C3581 /* MatchDataViewController.swift */; };
 		055F4B2E23DBAE99001C3581 /* TopViewRed.png in Resources */ = {isa = PBXBuildFile; fileRef = 055F4B2C23DBAE99001C3581 /* TopViewRed.png */; };
 		055F4B2F23DBAE99001C3581 /* TopViewBlue.png in Resources */ = {isa = PBXBuildFile; fileRef = 055F4B2D23DBAE99001C3581 /* TopViewBlue.png */; };
+		05B56EFF23FCA0F0005F1B8A /* QRReaderViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05B56EFE23FCA0F0005F1B8A /* QRReaderViewController.swift */; };
 		DF28847E23DBBE4400572749 /* BorderNorth1.png in Resources */ = {isa = PBXBuildFile; fileRef = DF28847D23DBBE4400572749 /* BorderNorth1.png */; };
 		DF28848023DBBE8500572749 /* BorderNorth&South2.png in Resources */ = {isa = PBXBuildFile; fileRef = DF28847F23DBBE8400572749 /* BorderNorth&South2.png */; };
 		DF28848223DBBFD300572749 /* ShieldGen.png in Resources */ = {isa = PBXBuildFile; fileRef = DF28848123DBBFD300572749 /* ShieldGen.png */; };
@@ -79,6 +80,7 @@
 		055F4B2823D7B445001C3581 /* MatchDataViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MatchDataViewController.swift; sourceTree = "<group>"; };
 		055F4B2C23DBAE99001C3581 /* TopViewRed.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = TopViewRed.png; sourceTree = "<group>"; };
 		055F4B2D23DBAE99001C3581 /* TopViewBlue.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = TopViewBlue.png; sourceTree = "<group>"; };
+		05B56EFE23FCA0F0005F1B8A /* QRReaderViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QRReaderViewController.swift; sourceTree = "<group>"; };
 		DF28847D23DBBE4400572749 /* BorderNorth1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = BorderNorth1.png; sourceTree = "<group>"; };
 		DF28847F23DBBE8400572749 /* BorderNorth&South2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "BorderNorth&South2.png"; sourceTree = "<group>"; };
 		DF28848123DBBFD300572749 /* ShieldGen.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ShieldGen.png; sourceTree = "<group>"; };
@@ -145,6 +147,7 @@
 				05264F4C23EE2A2E00B461D2 /* ViewDataViewController.swift */,
 				05264F4E23EF32BC00B461D2 /* QRExportViewController.swift */,
 				05264F5223EF46B400B461D2 /* WebExportViewController.swift */,
+				05B56EFE23FCA0F0005F1B8A /* QRReaderViewController.swift */,
 				0529E03723C95094004707FD /* Main.storyboard */,
 				0529E03D23C95095004707FD /* Assets.xcassets */,
 				0529E03F23C95095004707FD /* LaunchScreen.storyboard */,
@@ -334,6 +337,7 @@
 				0552504423E0EC7B0084F28C /* FinishMatchDataViewController.swift in Sources */,
 				05264F4F23EF32BC00B461D2 /* QRExportViewController.swift in Sources */,
 				055F4B2723D7B2CE001C3581 /* TeleOpViewController.swift in Sources */,
+				05B56EFF23FCA0F0005F1B8A /* QRReaderViewController.swift in Sources */,
 				05264F5323EF46B400B461D2 /* WebExportViewController.swift in Sources */,
 				0529E03C23C95094004707FD /* ScoutingApp2020.xcdatamodeld in Sources */,
 				0529E03423C95094004707FD /* AppDelegate.swift in Sources */,

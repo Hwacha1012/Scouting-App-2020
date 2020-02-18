@@ -737,6 +737,22 @@
             </objects>
             <point key="canvasLocation" x="1477.34375" y="-617.578125"/>
         </scene>
+        <!--Reader View Controller-->
+        <scene sceneID="Afc-6D-8Us">
+            <objects>
+                <viewController id="iT5-if-dH4" customClass="QRReaderViewController" customModule="ScoutingApp2020" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8BD-D7-XmK">
+                        <rect key="frame" x="0.0" y="0.0" width="712" height="984"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <viewLayoutGuide key="safeArea" id="YmB-I9-Siw"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="tNG-Yh-ruH"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="9Tp-jw-Q4O" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1188" y="185"/>
+        </scene>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
@@ -888,11 +904,12 @@
                         <segue destination="Jqb-qg-JOm" kind="show" identifier="MatchDataSegue" id="0oJ-wl-ftk"/>
                         <segue destination="NX4-JB-Ugf" kind="show" identifier="PitScoutSegue" id="tCm-xV-nx9"/>
                         <segue destination="2Un-mF-tWk" kind="show" identifier="QRExportSegue" id="q8e-wf-SvL"/>
+                        <segue destination="iT5-if-dH4" kind="show" identifier="qrReaderSegue" id="eEl-Mj-SD9"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-284.375" y="171.6796875"/>
+            <point key="canvasLocation" x="-234" y="210"/>
         </scene>
         <!--Pit Scouting View Controller-->
         <scene sceneID="0jm-Xk-ZKj">
@@ -1280,8 +1297,8 @@
         <image name="plus.png" width="512" height="512"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="Kaz-JP-RpN"/>
+        <segue reference="tCm-xV-nx9"/>
         <segue reference="mDG-xP-MNm"/>
-        <segue reference="KS7-jH-7QA"/>
+        <segue reference="0oJ-wl-ftk"/>
     </inferredMetricsTieBreakers>
 </document>
