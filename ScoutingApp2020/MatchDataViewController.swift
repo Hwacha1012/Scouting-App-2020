@@ -62,23 +62,7 @@ class MatchDataViewController: UIViewController {
             //entered viewController from viewData
             let defaults = UserDefaults.standard
             
-            if(teamNumberFromButton.contains("PitScouting")){
-                if UserDefaults.standard.array(forKey: "pitScoutList") != nil{
-                    pitScoutList = UserDefaults.standard.object(forKey: "pitScoutList") as! [String]
-                    print("\(pitScoutList) and \(pitScoutList.count)")
-                               
-                }
-                else{
-                    print("pitScoutList is nil")
-                }
-                var counter = 0
-                
-                for i in 0...pitScoutList.count - 1{
-                    if(teamNumberFromButton == pitScoutList[i]){
-                        counter = i
-                        break
-                    }
-                }
+          
                 //print(pitScoutList[counter])
                 /*
                 
@@ -115,8 +99,7 @@ class MatchDataViewController: UIViewController {
                 Climbing.isOn = data.climb
                 Notes.text = data.notes
                 */
-            }
-            else{
+          
                 if UserDefaults.standard.array(forKey: "teamList") != nil{
                     teamList = UserDefaults.standard.object(forKey: "teamList") as! [String]
                    // print("\(teamList) and \(teamList.count)")
@@ -129,7 +112,18 @@ class MatchDataViewController: UIViewController {
                             break
                         }
                     }
-                    //var data = Deserialize(jsonString: defaults.object(forKey: pitScoutList[counter]) as! String)
+                    var data = Deserialize(jsonString: defaults.object(forKey: teamList[counter]) as! String)
+                    scoutName = data.scoutText
+                    teamNumber = Int(data.teamText) ?? 0
+                    matchNumber = Int(data.matchText) ?? 1
+                    teamColor = data.teamColor
+                    autoLine = data.autoLine
+                    autoShieldBalls = data.autoShieldBalls
+                    autoTrenchBalls = data.autoTrenchBalls
+                    autoHighGoal = data.autoHighGoal
+                    autoLowGoal = data.autoLowGoal
+                    
+                    update()
                     
                     
                     
@@ -137,7 +131,7 @@ class MatchDataViewController: UIViewController {
                 else{
                     print("teamList is nil")
                 }
-            }
+            
 
             
             
@@ -162,6 +156,14 @@ class MatchDataViewController: UIViewController {
         
 
         
+    }
+    
+    func Deserialize(jsonString:String) ->
+            MatchData{
+            let jsonData = jsonString.data(using: .utf8)!
+            let decoder = JSONDecoder()
+                FinishMatchDataViewController.matchDataObj = try! decoder.decode(MatchData.self, from: jsonData);
+                return dump(FinishMatchDataViewController.matchDataObj)
     }
     
     func updateValues(){
