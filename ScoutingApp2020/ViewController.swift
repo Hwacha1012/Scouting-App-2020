@@ -121,6 +121,7 @@ class ViewController: UIViewController {
         
     }
     @IBAction func importDataPressed(_ sender: Any) {
+        performSegue(withIdentifier: "qrReaderSegue", sender: nil)
     }
     @IBAction func exportDataPressed(_ sender: Any) {
         popupView.isHidden = false
@@ -138,11 +139,12 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
-        
-     //  let d =  UserDefaults.standard
-     //  d.removeObject(forKey: "pitScoutList")
-    //    d.synchronize()
-        
+        /*
+      let d =  UserDefaults.standard
+      d.removeObject(forKey: "pitScoutList")
+        d.removeObject(forKey: "teamList")
+       d.synchronize()
+        */
         // MARK: - RunType is set
         
         

@@ -77,9 +77,9 @@ class QRExportViewController: UIViewController {
                 }
             }
             
-            qrCodeString = "\(qrCodeString) // "
+          //  qrCodeString = "\(qrCodeString) "
         }
-        
+        print("qrString is \(qrCodeString)")
         qrImage = generateQRCode(from: qrCodeString)
         imageView.image = qrImage
         
