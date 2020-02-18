@@ -217,7 +217,7 @@ class TeleOpViewController: UIViewController {
         wheelSegmentedControl.setTitle("Climbing", forSegmentAt: 1)
         wheelSegmentedControl.setTitle("Climbing + Balanced", forSegmentAt: 2)
         
-        popupLabel3.text = "Number of Additional Robots Climbing: 0"
+        popupLabel3.text = "Number of Additional Robots Climbing: \(climbingOtherRobots)"
         popupLabel2.isHidden = true
         popupLabel3.isHidden = false
         
