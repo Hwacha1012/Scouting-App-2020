@@ -16,7 +16,7 @@
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "51"
             endingLineNumber = "51"
-            landmarkName = "autoButtonPressed(_:)"
+            landmarkName = "viewDidLoad()"
             landmarkType = "7">
             <Locations>
                <Location
@@ -124,8 +124,8 @@
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "110"
             endingLineNumber = "110"
-            landmarkName = "send_post(jsonStr:)"
-            landmarkType = "7">
+            landmarkName = "PitScoutingViewController"
+            landmarkType = "3">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -140,7 +140,7 @@
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "112"
             endingLineNumber = "112"
-            landmarkName = "send_post(jsonStr:)"
+            landmarkName = "DeserializeList(jsonString:)"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
@@ -156,8 +156,8 @@
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "111"
             endingLineNumber = "111"
-            landmarkName = "send_post(jsonStr:)"
-            landmarkType = "7">
+            landmarkName = "PitScoutingViewController"
+            landmarkType = "3">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -172,7 +172,7 @@
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "114"
             endingLineNumber = "114"
-            landmarkName = "send_post(jsonStr:)"
+            landmarkName = "DeserializeList(jsonString:)"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
@@ -188,7 +188,7 @@
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "113"
             endingLineNumber = "113"
-            landmarkName = "send_post(jsonStr:)"
+            landmarkName = "DeserializeList(jsonString:)"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
@@ -204,7 +204,7 @@
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "120"
             endingLineNumber = "120"
-            landmarkName = "send_post(jsonStr:)"
+            landmarkName = "DeserializeList(jsonString:)"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
@@ -220,7 +220,7 @@
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "118"
             endingLineNumber = "118"
-            landmarkName = "send_post(jsonStr:)"
+            landmarkName = "DeserializeList(jsonString:)"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
@@ -236,7 +236,7 @@
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "122"
             endingLineNumber = "122"
-            landmarkName = "send_post(jsonStr:)"
+            landmarkName = "Deserialize(jsonString:)"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
@@ -252,7 +252,7 @@
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "126"
             endingLineNumber = "126"
-            landmarkName = "send_post(jsonStr:)"
+            landmarkName = "Deserialize(jsonString:)"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
