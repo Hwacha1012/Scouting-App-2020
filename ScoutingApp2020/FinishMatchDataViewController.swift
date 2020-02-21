@@ -276,55 +276,54 @@ class FinishMatchDataViewController: UIViewController {
                 Notes:FinishMatchDataViewController.matchDataObj.notes,
                 pretty: false)
         
-            print(payload);
-            let defaults = UserDefaults.standard
-            defaults.set(payload, forKey: "\(teamNumber), \(matchNumber)")
-           if UserDefaults.standard.array(forKey: "teamList") == nil{
-                // teamList = UserDefaults.standard.object(forKey: "teamList") as! [String]
-                teamList.append("\(teamNumber), \(matchNumber)")
-               // print("teamlist is \(teamList)!")
-                UserDefaults.standard.set(teamList, forKey: "teamList")
-                
-            }
-            else if UserDefaults.standard.array(forKey: "teamList")!.isEmpty == false{
-                
-                //commented code overwrites previous entries with same team number
-                teamList = UserDefaults.standard.array(forKey: "teamList") as! [String]
-                breakLoop = false
-                for index in 0...teamList.count - 1 {
-                    let testString = "\(teamNumber), \(matchNumber)"
-                    if testString == teamList[index]{
-                        breakLoop = true
-                        
-                    }
-                }
-                print("breakLoop is \(breakLoop!)")
-                if breakLoop == false{
-                    teamList.append("\(teamNumber), \(matchNumber)")
-                    //print(teamList)
-                    UserDefaults.standard.set(teamList, forKey: "teamList")
-                }
-                else if breakLoop == true{
-                    let indexOfElement = teamList.firstIndex(of: "\(teamNumber), \(matchNumber)")
-                    teamList.remove(at: indexOfElement!)
-                    teamList.append("\(teamNumber), \(matchNumber)")
-                   // print(teamList)
-                    UserDefaults.standard.set(teamList, forKey: "teamList")
-                    
-                }
-                
-                
-                //comment below code to when you uncomment the above
-                //  teamList = UserDefaults.standard.array(forKey: "teamList") as! [String]
-                //  teamList.append("\(teamNumber); \(matchNumber)")
-                //  UserDefaults.standard.set(teamList, forKey: "teamList")
-            }
-            else{
-                teamList = UserDefaults.standard.array(forKey: "teamList") as! [String]
-                teamList.append("\(teamNumber), \(matchNumber)")
-               // print("teamList is \(teamList)")
-                UserDefaults.standard.set(teamList, forKey: "teamList")
-            }
+             print(payload);
+             let defaults = UserDefaults.standard
+        defaults.set(payload, forKey: "\(FinishMatchDataViewController.matchDataObj.teamText), MatchData")
+            if UserDefaults.standard.array(forKey: "matchDataList") == nil{
+                 // teamList = UserDefaults.standard.object(forKey: "teamList") as! [String]
+             pitScoutList.append("\(FinishMatchDataViewController.matchDataObj.teamText), MatchData")
+                // print("teamlist is \(teamList)!")
+                 UserDefaults.standard.set(pitScoutList, forKey: "matchDataList")
+             }
+             else if UserDefaults.standard.array(forKey: "matchDataList")!.isEmpty == false{
+                 
+                 //commented code overwrites previous entries with same team number
+                 pitScoutList = UserDefaults.standard.array(forKey: "matchDataList") as! [String]
+                 breakLoop = false
+                 for index in 0...pitScoutList.count - 1 {
+                     let testString = "\(FinishMatchDataViewController.matchDataObj.teamText), MatchData"
+                     if testString == pitScoutList[index]{
+                         breakLoop = true
+                         
+                     }
+                 }
+                 print("breakLoop is \(breakLoop!)")
+                 if breakLoop == false{
+                     pitScoutList.append("\(FinishMatchDataViewController.matchDataObj.teamText), MatchData")
+                     //print(teamList)
+                     UserDefaults.standard.set(pitScoutList, forKey: "matchDataList")
+                 }
+                 else if breakLoop == true{
+                    let indexOfElement = pitScoutList.index(of: "\(FinishMatchDataViewController.matchDataObj.teamText), MatchData")
+                     pitScoutList.remove(at: indexOfElement!)
+                     pitScoutList.append("\(FinishMatchDataViewController.matchDataObj.teamText), MatchData")
+                    // print(teamList)
+                     UserDefaults.standard.set(pitScoutList, forKey: "matchDataList")
+                     
+                 }
+                 
+                 
+                 //comment below code to when you uncomment the above
+                 //  teamList = UserDefaults.standard.array(forKey: "teamList") as! [String]
+                 //  teamList.append("\(teamNumber); \(matchNumber)")
+                 //  UserDefaults.standard.set(teamList, forKey: "teamList")
+             }
+             else{
+                 pitScoutList = UserDefaults.standard.array(forKey: "matchDataList") as! [String]
+                 pitScoutList.append("\(FinishMatchDataViewController.matchDataObj.teamText), MatchData")
+                // print("pitScoutList is \(pitScoutList)")
+                 UserDefaults.standard.set(pitScoutList, forKey: "matchDataList")
+             }
             
             performSegue(withIdentifier: "MatchDataToMenu", sender: nil)
         }

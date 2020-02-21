@@ -8,20 +8,57 @@
 
 import UIKit
 
-import WebKit
-
-class WebExportViewController: UIViewController, WKNavigationDelegate {
-    override func loadView() {
-        webView = WKWebView()
-        webView.navigationDelegate = self
-        view = webView
-    }
+class WebExportViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+          var qrCodeString = ""
+          if UserDefaults.standard.array(forKey: "pitScoutList")?.isEmpty == false{
+              pitScoutList = UserDefaults.standard.object(forKey: "pitScoutList") as! [String]
+           //   print("\(pitScoutList) and \(pitScoutList.count)")
+              
+              for index in 0...(pitScoutList.count - 1){
+                  if UserDefaults.standard.object(forKey: "\(pitScoutList[index])") != nil{
+                      let addString2 = UserDefaults.standard.object(forKey: "\(pitScoutList[index])")
+                      
+                      if qrCodeString == ""{
+                          qrCodeString = " \(addString2!)"
+                      }
+                      else{
+                          qrCodeString = "\(qrCodeString) | \(addString2!)"
+                          
+                      }
+                      
+                  }
+              }
+              
+            qrCodeString = "\(qrCodeString) | "
+          }
+        var qrCodeString2 = ""
+        if UserDefaults.standard.array(forKey: "matchDataList")?.isEmpty == false{
+            pitScoutList = UserDefaults.standard.object(forKey: "matchDataList") as! [String]
+         //   print("\(pitScoutList) and \(pitScoutList.count)")
+            
+            for index in 0...(pitScoutList.count - 1){
+                if UserDefaults.standard.object(forKey: "\(pitScoutList[index])") != nil{
+                    let addString2 = UserDefaults.standard.object(forKey: "\(pitScoutList[index])")
+                    
+                    if qrCodeString2 == ""{
+                        qrCodeString2 = " \(addString2!)"
+                    }
+                    else{
+                        qrCodeString2 = "\(qrCodeString2) | \(addString2!)"
+                        
+                    }
+                    
+                }
+            }
+            
+          qrCodeString2 = "\(qrCodeString2) | "
+        }
         
+          print("qrString is \(qrCodeString2)")
         
-        // Do any additional setup after loading the view.
     }
     
 
@@ -34,5 +71,31 @@ class WebExportViewController: UIViewController, WKNavigationDelegate {
         // Pass the selected object to the new view controller.
     }
     */
+    
+
+    
+    
+    
+    func send_post(jsonStr:String,endpoint:String)-> String
+    {
+        var result = jsonStr
+        let requestUrl = URL(string:"http://ec2-52-71-196-37.compute-1.amazonaws.com/"+endpoint)!
+        var request = URLRequest(url: requestUrl)
+        request.httpMethod = "POST"
+        let postString=jsonStr;
+        request.httpBody = postString.data(using:String.Encoding.utf8);
+        let task = URLSession.shared.dataTask(with:request) {
+            (data,response,error) in
+            if let error = error{
+                print("ERROR FOUD")
+                return
+            }
+            if let data = data,let dataString = String(data:data,encoding:.utf8){
+                print("Response data String:\n \(dataString)")
+            }
+        }
+        task.resume()
+        return result
+    }
 
 }

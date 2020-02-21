@@ -101,6 +101,10 @@ class QRReaderViewController: UIViewController {
     
 
     func returnToMainMenu(){
+        
+        
+        
+        
            //  let testString = "sjndakfhiwaejksdfn sdhfijwerda"
            
            
@@ -115,6 +119,9 @@ class QRReaderViewController: UIViewController {
         
                
           // else if arraySeperatedByCommas.count > 26{
+        
+        
+        /*
                if true{
                    
                arrayOfMatchTeams = dataToAdd.components(separatedBy: "||")
@@ -431,7 +438,7 @@ class QRReaderViewController: UIViewController {
             
             }
             */
-           
+           */
            
            performSegue(withIdentifier: "segueAfterScan", sender: nil)
            
@@ -458,8 +465,8 @@ class QRReaderViewController: UIViewController {
                 qrCodeFrameView?.frame = barCodeObject!.bounds
                 
                 if metadataObj.stringValue != nil {
-                    launchApp(decodedURL: metadataObj.stringValue!)
-                    //messageLabel.text = metadataObj.stringValue
+                    //launchApp(decodedURL: metadataObj.stringValue!)
+     
                 }
             }
         }
