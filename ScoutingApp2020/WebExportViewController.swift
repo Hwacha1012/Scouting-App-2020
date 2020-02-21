@@ -8,10 +8,18 @@
 
 import UIKit
 
-class WebExportViewController: UIViewController {
+import WebKit
+
+class WebExportViewController: UIViewController, WKNavigationDelegate {
+    override func loadView() {
+        webView = WKWebView()
+        webView.navigationDelegate = self
+        view = webView
+    }
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        
         
         // Do any additional setup after loading the view.
     }
