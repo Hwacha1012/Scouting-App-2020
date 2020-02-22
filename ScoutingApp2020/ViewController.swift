@@ -49,6 +49,8 @@ var climbing = false //do they climb
 var climbingOtherRobots = 0 //how many other robots they climbed with
 /// Whether or not the climb was balanced, e.g., true
 var climbBalanced = false //was the climb balanced
+/// Any notes written about a robot/match, e.g., Climbed quickly
+var notes = "" //notes about the robot
 /// The position of the user in the app, where 1 is Match Data, 2 is Enter Data, and 3 is TeleOp, e.g., 3
 var matchPosition = 0 // 1 is Match Data, 2 is Enter Data, 3 teleop
 /// Leo needs to explain this

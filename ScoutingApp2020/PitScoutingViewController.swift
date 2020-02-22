@@ -12,16 +12,39 @@ import Foundation
 var breakLoop: Bool!
 //import Alamofire
 //import SwiftyJSON
+/// The Class that deals with PitScoutingData and Initializes all variables in a format that can be inserted into a JSON.
 class PitScoutingData: Codable {
-   public var robotNumber:String
+    /// Variable that holds the value of robotNumber as a String
+    public var robotNumber:String
+    /// Variable that holds the value of driveTrainType as a String
     public var driveTrainType:String
+    /// Variable that holds the value of intake as a String
     public var intake:String
+    /// Variable that holds the value of capacity as a String
     public var capacity:String
+    /// Variable that holds the value of AutoLineCrossing as a Bool
     public var AutoLineCrossing:Bool
+    /// Variable that holds the value of AutoHighBalls as a String
     public var AutoHighBalls:String
+    /// Variable that holds the value of AutoLowBalls as a String
     public var AutoLowBalls:String
+    /// Variable that holds the value of climb as a Bool
     public var climb:Bool
+    /// Variable that holds the value of notes as a String
     public var notes:String
+    
+    /**
+    Initializes the variables used in the JSON string
+     - Parameter robotNumber: robotNumber as a String
+     - Parameter driveTrainType: driveTrainType as a String
+     - Parameter intake: intake as a String
+     - Parameter capacity: capacity as a String
+     - Parameter AutoLineCrossing: AutoLineCrossing as a Bool
+     - Parameter AutoHighBalls: AutoHighBalls as a String
+     - Parameter AutoLowBalls :AutoLowBalls as a String
+     - Parameter climb: climb as a Bool
+     - Parameter notes: notes as a String
+     */
     init(robotNumber: String, driveTrainType:String, intake:String, capacity:String, AutoLineCrossing:Bool, AutoHighBalls:String, AutoLowBalls:String, climb:Bool, notes:String ) {
         self.driveTrainType = driveTrainType
         self.robotNumber = robotNumber
@@ -34,9 +57,9 @@ class PitScoutingData: Codable {
         self.notes = notes
     }
 }
-
+/// The original object that manages a view hierarchy for the UIKit in the PitScouting View Controller. Extends UIViewController
 class PitScoutingViewController: UIViewController {
-    
+    /// An Object that contains data that is to be serialized and saved on the AWS Server. Initialized with the default values for robotNumber, driveTrainType, intake, capacity, AutoLineCrossing, AutoHighBalls, AutoLowBalls, climb, and notes.
     public static var pitScoutingDataObj = PitScoutingData(robotNumber: "", driveTrainType:"Tank", intake:"Floor", capacity:"1", AutoLineCrossing:true, AutoHighBalls:"", AutoLowBalls:"", climb:true, notes:"")
     
     public struct Throwable<T: Decodable>: Decodable {
@@ -76,7 +99,20 @@ class PitScoutingViewController: UIViewController {
     
     @IBOutlet weak var Climbing: UISwitch!
     
-    
+    /**
+        A function that  serializes robotNumber, driveTrainType, intake, capacity, AutoLineCrossing, AutoHighBalls, AutoLowBalls, climb, and notes into JSON format using an array
+        - Parameter teamNumber: meant to be robotNumber as a String, e.g., 2170
+        - Parameter driveTrainType: driveTrainType as a String
+        - Parameter intake: intake as a String
+        - Parameter capacity: capacity as a String
+        - Parameter AutoLineCrossing: AutoLineCrossing as a Bool
+        - Parameter AutoHighBalls: AutoHighBalls as a String
+        - Parameter AutoLowBalls :AutoLowBalls as a String
+        - Parameter climb: climb as a Bool
+        - Parameter notes: notes as a String
+        - Parameter pretty: somewhat still necessary; formerly used to display text in the console
+        - returns: The JSON string that was serialized by the function
+     */
     func Serialize(teamNumber:String, driveTrainType:String, intake:String, capacity:String, AutoLineCrossing:Bool, AutoHighBalls:String, AutoLowBalls:String, climb:Bool, notes:String,pretty:Bool) -> String
     {
         PitScoutingViewController.pitScoutingDataObj = PitScoutingData(robotNumber: teamNumber, driveTrainType:driveTrainType, intake:intake, capacity:capacity, AutoLineCrossing:AutoLineCrossing, AutoHighBalls:AutoHighBalls, AutoLowBalls:AutoLowBalls, climb:climb, notes:notes)
@@ -92,12 +128,17 @@ class PitScoutingViewController: UIViewController {
         let jsonString = String(data: data, encoding: .utf8)!
          */
        
+        if(PitScoutingViewController.pitScoutingDataObj.notes.contains("Type here...") ?? false){
+            let a = PitScoutingViewController.pitScoutingDataObj.notes.components(separatedBy: "Type here...")
+            PitScoutingViewController.pitScoutingDataObj.notes = a[1]
+        }
+        
         if ( PitScoutingViewController.pitScoutingDataObj.notes == "")
         {
              PitScoutingViewController.pitScoutingDataObj.notes = "NONE"
         }
         
-
+        /// An array used to combine all of the variables into one giant string sent as a JSON, as swift is stupid and you can't add strings together
             let jStrArray = ["robotNumber="+PitScoutingViewController.pitScoutingDataObj.robotNumber,
             "driveTrainType="+PitScoutingViewController.pitScoutingDataObj.driveTrainType,
             "intake="+PitScoutingViewController.pitScoutingDataObj.intake,
@@ -116,8 +157,11 @@ class PitScoutingViewController: UIViewController {
         //let s2 = send_get()
         return jsonString
     }
-    
-    
+    /**
+     A function used to deserialize a list of JSON strings
+     - Parameter jsonString: The list JSON string in a single string to be deserialized
+     - returns: The Deserialized list of JSONs
+     */
     func DeserializeList(jsonString:String) ->
         [Throwable<PitScoutingData>]{
         let jsonData = jsonString.data(using: .utf8)!
@@ -128,6 +172,11 @@ class PitScoutingViewController: UIViewController {
 
         return teamData
     }
+    /**
+    A function used to deserialize a single JSON strings
+     - Parameter jsonString: The  JSON string to be deserialized
+     - returns: The Deserialized JSON
+    */
     func Deserialize(jsonString:String) ->
             PitScoutingData{
             let jsonData = jsonString.data(using: .utf8)!
@@ -135,6 +184,11 @@ class PitScoutingViewController: UIViewController {
                 PitScoutingViewController.pitScoutingDataObj = try! decoder.decode(PitScoutingData.self, from: jsonData);
                 return dump(PitScoutingViewController.pitScoutingDataObj)
     }
+    /**
+    A function used to send a post request(A request to add an additional JSON String to the data to the AWS Server at: http://ec2-52-71-196-37.compute-1.amazonaws.com/pitscouting )
+     - Parameter jsonStr: The  JSON string to be sent to the server
+     - returns: The response from the server
+    */
     func send_post(jsonStr:String)-> String
     {
         var result = jsonStr
@@ -156,7 +210,10 @@ class PitScoutingViewController: UIViewController {
         task.resume()
         return result
     }
-    
+    /**
+    A function used to send a get request(A request to get the full JSON string from the server at:  http://ec2-52-71-196-37.compute-1.amazonaws.com/pitscouting )
+     - returns: The full JSON String from the AWS Server
+     */
     func send_get() -> [Throwable<PitScoutingData>]
     {
         var teamData: [Throwable<PitScoutingData>] = Array()

@@ -308,19 +308,24 @@ class TeleOpViewController: UIViewController {
             backgroundImage.image = UIImage(named: "TopViewRed.png")
         }
         
-        
-        if (matchPosition > 3){
-            //load previous data
-            //updateLabels()
+        if(changeData){
             
         }
         else{
-            //have new data
-            for i in 0...3{
-                highGoalMade[i] = 0
-                highGoalTaken[i] = 0
+            if (matchPosition > 3){
+                //load previous data
+                //updateLabels()
+                
+            }
+            else{
+                //have new data
+                for i in 0...3{
+                    highGoalMade[i] = 0
+                    highGoalTaken[i] = 0
+                }
             }
         }
+        
         
         if(runType == 1){
                    controlPanelButton.titleLabel!.font = UIFont.init(name: "Optima-BoldItalic", size: 24)

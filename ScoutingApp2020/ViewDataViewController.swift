@@ -84,6 +84,60 @@ class ViewDataViewController: UIViewController, UITableViewDataSource, UITableVi
          return cell
     }
     
+    func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath){
+        if editingStyle == .delete {
+            print("Deleted")
+            
+            if indexPath.row < teamList.count {
+                UserDefaults.standard.removeObject(forKey: "\(teamList[indexPath.row])")
+                teamList.remove(at: indexPath.row)
+            }
+           // else if indexPath.row >= teamList.count && indexPath.row < teamList.count + pitScoutList.count{
+            else{
+                
+                UserDefaults.standard.removeObject(forKey: "\(pitScoutList[(indexPath.row-teamList.count)])")
+                pitScoutList.remove(at: (indexPath.row-teamList.count))
+            }
+            
+
+        /*
+            if indexPath.row > (teamList.count - 1) && indexPath.row < (teamList.count + pitScoutList.count - 1){
+                //cell.textLabel?.text = "Team \(pitScoutList[(row - (teamList.count + 1))])"
+                UserDefaults.standard.removeObject(forKey: "\(pitScoutList[(indexPath.row - (teamList.count))])")
+                pitScoutList.remove(at: (indexPath.row - (teamList.count)))
+            }
+            else if teamList.count == 0{
+                UserDefaults.standard.removeObject(forKey: "\(pitScoutList[indexPath.row])")
+                pitScoutList.remove(at: indexPath.row)
+            }
+            else {
+                UserDefaults.standard.removeObject(forKey: "\(teamList[indexPath.row])")
+                teamList.remove(at: indexPath.row)
+            }
+          */
+            // UserDefaults.standard.removeObject(forKey: "\(teamList[indexPath.row])")
+            
+            tableView.deleteRows(at: [indexPath], with: .fade)
+            //self.catNames.remove(at: indexPath.row)
+            //tableView.beginUpdates()
+            // print("here!")
+            
+            // print("here")
+            //self.tableView.endUpdates()
+            // print("here!!")
+            
+            
+            //tableView.reloadData()
+            // self.tableView.deleteRows(at: <#T##[IndexPath]#>, with: .)
+            //print("hi")
+            
+            UserDefaults.standard.set(teamList, forKey: "teamList")
+            UserDefaults.standard.set(pitScoutList, forKey: "pitScoutList")
+            
+           // print("teamList is \(teamList)")
+        }
+    }
+    
 
     @IBOutlet weak var tableView: UITableView!
     override func viewDidLoad() {
