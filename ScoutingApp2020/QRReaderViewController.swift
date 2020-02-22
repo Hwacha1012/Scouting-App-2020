@@ -19,6 +19,7 @@ var arrayOfMatchTeams = [String]()
 var arrayOfPitTeams = [String]()
 var arrayOfSuperTeams = [String]()
 var teamName = ""
+var pSTeamName = ""
 
 class QRReaderViewController: UIViewController {
 
@@ -120,6 +121,156 @@ class QRReaderViewController: UIViewController {
                
           // else if arraySeperatedByCommas.count > 26{
         
+        
+        arrayOfMatchTeams = dataToAdd.components(separatedBy: "||")
+        arrayOfPitTeams = dataToAdd.components(separatedBy: "//")
+        
+        if arrayOfMatchTeams.count > 1{
+            for index in 1...arrayOfMatchTeams.count - 2{
+                let a = arrayOfMatchTeams[index].components(separatedBy: "matchText=")
+                let b = a[1].components(separatedBy: "&")
+                let c = arrayOfMatchTeams[index].components(separatedBy: "teamText=")
+                let d = c[1].components(separatedBy: "&")
+                
+                teamName = "\(d[0]); \(b[0])"
+                if UserDefaults.standard.array(forKey: "teamList") == nil{
+                    // teamList = UserDefaults.standard.object(forKey: "teamList") as! [String]
+                   // print("teamNum is \(teamNum)")
+                 
+                 
+                    teamList.append(teamName)
+                    print("teamlist is \(teamList)!")
+                    UserDefaults.standard.set(teamList, forKey: "teamList")
+                    UserDefaults.standard.set(arrayOfMatchTeams[index], forKey: "\(teamName)")
+                    print("Value is \(arrayOfMatchTeams[index])")
+                    //print("teamNum is \(teamName)")
+                    let test = UserDefaults.standard.object(forKey: "\(teamName)")
+                    print(test)
+                    
+                }
+                else if UserDefaults.standard.array(forKey: "teamList")!.isEmpty == false{
+                    
+                    teamList = UserDefaults.standard.array(forKey: "teamList") as! [String]
+                    breakLoop = false
+                    for index in 0...teamList.count - 1 {
+                        if teamName == teamList[index]{
+                            breakLoop = true
+                            
+                        }
+                    }
+                    print("breakLoop is \(breakLoop)")
+                    if breakLoop == false{
+                        teamList.append(teamName)
+                        print(teamList)
+                    }
+                    else if breakLoop == true{
+                        let indexOfElement = teamList.index(of: "\(teamName)")
+                        teamList.remove(at: indexOfElement!)
+                        teamList.append(teamName)
+                        print(teamList)
+                    }
+                    
+                    UserDefaults.standard.set(teamList, forKey: "teamList")
+                    UserDefaults.standard.set(arrayOfMatchTeams[index], forKey: "\(teamName)")
+                    print("Value is \(arrayOfMatchTeams[index])")
+       
+                    
+                }
+                else{
+                    teamList = UserDefaults.standard.array(forKey: "teamList") as! [String]
+                    teamList.append(teamName)
+                    print("teamlist is \(teamList)")
+                    UserDefaults.standard.set(teamList, forKey: "teamList")
+                    UserDefaults.standard.set(arrayOfMatchTeams[index], forKey: "\(teamName)")
+                    print("Value is \(arrayOfMatchTeams[index])")
+                    print("teamNum is !\(teamName)")
+                    let test = UserDefaults.standard.object(forKey: "\(teamName)")
+                    print(test)
+                }
+                
+                
+                
+                
+            }
+            
+            
+            
+            
+        }
+        
+        if arrayOfPitTeams.count > 1{
+                              print("hi?!?")
+                              for index in 1...arrayOfPitTeams.count - 2{
+                                  
+                                let a = arrayOfPitTeams[index].components(separatedBy: "robotNumber=")
+                                let b = a[1].components(separatedBy: "&")
+                                
+                                  //arrayOfValues = arrayOfPitTeams[index].components(separatedBy: ",")
+                                  
+                                  //teamNum = arrayOfValues[0]
+                                  pSTeamName = "\(b[0]); Pit Scouting"
+                                  print("pSTeam Number is \(pSTeamName)!!!!!!!")
+                                  if pSTeamName != ""{
+                                      print("got here")
+                                      if UserDefaults.standard.array(forKey: "pitScoutList") == nil{
+                                          // teamList = UserDefaults.standard.object(forKey: "teamList") as! [String]
+                                          print("pSteamNum is \(pSTeamName)")
+                                          pitScoutList.append(pSTeamName)
+                                          print("pitScoutList is \(pitScoutList)!")
+                                          UserDefaults.standard.set(pitScoutList, forKey: "pitScoutList")
+                                          UserDefaults.standard.set(arrayOfPitTeams[index], forKey: "\(pSTeamName)")
+                                          print("Value is \(arrayOfPitTeams[index])")
+                                          print("pSteamNum is \(pSTeamName)")
+                                          let test = UserDefaults.standard.object(forKey: "\(pSTeamName)")
+                                          print(test)
+                                          
+                                      }
+                                      else if UserDefaults.standard.array(forKey: "pitScoutList")!.isEmpty == false{
+                                          
+                                          pitScoutList = UserDefaults.standard.array(forKey: "pitScoutList") as! [String]
+                                          breakLoop = false
+                                          for index in 0...pitScoutList.count - 1 {
+                                              if pSTeamName == pitScoutList[index]{
+                                                  breakLoop = true
+                                                  
+                                              }
+                                          }
+                                          print("breakLoop2 is \(breakLoop)")
+                                          if breakLoop == false{
+                                              pitScoutList.append(pSTeamName)
+                                              print(pitScoutList)
+                                          }
+                                          else if breakLoop == true{
+                                              let indexOfElement = pitScoutList.index(of: "\(pSTeamName)")
+                                              pitScoutList.remove(at: indexOfElement!)
+                                              pitScoutList.append(pSTeamName)
+                                              print(pitScoutList)
+                                          }
+                                          
+                                          UserDefaults.standard.set(pitScoutList, forKey: "pitScoutList")
+                                          UserDefaults.standard.set(arrayOfPitTeams[index], forKey: "\(pSTeamName)")
+                                          print("Value is \(arrayOfPitTeams[index])")
+                                          print("teamNum is !\(pSTeamName)")
+                                          let test = UserDefaults.standard.object(forKey: "\(pSTeamName)")
+                                          print(test)
+                                          
+                                      }
+                                      else{
+                                          pitScoutList = UserDefaults.standard.array(forKey: "pitScoutList") as! [String]
+                                          pitScoutList.append(pSTeamName)
+                                          print("pitScoutList is \(pitScoutList)")
+                                          UserDefaults.standard.set(pitScoutList, forKey: "pitScoutList")
+                                          UserDefaults.standard.set(arrayOfPitTeams[index], forKey: "\(pSTeamName)")
+                                          print("Value is \(arrayOfPitTeams[index])")
+                                          print("pSteamNum is !\(pSTeamName)")
+                                          let test = UserDefaults.standard.object(forKey: "\(pSTeamName)")
+                                          print(test)
+                                      }
+                                      
+                                      
+                                  }
+            }
+        }
         
         /*
                if true{
@@ -443,8 +594,45 @@ class QRReaderViewController: UIViewController {
            performSegue(withIdentifier: "segueAfterScan", sender: nil)
            
        }
+    
+    
+    func launchApp(decodedURL: String) {
+          
+            if presentedViewController != nil {
+              return
+          }
+    
+          
+          /* let alertPrompt = UIAlertController(title: "Open App", message: "You're going to open \(decodedURL)", preferredStyle: .actionSheet)
+           let confirmAction = UIAlertAction(title: "Confirm", style: UIAlertActionStyle.default, handler: { (action) -> Void in
+           
+           if let url = URL(string: decodedURL) {
+           if UIApplication.shared.canOpenURL(url) {
+           UIApplication.shared.open(url, options: [:], completionHandler: nil)
+           }
+           }
+           })
+           
+           let cancelAction = UIAlertAction(title: "Cancel", style: UIAlertActionStyle.cancel, handler: nil)
+           
+           alertPrompt.addAction(confirmAction)
+           alertPrompt.addAction(cancelAction)
+           
+           present(alertPrompt, animated: true, completion: nil)
+           */
+          print("decodedURL is \(decodedURL)")
+          dataToAdd = decodedURL
+          
+          returnToMainMenu()
+          //performSegue(withIdentifier: "segueAfterQRScan", sender: nil)
+          
+          
+      }
 
 }
+
+
+   
     
  extension QRReaderViewController: AVCaptureMetadataOutputObjectsDelegate {
         
@@ -465,7 +653,7 @@ class QRReaderViewController: UIViewController {
                 qrCodeFrameView?.frame = barCodeObject!.bounds
                 
                 if metadataObj.stringValue != nil {
-                    //launchApp(decodedURL: metadataObj.stringValue!)
+                    launchApp(decodedURL: metadataObj.stringValue!)
      
                 }
             }

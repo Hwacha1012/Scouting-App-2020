@@ -748,6 +748,9 @@
                         <viewLayoutGuide key="safeArea" id="YmB-I9-Siw"/>
                     </view>
                     <navigationItem key="navigationItem" id="tNG-Yh-ruH"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="show" identifier="segueAfterScan" id="oYa-Vw-b8j"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="9Tp-jw-Q4O" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -1298,7 +1301,7 @@
     </resources>
     <inferredMetricsTieBreakers>
         <segue reference="tCm-xV-nx9"/>
-        <segue reference="mDG-xP-MNm"/>
+        <segue reference="oYa-Vw-b8j"/>
         <segue reference="0oJ-wl-ftk"/>
     </inferredMetricsTieBreakers>
 </document>
