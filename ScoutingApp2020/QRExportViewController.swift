@@ -75,6 +75,7 @@ class QRExportViewController: UIViewController {
                     }
                     
                 }
+                qrCodeString = "\(qrCodeString) // "
             }
             
           //  qrCodeString = "\(qrCodeString) "

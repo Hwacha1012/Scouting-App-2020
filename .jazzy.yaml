@@ -1,0 +1,18 @@
+# Ordered by output of `jazzy --help config`
+
+output: docs
+clean: true
+xcodebuild_arguments:
+ - -project
+ - ScoutingApp2020.xcodeproj
+ - -scheme
+ - ScoutingApp2020
+ - CODE_SIGNING_ALLOWED = NO
+author: Leo Liu
+module: ScoutingApp2020
+module_version: 1.0
+copyright: Copyright © 2020 Team 2170. All rights reserved.
+min_acl: internal
+# Options : [apple | fullwidth | jony | DIRPATH]
+# Which theme to use. Specify either 'apple' (default), one of the other built-in theme names, or the path to your mustache templates and other assets for a custom theme.Default: apple
+theme: apple
