@@ -35,13 +35,13 @@ class WebExportViewController: UIViewController {
             qrCodeString = "\(qrCodeString) | "
           }
         var qrCodeString2 = ""
-        if UserDefaults.standard.array(forKey: "matchDataList")?.isEmpty == false{
-            pitScoutList = UserDefaults.standard.object(forKey: "matchDataList") as! [String]
+        if UserDefaults.standard.array(forKey: "teamList")?.isEmpty == false{
+            teamList = UserDefaults.standard.object(forKey: "teamList") as! [String]
          //   print("\(pitScoutList) and \(pitScoutList.count)")
             
-            for index in 0...(pitScoutList.count - 1){
-                if UserDefaults.standard.object(forKey: "\(pitScoutList[index])") != nil{
-                    let addString2 = UserDefaults.standard.object(forKey: "\(pitScoutList[index])")
+            for index in 0...(teamList.count - 1){
+                if UserDefaults.standard.object(forKey: "\(teamList[index])") != nil{
+                    let addString2 = UserDefaults.standard.object(forKey: "\(teamList[index])")
                     
                     if qrCodeString2 == ""{
                         qrCodeString2 = " \(addString2!)"
@@ -58,6 +58,17 @@ class WebExportViewController: UIViewController {
         }
         
           print("qrString is \(qrCodeString2)")
+        
+        
+        let pitArray = qrCodeString.components(separatedBy: "|")
+        for i in 0...pitArray.count-1{
+            send_post(jsonStr: pitArray[i], endpoint: "pitScouting")
+        }
+        
+        let matchArray = qrCodeString2.components(separatedBy: "|")
+        for i in 0...matchArray.count-1{
+            send_post(jsonStr: matchArray[i], endpoint: "matchData")
+        }
         
     }
     

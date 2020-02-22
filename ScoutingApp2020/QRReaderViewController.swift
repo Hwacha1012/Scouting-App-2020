@@ -129,12 +129,31 @@ class QRReaderViewController: UIViewController {
             for index in 1...arrayOfMatchTeams.count - 2{
                 let a = arrayOfMatchTeams[index].components(separatedBy: "matchText=")
                 
-                print("a[0] is \(a[0])")
-                let b = a[1].components(separatedBy: "&")
+                //print("a[0] is \(a[0])")
+                let matchText = a[1].components(separatedBy: "&")
                 let c = arrayOfMatchTeams[index].components(separatedBy: "teamText=")
-                let d = c[1].components(separatedBy: "&")
+                let teamText = c[1].components(separatedBy: "&")
                 
-                teamName = "\(d[0]); \(b[0])"
+                
+                teamName = "\(teamText[0]); \(matchText[0])"
+                
+                
+                var matchArr = arrayOfMatchTeams[index].components(separatedBy: "=")
+                var matchArr2 = Array(repeating: "", count: matchArr.count - 1)
+                for i in 1...matchArr.count - 1{
+                    if(i != matchArr.count - 1){
+                        matchArr2[i] = String(matchArr[i].removeLast())
+                    }
+                    
+                }
+                
+                teamName = "\(matchArr2[5]); \(matchArr2[4])"
+              //  print(teamName)
+                
+                
+                
+             //   FinishMatchDataViewController.matchDataObj = MatchData(teamText: matchArr2[5], matchText: matchArr2[4], scoutText:matchArr2[6], autoLowGoal:autoLowGoal, autoHighGoal:autoHighGoal, autoTrenchBalls:autoTrenchBalls, autoShieldBalls:autoShieldBalls, controlPanel:controlPanel,climbing:"\(climbing)", autoLine:autoLine, climbBalanced:climbBalanced, climbingOtherRobots:climbingOtherRobots, teamColor:teamColor, lowGoalTaken: lowGoalTaken, lowGoalMade: lowGoalMade, highGoalTaken: highGoalTaken, highGoalMade: highGoalMade, notes:notes.text)
+                
                 if UserDefaults.standard.array(forKey: "teamList") == nil{
                     // teamList = UserDefaults.standard.object(forKey: "teamList") as! [String]
                    // print("teamNum is \(teamNum)")
@@ -146,8 +165,8 @@ class QRReaderViewController: UIViewController {
                     UserDefaults.standard.set(arrayOfMatchTeams[index], forKey: "\(teamName)")
                     print("Value is \(arrayOfMatchTeams[index])")
                     //print("teamNum is \(teamName)")
-                    let test = UserDefaults.standard.object(forKey: "\(teamName)")
-                    print(test)
+                   // let test = UserDefaults.standard.object(forKey: "\(teamName)")
+                 //   print(test)
                     
                 }
                 else if UserDefaults.standard.array(forKey: "teamList")!.isEmpty == false{
@@ -185,9 +204,9 @@ class QRReaderViewController: UIViewController {
                     UserDefaults.standard.set(teamList, forKey: "teamList")
                     UserDefaults.standard.set(arrayOfMatchTeams[index], forKey: "\(teamName)")
                     print("Value is \(arrayOfMatchTeams[index])")
-                    print("teamNum is !\(teamName)")
-                    let test = UserDefaults.standard.object(forKey: "\(teamName)")
-                    print(test)
+                  //  print("teamNum is !\(teamName)")
+                   // let test = UserDefaults.standard.object(forKey: "\(teamName)")
+                  //  print(test)
                 }
                 
                 

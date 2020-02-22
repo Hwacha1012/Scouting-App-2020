@@ -92,6 +92,11 @@ class PitScoutingViewController: UIViewController {
         let jsonString = String(data: data, encoding: .utf8)!
          */
        
+        if(PitScoutingViewController.pitScoutingDataObj.notes.contains("Type here...") ?? false){
+            let a = PitScoutingViewController.pitScoutingDataObj.notes.components(separatedBy: "Type here...")
+            PitScoutingViewController.pitScoutingDataObj.notes = a[1]
+        }
+        
         if ( PitScoutingViewController.pitScoutingDataObj.notes == "")
         {
              PitScoutingViewController.pitScoutingDataObj.notes = "NONE"
