@@ -8,8 +8,9 @@
 
 import UIKit
 
-class WebExportViewController: UIViewController {
 
+class WebExportViewController: UIViewController {
+    
     override func viewDidLoad() {
         super.viewDidLoad()
           var qrCodeString = ""

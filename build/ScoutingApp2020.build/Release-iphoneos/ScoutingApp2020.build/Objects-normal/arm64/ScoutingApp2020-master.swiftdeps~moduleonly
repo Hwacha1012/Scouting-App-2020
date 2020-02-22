@@ -1,0 +1,15 @@
+version: "Apple Swift version 5.1.3 (swiftlang-1100.0.282.1 clang-1100.0.33.15)"
+options: "c6478988dc64304a69729624fdef2907"
+build_time: [1582383451, 495510000]
+inputs:
+  "/Users/manavmittal/Desktop/Scouting-App-2020/ScoutingApp2020/ViewController.swift": [9223372036, 854775807]
+  "/Users/manavmittal/Desktop/Scouting-App-2020/ScoutingApp2020/EnterData2ViewController.swift": [9223372036, 854775807]
+  "/Users/manavmittal/Desktop/Scouting-App-2020/ScoutingApp2020/PitScoutingViewController.swift": [9223372036, 854775807]
+  "/Users/manavmittal/Desktop/Scouting-App-2020/ScoutingApp2020/MatchDataViewController.swift": [9223372036, 854775807]
+  "/Users/manavmittal/Desktop/Scouting-App-2020/ScoutingApp2020/ViewDataViewController.swift": [9223372036, 854775807]
+  "/Users/manavmittal/Desktop/Scouting-App-2020/ScoutingApp2020/FinishMatchDataViewController.swift": [9223372036, 854775807]
+  "/Users/manavmittal/Desktop/Scouting-App-2020/ScoutingApp2020/QRExportViewController.swift": [9223372036, 854775807]
+  "/Users/manavmittal/Desktop/Scouting-App-2020/ScoutingApp2020/TeleOpViewController.swift": [9223372036, 854775807]
+  "/Users/manavmittal/Desktop/Scouting-App-2020/ScoutingApp2020/QRReaderViewController.swift": [9223372036, 854775807]
+  "/Users/manavmittal/Desktop/Scouting-App-2020/ScoutingApp2020/WebExportViewController.swift": [9223372036, 854775807]
+  "/Users/manavmittal/Desktop/Scouting-App-2020/ScoutingApp2020/AppDelegate.swift": [9223372036, 854775807]

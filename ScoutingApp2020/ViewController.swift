@@ -21,7 +21,7 @@ var matchNumber = 0
 var teamColor = true
 /// The intake type the robot uses to collect balls from the playing field, e.g., floor, feeding station
 var intakeType = ""
-/// Whether the decive running is an iPhone or iPad, where 0 is iPhone and 1 is iPad, e.g., 1
+/// Whether the decive running is an iPhone or iPad, where 2 is iPhone and 1 is iPad, e.g., 1
 var runType = 1 //default is running as iPad
 /// Whether the Team Scouted crosses the line in auto, e.g., 1
 var autoLine = false //do they cross the line in auto
@@ -83,6 +83,10 @@ class ViewController: UIViewController {
     @IBOutlet weak var popupButton1: UIButton!
     @IBOutlet weak var popupButton2: UIButton!
     
+    /**
+     Controls the first button when the popup appears in the scouting app
+    -  Parameter sender: The user that presses the button
+     */
     @IBAction func popup1Clicked(_ sender: Any) {
         popupView.isHidden = true
         if(selectedMode == 1){
@@ -96,7 +100,10 @@ class ViewController: UIViewController {
             performSegue(withIdentifier: "viewDataSegue", sender: nil)
         }
     }
-    
+    /**
+     Controls the second button when the popup appears in the scouting app
+    -  Parameter sender: The user that presses the button
+     */
     @IBAction func popup2Clicked(_ sender: Any) {
         popupView.isHidden = true
         if(selectedMode == 1){
@@ -113,7 +120,10 @@ class ViewController: UIViewController {
             }
         }
     }
-    
+    /**
+     Controls the actions that take place when the button "Enter Data" is presssed
+    -  Parameter sender: The user that presses the button
+     */
     @IBAction func enterDataPressed(_ sender: Any) {
 
         popupView.isHidden = false
@@ -126,6 +136,10 @@ class ViewController: UIViewController {
         
         
     }
+    /**
+     Controls the actions that take place when the button "View Data" is presssed
+    -  Parameter sender: The user that presses the button
+     */
     @IBAction func viewDataPressed(_ sender: Any) {
       //  let x = "Bruh" + "hsdf"
         popupView.isHidden = false
@@ -136,9 +150,17 @@ class ViewController: UIViewController {
         
         
     }
+    /**
+       Controls the actions that take place when the button "Import Data" is presssed
+      -  Parameter sender: The user that presses the button
+       */
     @IBAction func importDataPressed(_ sender: Any) {
         performSegue(withIdentifier: "qrReaderSegue", sender: nil)
     }
+    /**
+     Controls the actions that take place when the button "Export Data" is presssed
+    -  Parameter sender: The user that presses the button
+     */
     @IBAction func exportDataPressed(_ sender: Any) {
         popupView.isHidden = false
         popupLabel.text = "Export Data"
