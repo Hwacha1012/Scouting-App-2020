@@ -128,6 +128,8 @@ class QRReaderViewController: UIViewController {
         if arrayOfMatchTeams.count > 1{
             for index in 1...arrayOfMatchTeams.count - 2{
                 let a = arrayOfMatchTeams[index].components(separatedBy: "matchText=")
+                
+                print("a[0] is \(a[0])")
                 let b = a[1].components(separatedBy: "&")
                 let c = arrayOfMatchTeams[index].components(separatedBy: "teamText=")
                 let d = c[1].components(separatedBy: "&")

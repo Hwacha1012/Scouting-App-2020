@@ -193,9 +193,9 @@ class FinishMatchDataViewController: UIViewController {
     
     
     
-    func send_get() -> [Throwable<PitScoutingData>]
+    func send_get() -> [Throwable<MatchData>]
     {
-        var teamData: [Throwable<PitScoutingData>] = Array()
+        var teamData: [Throwable<MatchData>] = Array()
         let dataString = ""
         let url = URL(string: "http://ec2-52-71-196-37.compute-1.amazonaws.com/matchdata")
         guard let requestUrl = url else { fatalError() }
@@ -229,10 +229,10 @@ class FinishMatchDataViewController: UIViewController {
     
     
     func DeserializeList(jsonString:String) ->
-        [Throwable<PitScoutingData>]{
+        [Throwable<MatchData>]{
         let jsonData = jsonString.data(using: .utf8)!
         let decoder = JSONDecoder()
-        var teamData = try! decoder.decode([Throwable<PitScoutingData>].self, from: jsonData);
+        var teamData = try! decoder.decode([Throwable<MatchData>].self, from: jsonData);
         print(teamData)
         // let products = throwables.compactMap { try? $0.result.get() }
 
