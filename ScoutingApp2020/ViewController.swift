@@ -84,8 +84,8 @@ class ViewController: UIViewController {
     @IBOutlet weak var popupButton2: UIButton!
     
     /**
-     
-    -  Parameter sender: We have absolutely no clue
+     Controls the first button when the popup appears in the scouting app
+    -  Parameter sender: The user that presses the button
      */
     @IBAction func popup1Clicked(_ sender: Any) {
         popupView.isHidden = true
@@ -100,7 +100,10 @@ class ViewController: UIViewController {
             performSegue(withIdentifier: "viewDataSegue", sender: nil)
         }
     }
-    
+    /**
+     Controls the second button when the popup appears in the scouting app
+    -  Parameter sender: The user that presses the button
+     */
     @IBAction func popup2Clicked(_ sender: Any) {
         popupView.isHidden = true
         if(selectedMode == 1){
@@ -117,7 +120,10 @@ class ViewController: UIViewController {
             }
         }
     }
-    
+    /**
+     Controls the actions that take place when the button "Enter Data" is presssed
+    -  Parameter sender: The user that presses the button
+     */
     @IBAction func enterDataPressed(_ sender: Any) {
 
         popupView.isHidden = false
@@ -130,6 +136,10 @@ class ViewController: UIViewController {
         
         
     }
+    /**
+     Controls the actions that take place when the button "View Data" is presssed
+    -  Parameter sender: The user that presses the button
+     */
     @IBAction func viewDataPressed(_ sender: Any) {
       //  let x = "Bruh" + "hsdf"
         popupView.isHidden = false
@@ -140,9 +150,17 @@ class ViewController: UIViewController {
         
         
     }
+    /**
+       Controls the actions that take place when the button "Import Data" is presssed
+      -  Parameter sender: The user that presses the button
+       */
     @IBAction func importDataPressed(_ sender: Any) {
         performSegue(withIdentifier: "qrReaderSegue", sender: nil)
     }
+    /**
+     Controls the actions that take place when the button "Export Data" is presssed
+    -  Parameter sender: The user that presses the button
+     */
     @IBAction func exportDataPressed(_ sender: Any) {
         popupView.isHidden = false
         popupLabel.text = "Export Data"
