@@ -7,38 +7,53 @@
 //
 
 import UIKit
+/// List of all the teams recorded on your device, used by MatchData, e.g., (example array needed)
 var teamList = [String]()
+/// List of all the teams recorded on your device, used by PitScouting, e.g.,(example array needed)
 var pitScoutList = [String]()
-var scoutName = "" //Name of the Scout
-var teamNumber = 0 //ex;2170
-var matchNumber = 0 //ex;69
-var teamColor = true //true is blue, false is red
-
-var intakeType = "" //from floor or feeding station
-var runType = 1 //running as ipad
-
-
-
-
+/// Name of the Scout, e.g., Manav Mittal
+var scoutName = ""
+/// The number of the team that you are scouting, e.g., 2170.
+var teamNumber = 0
+/// The number of the match the team that you are scouting is playing in, e.g., 69
+var matchNumber = 0
+/// The color the team scouted is competing under, where true is blue and false is red, e.g., true
+var teamColor = true
+/// The intake type the robot uses to collect balls from the playing field, e.g., floor, feeding station
+var intakeType = ""
+/// Whether the decive running is an iPhone or iPad, where 0 is iPhone and 1 is iPad, e.g., 1
+var runType = 1 //default is running as iPad
+/// Whether the Team Scouted crosses the line in auto, e.g., 1
 var autoLine = false //do they cross the line in auto
+/// The amount of low goals scored in auto, e.g., 7
 var autoLowGoal = 0 //low goals scored in auto
+/// The amount of high goals scored in auto, e.g., 7
 var autoHighGoal = 0 //high goals scored in auto
+/// The amount of trench balls picked up in auto, e.g., 7
 var autoTrenchBalls = 0 //trench balls picked up in auto
+/// The amount of balls obtained from shield generator, e.g., 7
 var autoShieldBalls = 0 //balls you get from shield generator
-
+/// The action excercised on the control panel, e.g., nothing, spin, select
 var controlPanel = "" //what did they do with the control panel ex. no, spin, select
+/// The amount of low goals scored in teleop, e.g., 7
 var lowGoalMade = 0 //low goals made in teleop
+/// The amount of low goals shots taken in teleop, e.g., 7
 var lowGoalTaken = 0 //shots taken intended for low goal taken in teleop
-var highGoalMade = [0, 0, 0, 0] //low goals made in teleop array specifies location shot was taken from
+/// Leo needs to explain this (example array needed)
+var highGoalMade = [0, 0, 0, 0] //low goals made in teleop array specifies location shot was
+/// Leo needs to explain this (example array needed)
 var highGoalTaken = [0, 0, 0, 0] //shots taken intended for low goal taken in teleop array specifies location shot was taken from
+/// Whether or not the robot climbs, e.g., true
 var climbing = false //do they climb
+/// The amount of other robots they climbed with, e.g., 2
 var climbingOtherRobots = 0 //how many other robots they climbed with
+/// Whether or not the climb was balanced, e.g., true
 var climbBalanced = false //was the climb balanced
+/// The position of the user in the app, where 1 is Match Data, 2 is Enter Data, and 3 is TeleOp, e.g., 3
 var matchPosition = 0 // 1 is Match Data, 2 is Enter Data, 3 teleop
-
-
+/// Leo needs to explain this
 var changeData = false //changing data from tableView?
-
+/// Leo needs to explain this
 var qrImage: UIImage!
 
 
@@ -48,9 +63,10 @@ var qrImage: UIImage!
 
 //UIColor teamColor = UIColor.init(red: 0.0431372549, green: 0.1294117647, blue: 0.50196078431, alpha: 1.0)
 
+/// The original object that manages a view hierarchy for your UIKit app. Extends UIViewController
 class ViewController: UIViewController {
+    /// Integer that is changed when one of the four buttons is pressed, where when popup1Clicked is activated, 1 is MatchDataSegue, 2 is QRExportSegue, and 3 is viewDataSegue, and where popup2Clicked is activated, 1 is PitScoutSegue, 2 is WebExportSegue, and 3 is a UIApplication open command to open a website, e.g., 1
     var selectedMode = 0
-    
     @IBOutlet weak var titleLabel: UILabel!
     @IBOutlet weak var titleLabel2: UILabel!
     @IBOutlet weak var imageView: UIImageView!
