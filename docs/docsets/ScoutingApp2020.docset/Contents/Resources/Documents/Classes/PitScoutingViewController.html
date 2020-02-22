@@ -14,7 +14,7 @@
     <a title="PitScoutingViewController Class Reference"></a>
     <header>
       <div class="content-wrapper">
-        <p><a href="../index.html">ScoutingApp2020 1.0 Docs</a> (13% documented)</p>
+        <p><a href="../index.html">ScoutingApp2020 1.0 Docs</a> (17% documented)</p>
       </div>
     </header>
     <div class="content-wrapper">
@@ -49,6 +49,9 @@
                 <a href="../Classes/MatchDataViewController.html">MatchDataViewController</a>
               </li>
               <li class="nav-group-task">
+                <a href="../Classes/MatchDataWebsiteViewController.html">MatchDataWebsiteViewController</a>
+              </li>
+              <li class="nav-group-task">
                 <a href="../Classes/PitScoutingData.html">PitScoutingData</a>
               </li>
               <li class="nav-group-task">
@@ -56,6 +59,9 @@
               </li>
               <li class="nav-group-task">
                 <a href="../Classes/PitScoutingViewController/Throwable.html">– Throwable</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/PitScoutingWebsiteViewController.html">PitScoutingWebsiteViewController</a>
               </li>
               <li class="nav-group-task">
                 <a href="../Classes/QRExportViewController.html">QRExportViewController</a>
@@ -202,7 +208,7 @@
 
                 </div>
               </div>
-            <p>Undocumented</p>
+            <p>The original object that manages a view hierarchy for the UIKit in the PitScouting View Controller. Extends UIViewController</p>
 
           </section>
           <section class="section task-group-section">
@@ -221,7 +227,7 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Undocumented</p>
+                        <p>An Object that contains data that is to be serialized and saved on the AWS Server. Initialized with the default values for robotNumber, driveTrainType, intake, capacity, AutoLineCrossing, AutoHighBalls, AutoLowBalls, climb, and notes.</p>
 
                       </div>
                       <div class="declaration">
@@ -556,7 +562,7 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Undocumented</p>
+                        <p>A function that  serializes robotNumber, driveTrainType, intake, capacity, AutoLineCrossing, AutoHighBalls, AutoLowBalls, climb, and notes into JSON format using an array</p>
 
                       </div>
                       <div class="declaration">
@@ -566,6 +572,133 @@
                           <pre class="highlight swift"><code><span class="kd">func</span> <span class="kt">Serialize</span><span class="p">(</span><span class="nv">teamNumber</span><span class="p">:</span> <span class="kt">String</span><span class="p">,</span> <span class="nv">driveTrainType</span><span class="p">:</span> <span class="kt">String</span><span class="p">,</span> <span class="nv">intake</span><span class="p">:</span> <span class="kt">String</span><span class="p">,</span> <span class="nv">capacity</span><span class="p">:</span> <span class="kt">String</span><span class="p">,</span> <span class="kt"><a href="../Classes/PitScoutingViewController.html#/c:@M@ScoutingApp2020@objc(cs)PitScoutingViewController(py)AutoLineCrossing">AutoLineCrossing</a></span><span class="p">:</span> <span class="kt">Bool</span><span class="p">,</span> <span class="kt">AutoHighBalls</span><span class="p">:</span> <span class="kt">String</span><span class="p">,</span> <span class="kt">AutoLowBalls</span><span class="p">:</span> <span class="kt">String</span><span class="p">,</span> <span class="nv">climb</span><span class="p">:</span> <span class="kt">Bool</span><span class="p">,</span> <span class="nv">notes</span><span class="p">:</span> <span class="kt">String</span><span class="p">,</span> <span class="nv">pretty</span><span class="p">:</span> <span class="kt">Bool</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">String</span></code></pre>
 
                         </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>teamNumber</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>meant to be robotNumber as a String, e.g., 2170</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>driveTrainType</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>driveTrainType as a String</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>intake</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>intake as a String</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>capacity</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>capacity as a String</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>AutoLineCrossing</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>AutoLineCrossing as a Bool</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>AutoHighBalls</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>AutoHighBalls as a String</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>AutoLowBalls</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>AutoLowBalls as a String</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>climb</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>climb as a Bool</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>notes</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>notes as a String</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>pretty</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>somewhat still necessary; formerly used to display text in the console</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
                       </div>
                     </section>
                   </div>
