@@ -61,44 +61,6 @@ class MatchDataViewController: UIViewController {
         if(changeData){
             //entered viewController from viewData
             let defaults = UserDefaults.standard
-            
-          
-                //print(pitScoutList[counter])
-                /*
-                
-                var data = Deserialize(jsonString: defaults.object(forKey: pitScoutList[counter]) as! String)
-                RobotNumber.text = data.robotNumber
-                RobotNumber.backgroundColor = UIColor.green
-                print("driveTrain type is \(data.driveTrainType)")
-                if(data.driveTrainType == "Tank"){
-                    DrivetrainType.selectedSegmentIndex = 0
-                }
-                else if(data.driveTrainType == "Mechanum"){
-                    DrivetrainType.selectedSegmentIndex = 1
-                }
-                else if(data.driveTrainType == "H-Drive"){
-                    DrivetrainType.selectedSegmentIndex = 2
-                }
-                else if(data.driveTrainType == "Swerve"){
-                    DrivetrainType.selectedSegmentIndex = 3
-                }
-                if(data.intake == "Floor"){
-                    Intake.selectedSegmentIndex = 0
-                
-                }
-                else{
-                    Intake.selectedSegmentIndex = 1
-                }
-                
-                Capacity.selectedSegmentIndex = (Int(data.capacity) ?? 1) - 1
-                AutoLineCrossing.isOn = data.AutoLineCrossing
-                AutoHighGoalBalls.text = data.AutoHighBalls
-                AutoHighGoalBalls.backgroundColor = UIColor.green
-                AutoLowGoalBalls.text = data.AutoLowBalls
-                AutoLowGoalBalls.backgroundColor = UIColor.green
-                Climbing.isOn = data.climb
-                Notes.text = data.notes
-                */
           
                 if UserDefaults.standard.array(forKey: "teamList") != nil{
                     teamList = UserDefaults.standard.object(forKey: "teamList") as! [String]
@@ -112,16 +74,48 @@ class MatchDataViewController: UIViewController {
                             break
                         }
                     }
-                    var data = Deserialize(jsonString: defaults.object(forKey: teamList[counter]) as! String)
-                    scoutName = data.scoutText
-                    teamNumber = Int(data.teamText) ?? 0
-                    matchNumber = Int(data.matchText) ?? 1
-                    teamColor = data.teamColor
-                    autoLine = data.autoLine
-                    autoShieldBalls = data.autoShieldBalls
-                    autoTrenchBalls = data.autoTrenchBalls
-                    autoHighGoal = data.autoHighGoal
-                    autoLowGoal = data.autoLowGoal
+                    
+                    var dataToAdd = defaults.object(forKey: teamList[counter]) as! String
+                    
+                    
+                    let matchArr = dataToAdd.components(separatedBy: "=")
+                                   var matchArr2 = Array(repeating: "", count: matchArr.count - 1)
+                                   
+                                   for i in 1...matchArr.count - 1{
+                                       let a = matchArr[i].components(separatedBy: "&")
+                                       matchArr2[i-1] = a[0]
+                                   }
+
+                                   
+                                   
+                                   
+                                   teamName = "\(matchArr2[5]); \(matchArr2[4])"
+                                 //  print(teamName)
+                                   
+                                   
+                                   let highGoalTakenArr = [Int(matchArr2[15])!,Int(matchArr2[16])!,Int(matchArr2[17])!,Int(matchArr2[18])!]
+                                   let highGoalMadeArr = [Int(matchArr2[19])!,Int(matchArr2[20])!,Int(matchArr2[21])!,Int(matchArr2[22])!]
+                                   
+                                   
+                                   FinishMatchDataViewController.matchDataObj = MatchData(teamText: matchArr2[5], matchText: matchArr2[4], scoutText:matchArr2[6], autoLowGoal:Int(matchArr2[7])!, autoHighGoal:Int(matchArr2[8])!, autoTrenchBalls:Int(matchArr2[9])!, autoShieldBalls:Int(matchArr2[10])!, controlPanel:matchArr2[12],climbing:matchArr2[0], autoLine:Bool(matchArr2[2])!, climbBalanced:Bool(matchArr2[1])!, climbingOtherRobots:Int(matchArr2[3])!, teamColor:Bool(matchArr2[11])!, lowGoalTaken: Int(matchArr2[13])!, lowGoalMade: Int(matchArr2[14])!, highGoalTaken: highGoalTakenArr, highGoalMade: highGoalMadeArr, notes:matchArr2[23])
+                    
+                   
+                    scoutName = FinishMatchDataViewController.matchDataObj.scoutText
+                    teamNumber = Int(FinishMatchDataViewController.matchDataObj.teamText) ?? 0
+                    matchNumber = Int(FinishMatchDataViewController.matchDataObj.matchText) ?? 1
+                    teamColor = FinishMatchDataViewController.matchDataObj.teamColor
+                    autoLine = FinishMatchDataViewController.matchDataObj.autoLine
+                    autoShieldBalls = FinishMatchDataViewController.matchDataObj.autoShieldBalls
+                    autoTrenchBalls = FinishMatchDataViewController.matchDataObj.autoTrenchBalls
+                    autoHighGoal = FinishMatchDataViewController.matchDataObj.autoHighGoal
+                    autoLowGoal = FinishMatchDataViewController.matchDataObj.autoLowGoal
+                    controlPanel = FinishMatchDataViewController.matchDataObj.controlPanel
+                    climbingOtherRobots = FinishMatchDataViewController.matchDataObj.climbingOtherRobots
+                    lowGoalMade = FinishMatchDataViewController.matchDataObj.lowGoalMade
+                    lowGoalTaken = FinishMatchDataViewController.matchDataObj.lowGoalTaken
+                    highGoalMade = FinishMatchDataViewController.matchDataObj.highGoalMade
+                    highGoalTaken = FinishMatchDataViewController.matchDataObj.highGoalTaken
+                    notes = FinishMatchDataViewController.matchDataObj.notes
                     
                     update()
                     
@@ -158,13 +152,7 @@ class MatchDataViewController: UIViewController {
         
     }
     
-    func Deserialize(jsonString:String) ->
-            MatchData{
-            let jsonData = jsonString.data(using: .utf8)!
-            let decoder = JSONDecoder()
-                FinishMatchDataViewController.matchDataObj = try! decoder.decode(MatchData.self, from: jsonData);
-                return dump(FinishMatchDataViewController.matchDataObj)
-    }
+
     
     func updateValues(){
         scoutName = scoutText.text!

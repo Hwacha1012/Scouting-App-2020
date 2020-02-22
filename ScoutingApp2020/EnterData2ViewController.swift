@@ -91,24 +91,31 @@ class EnterData2ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
-        if (matchPosition > 2){
-            //load previous data
+        if(changeData){
             updateLabels()
         }
         else{
-            //have new data
-            lowGoalLabel.text = "Low Goal Balls: 0"
-            highGoalLabel.text = "High Goal Balls: 0"
-            trenchLabel.text = "Trench Run Balls: 0"
-            shieldGenLabel.text = "Shield Gen Balls: 0"
-            autoHighGoal = 0
-            autoLowGoal = 0
-            autoTrenchBalls = 0
-            autoShieldBalls = 0
-            crossedSwitch.setOn(false, animated: false)
-            autoLine = false
-            
-        } 
+
+            if (matchPosition > 2){
+                //load previous data
+                updateLabels()
+            }
+            else{
+                //have new data
+                lowGoalLabel.text = "Low Goal Balls: 0"
+                highGoalLabel.text = "High Goal Balls: 0"
+                trenchLabel.text = "Trench Run Balls: 0"
+                shieldGenLabel.text = "Shield Gen Balls: 0"
+                autoHighGoal = 0
+                autoLowGoal = 0
+                autoTrenchBalls = 0
+                autoShieldBalls = 0
+                crossedSwitch.setOn(false, animated: false)
+                autoLine = false
+                
+            }
+        }
+        
         
         if (runType == 1) {
            

@@ -71,16 +71,16 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "5615C052-1C01-41B7-BC56-1C3DCDF6F9B1"
-            shouldBeEnabled = "Yes"
+            uuid = "A5AA97E0-3E8C-4A8E-8FE6-8E6C11ED2F84"
+            shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "ScoutingApp2020/QRReaderViewController.swift"
+            filePath = "ScoutingApp2020/MatchDataViewController.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "154"
-            endingLineNumber = "154"
-            landmarkName = "returnToMainMenu()"
+            startingLineNumber = "102"
+            endingLineNumber = "102"
+            landmarkName = "viewDidLoad()"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>

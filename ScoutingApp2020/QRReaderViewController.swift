@@ -100,6 +100,95 @@ class QRReaderViewController: UIViewController {
         // Do any additional setup after loading the view.
     }
     
+    func Serialize(teamText:String, matchText:String, scoutText:String, autoLowGoal:Int, autoHighGoal:Int, autoTrenchBalls:Int , autoShieldBalls:Int, controlPanel:String, climbing:String,autoLine:Bool, climbBalanced:Bool, climbingOtherRobots:Int, lowGoalTaken:Int, lowGoalMade:Int, highGoalTaken:Array<Int>, highGoalMade:Array<Int>, Notes:String, pretty:Bool) -> String
+       {
+           
+           
+           let encoder = JSONEncoder()
+           if (pretty == true)
+           {
+           encoder.outputFormatting = .prettyPrinted // if necessary
+           }
+
+
+           // let data = try! encoder.encode(FinishMatchDataViewController.matchDataObj)
+           var temp_string = "climbing="
+           temp_string += FinishMatchDataViewController.matchDataObj.climbing
+           temp_string += "&"
+           temp_string += "climbBalanced="
+           temp_string += String(FinishMatchDataViewController.matchDataObj.climbBalanced)
+           temp_string += "&"
+           temp_string += "autoLine="
+           temp_string += String(FinishMatchDataViewController.matchDataObj.autoLine)
+           temp_string += "&"
+           temp_string += "climbingOtherRobots="
+           temp_string += String(FinishMatchDataViewController.matchDataObj.climbingOtherRobots)
+           temp_string += "&"
+           temp_string += "matchText="
+           temp_string += FinishMatchDataViewController.matchDataObj.matchText
+           temp_string += "&"
+           temp_string += "teamText="
+           temp_string += FinishMatchDataViewController.matchDataObj.teamText
+           temp_string += "&"
+           temp_string += "scoutText="
+           temp_string += FinishMatchDataViewController.matchDataObj.scoutText
+           temp_string += "&"
+           temp_string += "autoLowGoal="
+           temp_string += String(FinishMatchDataViewController.matchDataObj.autoLowGoal)
+           temp_string += "&"
+           temp_string += "autoHighGoal="
+           temp_string += String(FinishMatchDataViewController.matchDataObj.autoHighGoal)
+           temp_string += "&"
+           temp_string += "autoTrenchBalls="
+           temp_string += String(FinishMatchDataViewController.matchDataObj.autoTrenchBalls)
+           temp_string += "&"
+           temp_string += "autoShieldBalls="
+           temp_string += String(FinishMatchDataViewController.matchDataObj.autoShieldBalls)
+           temp_string += "&"
+           temp_string += "teamColor="
+           temp_string += String(FinishMatchDataViewController.matchDataObj.teamColor)
+           temp_string += "&"
+           temp_string += "controlPanel="
+           temp_string += FinishMatchDataViewController.matchDataObj.controlPanel
+           temp_string += "&"
+           temp_string += "lowGoalTaken="
+           temp_string += String(FinishMatchDataViewController.matchDataObj.lowGoalTaken)
+           temp_string += "&"
+           temp_string += "lowGoalMade="
+           temp_string += String(FinishMatchDataViewController.matchDataObj.lowGoalMade)
+           temp_string += "&"
+           temp_string += "highGoalTaken_0="
+           temp_string  += String(FinishMatchDataViewController.matchDataObj.highGoalTaken[0])
+           temp_string  += "&"
+           temp_string += "highGoalTaken_1="
+           temp_string  += String(FinishMatchDataViewController.matchDataObj.highGoalTaken[1])
+           temp_string  += "&"
+           temp_string += "highGoalTaken_2="
+           temp_string  += String(FinishMatchDataViewController.matchDataObj.highGoalTaken[2])
+           temp_string  += "&"
+           temp_string += "highGoalTaken_3="
+           temp_string  += String(FinishMatchDataViewController.matchDataObj.highGoalTaken[3])
+           temp_string  += "&"
+           temp_string += "highGoalMade_0="
+           temp_string  += String(FinishMatchDataViewController.matchDataObj.highGoalMade[0])
+           temp_string  += "&"
+           temp_string += "highGoalMade_1="
+           temp_string  += String(FinishMatchDataViewController.matchDataObj.highGoalMade[1])
+           temp_string  += "&"
+           temp_string += "highGoalMade_2="
+           temp_string  += String(FinishMatchDataViewController.matchDataObj.highGoalMade[2])
+           temp_string  += "&"
+           temp_string += "highGoalMade_3="
+           temp_string  += String(FinishMatchDataViewController.matchDataObj.highGoalMade[3])
+           temp_string += "&"
+           temp_string += "notes="
+           temp_string += String(FinishMatchDataViewController.matchDataObj.notes)
+           let jsonString = temp_string
+           print("jsonString = \(jsonString)")
+           //let s = send_post(jsonStr:jsonString)
+           //let s2 = send_get()
+           return jsonString
+       }
 
     func returnToMainMenu(){
         
@@ -127,7 +216,7 @@ class QRReaderViewController: UIViewController {
         
         if arrayOfMatchTeams.count > 1{
             for index in 1...arrayOfMatchTeams.count - 2{
-                let a = arrayOfMatchTeams[index].components(separatedBy: "matchText=")
+               /* let a = arrayOfMatchTeams[index].components(separatedBy: "matchText=")
                 
                 //print("a[0] is \(a[0])")
                 let matchText = a[1].components(separatedBy: "&")
@@ -136,23 +225,52 @@ class QRReaderViewController: UIViewController {
                 
                 
                 teamName = "\(teamText[0]); \(matchText[0])"
-                
+                */
                 
                 var matchArr = arrayOfMatchTeams[index].components(separatedBy: "=")
                 var matchArr2 = Array(repeating: "", count: matchArr.count - 1)
+                
                 for i in 1...matchArr.count - 1{
-                    if(i != matchArr.count - 1){
-                        matchArr2[i] = String(matchArr[i].removeLast())
-                    }
-                    
+                    let a = matchArr[i].components(separatedBy: "&")
+                    matchArr2[i-1] = a[0]
                 }
+
+                
+                
                 
                 teamName = "\(matchArr2[5]); \(matchArr2[4])"
               //  print(teamName)
                 
                 
+                let highGoalTakenArr = [Int(matchArr2[15])!,Int(matchArr2[16])!,Int(matchArr2[17])!,Int(matchArr2[18])!]
+                let highGoalMadeArr = [Int(matchArr2[19])!,Int(matchArr2[20])!,Int(matchArr2[21])!,Int(matchArr2[22])!]
                 
-             //   FinishMatchDataViewController.matchDataObj = MatchData(teamText: matchArr2[5], matchText: matchArr2[4], scoutText:matchArr2[6], autoLowGoal:autoLowGoal, autoHighGoal:autoHighGoal, autoTrenchBalls:autoTrenchBalls, autoShieldBalls:autoShieldBalls, controlPanel:controlPanel,climbing:"\(climbing)", autoLine:autoLine, climbBalanced:climbBalanced, climbingOtherRobots:climbingOtherRobots, teamColor:teamColor, lowGoalTaken: lowGoalTaken, lowGoalMade: lowGoalMade, highGoalTaken: highGoalTaken, highGoalMade: highGoalMade, notes:notes.text)
+                
+                FinishMatchDataViewController.matchDataObj = MatchData(teamText: matchArr2[5], matchText: matchArr2[4], scoutText:matchArr2[6], autoLowGoal:Int(matchArr2[7])!, autoHighGoal:Int(matchArr2[8])!, autoTrenchBalls:Int(matchArr2[9])!, autoShieldBalls:Int(matchArr2[10])!, controlPanel:matchArr2[12],climbing:matchArr2[0], autoLine:Bool(matchArr2[2])!, climbBalanced:Bool(matchArr2[1])!, climbingOtherRobots:Int(matchArr2[3])!, teamColor:Bool(matchArr2[11])!, lowGoalTaken: Int(matchArr2[13])!, lowGoalMade: Int(matchArr2[14])!, highGoalTaken: highGoalTakenArr, highGoalMade: highGoalMadeArr, notes:matchArr2[23])
+                
+                    let payload =  Serialize(
+                            teamText: FinishMatchDataViewController.matchDataObj.teamText,
+                            matchText: FinishMatchDataViewController.matchDataObj.matchText,
+                            scoutText: FinishMatchDataViewController.matchDataObj.scoutText,
+                            autoLowGoal: FinishMatchDataViewController.matchDataObj.autoLowGoal,
+                            autoHighGoal: FinishMatchDataViewController.matchDataObj.autoHighGoal,
+                            autoTrenchBalls: FinishMatchDataViewController.matchDataObj.autoTrenchBalls,
+                            autoShieldBalls: FinishMatchDataViewController.matchDataObj.autoShieldBalls,
+                            controlPanel: FinishMatchDataViewController.matchDataObj.controlPanel,
+                            climbing: FinishMatchDataViewController.matchDataObj.climbing,
+                            autoLine: FinishMatchDataViewController.matchDataObj.autoLine,
+                            climbBalanced: FinishMatchDataViewController.matchDataObj.climbBalanced,
+                            climbingOtherRobots:FinishMatchDataViewController.matchDataObj.climbingOtherRobots,
+                            lowGoalTaken: FinishMatchDataViewController.matchDataObj.lowGoalTaken,
+                            lowGoalMade: FinishMatchDataViewController.matchDataObj.lowGoalMade,
+                            highGoalTaken: FinishMatchDataViewController.matchDataObj.highGoalTaken,
+                            highGoalMade:  FinishMatchDataViewController.matchDataObj.highGoalMade,
+                            Notes:FinishMatchDataViewController.matchDataObj.notes,
+                            pretty: false)
+                    
+                         
+                ////////////////
+                
                 
                 if UserDefaults.standard.array(forKey: "teamList") == nil{
                     // teamList = UserDefaults.standard.object(forKey: "teamList") as! [String]
@@ -162,8 +280,8 @@ class QRReaderViewController: UIViewController {
                     teamList.append(teamName)
                     print("teamlist is \(teamList)!")
                     UserDefaults.standard.set(teamList, forKey: "teamList")
-                    UserDefaults.standard.set(arrayOfMatchTeams[index], forKey: "\(teamName)")
-                    print("Value is \(arrayOfMatchTeams[index])")
+                    UserDefaults.standard.set(payload, forKey: "\(teamName)")
+                  //  print("Value is \(arrayOfMatchTeams[index])")
                     //print("teamNum is \(teamName)")
                    // let test = UserDefaults.standard.object(forKey: "\(teamName)")
                  //   print(test)
@@ -192,8 +310,8 @@ class QRReaderViewController: UIViewController {
                     }
                     
                     UserDefaults.standard.set(teamList, forKey: "teamList")
-                    UserDefaults.standard.set(arrayOfMatchTeams[index], forKey: "\(teamName)")
-                    print("Value is \(arrayOfMatchTeams[index])")
+                    UserDefaults.standard.set(payload, forKey: "\(teamName)")
+                   // print("Value is \(arrayOfMatchTeams[index])")
        
                     
                 }
@@ -202,8 +320,8 @@ class QRReaderViewController: UIViewController {
                     teamList.append(teamName)
                     print("teamlist is \(teamList)")
                     UserDefaults.standard.set(teamList, forKey: "teamList")
-                    UserDefaults.standard.set(arrayOfMatchTeams[index], forKey: "\(teamName)")
-                    print("Value is \(arrayOfMatchTeams[index])")
+                    UserDefaults.standard.set(payload, forKey: "\(teamName)")
+                  //  print("Value is \(arrayOfMatchTeams[index])")
                   //  print("teamNum is !\(teamName)")
                    // let test = UserDefaults.standard.object(forKey: "\(teamName)")
                   //  print(test)
