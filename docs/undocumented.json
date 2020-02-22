@@ -23,49 +23,49 @@
     },
     {
       "file": "/Users/manavmittal/Desktop/Scouting-App-2020/ScoutingApp2020/AppDelegate.swift",
-      "line": 23,
+      "line": 22,
       "symbol": "AppDelegate.applicationWillResignActive(_:)",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
     },
     {
       "file": "/Users/manavmittal/Desktop/Scouting-App-2020/ScoutingApp2020/AppDelegate.swift",
-      "line": 28,
+      "line": 27,
       "symbol": "AppDelegate.applicationDidEnterBackground(_:)",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
     },
     {
       "file": "/Users/manavmittal/Desktop/Scouting-App-2020/ScoutingApp2020/AppDelegate.swift",
-      "line": 33,
+      "line": 32,
       "symbol": "AppDelegate.applicationWillEnterForeground(_:)",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
     },
     {
       "file": "/Users/manavmittal/Desktop/Scouting-App-2020/ScoutingApp2020/AppDelegate.swift",
-      "line": 37,
+      "line": 36,
       "symbol": "AppDelegate.applicationDidBecomeActive(_:)",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
     },
     {
       "file": "/Users/manavmittal/Desktop/Scouting-App-2020/ScoutingApp2020/AppDelegate.swift",
-      "line": 41,
+      "line": 40,
       "symbol": "AppDelegate.applicationWillTerminate(_:)",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
     },
     {
       "file": "/Users/manavmittal/Desktop/Scouting-App-2020/ScoutingApp2020/AppDelegate.swift",
-      "line": 49,
+      "line": 48,
       "symbol": "AppDelegate.persistentContainer",
       "symbol_kind": "source.lang.swift.decl.var.instance",
       "warning": "undocumented"
     },
     {
       "file": "/Users/manavmittal/Desktop/Scouting-App-2020/ScoutingApp2020/AppDelegate.swift",
-      "line": 78,
+      "line": 77,
       "symbol": "AppDelegate.saveContext()",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"

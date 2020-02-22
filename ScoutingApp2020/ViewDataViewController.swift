@@ -9,7 +9,7 @@
 import UIKit
 var teamNumberFromButton = ""
 
-
+// Class that handles the viewing of Local Data
 class ViewDataViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
 
     @IBAction func changeDataPressed(_ sender: Any) {
