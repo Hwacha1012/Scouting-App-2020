@@ -111,6 +111,7 @@ class PitScoutingViewController: UIViewController {
         - Parameter climb: climb as a Bool
         - Parameter notes: notes as a String
         - Parameter pretty: somewhat still necessary; formerly used to display text in the console
+        - returns: The JSON string that was serialized by the function
      */
     func Serialize(teamNumber:String, driveTrainType:String, intake:String, capacity:String, AutoLineCrossing:Bool, AutoHighBalls:String, AutoLowBalls:String, climb:Bool, notes:String,pretty:Bool) -> String
     {
@@ -156,7 +157,11 @@ class PitScoutingViewController: UIViewController {
         //let s2 = send_get()
         return jsonString
     }
-    
+    /**
+     A function used to deserialize a list of JSON strings
+     - Parameter jsonString: The list JSON string in a single string to be deserialized
+     - returns: The Deserialized list of JSONs
+     */
     func DeserializeList(jsonString:String) ->
         [Throwable<PitScoutingData>]{
         let jsonData = jsonString.data(using: .utf8)!
@@ -167,6 +172,11 @@ class PitScoutingViewController: UIViewController {
 
         return teamData
     }
+    /**
+    A function used to deserialize a single JSON strings
+     - Parameter jsonString: The  JSON string to be deserialized
+     - returns: The Deserialized JSON
+    */
     func Deserialize(jsonString:String) ->
             PitScoutingData{
             let jsonData = jsonString.data(using: .utf8)!
@@ -174,6 +184,11 @@ class PitScoutingViewController: UIViewController {
                 PitScoutingViewController.pitScoutingDataObj = try! decoder.decode(PitScoutingData.self, from: jsonData);
                 return dump(PitScoutingViewController.pitScoutingDataObj)
     }
+    /**
+    A function used to send a post request(A request to add an additional JSON String to the data to the AWS Server at: http://ec2-52-71-196-37.compute-1.amazonaws.com/pitscouting )
+     - Parameter jsonStr: The  JSON string to be sent to the server
+     - returns: The response from the server
+    */
     func send_post(jsonStr:String)-> String
     {
         var result = jsonStr
@@ -195,7 +210,10 @@ class PitScoutingViewController: UIViewController {
         task.resume()
         return result
     }
-    
+    /**
+    A function used to send a get request(A request to get the full JSON string from the server at:  http://ec2-52-71-196-37.compute-1.amazonaws.com/pitscouting )
+     - returns: The full JSON String from the AWS Server
+     */
     func send_get() -> [Throwable<PitScoutingData>]
     {
         var teamData: [Throwable<PitScoutingData>] = Array()

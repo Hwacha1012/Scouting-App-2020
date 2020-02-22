@@ -14,7 +14,7 @@
     <a title="PitScoutingViewController Class Reference"></a>
     <header>
       <div class="content-wrapper">
-        <p><a href="../index.html">ScoutingApp2020 1.0 Docs</a> (17% documented)</p>
+        <p><a href="../index.html">ScoutingApp2020 1.0 Docs</a> (19% documented)</p>
       </div>
     </header>
     <div class="content-wrapper">
@@ -163,6 +163,9 @@
               </li>
               <li class="nav-group-task">
                 <a href="../Global%20Variables.html#/s:15ScoutingApp202013matchPositionSivp">matchPosition</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Global%20Variables.html#/s:15ScoutingApp20205notesSSvp">notes</a>
               </li>
               <li class="nav-group-task">
                 <a href="../Global%20Variables.html#/s:15ScoutingApp202010pSTeamNameSSvp">pSTeamName</a>
@@ -700,6 +703,10 @@
                           </tbody>
                         </table>
                       </div>
+                      <div>
+                        <h4>Return Value</h4>
+                        <p>The JSON string that was serialized by the function</p>
+                      </div>
                     </section>
                   </div>
                 </li>
@@ -716,7 +723,7 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Undocumented</p>
+                        <p>A function used to deserialize a list of JSON strings</p>
 
                       </div>
                       <div class="declaration">
@@ -727,6 +734,29 @@
     <span class="p">[</span><span class="kt"><a href="../Classes/PitScoutingViewController/Throwable.html">Throwable</a></span><span class="o">&lt;</span><span class="kt"><a href="../Classes/PitScoutingData.html">PitScoutingData</a></span><span class="o">&gt;</span><span class="p">]</span></code></pre>
 
                         </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>jsonString</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The list JSON string in a single string to be deserialized</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                      <div>
+                        <h4>Return Value</h4>
+                        <p>The Deserialized list of JSONs</p>
                       </div>
                     </section>
                   </div>
@@ -744,7 +774,7 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Undocumented</p>
+                        <p>A function used to deserialize a single JSON strings</p>
 
                       </div>
                       <div class="declaration">
@@ -755,6 +785,29 @@
         <span class="kt"><a href="../Classes/PitScoutingData.html">PitScoutingData</a></span></code></pre>
 
                         </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>jsonString</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The  JSON string to be deserialized</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                      <div>
+                        <h4>Return Value</h4>
+                        <p>The Deserialized JSON</p>
                       </div>
                     </section>
                   </div>
@@ -772,7 +825,7 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Undocumented</p>
+                        <p>A function used to send a post request(A request to add an additional JSON String to the data to the AWS Server at: <a href="http://ec2-52-71-196-37.compute-1.amazonaws.com/pitscouting">http://ec2-52-71-196-37.compute-1.amazonaws.com/pitscouting</a> )</p>
 
                       </div>
                       <div class="declaration">
@@ -782,6 +835,29 @@
                           <pre class="highlight swift"><code><span class="kd">func</span> <span class="nf">send_post</span><span class="p">(</span><span class="nv">jsonStr</span><span class="p">:</span> <span class="kt">String</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">String</span></code></pre>
 
                         </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>jsonStr</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The  JSON string to be sent to the server</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                      <div>
+                        <h4>Return Value</h4>
+                        <p>The response from the server</p>
                       </div>
                     </section>
                   </div>
@@ -799,7 +875,7 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Undocumented</p>
+                        <p>A function used to send a get request(A request to get the full JSON string from the server at:  <a href="http://ec2-52-71-196-37.compute-1.amazonaws.com/pitscouting">http://ec2-52-71-196-37.compute-1.amazonaws.com/pitscouting</a> )</p>
 
                       </div>
                       <div class="declaration">
@@ -809,6 +885,10 @@
                           <pre class="highlight swift"><code><span class="kd">func</span> <span class="nf">send_get</span><span class="p">()</span> <span class="o">-&gt;</span> <span class="p">[</span><span class="kt"><a href="../Classes/PitScoutingViewController/Throwable.html">Throwable</a></span><span class="o">&lt;</span><span class="kt"><a href="../Classes/PitScoutingData.html">PitScoutingData</a></span><span class="o">&gt;</span><span class="p">]</span></code></pre>
 
                         </div>
+                      </div>
+                      <div>
+                        <h4>Return Value</h4>
+                        <p>The full JSON String from the AWS Server</p>
                       </div>
                     </section>
                   </div>
