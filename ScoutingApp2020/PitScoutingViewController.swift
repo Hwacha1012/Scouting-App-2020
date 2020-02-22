@@ -248,6 +248,11 @@ class PitScoutingViewController: UIViewController {
         return teamData
     }
     
+    /**
+     Checks whether number was inputted into the text box, and turns green if the input text was a number, otherwise keeps it red
+     - Parameter text: The input text from the user
+     - returns: A boolean that tells whether the input text was a number or not
+     */
     func validateNumber(text: String) -> Bool {
         var result = false
         // test password
@@ -259,12 +264,16 @@ class PitScoutingViewController: UIViewController {
         return result
     }
 
-
+/**
+     Code no longer is necessary
+*/
     @IBAction func buttonPressed(_ sender: Any) {
       print("You may enter")
 
     }
-    
+/**
+         Checks whether the user input for robotNumber is a a legitamate answer and reacts accordingly
+*/
     @IBAction func robotNumber_Changed(_ sender: Any) {
         if(validateNumber(text: RobotNumber.text!)) {
             // correct password
@@ -280,7 +289,7 @@ class PitScoutingViewController: UIViewController {
     }
     
     
-
+    
     @IBAction func driveTrainType_Selected(_ sender: Any) {
         let title = DrivetrainType.titleForSegment(at: DrivetrainType.selectedSegmentIndex)
         PitScoutingViewController.pitScoutingDataObj.driveTrainType = title!

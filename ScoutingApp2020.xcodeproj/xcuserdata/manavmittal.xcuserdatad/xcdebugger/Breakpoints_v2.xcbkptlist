@@ -32,8 +32,8 @@
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "110"
             endingLineNumber = "110"
-            landmarkName = "Serialize(teamNumber:driveTrainType:intake:capacity:AutoLineCrossing:AutoHighBalls:AutoLowBalls:climb:notes:pretty:)"
-            landmarkType = "7">
+            landmarkName = "PitScoutingViewController"
+            landmarkType = "3">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -48,8 +48,8 @@
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "112"
             endingLineNumber = "112"
-            landmarkName = "Serialize(teamNumber:driveTrainType:intake:capacity:AutoLineCrossing:AutoHighBalls:AutoLowBalls:climb:notes:pretty:)"
-            landmarkType = "7">
+            landmarkName = "PitScoutingViewController"
+            landmarkType = "3">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -64,8 +64,8 @@
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "111"
             endingLineNumber = "111"
-            landmarkName = "Serialize(teamNumber:driveTrainType:intake:capacity:AutoLineCrossing:AutoHighBalls:AutoLowBalls:climb:notes:pretty:)"
-            landmarkType = "7">
+            landmarkName = "PitScoutingViewController"
+            landmarkType = "3">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -80,8 +80,8 @@
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "114"
             endingLineNumber = "114"
-            landmarkName = "Serialize(teamNumber:driveTrainType:intake:capacity:AutoLineCrossing:AutoHighBalls:AutoLowBalls:climb:notes:pretty:)"
-            landmarkType = "7">
+            landmarkName = "PitScoutingViewController"
+            landmarkType = "3">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -96,8 +96,8 @@
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "113"
             endingLineNumber = "113"
-            landmarkName = "Serialize(teamNumber:driveTrainType:intake:capacity:AutoLineCrossing:AutoHighBalls:AutoLowBalls:climb:notes:pretty:)"
-            landmarkType = "7">
+            landmarkName = "PitScoutingViewController"
+            landmarkType = "3">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -160,8 +160,8 @@
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "97"
             endingLineNumber = "97"
-            landmarkName = "Serialize(teamNumber:driveTrainType:intake:capacity:AutoLineCrossing:AutoHighBalls:AutoLowBalls:climb:notes:pretty:)"
-            landmarkType = "7">
+            landmarkName = "PitScoutingViewController"
+            landmarkType = "3">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -176,8 +176,8 @@
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "94"
             endingLineNumber = "94"
-            landmarkName = "Serialize(teamNumber:driveTrainType:intake:capacity:AutoLineCrossing:AutoHighBalls:AutoLowBalls:climb:notes:pretty:)"
-            landmarkType = "7">
+            landmarkName = "PitScoutingViewController"
+            landmarkType = "3">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -192,8 +192,8 @@
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "96"
             endingLineNumber = "96"
-            landmarkName = "Serialize(teamNumber:driveTrainType:intake:capacity:AutoLineCrossing:AutoHighBalls:AutoLowBalls:climb:notes:pretty:)"
-            landmarkType = "7">
+            landmarkName = "PitScoutingViewController"
+            landmarkType = "3">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy

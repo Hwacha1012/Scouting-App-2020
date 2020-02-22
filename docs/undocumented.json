@@ -772,84 +772,63 @@
     },
     {
       "file": "/Users/manavmittal/Desktop/Scouting-App-2020/ScoutingApp2020/PitScoutingViewController.swift",
-      "line": 251,
-      "symbol": "PitScoutingViewController.validateNumber(text:)",
-      "symbol_kind": "source.lang.swift.decl.function.method.instance",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/manavmittal/Desktop/Scouting-App-2020/ScoutingApp2020/PitScoutingViewController.swift",
-      "line": 263,
-      "symbol": "PitScoutingViewController.buttonPressed(_:)",
-      "symbol_kind": "source.lang.swift.decl.function.method.instance",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/manavmittal/Desktop/Scouting-App-2020/ScoutingApp2020/PitScoutingViewController.swift",
-      "line": 268,
-      "symbol": "PitScoutingViewController.robotNumber_Changed(_:)",
-      "symbol_kind": "source.lang.swift.decl.function.method.instance",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/manavmittal/Desktop/Scouting-App-2020/ScoutingApp2020/PitScoutingViewController.swift",
-      "line": 284,
+      "line": 293,
       "symbol": "PitScoutingViewController.driveTrainType_Selected(_:)",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
     },
     {
       "file": "/Users/manavmittal/Desktop/Scouting-App-2020/ScoutingApp2020/PitScoutingViewController.swift",
-      "line": 289,
+      "line": 298,
       "symbol": "PitScoutingViewController.intake_Selected(_:)",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
     },
     {
       "file": "/Users/manavmittal/Desktop/Scouting-App-2020/ScoutingApp2020/PitScoutingViewController.swift",
-      "line": 296,
+      "line": 305,
       "symbol": "PitScoutingViewController.capacity_Selected(_:)",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
     },
     {
       "file": "/Users/manavmittal/Desktop/Scouting-App-2020/ScoutingApp2020/PitScoutingViewController.swift",
-      "line": 302,
+      "line": 311,
       "symbol": "PitScoutingViewController.autoLineCrossing_Selected(_:)",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
     },
     {
       "file": "/Users/manavmittal/Desktop/Scouting-App-2020/ScoutingApp2020/PitScoutingViewController.swift",
-      "line": 306,
+      "line": 315,
       "symbol": "PitScoutingViewController.Climbing(_:)",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
     },
     {
       "file": "/Users/manavmittal/Desktop/Scouting-App-2020/ScoutingApp2020/PitScoutingViewController.swift",
-      "line": 310,
+      "line": 319,
       "symbol": "PitScoutingViewController.AutoHighGoalBalls_Changed(_:)",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
     },
     {
       "file": "/Users/manavmittal/Desktop/Scouting-App-2020/ScoutingApp2020/PitScoutingViewController.swift",
-      "line": 325,
+      "line": 334,
       "symbol": "PitScoutingViewController.autoLowBalls_Changed(_:)",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
     },
     {
       "file": "/Users/manavmittal/Desktop/Scouting-App-2020/ScoutingApp2020/PitScoutingViewController.swift",
-      "line": 343,
+      "line": 352,
       "symbol": "PitScoutingViewController.submit(_:)",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
     },
     {
       "file": "/Users/manavmittal/Desktop/Scouting-App-2020/ScoutingApp2020/PitScoutingViewController.swift",
-      "line": 412,
+      "line": 421,
       "symbol": "PitScoutingViewController.viewDidLoad()",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
