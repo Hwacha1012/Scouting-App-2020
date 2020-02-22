@@ -288,8 +288,6 @@ class PitScoutingViewController: UIViewController {
         }
     }
     
-    
-    
     @IBAction func driveTrainType_Selected(_ sender: Any) {
         let title = DrivetrainType.titleForSegment(at: DrivetrainType.selectedSegmentIndex)
         PitScoutingViewController.pitScoutingDataObj.driveTrainType = title!
