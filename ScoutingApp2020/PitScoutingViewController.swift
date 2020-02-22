@@ -12,7 +12,6 @@ import Foundation
 var breakLoop: Bool!
 //import Alamofire
 //import SwiftyJSON
-
 class PitScoutingData: Codable {
    public var robotNumber:String
     public var driveTrainType:String
