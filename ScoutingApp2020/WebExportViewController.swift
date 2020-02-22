@@ -10,6 +10,23 @@ import UIKit
 
 
 class WebExportViewController: UIViewController {
+    @IBOutlet weak var matchDataWebsite: UIButton!
+    
+    @IBOutlet weak var pitScoutingWebsite: UIButton!
+    
+    @IBAction func matchDataWebsite_Pressed(_ sender: Any) {
+        if let url = URL(string: "http://ec2-52-71-196-37.compute-1.amazonaws.com/matchdata/html") {
+            UIApplication.shared.open(url)
+        }
+        
+    }
+    
+    
+    @IBAction func pitScoutingWebsite_Pressed(_ sender: Any) {
+        if let url = URL(string: "http://ec2-52-71-196-37.compute-1.amazonaws.com/pitscouting/html") {
+        UIApplication.shared.open(url)
+        }
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()

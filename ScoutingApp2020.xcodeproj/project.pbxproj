@@ -33,8 +33,6 @@
 		DF28848223DBBFD300572749 /* ShieldGen.png in Resources */ = {isa = PBXBuildFile; fileRef = DF28848123DBBFD300572749 /* ShieldGen.png */; };
 		DF28848423DBC0C700572749 /* ControlPanel.png in Resources */ = {isa = PBXBuildFile; fileRef = DF28848323DBC0C700572749 /* ControlPanel.png */; };
 		DF28848623DCC19B00572749 /* PitScoutingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF28848523DCC19B00572749 /* PitScoutingViewController.swift */; };
-		DF6E78FD2401731D0013022A /* MatchDataWebsiteViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF6E78FC2401731D0013022A /* MatchDataWebsiteViewController.swift */; };
-		DF6E78FF240173760013022A /* PitScoutingWebsiteViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF6E78FE240173760013022A /* PitScoutingWebsiteViewController.swift */; };
 		DFA141C723E5017A00DC727C /* New Piskel.png in Resources */ = {isa = PBXBuildFile; fileRef = DFA141C623E5017900DC727C /* New Piskel.png */; };
 /* End PBXBuildFile section */
 
@@ -58,7 +56,7 @@
 /* Begin PBXFileReference section */
 		05264F4C23EE2A2E00B461D2 /* ViewDataViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewDataViewController.swift; sourceTree = "<group>"; };
 		05264F4E23EF32BC00B461D2 /* QRExportViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QRExportViewController.swift; sourceTree = "<group>"; };
-		05264F5223EF46B400B461D2 /* WebExportViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebExportViewController.swift; sourceTree = "<group>"; };
+		05264F5223EF46B400B461D2 /* WebExportViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebExportViewController.swift; sourceTree = "<group>"; wrapsLines = 0; };
 		0529E03023C95094004707FD /* ScoutingApp2020.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ScoutingApp2020.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0529E03323C95094004707FD /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		0529E03523C95094004707FD /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -88,8 +86,6 @@
 		DF28848123DBBFD300572749 /* ShieldGen.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ShieldGen.png; sourceTree = "<group>"; };
 		DF28848323DBC0C700572749 /* ControlPanel.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ControlPanel.png; sourceTree = "<group>"; };
 		DF28848523DCC19B00572749 /* PitScoutingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PitScoutingViewController.swift; sourceTree = "<group>"; };
-		DF6E78FC2401731D0013022A /* MatchDataWebsiteViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MatchDataWebsiteViewController.swift; sourceTree = "<group>"; };
-		DF6E78FE240173760013022A /* PitScoutingWebsiteViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PitScoutingWebsiteViewController.swift; sourceTree = "<group>"; };
 		DFA141C623E5017900DC727C /* New Piskel.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "New Piskel.png"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -152,8 +148,6 @@
 				05264F4E23EF32BC00B461D2 /* QRExportViewController.swift */,
 				05264F5223EF46B400B461D2 /* WebExportViewController.swift */,
 				05B56EFE23FCA0F0005F1B8A /* QRReaderViewController.swift */,
-				DF6E78FC2401731D0013022A /* MatchDataWebsiteViewController.swift */,
-				DF6E78FE240173760013022A /* PitScoutingWebsiteViewController.swift */,
 				0529E03723C95094004707FD /* Main.storyboard */,
 				0529E03D23C95095004707FD /* Assets.xcassets */,
 				0529E03F23C95095004707FD /* LaunchScreen.storyboard */,
@@ -342,10 +336,8 @@
 				05264F4D23EE2A2E00B461D2 /* ViewDataViewController.swift in Sources */,
 				0552504423E0EC7B0084F28C /* FinishMatchDataViewController.swift in Sources */,
 				05264F4F23EF32BC00B461D2 /* QRExportViewController.swift in Sources */,
-				DF6E78FD2401731D0013022A /* MatchDataWebsiteViewController.swift in Sources */,
 				055F4B2723D7B2CE001C3581 /* TeleOpViewController.swift in Sources */,
 				05B56EFF23FCA0F0005F1B8A /* QRReaderViewController.swift in Sources */,
-				DF6E78FF240173760013022A /* PitScoutingWebsiteViewController.swift in Sources */,
 				05264F5323EF46B400B461D2 /* WebExportViewController.swift in Sources */,
 				0529E03C23C95094004707FD /* ScoutingApp2020.xcdatamodeld in Sources */,
 				0529E03423C95094004707FD /* AppDelegate.swift in Sources */,
