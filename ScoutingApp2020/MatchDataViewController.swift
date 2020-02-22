@@ -22,6 +22,10 @@ class MatchDataViewController: UIViewController {
     @IBOutlet weak var matchText: UITextField!
     @IBOutlet weak var colorSegmentedControl: UISegmentedControl!
     @IBOutlet weak var autoButtons: UIButton!
+    
+    /**
+     Allows the user to select the robot's alliance color and updates the value
+     */
     @IBAction func segmentedChanged(_ sender: Any) {
         if(colorSegmentedControl.selectedSegmentIndex == 0){
             teamColor = true
@@ -32,6 +36,9 @@ class MatchDataViewController: UIViewController {
         
         updateValues()
     }
+    /**
+    Allows the user to progress to the next section of data
+    */
     @IBAction func autoButtonPressed(_ sender: Any) {
         matchPosition = 2
         updateValues()
@@ -152,7 +159,10 @@ class MatchDataViewController: UIViewController {
         
     }
     
-
+    
+    /**
+    Updates the variable values and changes the color of the segmentedControl
+    */
     
     func updateValues(){
         scoutName = scoutText.text!
@@ -171,6 +181,9 @@ class MatchDataViewController: UIViewController {
         }
     }
     
+    /**
+     Updates the UI with variable names and data
+    */
     func update(){
         
         scoutText.text = scoutName
@@ -190,10 +203,15 @@ class MatchDataViewController: UIViewController {
         
     }
     
+    /**
+    Allows the user to stop editing a textfield by clicking away from it
+    */
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
         view.endEditing(true)
     }
-    
+    /**
+    Allows the user to stop editing a textfield by hitting enter
+    */
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
         self.view.endEditing(true)
         return false
