@@ -187,7 +187,7 @@ class ViewController: UIViewController {
         */
         // MARK: - RunType is set
         
-        
+      
         if UIDevice.current.model.range(of:"iPad") != nil{
             //device is iPad
             runType = 1

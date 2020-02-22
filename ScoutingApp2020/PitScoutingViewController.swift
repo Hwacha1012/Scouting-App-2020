@@ -326,6 +326,15 @@ class PitScoutingViewController: UIViewController {
         if (Notes.text! == "Type here...") {
             Notes.text! = ""
         }
+        if(Notes.text!.contains("Type here...") ?? false){
+            let a = Notes.text!.components(separatedBy: "Type here...")
+            Notes.text! = a[1]
+        }
+        if (Notes.text! == "")
+        {
+            Notes.text! = "NONE"
+        }
+        
       // print("teamnum is \(teamNumber)" )
         PitScoutingViewController.pitScoutingDataObj.notes =  Notes.text!
         let payload =  Serialize(
@@ -339,7 +348,7 @@ class PitScoutingViewController: UIViewController {
             climb: PitScoutingViewController.pitScoutingDataObj.climb,
             notes: PitScoutingViewController.pitScoutingDataObj.notes,
                pretty: false)
-        print(payload);
+        print("payload is \(payload)");
         let defaults = UserDefaults.standard
         defaults.set(payload, forKey: "\(PitScoutingViewController.pitScoutingDataObj.robotNumber), PitScouting")
        if UserDefaults.standard.array(forKey: "pitScoutList") == nil{
@@ -418,50 +427,58 @@ class PitScoutingViewController: UIViewController {
               //print(pitScoutList[counter])
               
               
-              var data = Deserialize(jsonString: defaults.object(forKey: pitScoutList[counter]) as! String)
-              RobotNumber.text = data.robotNumber
-              RobotNumber.backgroundColor = UIColor.green
-              print("driveTrain type is \(data.driveTrainType)")
-              if(data.driveTrainType == "Tank"){
-                  DrivetrainType.selectedSegmentIndex = 0
-              }
-              else if(data.driveTrainType == "Mechanum"){
-                  DrivetrainType.selectedSegmentIndex = 1
-              }
-              else if(data.driveTrainType == "H-Drive"){
-                  DrivetrainType.selectedSegmentIndex = 2
-              }
-              else if(data.driveTrainType == "Swerve"){
-                  DrivetrainType.selectedSegmentIndex = 3
-              }
-              if(data.intake == "Floor"){
-                  Intake.selectedSegmentIndex = 0
+             // var data = Deserialize(jsonString: defaults.object(forKey: pitScoutList[counter]) as! String)
+            
+            
+            //use defaults.object(forKey: pitScoutList[counter] instead of pitTeams[index]
+            
+            var dataToAdd2 = defaults.string(forKey: pitScoutList[counter])
               
-              }
-              else{
-                  Intake.selectedSegmentIndex = 1
-              }
+            //defaults.
+            let pitArr = dataToAdd2!.components(separatedBy: "=")
+              var pitArr2 = Array(repeating: "", count: pitArr.count - 1)
               
-              Capacity.selectedSegmentIndex = (Int(data.capacity) ?? 1) - 1
-              AutoLineCrossing.isOn = data.AutoLineCrossing
-              AutoHighGoalBalls.text = data.AutoHighBalls
-              AutoHighGoalBalls.backgroundColor = UIColor.green
-              AutoLowGoalBalls.text = data.AutoLowBalls
-              AutoLowGoalBalls.backgroundColor = UIColor.green
-              Climbing.isOn = data.climb
-              Notes.text = data.notes
-              
-          }
-          else{
-              if UserDefaults.standard.array(forKey: "teamList") != nil{
-                  teamList = UserDefaults.standard.object(forKey: "teamList") as! [String]
-                  print("\(teamList) and \(teamList.count)")
+              for i in 1...pitArr.count - 1{
+                  let a = pitArr[i].components(separatedBy: "&")
+                  pitArr2[i-1] = a[0]
+              }
                   
-              }
-              else{
-                  print("teamList is nil")
-              }
-          }
+                  PitScoutingViewController.pitScoutingDataObj = PitScoutingData(robotNumber: pitArr2[0], driveTrainType:pitArr2[1], intake:pitArr2[2], capacity:pitArr2[3], AutoLineCrossing:Bool(pitArr2[4])!, AutoHighBalls:pitArr2[5], AutoLowBalls:pitArr2[6], climb:Bool(pitArr2[7])!, notes:pitArr2[8])
+              
+              
+                RobotNumber.text =  PitScoutingViewController.pitScoutingDataObj.robotNumber
+                RobotNumber.backgroundColor = UIColor.green
+                print("driveTrain type is \( PitScoutingViewController.pitScoutingDataObj.driveTrainType)")
+                if( PitScoutingViewController.pitScoutingDataObj.driveTrainType == "Tank"){
+                    DrivetrainType.selectedSegmentIndex = 0
+                }
+                else if( PitScoutingViewController.pitScoutingDataObj.driveTrainType == "Mechanum"){
+                    DrivetrainType.selectedSegmentIndex = 1
+                }
+                else if( PitScoutingViewController.pitScoutingDataObj.driveTrainType == "H-Drive"){
+                    DrivetrainType.selectedSegmentIndex = 2
+                }
+                else if( PitScoutingViewController.pitScoutingDataObj.driveTrainType == "Swerve"){
+                    DrivetrainType.selectedSegmentIndex = 3
+                }
+                if( PitScoutingViewController.pitScoutingDataObj.intake == "Floor"){
+                    Intake.selectedSegmentIndex = 0
+                
+                }
+                else{
+                    Intake.selectedSegmentIndex = 1
+                }
+                
+                Capacity.selectedSegmentIndex = (Int( PitScoutingViewController.pitScoutingDataObj.capacity) ?? 1) - 1
+                AutoLineCrossing.isOn =  PitScoutingViewController.pitScoutingDataObj.AutoLineCrossing
+                AutoHighGoalBalls.text =  PitScoutingViewController.pitScoutingDataObj.AutoHighBalls
+                AutoHighGoalBalls.backgroundColor = UIColor.green
+                AutoLowGoalBalls.text =  PitScoutingViewController.pitScoutingDataObj.AutoLowBalls
+                AutoLowGoalBalls.backgroundColor = UIColor.green
+                Climbing.isOn =  PitScoutingViewController.pitScoutingDataObj.climb
+                Notes.text =  PitScoutingViewController.pitScoutingDataObj.notes
+                
+            
 
           
           
@@ -485,5 +502,5 @@ class PitScoutingViewController: UIViewController {
         // Pass the selected object to the new view controller.
     }
     */
-
+    }
 }
