@@ -83,6 +83,10 @@ class ViewController: UIViewController {
     @IBOutlet weak var popupButton1: UIButton!
     @IBOutlet weak var popupButton2: UIButton!
     
+    /**
+     
+    -  Parameter sender: We have absolutely no clue
+     */
     @IBAction func popup1Clicked(_ sender: Any) {
         popupView.isHidden = true
         if(selectedMode == 1){
