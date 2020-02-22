@@ -100,6 +100,40 @@ class QRReaderViewController: UIViewController {
         // Do any additional setup after loading the view.
     }
     
+    func Serialize(teamNumber:String, driveTrainType:String, intake:String, capacity:String, AutoLineCrossing:Bool, AutoHighBalls:String, AutoLowBalls:String, climb:Bool, notes:String,pretty:Bool) -> String
+       {
+           PitScoutingViewController.pitScoutingDataObj = PitScoutingData(robotNumber: teamNumber, driveTrainType:driveTrainType, intake:intake, capacity:capacity, AutoLineCrossing:AutoLineCrossing, AutoHighBalls:AutoHighBalls, AutoLowBalls:AutoLowBalls, climb:climb, notes:notes)
+
+           if(PitScoutingViewController.pitScoutingDataObj.notes.contains("Type here...") ?? false){
+               let a = PitScoutingViewController.pitScoutingDataObj.notes.components(separatedBy: "Type here...")
+               PitScoutingViewController.pitScoutingDataObj.notes = a[1]
+           }
+           
+           if ( PitScoutingViewController.pitScoutingDataObj.notes == "")
+           {
+                PitScoutingViewController.pitScoutingDataObj.notes = "NONE"
+           }
+           
+           /// An array used to combine all of the variables into one giant string sent as a JSON, as swift is stupid and you can't add strings together
+               let jStrArray = ["robotNumber="+PitScoutingViewController.pitScoutingDataObj.robotNumber,
+               "driveTrainType="+PitScoutingViewController.pitScoutingDataObj.driveTrainType,
+               "intake="+PitScoutingViewController.pitScoutingDataObj.intake,
+               "capacity="+PitScoutingViewController.pitScoutingDataObj.capacity,
+               "AutoLineCrossing="+String(PitScoutingViewController.pitScoutingDataObj.AutoLineCrossing),
+               "AutoHighBalls="+PitScoutingViewController.pitScoutingDataObj.AutoHighBalls,
+               "AutoLowBalls="+PitScoutingViewController.pitScoutingDataObj.AutoLowBalls,
+               "climb="+String(PitScoutingViewController.pitScoutingDataObj.climb),
+               "notes="+PitScoutingViewController.pitScoutingDataObj.notes]
+           
+           
+           
+           let jsonString = jStrArray.joined(separator: "&")
+           print(jsonString)
+           //let s = send_post(jsonStr:jsonString)
+           //let s2 = send_get()
+           return jsonString
+       }
+    
     func Serialize(teamText:String, matchText:String, scoutText:String, autoLowGoal:Int, autoHighGoal:Int, autoTrenchBalls:Int , autoShieldBalls:Int, controlPanel:String, climbing:String,autoLine:Bool, climbBalanced:Bool, climbingOtherRobots:Int, lowGoalTaken:Int, lowGoalMade:Int, highGoalTaken:Array<Int>, highGoalMade:Array<Int>, Notes:String, pretty:Bool) -> String
        {
            
@@ -340,15 +374,40 @@ class QRReaderViewController: UIViewController {
         if arrayOfPitTeams.count > 1{
                               print("hi?!?")
                               for index in 1...arrayOfPitTeams.count - 2{
+                                
+                                let pitArr = arrayOfPitTeams[index].components(separatedBy: "=")
+                                var pitArr2 = Array(repeating: "", count: pitArr.count - 1)
+                                
+                                for i in 1...pitArr.count - 1{
+                                    let a = pitArr[i].components(separatedBy: "&")
+                                    pitArr2[i-1] = a[0]
+                                }
+                                
                                   
-                                let a = arrayOfPitTeams[index].components(separatedBy: "robotNumber=")
-                                let b = a[1].components(separatedBy: "&")
+                               
                                 
                                   //arrayOfValues = arrayOfPitTeams[index].components(separatedBy: ",")
                                   
                                   //teamNum = arrayOfValues[0]
-                                  pSTeamName = "\(b[0]); Pit Scouting"
-                                  print("pSTeam Number is \(pSTeamName)!!!!!!!")
+                                  pSTeamName = "\(pitArr2[0]); Pit Scouting"
+                                
+                                
+                                
+                                var payload2 = Serialize(
+                                teamNumber: pitArr2[0],
+                                driveTrainType: pitArr2[1],
+                                intake: pitArr2[2],
+                                capacity: pitArr2[3],
+                                AutoLineCrossing: Bool(pitArr2[4])!,
+                                AutoHighBalls: pitArr2[5],
+                                AutoLowBalls: pitArr2[6],
+                                climb: Bool(pitArr2[7])!,
+                                notes: pitArr2[8],
+                                   pretty: false)
+                                
+                                print("payload2 from QR is \(payload2)")
+                                
+                                  //print("pSTeam Number is \(pSTeamName)!!!!!!!")
                                   if pSTeamName != ""{
                                       print("got here")
                                       if UserDefaults.standard.array(forKey: "pitScoutList") == nil{
@@ -357,11 +416,11 @@ class QRReaderViewController: UIViewController {
                                           pitScoutList.append(pSTeamName)
                                           print("pitScoutList is \(pitScoutList)!")
                                           UserDefaults.standard.set(pitScoutList, forKey: "pitScoutList")
-                                          UserDefaults.standard.set(arrayOfPitTeams[index], forKey: "\(pSTeamName)")
-                                          print("Value is \(arrayOfPitTeams[index])")
-                                          print("pSteamNum is \(pSTeamName)")
-                                          let test = UserDefaults.standard.object(forKey: "\(pSTeamName)")
-                                          print(test)
+                                          UserDefaults.standard.set(payload2, forKey: "\(pSTeamName)")
+                                     //     print("Value is \(arrayOfPitTeams[index])")
+                                       //   print("pSteamNum is \(pSTeamName)")
+                                         // let test = UserDefaults.standard.object(forKey: "\(pSTeamName)")
+                                      //    print(test)
                                           
                                       }
                                       else if UserDefaults.standard.array(forKey: "pitScoutList")!.isEmpty == false{
@@ -387,11 +446,11 @@ class QRReaderViewController: UIViewController {
                                           }
                                           
                                           UserDefaults.standard.set(pitScoutList, forKey: "pitScoutList")
-                                          UserDefaults.standard.set(arrayOfPitTeams[index], forKey: "\(pSTeamName)")
-                                          print("Value is \(arrayOfPitTeams[index])")
-                                          print("teamNum is !\(pSTeamName)")
-                                          let test = UserDefaults.standard.object(forKey: "\(pSTeamName)")
-                                          print(test)
+                                          UserDefaults.standard.set(payload2, forKey: "\(pSTeamName)")
+                                          //print("Value is \(arrayOfPitTeams[index])")
+                                          //print("teamNum is !\(pSTeamName)")
+                                       //   let test = UserDefaults.standard.object(forKey: "\(pSTeamName)")
+                                       //   print(test)
                                           
                                       }
                                       else{
@@ -399,11 +458,11 @@ class QRReaderViewController: UIViewController {
                                           pitScoutList.append(pSTeamName)
                                           print("pitScoutList is \(pitScoutList)")
                                           UserDefaults.standard.set(pitScoutList, forKey: "pitScoutList")
-                                          UserDefaults.standard.set(arrayOfPitTeams[index], forKey: "\(pSTeamName)")
-                                          print("Value is \(arrayOfPitTeams[index])")
-                                          print("pSteamNum is !\(pSTeamName)")
-                                          let test = UserDefaults.standard.object(forKey: "\(pSTeamName)")
-                                          print(test)
+                                          UserDefaults.standard.set(payload2, forKey: "\(pSTeamName)")
+                                      //    print("Value is \(arrayOfPitTeams[index])")
+                                        //  print("pSteamNum is !\(pSTeamName)")
+                                          //let test = UserDefaults.standard.object(forKey: "\(pSTeamName)")
+                                         // print(test)
                                       }
                                       
                                       
