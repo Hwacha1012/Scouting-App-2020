@@ -21,7 +21,7 @@ var matchNumber = 0
 var teamColor = true
 /// The intake type the robot uses to collect balls from the playing field, e.g., floor, feeding station
 var intakeType = ""
-/// Whether the decive running is an iPhone or iPad, where 0 is iPhone and 1 is iPad, e.g., 1
+/// Whether the decive running is an iPhone or iPad, where 2 is iPhone and 1 is iPad, e.g., 1
 var runType = 1 //default is running as iPad
 /// Whether the Team Scouted crosses the line in auto, e.g., 1
 var autoLine = false //do they cross the line in auto
