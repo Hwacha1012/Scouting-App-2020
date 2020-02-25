@@ -1182,46 +1182,6 @@
             </objects>
             <point key="canvasLocation" x="-1273.4375" y="939.84374999999989"/>
         </scene>
-        <!--Match Data Website View Controller-->
-        <scene sceneID="tkW-07-8BT">
-            <objects>
-                <viewController id="b4c-8n-Rxd" customClass="MatchDataWebsiteViewController" customModule="ScoutingApp2020" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="FVO-zZ-sct">
-                        <rect key="frame" x="0.0" y="0.0" width="712" height="984"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <wkWebView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Kpd-4h-tg0">
-                                <rect key="frame" x="0.0" y="306" width="712" height="678"/>
-                                <color key="backgroundColor" red="0.36078431370000003" green="0.38823529410000002" blue="0.4039215686" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" secondItem="Kpd-4h-tg0" secondAttribute="height" multiplier="89:123" constant="221.41463414634143" id="Ek8-Cq-tG5"/>
-                                    <constraint firstAttribute="height" constant="678" id="Pa9-TJ-sq1"/>
-                                    <constraint firstAttribute="width" constant="712" id="cSc-Qh-7SF"/>
-                                </constraints>
-                                <wkWebViewConfiguration key="configuration">
-                                    <audiovisualMediaTypes key="mediaTypesRequiringUserActionForPlayback" none="YES"/>
-                                    <wkPreferences key="preferences"/>
-                                </wkWebViewConfiguration>
-                            </wkWebView>
-                        </subviews>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
-                        <constraints>
-                            <constraint firstItem="Kpd-4h-tg0" firstAttribute="trailing" secondItem="eV6-r9-4vE" secondAttribute="trailing" id="Cdl-7U-NFM"/>
-                            <constraint firstItem="Kpd-4h-tg0" firstAttribute="leading" secondItem="eV6-r9-4vE" secondAttribute="leading" id="Rmr-IC-5YQ"/>
-                            <constraint firstItem="Kpd-4h-tg0" firstAttribute="top" secondItem="eV6-r9-4vE" secondAttribute="top" constant="306" id="kPP-gJ-qd9"/>
-                            <constraint firstItem="Kpd-4h-tg0" firstAttribute="bottom" secondItem="eV6-r9-4vE" secondAttribute="bottom" id="ouH-X4-WxN"/>
-                        </constraints>
-                        <viewLayoutGuide key="safeArea" id="eV6-r9-4vE"/>
-                    </view>
-                    <navigationItem key="navigationItem" id="HIO-uC-Ulv"/>
-                    <connections>
-                        <outlet property="matchDataWebsite" destination="Kpd-4h-tg0" id="frO-Vu-n64"/>
-                    </connections>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="fQ3-XR-mMy" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="-951.5625" y="2007.4218749999998"/>
-        </scene>
         <!--Web Export View Controller-->
         <scene sceneID="UHn-VF-QMq">
             <objects>
@@ -1237,9 +1197,9 @@
                                     <constraint firstAttribute="height" constant="138" id="ZkJ-V9-kqW"/>
                                     <constraint firstAttribute="width" constant="208" id="wUq-Qb-tmD"/>
                                 </constraints>
-                                <state key="normal" title="Pit Scouting Website"/>
+                                <state key="normal" title="Match Data Website"/>
                                 <connections>
-                                    <segue destination="b4c-8n-Rxd" kind="show" id="MRz-55-lME"/>
+                                    <action selector="matchDataWebsite_Pressed:" destination="wJw-Tr-3cZ" eventType="touchUpInside" id="Ajc-kd-An6"/>
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Website" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="i38-Fk-4vB">
@@ -1260,9 +1220,9 @@
                                     <constraint firstAttribute="width" secondItem="51F-e4-QwA" secondAttribute="height" multiplier="104:69" id="bxB-qN-qw9"/>
                                     <constraint firstAttribute="width" constant="208" id="yGy-zD-bdC"/>
                                 </constraints>
-                                <state key="normal" title="Match Data Website"/>
+                                <state key="normal" title="Pit Scouting Website"/>
                                 <connections>
-                                    <segue destination="UfI-CQ-rZh" kind="show" id="Fse-uc-Bft"/>
+                                    <action selector="pitScoutingWebsite_Pressed:" destination="wJw-Tr-3cZ" eventType="touchUpInside" id="neW-6N-O05"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -1278,50 +1238,14 @@
                         <viewLayoutGuide key="safeArea" id="QcJ-PA-XDN"/>
                     </view>
                     <navigationItem key="navigationItem" id="vC1-0h-Vcn"/>
+                    <connections>
+                        <outlet property="matchDataWebsite" destination="3md-br-qjE" id="j71-f4-YmI"/>
+                        <outlet property="pitScoutingWebsite" destination="51F-e4-QwA" id="T9G-mu-fT6"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="UQ1-Gi-aOE" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-284" y="1356"/>
-        </scene>
-        <!--Pit Scouting Website View Controller-->
-        <scene sceneID="ajV-Gw-nW4">
-            <objects>
-                <viewController id="UfI-CQ-rZh" customClass="PitScoutingWebsiteViewController" customModule="ScoutingApp2020" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="Mrr-Ez-YjS">
-                        <rect key="frame" x="0.0" y="0.0" width="712" height="984"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <wkWebView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="LYO-2C-h5U">
-                                <rect key="frame" x="0.0" y="347" width="712" height="637"/>
-                                <color key="backgroundColor" red="0.36078431370000003" green="0.38823529410000002" blue="0.4039215686" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="712" id="IIF-c6-f9B"/>
-                                    <constraint firstAttribute="height" constant="637" id="Xkh-pL-ODl"/>
-                                    <constraint firstAttribute="width" secondItem="LYO-2C-h5U" secondAttribute="height" multiplier="89:123" constant="251.08130081300811" id="YhV-Om-0Mg"/>
-                                </constraints>
-                                <wkWebViewConfiguration key="configuration">
-                                    <audiovisualMediaTypes key="mediaTypesRequiringUserActionForPlayback" none="YES"/>
-                                    <wkPreferences key="preferences"/>
-                                </wkWebViewConfiguration>
-                            </wkWebView>
-                        </subviews>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
-                        <constraints>
-                            <constraint firstItem="LYO-2C-h5U" firstAttribute="trailing" secondItem="Hvt-im-Pdh" secondAttribute="trailing" id="T4D-Zc-Ce0"/>
-                            <constraint firstItem="LYO-2C-h5U" firstAttribute="top" secondItem="Hvt-im-Pdh" secondAttribute="top" constant="347" id="eYD-K6-0fV"/>
-                            <constraint firstItem="LYO-2C-h5U" firstAttribute="bottom" secondItem="Hvt-im-Pdh" secondAttribute="bottom" id="hRV-EY-eK7"/>
-                            <constraint firstItem="LYO-2C-h5U" firstAttribute="leading" secondItem="Hvt-im-Pdh" secondAttribute="leading" id="r4S-gI-Nm4"/>
-                        </constraints>
-                        <viewLayoutGuide key="safeArea" id="Hvt-im-Pdh"/>
-                    </view>
-                    <navigationItem key="navigationItem" id="AyF-kQ-czu"/>
-                    <connections>
-                        <outlet property="pitScoutingWebsite" destination="LYO-2C-h5U" id="zRd-jt-KKo"/>
-                    </connections>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="JkO-gE-bUt" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="466.40625" y="1994.5312499999998"/>
         </scene>
         <!--Export View Controller-->
         <scene sceneID="yEv-my-wII">
