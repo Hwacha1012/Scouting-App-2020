@@ -30,6 +30,7 @@ class WebExportViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        ///The string for the QR code
           var qrCodeString = ""
           if UserDefaults.standard.array(forKey: "pitScoutList")?.isEmpty == false{
               pitScoutList = UserDefaults.standard.object(forKey: "pitScoutList") as! [String]
@@ -52,6 +53,7 @@ class WebExportViewController: UIViewController {
               
             qrCodeString = "\(qrCodeString) | "
           }
+        ///
         var qrCodeString2 = ""
         if UserDefaults.standard.array(forKey: "teamList")?.isEmpty == false{
             teamList = UserDefaults.standard.object(forKey: "teamList") as! [String]
@@ -77,15 +79,19 @@ class WebExportViewController: UIViewController {
         
           print("qrString is \(qrCodeString2)")
         
+        qrCodeString = qrCodeString.replacingOccurrences(of: "notes= ", with: "notes=none")
+        qrCodeString2 = qrCodeString2.replacingOccurrences(of: "notes= ", with: "notes=none")
         
-        let pitArray = qrCodeString.components(separatedBy: "|")
+        var pitArray = qrCodeString.components(separatedBy: "|")
         for i in 0...pitArray.count-1{
-            send_post(jsonStr: pitArray[i], endpoint: "pitScouting")
+            let res = send_post(jsonStr: pitArray[i], endpoint: "pitscouting")
+            print(res)
         }
         
         let matchArray = qrCodeString2.components(separatedBy: "|")
         for i in 0...matchArray.count-1{
-            send_post(jsonStr: matchArray[i], endpoint: "matchData")
+            let res = send_post(jsonStr: matchArray[i], endpoint: "matchdata")
+            print(res)
         }
         
     }
@@ -107,7 +113,7 @@ class WebExportViewController: UIViewController {
     
     func send_post(jsonStr:String,endpoint:String)-> String
     {
-        var result = jsonStr
+        var result = ""
         let requestUrl = URL(string:"http://ec2-52-71-196-37.compute-1.amazonaws.com/"+endpoint)!
         var request = URLRequest(url: requestUrl)
         request.httpMethod = "POST"
@@ -117,13 +123,17 @@ class WebExportViewController: UIViewController {
             (data,response,error) in
             if let error = error{
                 print("ERROR FOUD")
-                return
+                result = "ERROR FOUND"
             }
             if let data = data,let dataString = String(data:data,encoding:.utf8){
                 print("Response data String:\n \(dataString)")
+                result = dataString
             }
         }
         task.resume()
+        while(result == "")
+        {
+        }
         return result
     }
 
