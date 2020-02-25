@@ -63,12 +63,12 @@ class WebExportViewController: UIViewController {
         
         let pitArray = qrCodeString.components(separatedBy: "|")
         for i in 0...pitArray.count-1{
-            send_post(jsonStr: pitArray[i], endpoint: "pitScouting")
+            send_post(jsonStr: pitArray[i], endpoint: "pitscouting")
         }
         
         let matchArray = qrCodeString2.components(separatedBy: "|")
         for i in 0...matchArray.count-1{
-            send_post(jsonStr: matchArray[i], endpoint: "matchData")
+            send_post(jsonStr: matchArray[i], endpoint: "matchdata")
         }
         
     }

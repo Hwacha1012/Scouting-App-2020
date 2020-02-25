@@ -56,7 +56,8 @@ class MatchData: Codable {
 
 
 class FinishMatchDataViewController: UIViewController {
-
+    @IBOutlet weak var titleLabel: UILabel!
+    
     public static var  matchDataObj = MatchData(teamText: "", matchText:"",  scoutText:"", autoLowGoal:0, autoHighGoal:0,  autoTrenchBalls:0, autoShieldBalls:0, controlPanel:"",climbing:"", autoLine:false, climbBalanced:false, climbingOtherRobots:0, teamColor:true, lowGoalTaken:0, lowGoalMade:0, highGoalTaken:[0, 0, 0, 0], highGoalMade:[0, 0, 0, 0], notes:"Type here...")
     
     public struct Throwable<T: Decodable>: Decodable {
@@ -341,6 +342,10 @@ class FinishMatchDataViewController: UIViewController {
         // Do any additional setup after loading the view.
         if(changeData){
             notes.text = FinishMatchDataViewController.matchDataObj.notes
+        }
+        
+        if(runType == 1){
+            //submitButton.setFon
         }
     }
     

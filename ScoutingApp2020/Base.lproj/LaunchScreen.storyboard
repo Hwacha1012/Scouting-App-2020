@@ -15,13 +15,13 @@
                         <rect key="frame" x="0.0" y="0.0" width="768" height="1024"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" image="GHSRoboticsLogo2170.png" translatesAutoresizingMaskIntoConstraints="NO" id="5fr-RC-qpZ">
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="GHSRoboticsLogo2170.png" translatesAutoresizingMaskIntoConstraints="NO" id="5fr-RC-qpZ">
                                 <rect key="frame" x="269" y="60" width="230" height="230.5"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="5fr-RC-qpZ" secondAttribute="height" multiplier="1:1" id="155-iw-Jhw"/>
                                 </constraints>
                             </imageView>
-                            <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" ambiguous="YES" progressViewStyle="bar" progress="0.96999999999999997" translatesAutoresizingMaskIntoConstraints="NO" id="pqf-5Z-3cC">
+                            <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" progressViewStyle="bar" progress="0.96999999999999997" translatesAutoresizingMaskIntoConstraints="NO" id="pqf-5Z-3cC">
                                 <rect key="frame" x="111" y="511" width="546" height="3"/>
                                 <color key="trackTintColor" systemColor="systemTealColor" red="0.35294117650000001" green="0.7843137255" blue="0.98039215690000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             </progressView>
@@ -33,6 +33,8 @@
                             <constraint firstItem="pqf-5Z-3cC" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="IjD-wc-0mM"/>
                             <constraint firstItem="pqf-5Z-3cC" firstAttribute="centerY" secondItem="Ze5-6b-2t3" secondAttribute="centerY" id="KXA-eM-MMP"/>
                             <constraint firstItem="5fr-RC-qpZ" firstAttribute="width" secondItem="Ze5-6b-2t3" secondAttribute="width" multiplier="0.3" id="fEF-90-SA5"/>
+                            <constraint firstItem="pqf-5Z-3cC" firstAttribute="width" secondItem="Ze5-6b-2t3" secondAttribute="width" multiplier="0.710938" id="vnT-8Q-JKp"/>
+                            <constraint firstItem="5fr-RC-qpZ" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" id="zqg-6Q-dYA"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
