@@ -224,11 +224,11 @@ class ViewController: UIViewController {
             exportData.titleLabel!.font = UIFont.init(name: "Optima-BoldItalic", size: 40)
             importData.titleLabel!.font = UIFont.init(name: "Optima-BoldItalic", size: 40)
             // pitScoutingButton.titleLabel!.font = UIFont.init(name: "Optima-BoldItalic", size: 65)
-            titleLabel.font = UIFont.init(name: "Futura-MediumItalic", size: 75)
+            titleLabel.font = UIFont.init(name: "Futura-MediumItalic", size: 60)
             titleLabel2.font = UIFont.init(name: "Futura-MediumItalic", size: 75)
-            popupButton1.titleLabel!.font = UIFont.init( name: "Optima-BoldItalic", size: 40)
-            popupButton2.titleLabel!.font = UIFont.init( name: "Optima-BoldItalic", size: 40)
-            popupLabel.font = UIFont.init( name: "Futura-MediumItalic", size: 75)
+            popupButton1.titleLabel!.font = UIFont.init( name: "Optima-BoldItalic", size: 20)
+            popupButton2.titleLabel!.font = UIFont.init( name: "Optima-BoldItalic", size: 20)
+            popupLabel.font = UIFont.init( name: "Futura-MediumItalic", size: 40)
         }
         
         

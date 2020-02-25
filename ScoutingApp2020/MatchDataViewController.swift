@@ -58,10 +58,10 @@ class MatchDataViewController: UIViewController {
             
         }
         else{
-            scoutLabel.font = UIFont.init(name: "Optima-BoldItalic", size: 35 )
-            teamLabel.font = UIFont.init(name: "Optima-BoldItalic", size: 35 )
-            matchLabel.font = UIFont.init(name: "Optima-BoldItalic", size: 35 )
-            colorLabel.font = UIFont.init(name: "Optima-BoldItalic", size: 25 )
+            scoutLabel.font = UIFont.init(name: "Optima-BoldItalic", size: 25 )
+            teamLabel.font = UIFont.init(name: "Optima-BoldItalic", size: 25 )
+            matchLabel.font = UIFont.init(name: "Optima-BoldItalic", size: 25 )
+            colorLabel.font = UIFont.init(name: "Optima-BoldItalic", size: 20 )
             autoButtons.titleLabel?.font = UIFont.init(name: "Optima-BoldItalic", size: 35 )
         }
         
