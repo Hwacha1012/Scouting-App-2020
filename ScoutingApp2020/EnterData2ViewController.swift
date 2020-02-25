@@ -121,8 +121,8 @@ class EnterData2ViewController: UIViewController {
            
             titleLabel.font = UIFont.init( name: "Futura-MediumItalic", size: 75)
             lineLabel.font = UIFont.init(name: "Optima-BoldItalic", size: 45)
-            lowGoalLabel.font = UIFont.init(name: "Optima-BoldItalic", size: 45)
-            highGoalLabel.font = UIFont.init(name: "Optima-BoldItalic", size: 45)
+            lowGoalLabel.font = UIFont.init(name: "Optima-BoldItalic", size: 40)
+            highGoalLabel.font = UIFont.init(name: "Optima-BoldItalic", size: 40)
             powerLabel.font = UIFont.init(name: "Optima-BoldItalic", size: 50)
             powerCellsLabel.font = UIFont.init(name: "Optima-BoldItalic", size: 45)
             trenchLabel.font = UIFont.init(name: "Optima-BoldItalic", size: 32)
@@ -131,13 +131,13 @@ class EnterData2ViewController: UIViewController {
         }
         else{
             titleLabel.font = UIFont.init( name: "Futura-MediumItalic", size: 60)
-            lineLabel.font = UIFont.init(name: "Optima-BoldItalic", size: 35)
-            lowGoalLabel.font = UIFont.init(name: "Optima-BoldItalic", size: 35)
-            highGoalLabel.font = UIFont.init(name: "Optima-BoldItalic", size: 35)
-            powerLabel.font = UIFont.init(name: "Optima-BoldItalic", size: 40)
+            lineLabel.font = UIFont.init(name: "Optima-BoldItalic", size: 20)
+            lowGoalLabel.font = UIFont.init(name: "Optima-BoldItalic", size: 15)
+            highGoalLabel.font = UIFont.init(name: "Optima-BoldItalic", size: 15)
+            powerLabel.font = UIFont.init(name: "Optima-BoldItalic", size: 30)
             powerCellsLabel.font = UIFont.init(name: "Optima-BoldItalic", size: 35)
-            trenchLabel.font = UIFont.init(name: "Optima-BoldItalic", size: 23)
-            shieldGenLabel.font = UIFont.init(name: "Optima-BoldItalic", size: 23)
+            trenchLabel.font = UIFont.init(name: "Optima-BoldItalic", size: 17)
+            shieldGenLabel.font = UIFont.init(name: "Optima-BoldItalic", size: 17)
             
         }
         

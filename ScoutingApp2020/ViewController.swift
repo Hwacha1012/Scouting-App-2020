@@ -39,9 +39,9 @@ var controlPanel = "" //what did they do with the control panel ex. no, spin, se
 var lowGoalMade = 0 //low goals made in teleop
 /// The amount of low goals shots taken in teleop, e.g., 7
 var lowGoalTaken = 0 //shots taken intended for low goal taken in teleop
-/// Leo needs to explain this (example array needed)
+/// The amount of high goal shots made from each section of the field, e.g., [opponent's sector, close shield generator, trench run, far shield generator]
 var highGoalMade = [0, 0, 0, 0] //low goals made in teleop array specifies location shot was
-/// Leo needs to explain this (example array needed)
+/// The amount of high goal shots taken from each section of the field, e.g., [opponent's sector, close shield generator, trench run, far shield generator]
 var highGoalTaken = [0, 0, 0, 0] //shots taken intended for low goal taken in teleop array specifies location shot was taken from
 /// Whether or not the robot climbs, e.g., true
 var climbing = false //do they climb
@@ -53,9 +53,9 @@ var climbBalanced = false //was the climb balanced
 var notes = "" //notes about the robot
 /// The position of the user in the app, where 1 is Match Data, 2 is Enter Data, and 3 is TeleOp, e.g., 3
 var matchPosition = 0 // 1 is Match Data, 2 is Enter Data, 3 teleop
-/// Leo needs to explain this
+/// boolean that indicates if prior match or pit scouting data is being edited
 var changeData = false //changing data from tableView?
-/// Leo needs to explain this
+/// image that will be displayed as the QR code to be scanned
 var qrImage: UIImage!
 
 
@@ -67,7 +67,7 @@ var qrImage: UIImage!
 
 /// The original object that manages a view hierarchy for your UIKit app. Extends UIViewController
 class ViewController: UIViewController {
-    /// Integer that is changed when one of the four buttons is pressed, where when popup1Clicked is activated, 1 is MatchDataSegue, 2 is QRExportSegue, and 3 is viewDataSegue, and where popup2Clicked is activated, 1 is PitScoutSegue, 2 is WebExportSegue, and 3 is a UIApplication open command to open a website, e.g., 1
+/// Integer that is changed when one of the four buttons is pressed, where when popup1Clicked is activated, 1 is MatchDataSegue, 2 is QRExportSegue, and 3 is viewDataSegue, and where popup2Clicked is activated, 1 is PitScoutSegue, 2 is WebExportSegue, and 3 is a UIApplication open command to open a website, e.g., 1
     var selectedMode = 0
     @IBOutlet weak var titleLabel: UILabel!
     @IBOutlet weak var titleLabel2: UILabel!
@@ -77,7 +77,6 @@ class ViewController: UIViewController {
     @IBOutlet weak var importData: UIButton!
  
     @IBOutlet weak var exportData: UIButton!
-    
     
     @IBOutlet weak var popupView: UIView!
     @IBOutlet weak var popupLabel: UILabel!
@@ -128,13 +127,12 @@ class ViewController: UIViewController {
      */
     @IBAction func enterDataPressed(_ sender: Any) {
 
+        //hides the popup view
         popupView.isHidden = false
         popupLabel.text = "Enter Data"
         popupButton1.setTitle("Match Data", for: .normal)
         popupButton2.setTitle("Pit Scouting Data", for: .normal)
         selectedMode = 1
-       // matchPosition = 0
-      // performSegue(withIdentifier: "viewToEnterData1", sender: nil)
         
         
     }
@@ -172,10 +170,14 @@ class ViewController: UIViewController {
        // performSegue(withIdentifier: "QRExportSegue", sender: nil)
     }
     
+    
+    /**
+     Hides the popup when anywhere else on the screen is clicked
+     */
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
         popupView.isHidden = true
     }
-    
+
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
@@ -222,11 +224,11 @@ class ViewController: UIViewController {
             exportData.titleLabel!.font = UIFont.init(name: "Optima-BoldItalic", size: 40)
             importData.titleLabel!.font = UIFont.init(name: "Optima-BoldItalic", size: 40)
             // pitScoutingButton.titleLabel!.font = UIFont.init(name: "Optima-BoldItalic", size: 65)
-            titleLabel.font = UIFont.init(name: "Futura-MediumItalic", size: 75)
+            titleLabel.font = UIFont.init(name: "Futura-MediumItalic", size: 60)
             titleLabel2.font = UIFont.init(name: "Futura-MediumItalic", size: 75)
-            popupButton1.titleLabel!.font = UIFont.init( name: "Optima-BoldItalic", size: 40)
-            popupButton2.titleLabel!.font = UIFont.init( name: "Optima-BoldItalic", size: 40)
-            popupLabel.font = UIFont.init( name: "Futura-MediumItalic", size: 75)
+            popupButton1.titleLabel!.font = UIFont.init( name: "Optima-BoldItalic", size: 20)
+            popupButton2.titleLabel!.font = UIFont.init( name: "Optima-BoldItalic", size: 20)
+            popupLabel.font = UIFont.init( name: "Futura-MediumItalic", size: 40)
         }
         
         

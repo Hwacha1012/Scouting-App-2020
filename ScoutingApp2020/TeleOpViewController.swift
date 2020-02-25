@@ -179,6 +179,8 @@ class TeleOpViewController: UIViewController {
             else{
                 controlPanel = "Position"
             }
+            popupLabel2.isHidden = true
+            popupLabel3.isHidden = true
         }
         else{
             //climbing
@@ -194,11 +196,12 @@ class TeleOpViewController: UIViewController {
                 climbing = true
                 climbBalanced = true
             }
+            popupLabel2.isHidden = true
+            popupLabel3.isHidden = false
             
         }
         
-        popupLabel2.isHidden = true
-        popupLabel3.isHidden = true
+        
         
         
         
@@ -334,6 +337,9 @@ class TeleOpViewController: UIViewController {
                     popupLabel1.font = UIFont.init(name: "Futura-MediumItalic", size: 30)
                    popupLabel2.font = UIFont.init(name: "Futura-MediumItalic", size: 30)
                    popupLabel3.font = UIFont.init(name: "Futura-MediumItalic", size: 30)
+            let font = UIFont.systemFont(ofSize: 30)
+            let attributes = [NSAttributedString.Key.font: font]
+            wheelSegmentedControl.setTitleTextAttributes(attributes, for: .normal)
                    
    
                    
@@ -344,9 +350,12 @@ class TeleOpViewController: UIViewController {
                    controlPanelButton.titleLabel!.font = UIFont.init(name: "Optima-BoldItalic", size: 20)
                    lowGoalButton.titleLabel!.font = UIFont.init(name: "Optima-BoldItalic", size: 20)
                    nextButton.titleLabel!.font = UIFont.init(name: "Optima-BoldItalic", size: 20)
-                    popupLabel1.font = UIFont.init(name: "Futura-MediumItalic", size: 24)
-                   popupLabel2.font = UIFont.init(name: "Futura-MediumItalic", size: 24)
-                   popupLabel3.font = UIFont.init(name: "Futura-MediumItalic", size: 24)
+                    popupLabel1.font = UIFont.init(name: "Futura-MediumItalic", size: 20)
+                   popupLabel2.font = UIFont.init(name: "Futura-MediumItalic", size: 20)
+                   popupLabel3.font = UIFont.init(name: "Futura-MediumItalic", size: 20)
+            let font = UIFont.systemFont(ofSize: 20)
+            let attributes = [NSAttributedString.Key.font: font]
+            wheelSegmentedControl.setTitleTextAttributes(attributes, for: .normal)
                }
         
         
@@ -354,6 +363,12 @@ class TeleOpViewController: UIViewController {
        
         
         // Do any additional setup after loading the view.
+    }
+    
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        tempTaken = 0
+        tempMade = 0
+        popupView.isHidden = true
     }
     
 
