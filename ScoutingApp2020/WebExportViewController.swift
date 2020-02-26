@@ -15,6 +15,10 @@ class WebExportViewController: UIViewController {
     
     @IBOutlet weak var pitScoutingWebsite: UIButton!
     
+    /**
+    - Parameter sender: The button is pressed by the user
+    */
+    
     @IBAction func matchDataWebsite_Pressed(_ sender: Any) {
         if let url = URL(string: "http://ec2-52-71-196-37.compute-1.amazonaws.com/matchdata/html") {
             UIApplication.shared.open(url)
@@ -22,6 +26,9 @@ class WebExportViewController: UIViewController {
         
     }
     
+    /**
+     - Parameter sender: The button is pressed by the user 2: Electric Boogaloo
+     */
     
     @IBAction func pitScoutingWebsite_Pressed(_ sender: Any) {
         if let url = URL(string: "http://ec2-52-71-196-37.compute-1.amazonaws.com/pitscouting/html") {
@@ -68,7 +75,7 @@ class WebExportViewController: UIViewController {
               
             qrCodeString = "\(qrCodeString) | "
           }
-        ///
+        ///The string for the QR code yet again
         var qrCodeString2 = ""
         if UserDefaults.standard.array(forKey: "teamList")?.isEmpty == false{
             teamList = UserDefaults.standard.object(forKey: "teamList") as! [String]
@@ -96,7 +103,7 @@ class WebExportViewController: UIViewController {
         
         qrCodeString = qrCodeString.replacingOccurrences(of: "notes= ", with: "notes=none")
         qrCodeString2 = qrCodeString2.replacingOccurrences(of: "notes= ", with: "notes=none")
-        
+        ///The entire pitscouting data strings, seperated by vertical lines.
         var pitArray = qrCodeString.components(separatedBy: "|")
         for i in 0...pitArray.count-1{
 
@@ -106,7 +113,7 @@ class WebExportViewController: UIViewController {
             print(res)
 
         }
-        
+        ///Same thing as above except for Match Data
         let matchArray = qrCodeString2.components(separatedBy: "|")
         for i in 0...matchArray.count-1{
             send_post(jsonStr: matchArray[i], endpoint: "matchdata")
@@ -131,10 +138,16 @@ class WebExportViewController: UIViewController {
     
 
     
-    
+    /**
+        Sends the informaton to the server to allow for view.
+        - Parameter jsonStr: The JSON string
+        - Parameter endpoint: Where the string is finished 
+        - Throws:If the error value is ticked spits out an error
+    */
     
     func send_post(jsonStr:String,endpoint:String)-> String
     {
+        ///For error checking
         var result = ""
         let requestUrl = URL(string:"http://ec2-52-71-196-37.compute-1.amazonaws.com/"+endpoint)!
         var request = URLRequest(url: requestUrl)
