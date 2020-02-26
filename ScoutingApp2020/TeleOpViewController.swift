@@ -337,7 +337,7 @@ class TeleOpViewController: UIViewController {
                     popupLabel1.font = UIFont.init(name: "Futura-MediumItalic", size: 30)
                    popupLabel2.font = UIFont.init(name: "Futura-MediumItalic", size: 30)
                    popupLabel3.font = UIFont.init(name: "Futura-MediumItalic", size: 30)
-            let font = UIFont.systemFont(ofSize: 30)
+            let font = UIFont.systemFont(ofSize: 20)
             let attributes = [NSAttributedString.Key.font: font]
             wheelSegmentedControl.setTitleTextAttributes(attributes, for: .normal)
                    
@@ -350,10 +350,10 @@ class TeleOpViewController: UIViewController {
                    controlPanelButton.titleLabel!.font = UIFont.init(name: "Optima-BoldItalic", size: 20)
                    lowGoalButton.titleLabel!.font = UIFont.init(name: "Optima-BoldItalic", size: 20)
                    nextButton.titleLabel!.font = UIFont.init(name: "Optima-BoldItalic", size: 20)
-                    popupLabel1.font = UIFont.init(name: "Futura-MediumItalic", size: 20)
-                   popupLabel2.font = UIFont.init(name: "Futura-MediumItalic", size: 20)
-                   popupLabel3.font = UIFont.init(name: "Futura-MediumItalic", size: 20)
-            let font = UIFont.systemFont(ofSize: 20)
+                    popupLabel1.font = UIFont.init(name: "Futura-MediumItalic", size: 15)
+                   popupLabel2.font = UIFont.init(name: "Futura-MediumItalic", size: 15)
+                   popupLabel3.font = UIFont.init(name: "Futura-MediumItalic", size: 15)
+            let font = UIFont.systemFont(ofSize: 10)
             let attributes = [NSAttributedString.Key.font: font]
             wheelSegmentedControl.setTitleTextAttributes(attributes, for: .normal)
                }

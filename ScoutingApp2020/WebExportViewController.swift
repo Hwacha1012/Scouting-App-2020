@@ -10,6 +10,7 @@ import UIKit
 
 
 class WebExportViewController: UIViewController {
+    @IBOutlet weak var titleLabel: UILabel!
     @IBOutlet weak var matchDataWebsite: UIButton!
     
     @IBOutlet weak var pitScoutingWebsite: UIButton!
@@ -30,6 +31,20 @@ class WebExportViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        if(runType == 1){
+                   //submitButton.setFon
+                   matchDataWebsite.titleLabel!.font = UIFont.init(name: "Optima-BoldItalic", size: 40)
+                  pitScoutingWebsite.titleLabel!.font = UIFont.init(name: "Optima-BoldItalic", size: 40)
+                   titleLabel.font = UIFont.init(name: "Futura-MediumItalic", size: 60)
+               }
+               if(runType == 2){
+                   //submitButton.setFon
+                   matchDataWebsite.titleLabel!.font = UIFont.init(name: "Optima-BoldItalic", size: 30)
+                   pitScoutingWebsite.titleLabel!.font = UIFont.init(name: "Optima-BoldItalic", size: 30)
+                   titleLabel.font = UIFont.init(name: "Futura-MediumItalic", size: 45)
+               }
+        
         ///The string for the QR code
           var qrCodeString = ""
           if UserDefaults.standard.array(forKey: "pitScoutList")?.isEmpty == false{

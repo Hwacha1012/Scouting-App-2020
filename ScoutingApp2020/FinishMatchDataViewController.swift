@@ -346,10 +346,22 @@ class FinishMatchDataViewController: UIViewController {
         
         if(runType == 1){
             //submitButton.setFon
+            submitButton.titleLabel!.font = UIFont.init(name: "Optima-BoldItalic", size: 40)
+            notes.font = UIFont.init(name: "Optima-BoldItalic", size: 20)
+            titleLabel.font = UIFont.init(name: "Futura-MediumItalic", size: 60)
+        }
+        if(runType == 2){
+            //submitButton.setFon
+            submitButton.titleLabel!.font = UIFont.init(name: "Optima-BoldItalic", size: 30)
+            notes.font = UIFont.init(name: "Optima-BoldItalic", size: 12)
+            titleLabel.font = UIFont.init(name: "Futura-MediumItalic", size: 30)
         }
     }
     
 
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        view.endEditing(true)
+    }
     /*
     // MARK: - Navigation
 

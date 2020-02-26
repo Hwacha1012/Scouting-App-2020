@@ -116,7 +116,7 @@ class ViewController: UIViewController {
             performSegue(withIdentifier: "WebExportSegue", sender: nil)
         }
         else if(selectedMode == 3){
-            if let url = URL(string: "https://www.google.com") {
+            if let url = URL(string: "http://ec2-52-71-196-37.compute-1.amazonaws.com/matchdata/html") {
                 UIApplication.shared.open(url)
             }
         }

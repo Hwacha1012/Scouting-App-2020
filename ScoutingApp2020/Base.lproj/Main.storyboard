@@ -10,7 +10,7 @@
         <!--Match Data View Controller-->
         <scene sceneID="Nh7-Ic-Ny3">
             <objects>
-                <viewController id="Jqb-qg-JOm" customClass="MatchDataViewController" customModule="ScoutingApp2020" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="Jqb-qg-JOm" customClass="MatchDataViewController" customModule="_170_FRC_Scouting" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="psf-DU-iDx">
                         <rect key="frame" x="0.0" y="0.0" width="712" height="984"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -145,7 +145,7 @@
         <!--Enter Data2 View Controller-->
         <scene sceneID="VGL-oe-1at">
             <objects>
-                <viewController id="PyS-zn-Gn5" customClass="EnterData2ViewController" customModule="ScoutingApp2020" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="PyS-zn-Gn5" customClass="EnterData2ViewController" customModule="_170_FRC_Scouting" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="VaL-Xf-n67">
                         <rect key="frame" x="0.0" y="0.0" width="712" height="984"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -379,7 +379,7 @@
         <!--Tele Op View Controller-->
         <scene sceneID="r4T-Jr-nNv">
             <objects>
-                <viewController id="VIn-uM-yeP" customClass="TeleOpViewController" customModule="ScoutingApp2020" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="VIn-uM-yeP" customClass="TeleOpViewController" customModule="_170_FRC_Scouting" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="iha-7B-CBu">
                         <rect key="frame" x="0.0" y="0.0" width="712" height="984"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -681,7 +681,7 @@
         <!--Finish Match Data View Controller-->
         <scene sceneID="2X4-5U-Ofe">
             <objects>
-                <viewController id="etm-05-Ffo" customClass="FinishMatchDataViewController" customModule="ScoutingApp2020" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="etm-05-Ffo" customClass="FinishMatchDataViewController" customModule="_170_FRC_Scouting" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="qv0-Rz-yym">
                         <rect key="frame" x="0.0" y="0.0" width="712" height="984"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -741,7 +741,7 @@
         <!--Reader View Controller-->
         <scene sceneID="Afc-6D-8Us">
             <objects>
-                <viewController id="iT5-if-dH4" customClass="QRReaderViewController" customModule="ScoutingApp2020" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="iT5-if-dH4" customClass="QRReaderViewController" customModule="_170_FRC_Scouting" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8BD-D7-XmK">
                         <rect key="frame" x="0.0" y="0.0" width="712" height="984"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -760,7 +760,7 @@
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="ScoutingApp2020" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="_170_FRC_Scouting" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="712" height="984"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -918,7 +918,7 @@
         <!--Pit Scouting View Controller-->
         <scene sceneID="0jm-Xk-ZKj">
             <objects>
-                <viewController id="NX4-JB-Ugf" customClass="PitScoutingViewController" customModule="ScoutingApp2020" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="NX4-JB-Ugf" customClass="PitScoutingViewController" customModule="_170_FRC_Scouting" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Cda-eR-HCc">
                         <rect key="frame" x="0.0" y="0.0" width="712" height="984"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -1185,41 +1185,26 @@
         <!--Web Export View Controller-->
         <scene sceneID="UHn-VF-QMq">
             <objects>
-                <viewController id="wJw-Tr-3cZ" customClass="WebExportViewController" customModule="ScoutingApp2020" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="wJw-Tr-3cZ" customClass="WebExportViewController" customModule="_170_FRC_Scouting" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="EBX-fM-ZzE">
                         <rect key="frame" x="0.0" y="0.0" width="712" height="984"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3md-br-qjE">
-                                <rect key="frame" x="90" y="295" width="208" height="138"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" secondItem="3md-br-qjE" secondAttribute="height" multiplier="104:69" id="7mC-rk-vsc"/>
-                                    <constraint firstAttribute="height" constant="138" id="ZkJ-V9-kqW"/>
-                                    <constraint firstAttribute="width" constant="208" id="wUq-Qb-tmD"/>
-                                </constraints>
+                                <rect key="frame" x="213.5" y="369" width="285" height="246"/>
                                 <state key="normal" title="Match Data Website"/>
                                 <connections>
                                     <action selector="matchDataWebsite_Pressed:" destination="wJw-Tr-3cZ" eventType="touchUpInside" id="Ajc-kd-An6"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Website" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="i38-Fk-4vB">
-                                <rect key="frame" x="308" y="43" width="69" height="51"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="69" id="Apu-TJ-nIR"/>
-                                    <constraint firstAttribute="height" constant="51" id="cfo-tR-79k"/>
-                                    <constraint firstAttribute="width" secondItem="i38-Fk-4vB" secondAttribute="height" multiplier="23:17" id="mvq-E2-suD"/>
-                                </constraints>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Website Data" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="i38-Fk-4vB">
+                                <rect key="frame" x="71" y="40" width="570" height="147.5"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="51F-e4-QwA">
-                                <rect key="frame" x="432" y="295" width="208" height="138"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="138" id="Jjv-xc-zHc"/>
-                                    <constraint firstAttribute="width" secondItem="51F-e4-QwA" secondAttribute="height" multiplier="104:69" id="bxB-qN-qw9"/>
-                                    <constraint firstAttribute="width" constant="208" id="yGy-zD-bdC"/>
-                                </constraints>
+                                <rect key="frame" x="213.5" y="655" width="285" height="246"/>
                                 <state key="normal" title="Pit Scouting Website"/>
                                 <connections>
                                     <action selector="pitScoutingWebsite_Pressed:" destination="wJw-Tr-3cZ" eventType="touchUpInside" id="neW-6N-O05"/>
@@ -1228,12 +1213,18 @@
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
-                            <constraint firstItem="i38-Fk-4vB" firstAttribute="top" secondItem="QcJ-PA-XDN" secondAttribute="top" constant="43" id="1as-dp-bzF"/>
-                            <constraint firstItem="51F-e4-QwA" firstAttribute="top" secondItem="QcJ-PA-XDN" secondAttribute="top" constant="295" id="IRn-E2-fFx"/>
-                            <constraint firstItem="QcJ-PA-XDN" firstAttribute="trailing" secondItem="51F-e4-QwA" secondAttribute="trailing" constant="72" id="b8I-vr-I7a"/>
-                            <constraint firstItem="3md-br-qjE" firstAttribute="top" secondItem="QcJ-PA-XDN" secondAttribute="top" constant="295" id="pd5-as-svK"/>
-                            <constraint firstItem="3md-br-qjE" firstAttribute="leading" secondItem="QcJ-PA-XDN" secondAttribute="leading" constant="90" id="rIi-Ob-QJS"/>
-                            <constraint firstItem="QcJ-PA-XDN" firstAttribute="trailing" secondItem="i38-Fk-4vB" secondAttribute="trailing" constant="335" id="tSk-21-3FH"/>
+                            <constraint firstItem="i38-Fk-4vB" firstAttribute="height" secondItem="EBX-fM-ZzE" secondAttribute="height" multiplier="0.15" id="0Op-ec-TLY"/>
+                            <constraint firstItem="i38-Fk-4vB" firstAttribute="centerX" secondItem="EBX-fM-ZzE" secondAttribute="centerX" id="1PO-x7-Rhc"/>
+                            <constraint firstItem="3md-br-qjE" firstAttribute="centerX" secondItem="EBX-fM-ZzE" secondAttribute="centerX" id="5e2-IB-Mxa"/>
+                            <constraint firstItem="3md-br-qjE" firstAttribute="width" secondItem="51F-e4-QwA" secondAttribute="width" id="6ya-1n-Jj4"/>
+                            <constraint firstItem="3md-br-qjE" firstAttribute="centerY" secondItem="EBX-fM-ZzE" secondAttribute="centerY" id="CFw-9k-x1m"/>
+                            <constraint firstItem="51F-e4-QwA" firstAttribute="centerX" secondItem="3md-br-qjE" secondAttribute="centerX" id="Qye-Hf-Cjl"/>
+                            <constraint firstItem="51F-e4-QwA" firstAttribute="top" secondItem="3md-br-qjE" secondAttribute="bottom" constant="40" id="RIj-vg-1JF"/>
+                            <constraint firstItem="3md-br-qjE" firstAttribute="height" secondItem="EBX-fM-ZzE" secondAttribute="height" multiplier="0.25" id="Td8-Mt-BuN"/>
+                            <constraint firstItem="3md-br-qjE" firstAttribute="width" secondItem="EBX-fM-ZzE" secondAttribute="width" multiplier="0.4" id="aJG-vT-L7W"/>
+                            <constraint firstItem="i38-Fk-4vB" firstAttribute="width" secondItem="EBX-fM-ZzE" secondAttribute="width" multiplier="0.8" id="dL3-RN-Q87"/>
+                            <constraint firstItem="3md-br-qjE" firstAttribute="height" secondItem="51F-e4-QwA" secondAttribute="height" id="pEJ-gl-96Z"/>
+                            <constraint firstItem="i38-Fk-4vB" firstAttribute="top" secondItem="QcJ-PA-XDN" secondAttribute="top" constant="40" id="yTa-tg-d4c"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="QcJ-PA-XDN"/>
                     </view>
@@ -1241,6 +1232,7 @@
                     <connections>
                         <outlet property="matchDataWebsite" destination="3md-br-qjE" id="j71-f4-YmI"/>
                         <outlet property="pitScoutingWebsite" destination="51F-e4-QwA" id="T9G-mu-fT6"/>
+                        <outlet property="titleLabel" destination="i38-Fk-4vB" id="NfL-ze-tEH"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="UQ1-Gi-aOE" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -1250,7 +1242,7 @@
         <!--Export View Controller-->
         <scene sceneID="yEv-my-wII">
             <objects>
-                <viewController id="2Un-mF-tWk" customClass="QRExportViewController" customModule="ScoutingApp2020" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="2Un-mF-tWk" customClass="QRExportViewController" customModule="_170_FRC_Scouting" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="oi7-K0-pT7">
                         <rect key="frame" x="0.0" y="0.0" width="712" height="984"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -1280,7 +1272,7 @@
         <!--View Data View Controller-->
         <scene sceneID="JCf-Im-OnM">
             <objects>
-                <viewController id="mo4-ge-izQ" customClass="ViewDataViewController" customModule="ScoutingApp2020" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="mo4-ge-izQ" customClass="ViewDataViewController" customModule="_170_FRC_Scouting" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="ugI-hl-AGl">
                         <rect key="frame" x="0.0" y="0.0" width="712" height="984"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -1297,18 +1289,18 @@
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bF1-nt-s2F">
-                                                    <rect key="frame" x="407" y="5" width="285" height="65"/>
-                                                    <fontDescription key="fontDescription" name="Optima-BoldItalic" family="Optima" pointSize="30"/>
-                                                    <state key="normal" title="Change Entered Data"/>
+                                                    <rect key="frame" x="296" y="5" width="406" height="65"/>
+                                                    <fontDescription key="fontDescription" name="Optima-BoldItalic" family="Optima" pointSize="25"/>
+                                                    <state key="normal" title="Change Data"/>
                                                     <connections>
                                                         <action selector="changeDataPressed:" destination="mo4-ge-izQ" eventType="touchUpInside" id="yzK-H0-m91"/>
                                                     </connections>
                                                 </button>
                                             </subviews>
                                             <constraints>
-                                                <constraint firstAttribute="trailing" secondItem="bF1-nt-s2F" secondAttribute="trailing" constant="20" id="6LN-SE-qtY"/>
+                                                <constraint firstAttribute="trailing" secondItem="bF1-nt-s2F" secondAttribute="trailing" constant="10" id="6LN-SE-qtY"/>
                                                 <constraint firstAttribute="bottom" secondItem="bF1-nt-s2F" secondAttribute="bottom" constant="5" id="gs5-aB-4rU"/>
-                                                <constraint firstItem="bF1-nt-s2F" firstAttribute="width" secondItem="iyY-91-F5t" secondAttribute="width" multiplier="0.4" id="k4x-70-GnW"/>
+                                                <constraint firstItem="bF1-nt-s2F" firstAttribute="width" secondItem="iyY-91-F5t" secondAttribute="width" multiplier="0.57" id="k4x-70-GnW"/>
                                                 <constraint firstItem="bF1-nt-s2F" firstAttribute="top" secondItem="iyY-91-F5t" secondAttribute="top" constant="5" id="kYl-2f-U5f"/>
                                             </constraints>
                                         </tableViewCellContentView>
