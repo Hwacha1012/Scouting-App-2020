@@ -57,7 +57,7 @@
 		05264F4C23EE2A2E00B461D2 /* ViewDataViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewDataViewController.swift; sourceTree = "<group>"; };
 		05264F4E23EF32BC00B461D2 /* QRExportViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QRExportViewController.swift; sourceTree = "<group>"; };
 		05264F5223EF46B400B461D2 /* WebExportViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebExportViewController.swift; sourceTree = "<group>"; wrapsLines = 0; };
-		0529E03023C95094004707FD /* ScoutingApp2020.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ScoutingApp2020.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		0529E03023C95094004707FD /* 2170 FRC Scouting.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "2170 FRC Scouting.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		0529E03323C95094004707FD /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		0529E03523C95094004707FD /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		0529E03823C95094004707FD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -127,7 +127,7 @@
 		0529E03123C95094004707FD /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				0529E03023C95094004707FD /* ScoutingApp2020.app */,
+				0529E03023C95094004707FD /* 2170 FRC Scouting.app */,
 				0529E04723C95095004707FD /* ScoutingApp2020Tests.xctest */,
 				0529E05223C95095004707FD /* ScoutingApp2020UITests.xctest */,
 			);
@@ -202,7 +202,7 @@
 			);
 			name = ScoutingApp2020;
 			productName = ScoutingApp2020;
-			productReference = 0529E03023C95094004707FD /* ScoutingApp2020.app */;
+			productReference = 0529E03023C95094004707FD /* 2170 FRC Scouting.app */;
 			productType = "com.apple.product-type.application";
 		};
 		0529E04623C95095004707FD /* ScoutingApp2020Tests */ = {
@@ -523,8 +523,9 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = hwacha.ScoutingApp2020;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				MARKETING_VERSION = 3.0.0;
+				PRODUCT_BUNDLE_IDENTIFIER = hwacha.ScoutingApp;
+				PRODUCT_NAME = "2170 FRC Scouting";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -542,8 +543,9 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = hwacha.ScoutingApp2020;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				MARKETING_VERSION = 3.0.0;
+				PRODUCT_BUNDLE_IDENTIFIER = hwacha.ScoutingApp;
+				PRODUCT_NAME = "2170 FRC Scouting";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
