@@ -10,11 +10,9 @@ import UIKit
 import AVFoundation
 import Foundation
 
-///String's added to the main JSON string
+
 var dataToAdd = ""
-///No longer used, was used for testing of QR reader
 var arraySeperatedByCommas = [String]()
-///Also no longer used yet, was a different used
 var arraySeperatedByTeams = [String]()
 var arrayOfValues = [String]()
 var arrayOfMatchTeams = [String]()

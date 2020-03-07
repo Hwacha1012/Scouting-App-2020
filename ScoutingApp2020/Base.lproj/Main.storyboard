@@ -10,7 +10,7 @@
         <!--Match Data View Controller-->
         <scene sceneID="Nh7-Ic-Ny3">
             <objects>
-                <viewController id="Jqb-qg-JOm" customClass="MatchDataViewController" customModule="_170_FRC_Scouting" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="Jqb-qg-JOm" customClass="MatchDataViewController" customModule="ScoutingApp2020" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="psf-DU-iDx">
                         <rect key="frame" x="0.0" y="0.0" width="712" height="984"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -145,7 +145,7 @@
         <!--Enter Data2 View Controller-->
         <scene sceneID="VGL-oe-1at">
             <objects>
-                <viewController id="PyS-zn-Gn5" customClass="EnterData2ViewController" customModule="_170_FRC_Scouting" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="PyS-zn-Gn5" customClass="EnterData2ViewController" customModule="ScoutingApp2020" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="VaL-Xf-n67">
                         <rect key="frame" x="0.0" y="0.0" width="712" height="984"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -379,8 +379,7 @@
         <!--Tele Op View Controller-->
         <scene sceneID="r4T-Jr-nNv">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="HVx-Q2-9Z9" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-                <viewController id="VIn-uM-yeP" customClass="TeleOpViewController" customModule="_170_FRC_Scouting" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="VIn-uM-yeP" customClass="TeleOpViewController" customModule="ScoutingApp2020" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="iha-7B-CBu">
                         <rect key="frame" x="0.0" y="0.0" width="712" height="984"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -572,13 +571,14 @@
                         <segue destination="etm-05-Ffo" kind="show" identifier="TeleOpToFinish" id="MFm-cP-sNz"/>
                     </connections>
                 </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="HVx-Q2-9Z9" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="708.59375" y="-623.4375"/>
         </scene>
         <!--Finish Match Data View Controller-->
         <scene sceneID="2X4-5U-Ofe">
             <objects>
-                <viewController id="etm-05-Ffo" customClass="FinishMatchDataViewController" customModule="_170_FRC_Scouting" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="etm-05-Ffo" customClass="FinishMatchDataViewController" customModule="ScoutingApp2020" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="qv0-Rz-yym">
                         <rect key="frame" x="0.0" y="0.0" width="712" height="984"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -691,7 +691,7 @@
         <!--Reader View Controller-->
         <scene sceneID="Afc-6D-8Us">
             <objects>
-                <viewController id="iT5-if-dH4" customClass="QRReaderViewController" customModule="_170_FRC_Scouting" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="iT5-if-dH4" customClass="QRReaderViewController" customModule="ScoutingApp2020" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8BD-D7-XmK">
                         <rect key="frame" x="0.0" y="0.0" width="712" height="984"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -710,7 +710,7 @@
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="_170_FRC_Scouting" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="ScoutingApp2020" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="712" height="984"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -868,7 +868,7 @@
         <!--Pit Scouting View Controller-->
         <scene sceneID="0jm-Xk-ZKj">
             <objects>
-                <viewController id="NX4-JB-Ugf" customClass="PitScoutingViewController" customModule="_170_FRC_Scouting" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="NX4-JB-Ugf" customClass="PitScoutingViewController" customModule="ScoutingApp2020" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Cda-eR-HCc">
                         <rect key="frame" x="0.0" y="0.0" width="712" height="984"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -1135,7 +1135,7 @@
         <!--Web Export View Controller-->
         <scene sceneID="UHn-VF-QMq">
             <objects>
-                <viewController id="wJw-Tr-3cZ" customClass="WebExportViewController" customModule="_170_FRC_Scouting" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="wJw-Tr-3cZ" customClass="WebExportViewController" customModule="ScoutingApp2020" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="EBX-fM-ZzE">
                         <rect key="frame" x="0.0" y="0.0" width="712" height="984"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -1192,7 +1192,7 @@
         <!--Export View Controller-->
         <scene sceneID="yEv-my-wII">
             <objects>
-                <viewController id="2Un-mF-tWk" customClass="QRExportViewController" customModule="_170_FRC_Scouting" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="2Un-mF-tWk" customClass="QRExportViewController" customModule="ScoutingApp2020" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="oi7-K0-pT7">
                         <rect key="frame" x="0.0" y="0.0" width="712" height="984"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -1222,7 +1222,7 @@
         <!--View Data View Controller-->
         <scene sceneID="JCf-Im-OnM">
             <objects>
-                <viewController id="mo4-ge-izQ" customClass="ViewDataViewController" customModule="_170_FRC_Scouting" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="mo4-ge-izQ" customClass="ViewDataViewController" customModule="ScoutingApp2020" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="ugI-hl-AGl">
                         <rect key="frame" x="0.0" y="0.0" width="712" height="984"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>

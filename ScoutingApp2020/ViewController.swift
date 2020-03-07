@@ -58,17 +58,6 @@ var changeData = false //changing data from tableView?
 /// image that will be displayed as the QR code to be scanned
 var qrImage: UIImage!
 
-var innerMade = 0
-var innerMissed = 0
-var outerMade = 0
-var outerMissed = 0
-var rotationControl = ""
-var positionControl = ""
-var shootingLocation = ""
-var fouls = 0
-var techFouls = 0
-
-
 
 // "2170; 1", 
 
@@ -296,4 +285,4 @@ class ViewController: UIViewController {
 
 
 
-
+ 
