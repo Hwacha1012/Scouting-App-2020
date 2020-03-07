@@ -205,9 +205,9 @@ class FinishMatchDataViewController: UIViewController {
         if (notes.text == "Type here...") {
          notes.text = ""
          }
+        //"\(teamNumber)"
         
-        
-        FinishMatchDataViewController.matchDataObj = MatchData(teamText: "\(teamNumber)", matchText:"\(matchNumber)", scoutText:scoutName, autoLowGoal:autoLowGoal, autoHighGoal:autoHighGoal, autoTrenchBalls:autoTrenchBalls, autoShieldBalls:autoShieldBalls, controlPanel:controlPanel,climbing:"\(climbing)", autoLine:autoLine, teamColor:teamColor, notes:notes.text)
+        FinishMatchDataViewController.matchDataObj = MatchData(teamText: teamText, matchText:matchText, scoutText: scoutText, autoLowGoal:autoLowGoal, autoHighGoal:autoHighGoal, autoTrenchBalls:autoTrenchBalls , autoShieldBalls:autoShieldBalls, controlPanel:controlPanel, climbing:climbing, autoLine:autoLine, teamColor: teamColor,  notes: noteText, innerMade: innerMade, innerMissed: innerMissed, outerMade: outerMade, outerMissed: outerMissed, rotationControl: rotationControl, positionControl: positionControl, shootingLocation: shootingLocation, fouls: fouls, techFouls: techFouls)
         
             let payload =  Serialize(
                 teamText: FinishMatchDataViewController.matchDataObj.teamText,
@@ -220,13 +220,17 @@ class FinishMatchDataViewController: UIViewController {
                 controlPanel: FinishMatchDataViewController.matchDataObj.controlPanel,
                 climbing: FinishMatchDataViewController.matchDataObj.climbing,
                 autoLine: FinishMatchDataViewController.matchDataObj.autoLine,
-                climbBalanced: FinishMatchDataViewController.matchDataObj.climbBalanced,
-                climbingOtherRobots:FinishMatchDataViewController.matchDataObj.climbingOtherRobots,
-                lowGoalTaken: FinishMatchDataViewController.matchDataObj.lowGoalTaken,
-                lowGoalMade: FinishMatchDataViewController.matchDataObj.lowGoalMade,
-                highGoalTaken: FinishMatchDataViewController.matchDataObj.highGoalTaken,
-                highGoalMade:  FinishMatchDataViewController.matchDataObj.highGoalMade,
-                Notes:FinishMatchDataViewController.matchDataObj.notes,
+                teamColor: FinishMatchDataViewController.matchDataObj.teamColor,
+                Notes: FinishMatchDataViewController.matchDataObj.notes,
+                innerMade: FinishMatchDataViewController.matchDataObj.innerMade,
+                innerMissed: FinishMatchDataViewController.matchDataObj.innerMissed,
+                outerMade: FinishMatchDataViewController.matchDataObj.outerMade,
+                outerMissed: FinishMatchDataViewController.matchDataObj.outerMissed,
+                rotationControl: FinishMatchDataViewController.matchDataObj.rotationControl,
+                positionControl: FinishMatchDataViewController.matchDataObj.positionControl,
+                shootingLocation: FinishMatchDataViewController.matchDataObj.shootingLocation,
+                fouls: FinishMatchDataViewController.matchDataObj.fouls,
+                techFouls: FinishMatchDataViewController.matchDataObj.techFouls,
                 pretty: false)
         
              print(payload);

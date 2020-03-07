@@ -44,7 +44,7 @@ var highGoalMade = [0, 0, 0, 0] //low goals made in teleop array specifies locat
 /// The amount of high goal shots taken from each section of the field, e.g., [opponent's sector, close shield generator, trench run, far shield generator]
 var highGoalTaken = [0, 0, 0, 0] //shots taken intended for low goal taken in teleop array specifies location shot was taken from
 /// Whether or not the robot climbs, e.g., true
-var climbing = false //do they climb
+var climbing = "" //do they climb
 /// The amount of other robots they climbed with, e.g., 2
 var climbingOtherRobots = 0 //how many other robots they climbed with
 /// Whether or not the climb was balanced, e.g., true
