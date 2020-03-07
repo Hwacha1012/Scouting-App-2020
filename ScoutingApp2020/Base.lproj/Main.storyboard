@@ -501,7 +501,7 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <segments>
                                     <segment title="Nope"/>
-                                    <segment title="Position Attemnpted"/>
+                                    <segment title="Position Attempted"/>
                                     <segment title="Rotation Completed"/>
                                 </segments>
                             </segmentedControl>
@@ -647,7 +647,7 @@
                                 <rect key="frame" x="222" y="183" width="294" height="32"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <segments>
-                                    <segment title="Attempeted"/>
+                                    <segment title="Attempted"/>
                                     <segment title="Did not attempt"/>
                                 </segments>
                             </segmentedControl>
