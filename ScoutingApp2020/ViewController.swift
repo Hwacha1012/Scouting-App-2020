@@ -58,7 +58,6 @@ var changeData = false //changing data from tableView?
 /// image that will be displayed as the QR code to be scanned
 var qrImage: UIImage!
 
-
 // "2170; 1", 
 
 

@@ -69,6 +69,8 @@
 
 import UIKit
 
+var temp_string = ""
+
 
 
 class MatchData: Codable {
@@ -172,19 +174,26 @@ class FinishMatchDataViewController: UIViewController {
         temp_string += FinishMatchDataViewController.matchDataObj.scoutText
         temp_string += "&"
 */
+       
+        
        temp_string += "scoutText="
        temp_string += FinishMatchDataViewController.matchDataObj.scoutText
        temp_string += "&"
        temp_string += "matchText="
        temp_string += FinishMatchDataViewController.matchDataObj.matchText
        temp_string += "&"
-       temp_string += "scoutText="
-       temp_string += FinishMatchDataViewController.matchDataObj.scoutText
+       temp_string += "teamText="
+       temp_string += FinishMatchDataViewController.matchDataObj.teamText
        temp_string += "&"
-       temp_string += "scoutText="
-       temp_string += FinishMatchDataViewController.matchDataObj.scoutText
+       temp_string += "autoLowGoal="
+       temp_string += String(FinishMatchDataViewController.matchDataObj.autoLowGoal)
        temp_string += "&"
-            
+       temp_string += "autoHighGoal="
+       temp_string += String(FinishMatchDataViewController.matchDataObj.autoHighGoal)
+       temp_string += "&"
+       temp_string += "autoTrenchBalls="
+       temp_string += String(FinishMatchDataViewController.matchDataObj.autoTrenchBalls)
+       temp_string += "&"
         
         
         
