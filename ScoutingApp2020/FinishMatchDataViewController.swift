@@ -20,6 +20,8 @@ class MatchData: Codable {
     public var autoShieldBalls:Int
     public var controlPanel:String
     public var climbing:String
+    public var climbingBalanced:Bool
+    public var climbingOtherRobots:String
     public var autoLine:Bool
     public var teamColor:Bool
     public var notes:String
@@ -34,8 +36,10 @@ class MatchData: Codable {
     public var techFouls:Int
     
     
-    init(teamText: String, matchText:String, scoutText:String, autoLowGoal:Int, autoHighGoal:Int, autoTrenchBalls:Int, autoShieldBalls:Int, controlPanel:String,climbing:String, autoLine:Bool, teamColor:Bool, notes:String, innerMade:Int, innerMissed:Int, outerMade:Int, outerMissed:Int, rotationControl:String, positionControl:String, shootingLocation:String, fouls:Int, techFouls:Int) {
+    init(teamText: String, matchText:String, scoutText:String, autoLowGoal:Int, autoHighGoal:Int, autoTrenchBalls:Int, autoShieldBalls:Int, controlPanel:String,climbing:String, climbingBalanced:Bool, climbingOtherRobots:String, autoLine:Bool, teamColor:Bool, notes:String, innerMade:Int, innerMissed:Int, outerMade:Int, outerMissed:Int, rotationControl:String, positionControl:String, shootingLocation:String, fouls:Int, techFouls:Int) {
         self.climbing = climbing
+        self.climbingBalanced = climbingBalanced
+        self.climbingOtherRobots = climbingOtherRobots
         self.autoLine = autoLine
         self.matchText = matchText
         self.teamText = teamText
@@ -64,7 +68,7 @@ class MatchData: Codable {
 class FinishMatchDataViewController: UIViewController {
     @IBOutlet weak var titleLabel: UILabel!
     
-    public static var  matchDataObj = MatchData(teamText: "", matchText:"",  scoutText:"", autoLowGoal:0, autoHighGoal:0,  autoTrenchBalls:0, autoShieldBalls:0, controlPanel:"",climbing:"", autoLine:false,teamColor:true, notes:"Type here...", innerMade:0, innerMissed:0, outerMade:0, outerMissed:0, rotationControl:"", positionControl:"", shootingLocation:"", fouls:0, techFouls:0)
+    public static var  matchDataObj = MatchData(teamText: "", matchText:"",  scoutText:"", autoLowGoal:0, autoHighGoal:0,  autoTrenchBalls:0, autoShieldBalls:0, controlPanel:"",climbing:"", climbingBalanced:false,climbingOtherRobots: "",  autoLine:false,teamColor:true, notes:"Type here...", innerMade:0, innerMissed:0, outerMade:0, outerMissed:0, rotationControl:"", positionControl:"", shootingLocation:"", fouls:0, techFouls:0)
     
     public struct Throwable<T: Decodable>: Decodable {
         let result: Result<T, Error>
@@ -82,7 +86,7 @@ class FinishMatchDataViewController: UIViewController {
     
  
     
-    func Serialize(teamText:String, matchText:String, scoutText:String, autoLowGoal:Int, autoHighGoal:Int, autoTrenchBalls:Int , autoShieldBalls:Int, controlPanel:String, climbing:String,autoLine:Bool, teamColor:Bool, innerMade:Int,innerMissed:Int, outerMade:Int, outerMissed:Int, rotationControl:String, positionControl:String, shootingLocation:String, fouls:Int, techFouls:Int, Notes:String, pretty:Bool) -> String
+    func Serialize(teamText:String, matchText:String, scoutText:String, autoLowGoal:Int, autoHighGoal:Int, autoTrenchBalls:Int , autoShieldBalls:Int, controlPanel:String, climbing:String, climbingBalanced:Bool, climbingOtherRobots:String, autoLine:Bool, teamColor:Bool, innerMade:Int,innerMissed:Int, outerMade:Int, outerMissed:Int, rotationControl:String, positionControl:String, shootingLocation:String, fouls:Int, techFouls:Int, Notes:String, pretty:Bool) -> String
     {
         var noteText = notes.text
         if(noteText?.contains("Type here...") ?? false){
@@ -95,24 +99,40 @@ class FinishMatchDataViewController: UIViewController {
         }
         
         
-        FinishMatchDataViewController.matchDataObj = MatchData(teamText: teamText, matchText:matchText, scoutText:scoutText, autoLowGoal:autoLowGoal, autoHighGoal:autoHighGoal, autoTrenchBalls:autoTrenchBalls , autoShieldBalls:autoShieldBalls, controlPanel:controlPanel, climbing:climbing, autoLine:autoLine, teamColor: teamColor,  notes: noteText ?? "", innerMade: innerMade, innerMissed: innerMissed, outerMade: outerMade, outerMissed: outerMissed, rotationControl: rotationControl, positionControl: positionControl, shootingLocation: shootingLocation, fouls: fouls, techFouls: techFouls)
+        FinishMatchDataViewController.matchDataObj = MatchData(teamText: teamText, matchText:matchText, scoutText:scoutText, autoLowGoal:autoLowGoal, autoHighGoal:autoHighGoal, autoTrenchBalls:autoTrenchBalls , autoShieldBalls:autoShieldBalls, controlPanel:controlPanel, climbing:climbing,climbingBalanced: climbingBalanced, climbingOtherRobots: climbingOtherRobots, autoLine:autoLine, teamColor: teamColor,  notes: noteText ?? "", innerMade: innerMade, innerMissed: innerMissed, outerMade: outerMade, outerMissed: outerMissed, rotationControl: rotationControl, positionControl: positionControl, shootingLocation: shootingLocation, fouls: fouls, techFouls: techFouls)
         
         let encoder = JSONEncoder()
         if (pretty == true)
         {
         encoder.outputFormatting = .prettyPrinted // if necessary
         }
+//"robotNumber="+PitScoutingViewController.pitScoutingDataObj.robotNumber
 
-
-       let jStrArray = ["robotNumber="+PitScoutingViewController.pitScoutingDataObj.robotNumber,
-            "driveTrainType="+PitScoutingViewController.pitScoutingDataObj.driveTrainType,
-            "intake="+PitScoutingViewController.pitScoutingDataObj.intake,
-            "capacity="+PitScoutingViewController.pitScoutingDataObj.capacity,
-            "AutoLineCrossing="+String(PitScoutingViewController.pitScoutingDataObj.AutoLineCrossing),
-            "AutoHighBalls="+PitScoutingViewController.pitScoutingDataObj.AutoHighBalls,
-            "AutoLowBalls="+PitScoutingViewController.pitScoutingDataObj.AutoLowBalls,
-            "climb="+String(PitScoutingViewController.pitScoutingDataObj.climb),
-            "notes="+PitScoutingViewController.pitScoutingDataObj.notes]
+        let jStrArray = [
+            "teamNumber="FinishMatchDataViewController.matchDataObj.teamText,
+            "matchNumber="+FinishMatchDataViewController.matchDataObj.matchText,
+            "scoutName="+FinishMatchDataViewController.matchDataObj.scoutText,
+            "autoLowGoal="+FinishMatchDataViewController.matchDataObj.autoLowGoal,
+            "autoHighGoal="+FinishMatchDataViewController.matchDataObj.autoHighGoal,
+            "autoTrenchBalls="+FinishMatchDataViewController.matchDataObj.autoTrenchBalls,
+            "autoShieldBalls="+FinishMatchDataViewController.matchDataObj.autoShieldBalls,
+            "controlPanels="+FinishMatchDataViewController.matchDataObj.controlPanels,
+            "climbing="+FinishMatchDataViewController.matchDataObj.climbing,
+            "climbingBalanced="+FinishMatchDataViewController.matchDataObj.climbingBalanced,
+            "autoLine="+FinishMatchDataViewController.matchDataObj.autoLine,
+            "scoutName="+FinishMatchDataViewController.matchDataObj.scoutText,
+            "scoutName="+FinishMatchDataViewController.matchDataObj.scoutText,
+            "scoutName="+FinishMatchDataViewController.matchDataObj.scoutText,
+            "scoutName="+FinishMatchDataViewController.matchDataObj.scoutText,
+            "scoutName="+FinishMatchDataViewController.matchDataObj.scoutText,
+            "scoutName="+FinishMatchDataViewController.matchDataObj.scoutText,
+            "scoutName="+FinishMatchDataViewController.matchDataObj.scoutText,
+            "scoutName="+FinishMatchDataViewController.matchDataObj.scoutText,
+            "scoutName="+FinishMatchDataViewController.matchDataObj.scoutText,
+            "scoutName="+FinishMatchDataViewController.matchDataObj.scoutText,
+            
+            
+        ]
         
         
         
@@ -207,7 +227,7 @@ class FinishMatchDataViewController: UIViewController {
          }
         //"\(teamNumber)"
         
-        FinishMatchDataViewController.matchDataObj = MatchData(teamText: teamText, matchText:matchText, scoutText: scoutText, autoLowGoal:autoLowGoal, autoHighGoal:autoHighGoal, autoTrenchBalls:autoTrenchBalls , autoShieldBalls:autoShieldBalls, controlPanel:controlPanel, climbing:climbing, autoLine:autoLine, teamColor: teamColor,  notes: noteText, innerMade: innerMade, innerMissed: innerMissed, outerMade: outerMade, outerMissed: outerMissed, rotationControl: rotationControl, positionControl: positionControl, shootingLocation: shootingLocation, fouls: fouls, techFouls: techFouls)
+        FinishMatchDataViewController.matchDataObj = MatchData(teamText: teamText, matchText:matchText, scoutText: scoutText, autoLowGoal:autoLowGoal, autoHighGoal:autoHighGoal, autoTrenchBalls:autoTrenchBalls , autoShieldBalls:autoShieldBalls, controlPanel:controlPanel, climbing:climbing, climbingBalanced: climbingBalanced, climbingOtherRobots: climbingOtherRobots,  autoLine:autoLine, teamColor: teamColor,  notes: noteText, innerMade: innerMade, innerMissed: innerMissed, outerMade: outerMade, outerMissed: outerMissed, rotationControl: rotationControl, positionControl: positionControl, shootingLocation: shootingLocation, fouls: fouls, techFouls: techFouls)
         
             let payload =  Serialize(
                 teamText: FinishMatchDataViewController.matchDataObj.teamText,
@@ -219,6 +239,8 @@ class FinishMatchDataViewController: UIViewController {
                 autoShieldBalls: FinishMatchDataViewController.matchDataObj.autoShieldBalls,
                 controlPanel: FinishMatchDataViewController.matchDataObj.controlPanel,
                 climbing: FinishMatchDataViewController.matchDataObj.climbing,
+                climbingBalanced: FinishMatchDataViewController.matchDataObj.climbingBalanced,
+                climbingOtherRobots: FinishMatchDataViewController.matchDataObj.climbingOtherRobots,
                 autoLine: FinishMatchDataViewController.matchDataObj.autoLine,
                 teamColor: FinishMatchDataViewController.matchDataObj.teamColor,
                 Notes: FinishMatchDataViewController.matchDataObj.notes,
