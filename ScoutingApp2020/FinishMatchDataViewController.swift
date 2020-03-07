@@ -6,6 +6,67 @@
 //  Copyright © 2020 Leonard Liu. All rights reserved.
 //
 
+
+/*
+   temp_string += "scoutText="
+         temp_string += FinishMatchDataViewController.matchDataObj.scoutText
+         temp_string += "&"
+         
+         
+         
+         
+         temp_string += "autoLowGoal="
+         temp_string += String(FinishMatchDataViewController.matchDataObj.autoLowGoal)
+         temp_string += "&"
+ @ -137,40 +137,42 @@ class FinishMatchDataViewController: UIViewController {
+         temp_string += "lowGoalMade="
+         temp_string += String(FinishMatchDataViewController.matchDataObj.lowGoalMade)
+         temp_string += "&"
+         temp_string += "highGoalTaken="
+         temp_string += "["
+         temp_string += "highGoalTaken_0="
+         temp_string  += String(FinishMatchDataViewController.matchDataObj.highGoalTaken[0])
+         temp_string  += ","
+         temp_string  += "&"
+         temp_string += "highGoalTaken_1="
+         temp_string  += String(FinishMatchDataViewController.matchDataObj.highGoalTaken[1])
+         temp_string  += ","
+         temp_string  += "&"
+         temp_string += "highGoalTaken_2="
+         temp_string  += String(FinishMatchDataViewController.matchDataObj.highGoalTaken[2])
+         temp_string  += ","
+         temp_string  += "&"
+         temp_string += "highGoalTaken_3="
+         temp_string  += String(FinishMatchDataViewController.matchDataObj.highGoalTaken[3])
+         temp_string += "]"
+         temp_string += "&"
+         temp_string += "highGoalMade="
+         temp_string += "["
+         temp_string  += "&"
+         temp_string += "highGoalMade_0="
+         temp_string  += String(FinishMatchDataViewController.matchDataObj.highGoalMade[0])
+         temp_string  += ","
+         temp_string  += "&"
+         temp_string += "highGoalMade_1="
+         temp_string  += String(FinishMatchDataViewController.matchDataObj.highGoalMade[1])
+         temp_string  += ","
+         temp_string  += "&"
+         temp_string += "highGoalMade_2="
+         temp_string  += String(FinishMatchDataViewController.matchDataObj.highGoalMade[2])
+         temp_string  += ","
+         temp_string  += "&"
+         temp_string += "highGoalMade_3="
+         temp_string  += String(FinishMatchDataViewController.matchDataObj.highGoalMade[3])
+         temp_string += "]"
+         temp_string += "&"
+         temp_string += "notes="
+         temp_string += String(FinishMatchDataViewController.matchDataObj.notes)
+         let jsonString = temp_string
+         print(jsonString)
+ 
+ 
+ */
+
 import UIKit
 
 
@@ -107,36 +168,28 @@ class FinishMatchDataViewController: UIViewController {
         encoder.outputFormatting = .prettyPrinted // if necessary
         }
 //"robotNumber="+PitScoutingViewController.pitScoutingDataObj.robotNumber
-
-        let jStrArray = [
-            "teamNumber="FinishMatchDataViewController.matchDataObj.teamText,
-            "matchNumber="+FinishMatchDataViewController.matchDataObj.matchText,
-            "scoutName="+FinishMatchDataViewController.matchDataObj.scoutText,
-            "autoLowGoal="+FinishMatchDataViewController.matchDataObj.autoLowGoal,
-            "autoHighGoal="+FinishMatchDataViewController.matchDataObj.autoHighGoal,
-            "autoTrenchBalls="+FinishMatchDataViewController.matchDataObj.autoTrenchBalls,
-            "autoShieldBalls="+FinishMatchDataViewController.matchDataObj.autoShieldBalls,
-            "controlPanels="+FinishMatchDataViewController.matchDataObj.controlPanels,
-            "climbing="+FinishMatchDataViewController.matchDataObj.climbing,
-            "climbingBalanced="+FinishMatchDataViewController.matchDataObj.climbingBalanced,
-            "autoLine="+FinishMatchDataViewController.matchDataObj.autoLine,
-            "scoutName="+FinishMatchDataViewController.matchDataObj.scoutText,
-            "scoutName="+FinishMatchDataViewController.matchDataObj.scoutText,
-            "scoutName="+FinishMatchDataViewController.matchDataObj.scoutText,
-            "scoutName="+FinishMatchDataViewController.matchDataObj.scoutText,
-            "scoutName="+FinishMatchDataViewController.matchDataObj.scoutText,
-            "scoutName="+FinishMatchDataViewController.matchDataObj.scoutText,
-            "scoutName="+FinishMatchDataViewController.matchDataObj.scoutText,
-            "scoutName="+FinishMatchDataViewController.matchDataObj.scoutText,
-            "scoutName="+FinishMatchDataViewController.matchDataObj.scoutText,
-            "scoutName="+FinishMatchDataViewController.matchDataObj.scoutText,
+        /* temp_string += "scoutText="
+        temp_string += FinishMatchDataViewController.matchDataObj.scoutText
+        temp_string += "&"
+*/
+       temp_string += "scoutText="
+       temp_string += FinishMatchDataViewController.matchDataObj.scoutText
+       temp_string += "&"
+       temp_string += "matchText="
+       temp_string += FinishMatchDataViewController.matchDataObj.matchText
+       temp_string += "&"
+       temp_string += "scoutText="
+       temp_string += FinishMatchDataViewController.matchDataObj.scoutText
+       temp_string += "&"
+       temp_string += "scoutText="
+       temp_string += FinishMatchDataViewController.matchDataObj.scoutText
+       temp_string += "&"
             
-            
-        ]
         
         
         
-        let jsonString = jStrArray.joined(separator: "&")
+        
+        let jsonString = temp_string
         print(jsonString)
         //let s = send_post(jsonStr:jsonString)
         //let s2 = send_get()
