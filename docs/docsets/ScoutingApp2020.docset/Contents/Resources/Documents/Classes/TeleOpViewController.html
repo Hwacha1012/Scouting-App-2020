@@ -1,0 +1,1457 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>TeleOpViewController Class Reference</title>
+    <link rel="stylesheet" type="text/css" href="../css/jazzy.css" />
+    <link rel="stylesheet" type="text/css" href="../css/highlight.css" />
+    <meta charset='utf-8'>
+    <script src="../js/jquery.min.js" defer></script>
+    <script src="../js/jazzy.js" defer></script>
+    
+  </head>
+  <body>
+    <a name="//apple_ref/swift/Class/TeleOpViewController" class="dashAnchor"></a>
+    <a title="TeleOpViewController Class Reference"></a>
+    <header>
+      <div class="content-wrapper">
+        <p><a href="../index.html">ScoutingApp2020 1.0 Docs</a> (20% documented)</p>
+      </div>
+    </header>
+    <div class="content-wrapper">
+      <p id="breadcrumbs">
+        <a href="../index.html">ScoutingApp2020 Reference</a>
+        <img id="carat" src="../img/carat.png" />
+        TeleOpViewController Class Reference
+      </p>
+    </div>
+    <div class="content-wrapper">
+      <nav class="sidebar">
+        <ul class="nav-groups">
+          <li class="nav-group-name">
+            <a href="../Classes.html">Classes</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Classes/AppDelegate.html">AppDelegate</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/EnterData2ViewController.html">EnterData2ViewController</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/FinishMatchDataViewController.html">FinishMatchDataViewController</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/FinishMatchDataViewController/Throwable.html">– Throwable</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/MatchData.html">MatchData</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/MatchDataViewController.html">MatchDataViewController</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/MatchDataWebsiteViewController.html">MatchDataWebsiteViewController</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/PitScoutingData.html">PitScoutingData</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/PitScoutingViewController.html">PitScoutingViewController</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/PitScoutingViewController/Throwable.html">– Throwable</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/PitScoutingWebsiteViewController.html">PitScoutingWebsiteViewController</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/QRExportViewController.html">QRExportViewController</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/QRReaderViewController.html">QRReaderViewController</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/TeleOpViewController.html">TeleOpViewController</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/ViewController.html">ViewController</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/ViewDataViewController.html">ViewDataViewController</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/WebExportViewController.html">WebExportViewController</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="../Global%20Variables.html">Global Variables</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Global%20Variables.html#/s:15ScoutingApp202017arrayOfMatchTeamsSaySSGvp">arrayOfMatchTeams</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Global%20Variables.html#/s:15ScoutingApp202015arrayOfPitTeamsSaySSGvp">arrayOfPitTeams</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Global%20Variables.html#/s:15ScoutingApp202017arrayOfSuperTeamsSaySSGvp">arrayOfSuperTeams</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Global%20Variables.html#/s:15ScoutingApp202013arrayOfValuesSaySSGvp">arrayOfValues</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Global%20Variables.html#/s:15ScoutingApp202022arraySeperatedByCommasSaySSGvp">arraySeperatedByCommas</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Global%20Variables.html#/s:15ScoutingApp202021arraySeperatedByTeamsSaySSGvp">arraySeperatedByTeams</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Global%20Variables.html#/s:15ScoutingApp202012autoHighGoalSivp">autoHighGoal</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Global%20Variables.html#/s:15ScoutingApp20208autoLineSbvp">autoLine</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Global%20Variables.html#/s:15ScoutingApp202011autoLowGoalSivp">autoLowGoal</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Global%20Variables.html#/s:15ScoutingApp202015autoShieldBallsSivp">autoShieldBalls</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Global%20Variables.html#/s:15ScoutingApp202015autoTrenchBallsSivp">autoTrenchBalls</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Global%20Variables.html#/s:15ScoutingApp20209breakLoopSbSgvp">breakLoop</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Global%20Variables.html#/s:15ScoutingApp202010changeDataSbvp">changeData</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Global%20Variables.html#/s:15ScoutingApp202013climbBalancedSbvp">climbBalanced</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Global%20Variables.html#/s:15ScoutingApp20208climbingSbvp">climbing</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Global%20Variables.html#/s:15ScoutingApp202019climbingOtherRobotsSivp">climbingOtherRobots</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Global%20Variables.html#/s:15ScoutingApp202012controlPanelSSvp">controlPanel</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Global%20Variables.html#/s:15ScoutingApp20209dataToAddSSvp">dataToAdd</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Global%20Variables.html#/s:15ScoutingApp202012highGoalMadeSaySiGvp">highGoalMade</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Global%20Variables.html#/s:15ScoutingApp202013highGoalTakenSaySiGvp">highGoalTaken</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Global%20Variables.html#/s:15ScoutingApp202010intakeTypeSSvp">intakeType</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Global%20Variables.html#/s:15ScoutingApp20208locationSivp">location</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Global%20Variables.html#/s:15ScoutingApp202011lowGoalMadeSivp">lowGoalMade</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Global%20Variables.html#/s:15ScoutingApp202012lowGoalTakenSivp">lowGoalTaken</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Global%20Variables.html#/s:15ScoutingApp202011matchNumberSivp">matchNumber</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Global%20Variables.html#/s:15ScoutingApp202013matchPositionSivp">matchPosition</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Global%20Variables.html#/s:15ScoutingApp20205notesSSvp">notes</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Global%20Variables.html#/s:15ScoutingApp202010pSTeamNameSSvp">pSTeamName</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Global%20Variables.html#/s:15ScoutingApp202012pitScoutListSaySSGvp">pitScoutList</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Global%20Variables.html#/s:15ScoutingApp20207qrImageSo7UIImageCSgvp">qrImage</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Global%20Variables.html#/s:15ScoutingApp20207runTypeSivp">runType</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Global%20Variables.html#/s:15ScoutingApp20209scoutNameSSvp">scoutName</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Global%20Variables.html#/s:15ScoutingApp20209teamColorSbvp">teamColor</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Global%20Variables.html#/s:15ScoutingApp20208teamListSaySSGvp">teamList</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Global%20Variables.html#/s:15ScoutingApp20208teamNameSSvp">teamName</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Global%20Variables.html#/s:15ScoutingApp202010teamNumberSivp">teamNumber</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Global%20Variables.html#/s:15ScoutingApp202020teamNumberFromButtonSSvp">teamNumberFromButton</a>
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </nav>
+      <article class="main-content">
+        <section>
+          <section class="section">
+            <h1>TeleOpViewController</h1>
+              <div class="declaration">
+                <div class="language">
+                  <pre class="highlight swift"><code><span class="kd">class</span> <span class="kt">TeleOpViewController</span> <span class="p">:</span> <span class="kt">UIViewController</span></code></pre>
+
+                </div>
+              </div>
+            <p>Undocumented</p>
+
+          </section>
+          <section class="section task-group-section">
+            <div class="task-group">
+              <ul>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:15ScoutingApp202020TeleOpViewControllerC8tempMadeSivp"></a>
+                    <a name="//apple_ref/swift/Property/tempMade" class="dashAnchor"></a>
+                    <a class="token" href="#/s:15ScoutingApp202020TeleOpViewControllerC8tempMadeSivp">tempMade</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="k">var</span> <span class="nv">tempMade</span><span class="p">:</span> <span class="kt">Int</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:15ScoutingApp202020TeleOpViewControllerC9tempTakenSivp"></a>
+                    <a name="//apple_ref/swift/Property/tempTaken" class="dashAnchor"></a>
+                    <a class="token" href="#/s:15ScoutingApp202020TeleOpViewControllerC9tempTakenSivp">tempTaken</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="k">var</span> <span class="nv">tempTaken</span><span class="p">:</span> <span class="kt">Int</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:@M@ScoutingApp2020@objc(cs)TeleOpViewController(py)closeButton"></a>
+                    <a name="//apple_ref/swift/Property/closeButton" class="dashAnchor"></a>
+                    <a class="token" href="#/c:@M@ScoutingApp2020@objc(cs)TeleOpViewController(py)closeButton">closeButton</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">@IBOutlet</span>
+<span class="k">weak</span> <span class="k">var</span> <span class="nv">closeButton</span><span class="p">:</span> <span class="kt">UIButton</span><span class="o">!</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:@M@ScoutingApp2020@objc(cs)TeleOpViewController(py)sortaCloseButton"></a>
+                    <a name="//apple_ref/swift/Property/sortaCloseButton" class="dashAnchor"></a>
+                    <a class="token" href="#/c:@M@ScoutingApp2020@objc(cs)TeleOpViewController(py)sortaCloseButton">sortaCloseButton</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">@IBOutlet</span>
+<span class="k">weak</span> <span class="k">var</span> <span class="nv">sortaCloseButton</span><span class="p">:</span> <span class="kt">UIButton</span><span class="o">!</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:@M@ScoutingApp2020@objc(cs)TeleOpViewController(py)trenchButton"></a>
+                    <a name="//apple_ref/swift/Property/trenchButton" class="dashAnchor"></a>
+                    <a class="token" href="#/c:@M@ScoutingApp2020@objc(cs)TeleOpViewController(py)trenchButton">trenchButton</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">@IBOutlet</span>
+<span class="k">weak</span> <span class="k">var</span> <span class="nv">trenchButton</span><span class="p">:</span> <span class="kt">UIButton</span><span class="o">!</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:@M@ScoutingApp2020@objc(cs)TeleOpViewController(py)farButton"></a>
+                    <a name="//apple_ref/swift/Property/farButton" class="dashAnchor"></a>
+                    <a class="token" href="#/c:@M@ScoutingApp2020@objc(cs)TeleOpViewController(py)farButton">farButton</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">@IBOutlet</span>
+<span class="k">weak</span> <span class="k">var</span> <span class="nv">farButton</span><span class="p">:</span> <span class="kt">UIButton</span><span class="o">!</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:@M@ScoutingApp2020@objc(cs)TeleOpViewController(py)climbingButton"></a>
+                    <a name="//apple_ref/swift/Property/climbingButton" class="dashAnchor"></a>
+                    <a class="token" href="#/c:@M@ScoutingApp2020@objc(cs)TeleOpViewController(py)climbingButton">climbingButton</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">@IBOutlet</span>
+<span class="k">weak</span> <span class="k">var</span> <span class="nv">climbingButton</span><span class="p">:</span> <span class="kt">UIButton</span><span class="o">!</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:@M@ScoutingApp2020@objc(cs)TeleOpViewController(py)controlArrow"></a>
+                    <a name="//apple_ref/swift/Property/controlArrow" class="dashAnchor"></a>
+                    <a class="token" href="#/c:@M@ScoutingApp2020@objc(cs)TeleOpViewController(py)controlArrow">controlArrow</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">@IBOutlet</span>
+<span class="k">weak</span> <span class="k">var</span> <span class="nv">controlArrow</span><span class="p">:</span> <span class="kt">UIImageView</span><span class="o">!</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:@M@ScoutingApp2020@objc(cs)TeleOpViewController(py)lowGoalArrow"></a>
+                    <a name="//apple_ref/swift/Property/lowGoalArrow" class="dashAnchor"></a>
+                    <a class="token" href="#/c:@M@ScoutingApp2020@objc(cs)TeleOpViewController(py)lowGoalArrow">lowGoalArrow</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">@IBOutlet</span>
+<span class="k">weak</span> <span class="k">var</span> <span class="nv">lowGoalArrow</span><span class="p">:</span> <span class="kt">UIImageView</span><span class="o">!</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:@M@ScoutingApp2020@objc(cs)TeleOpViewController(py)controlPanelButton"></a>
+                    <a name="//apple_ref/swift/Property/controlPanelButton" class="dashAnchor"></a>
+                    <a class="token" href="#/c:@M@ScoutingApp2020@objc(cs)TeleOpViewController(py)controlPanelButton">controlPanelButton</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">@IBOutlet</span>
+<span class="k">weak</span> <span class="k">var</span> <span class="nv">controlPanelButton</span><span class="p">:</span> <span class="kt">UIButton</span><span class="o">!</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:@M@ScoutingApp2020@objc(cs)TeleOpViewController(py)lowGoalButton"></a>
+                    <a name="//apple_ref/swift/Property/lowGoalButton" class="dashAnchor"></a>
+                    <a class="token" href="#/c:@M@ScoutingApp2020@objc(cs)TeleOpViewController(py)lowGoalButton">lowGoalButton</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">@IBOutlet</span>
+<span class="k">weak</span> <span class="k">var</span> <span class="nv">lowGoalButton</span><span class="p">:</span> <span class="kt">UIButton</span><span class="o">!</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:@M@ScoutingApp2020@objc(cs)TeleOpViewController(py)backgroundImage"></a>
+                    <a name="//apple_ref/swift/Property/backgroundImage" class="dashAnchor"></a>
+                    <a class="token" href="#/c:@M@ScoutingApp2020@objc(cs)TeleOpViewController(py)backgroundImage">backgroundImage</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">@IBOutlet</span>
+<span class="k">weak</span> <span class="k">var</span> <span class="nv">backgroundImage</span><span class="p">:</span> <span class="kt">UIImageView</span><span class="o">!</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:@M@ScoutingApp2020@objc(cs)TeleOpViewController(py)nextButton"></a>
+                    <a name="//apple_ref/swift/Property/nextButton" class="dashAnchor"></a>
+                    <a class="token" href="#/c:@M@ScoutingApp2020@objc(cs)TeleOpViewController(py)nextButton">nextButton</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">@IBOutlet</span>
+<span class="k">weak</span> <span class="k">var</span> <span class="nv">nextButton</span><span class="p">:</span> <span class="kt">UIButton</span><span class="o">!</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:@M@ScoutingApp2020@objc(cs)TeleOpViewController(py)wheelSegmentedControl"></a>
+                    <a name="//apple_ref/swift/Property/wheelSegmentedControl" class="dashAnchor"></a>
+                    <a class="token" href="#/c:@M@ScoutingApp2020@objc(cs)TeleOpViewController(py)wheelSegmentedControl">wheelSegmentedControl</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">@IBOutlet</span>
+<span class="k">weak</span> <span class="k">var</span> <span class="nv">wheelSegmentedControl</span><span class="p">:</span> <span class="kt">UISegmentedControl</span><span class="o">!</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:@M@ScoutingApp2020@objc(cs)TeleOpViewController(im)closeButtonPressed:"></a>
+                    <a name="//apple_ref/swift/Method/closeButtonPressed(_:)" class="dashAnchor"></a>
+                    <a class="token" href="#/c:@M@ScoutingApp2020@objc(cs)TeleOpViewController(im)closeButtonPressed:">closeButtonPressed(_:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">@IBAction</span>
+<span class="kd">func</span> <span class="nf">closeButtonPressed</span><span class="p">(</span><span class="n">_</span> <span class="nv">sender</span><span class="p">:</span> <span class="kt">Any</span><span class="p">)</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:@M@ScoutingApp2020@objc(cs)TeleOpViewController(im)sortaCloseButtonPressed:"></a>
+                    <a name="//apple_ref/swift/Method/sortaCloseButtonPressed(_:)" class="dashAnchor"></a>
+                    <a class="token" href="#/c:@M@ScoutingApp2020@objc(cs)TeleOpViewController(im)sortaCloseButtonPressed:">sortaCloseButtonPressed(_:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">@IBAction</span>
+<span class="kd">func</span> <span class="nf">sortaCloseButtonPressed</span><span class="p">(</span><span class="n">_</span> <span class="nv">sender</span><span class="p">:</span> <span class="kt">Any</span><span class="p">)</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:@M@ScoutingApp2020@objc(cs)TeleOpViewController(im)trenchButtonPressed:"></a>
+                    <a name="//apple_ref/swift/Method/trenchButtonPressed(_:)" class="dashAnchor"></a>
+                    <a class="token" href="#/c:@M@ScoutingApp2020@objc(cs)TeleOpViewController(im)trenchButtonPressed:">trenchButtonPressed(_:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">@IBAction</span>
+<span class="kd">func</span> <span class="nf">trenchButtonPressed</span><span class="p">(</span><span class="n">_</span> <span class="nv">sender</span><span class="p">:</span> <span class="kt">Any</span><span class="p">)</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:@M@ScoutingApp2020@objc(cs)TeleOpViewController(im)farButtonPressed:"></a>
+                    <a name="//apple_ref/swift/Method/farButtonPressed(_:)" class="dashAnchor"></a>
+                    <a class="token" href="#/c:@M@ScoutingApp2020@objc(cs)TeleOpViewController(im)farButtonPressed:">farButtonPressed(_:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">@IBAction</span>
+<span class="kd">func</span> <span class="nf">farButtonPressed</span><span class="p">(</span><span class="n">_</span> <span class="nv">sender</span><span class="p">:</span> <span class="kt">Any</span><span class="p">)</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:@M@ScoutingApp2020@objc(cs)TeleOpViewController(im)climbingButtonPressed:"></a>
+                    <a name="//apple_ref/swift/Method/climbingButtonPressed(_:)" class="dashAnchor"></a>
+                    <a class="token" href="#/c:@M@ScoutingApp2020@objc(cs)TeleOpViewController(im)climbingButtonPressed:">climbingButtonPressed(_:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">@IBAction</span>
+<span class="kd">func</span> <span class="nf">climbingButtonPressed</span><span class="p">(</span><span class="n">_</span> <span class="nv">sender</span><span class="p">:</span> <span class="kt">Any</span><span class="p">)</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:@M@ScoutingApp2020@objc(cs)TeleOpViewController(im)controlPanelButtonPressed:"></a>
+                    <a name="//apple_ref/swift/Method/controlPanelButtonPressed(_:)" class="dashAnchor"></a>
+                    <a class="token" href="#/c:@M@ScoutingApp2020@objc(cs)TeleOpViewController(im)controlPanelButtonPressed:">controlPanelButtonPressed(_:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">@IBAction</span>
+<span class="kd">func</span> <span class="nf">controlPanelButtonPressed</span><span class="p">(</span><span class="n">_</span> <span class="nv">sender</span><span class="p">:</span> <span class="kt">Any</span><span class="p">)</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:@M@ScoutingApp2020@objc(cs)TeleOpViewController(im)lowGoalButtonPressed:"></a>
+                    <a name="//apple_ref/swift/Method/lowGoalButtonPressed(_:)" class="dashAnchor"></a>
+                    <a class="token" href="#/c:@M@ScoutingApp2020@objc(cs)TeleOpViewController(im)lowGoalButtonPressed:">lowGoalButtonPressed(_:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">@IBAction</span>
+<span class="kd">func</span> <span class="nf">lowGoalButtonPressed</span><span class="p">(</span><span class="n">_</span> <span class="nv">sender</span><span class="p">:</span> <span class="kt">Any</span><span class="p">)</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:@M@ScoutingApp2020@objc(cs)TeleOpViewController(im)nextButtonPressed:"></a>
+                    <a name="//apple_ref/swift/Method/nextButtonPressed(_:)" class="dashAnchor"></a>
+                    <a class="token" href="#/c:@M@ScoutingApp2020@objc(cs)TeleOpViewController(im)nextButtonPressed:">nextButtonPressed(_:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">@IBAction</span>
+<span class="kd">func</span> <span class="nf">nextButtonPressed</span><span class="p">(</span><span class="n">_</span> <span class="nv">sender</span><span class="p">:</span> <span class="kt">Any</span><span class="p">)</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:@M@ScoutingApp2020@objc(cs)TeleOpViewController(py)popupView"></a>
+                    <a name="//apple_ref/swift/Property/popupView" class="dashAnchor"></a>
+                    <a class="token" href="#/c:@M@ScoutingApp2020@objc(cs)TeleOpViewController(py)popupView">popupView</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">@IBOutlet</span>
+<span class="k">weak</span> <span class="k">var</span> <span class="nv">popupView</span><span class="p">:</span> <span class="kt">UIView</span><span class="o">!</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:@M@ScoutingApp2020@objc(cs)TeleOpViewController(py)popupLabel1"></a>
+                    <a name="//apple_ref/swift/Property/popupLabel1" class="dashAnchor"></a>
+                    <a class="token" href="#/c:@M@ScoutingApp2020@objc(cs)TeleOpViewController(py)popupLabel1">popupLabel1</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">@IBOutlet</span>
+<span class="k">weak</span> <span class="k">var</span> <span class="nv">popupLabel1</span><span class="p">:</span> <span class="kt">UILabel</span><span class="o">!</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:@M@ScoutingApp2020@objc(cs)TeleOpViewController(py)popupLabel2"></a>
+                    <a name="//apple_ref/swift/Property/popupLabel2" class="dashAnchor"></a>
+                    <a class="token" href="#/c:@M@ScoutingApp2020@objc(cs)TeleOpViewController(py)popupLabel2">popupLabel2</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">@IBOutlet</span>
+<span class="k">weak</span> <span class="k">var</span> <span class="nv">popupLabel2</span><span class="p">:</span> <span class="kt">UILabel</span><span class="o">!</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:@M@ScoutingApp2020@objc(cs)TeleOpViewController(py)popupAdd1"></a>
+                    <a name="//apple_ref/swift/Property/popupAdd1" class="dashAnchor"></a>
+                    <a class="token" href="#/c:@M@ScoutingApp2020@objc(cs)TeleOpViewController(py)popupAdd1">popupAdd1</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">@IBOutlet</span>
+<span class="k">weak</span> <span class="k">var</span> <span class="nv">popupAdd1</span><span class="p">:</span> <span class="kt">UIButton</span><span class="o">!</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:@M@ScoutingApp2020@objc(cs)TeleOpViewController(py)popupMinus1"></a>
+                    <a name="//apple_ref/swift/Property/popupMinus1" class="dashAnchor"></a>
+                    <a class="token" href="#/c:@M@ScoutingApp2020@objc(cs)TeleOpViewController(py)popupMinus1">popupMinus1</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">@IBOutlet</span>
+<span class="k">weak</span> <span class="k">var</span> <span class="nv">popupMinus1</span><span class="p">:</span> <span class="kt">UIButton</span><span class="o">!</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:@M@ScoutingApp2020@objc(cs)TeleOpViewController(py)popupLabel3"></a>
+                    <a name="//apple_ref/swift/Property/popupLabel3" class="dashAnchor"></a>
+                    <a class="token" href="#/c:@M@ScoutingApp2020@objc(cs)TeleOpViewController(py)popupLabel3">popupLabel3</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">@IBOutlet</span>
+<span class="k">weak</span> <span class="k">var</span> <span class="nv">popupLabel3</span><span class="p">:</span> <span class="kt">UILabel</span><span class="o">!</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:@M@ScoutingApp2020@objc(cs)TeleOpViewController(py)popupAdd2"></a>
+                    <a name="//apple_ref/swift/Property/popupAdd2" class="dashAnchor"></a>
+                    <a class="token" href="#/c:@M@ScoutingApp2020@objc(cs)TeleOpViewController(py)popupAdd2">popupAdd2</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">@IBOutlet</span>
+<span class="k">weak</span> <span class="k">var</span> <span class="nv">popupAdd2</span><span class="p">:</span> <span class="kt">UIButton</span><span class="o">!</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:@M@ScoutingApp2020@objc(cs)TeleOpViewController(py)popupMinus2"></a>
+                    <a name="//apple_ref/swift/Property/popupMinus2" class="dashAnchor"></a>
+                    <a class="token" href="#/c:@M@ScoutingApp2020@objc(cs)TeleOpViewController(py)popupMinus2">popupMinus2</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">@IBOutlet</span>
+<span class="k">weak</span> <span class="k">var</span> <span class="nv">popupMinus2</span><span class="p">:</span> <span class="kt">UIButton</span><span class="o">!</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:@M@ScoutingApp2020@objc(cs)TeleOpViewController(py)enterButton"></a>
+                    <a name="//apple_ref/swift/Property/enterButton" class="dashAnchor"></a>
+                    <a class="token" href="#/c:@M@ScoutingApp2020@objc(cs)TeleOpViewController(py)enterButton">enterButton</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">@IBOutlet</span>
+<span class="k">weak</span> <span class="k">var</span> <span class="nv">enterButton</span><span class="p">:</span> <span class="kt">UIButton</span><span class="o">!</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:@M@ScoutingApp2020@objc(cs)TeleOpViewController(py)cancelButton"></a>
+                    <a name="//apple_ref/swift/Property/cancelButton" class="dashAnchor"></a>
+                    <a class="token" href="#/c:@M@ScoutingApp2020@objc(cs)TeleOpViewController(py)cancelButton">cancelButton</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">@IBOutlet</span>
+<span class="k">weak</span> <span class="k">var</span> <span class="nv">cancelButton</span><span class="p">:</span> <span class="kt">UIButton</span><span class="o">!</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:@M@ScoutingApp2020@objc(cs)TeleOpViewController(im)popupAdd1Pressed:"></a>
+                    <a name="//apple_ref/swift/Method/popupAdd1Pressed(_:)" class="dashAnchor"></a>
+                    <a class="token" href="#/c:@M@ScoutingApp2020@objc(cs)TeleOpViewController(im)popupAdd1Pressed:">popupAdd1Pressed(_:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">@IBAction</span>
+<span class="kd">func</span> <span class="nf">popupAdd1Pressed</span><span class="p">(</span><span class="n">_</span> <span class="nv">sender</span><span class="p">:</span> <span class="kt">Any</span><span class="p">)</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:@M@ScoutingApp2020@objc(cs)TeleOpViewController(im)popupMinus1Pressed:"></a>
+                    <a name="//apple_ref/swift/Method/popupMinus1Pressed(_:)" class="dashAnchor"></a>
+                    <a class="token" href="#/c:@M@ScoutingApp2020@objc(cs)TeleOpViewController(im)popupMinus1Pressed:">popupMinus1Pressed(_:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">@IBAction</span>
+<span class="kd">func</span> <span class="nf">popupMinus1Pressed</span><span class="p">(</span><span class="n">_</span> <span class="nv">sender</span><span class="p">:</span> <span class="kt">Any</span><span class="p">)</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:@M@ScoutingApp2020@objc(cs)TeleOpViewController(im)popupAdd2Pressed:"></a>
+                    <a name="//apple_ref/swift/Method/popupAdd2Pressed(_:)" class="dashAnchor"></a>
+                    <a class="token" href="#/c:@M@ScoutingApp2020@objc(cs)TeleOpViewController(im)popupAdd2Pressed:">popupAdd2Pressed(_:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">@IBAction</span>
+<span class="kd">func</span> <span class="nf">popupAdd2Pressed</span><span class="p">(</span><span class="n">_</span> <span class="nv">sender</span><span class="p">:</span> <span class="kt">Any</span><span class="p">)</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:@M@ScoutingApp2020@objc(cs)TeleOpViewController(im)popupMinus2Pressed:"></a>
+                    <a name="//apple_ref/swift/Method/popupMinus2Pressed(_:)" class="dashAnchor"></a>
+                    <a class="token" href="#/c:@M@ScoutingApp2020@objc(cs)TeleOpViewController(im)popupMinus2Pressed:">popupMinus2Pressed(_:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">@IBAction</span>
+<span class="kd">func</span> <span class="nf">popupMinus2Pressed</span><span class="p">(</span><span class="n">_</span> <span class="nv">sender</span><span class="p">:</span> <span class="kt">Any</span><span class="p">)</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:@M@ScoutingApp2020@objc(cs)TeleOpViewController(im)enterPressed:"></a>
+                    <a name="//apple_ref/swift/Method/enterPressed(_:)" class="dashAnchor"></a>
+                    <a class="token" href="#/c:@M@ScoutingApp2020@objc(cs)TeleOpViewController(im)enterPressed:">enterPressed(_:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">@IBAction</span>
+<span class="kd">func</span> <span class="nf">enterPressed</span><span class="p">(</span><span class="n">_</span> <span class="nv">sender</span><span class="p">:</span> <span class="kt">Any</span><span class="p">)</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:@M@ScoutingApp2020@objc(cs)TeleOpViewController(im)cancelPressed:"></a>
+                    <a name="//apple_ref/swift/Method/cancelPressed(_:)" class="dashAnchor"></a>
+                    <a class="token" href="#/c:@M@ScoutingApp2020@objc(cs)TeleOpViewController(im)cancelPressed:">cancelPressed(_:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">@IBAction</span>
+<span class="kd">func</span> <span class="nf">cancelPressed</span><span class="p">(</span><span class="n">_</span> <span class="nv">sender</span><span class="p">:</span> <span class="kt">Any</span><span class="p">)</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:@M@ScoutingApp2020@objc(cs)TeleOpViewController(im)wheelControlChanged:"></a>
+                    <a name="//apple_ref/swift/Method/wheelControlChanged(_:)" class="dashAnchor"></a>
+                    <a class="token" href="#/c:@M@ScoutingApp2020@objc(cs)TeleOpViewController(im)wheelControlChanged:">wheelControlChanged(_:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">@IBAction</span>
+<span class="kd">func</span> <span class="nf">wheelControlChanged</span><span class="p">(</span><span class="n">_</span> <span class="nv">sender</span><span class="p">:</span> <span class="kt">Any</span><span class="p">)</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:15ScoutingApp202020TeleOpViewControllerC15climbingClickedyyF"></a>
+                    <a name="//apple_ref/swift/Method/climbingClicked()" class="dashAnchor"></a>
+                    <a class="token" href="#/s:15ScoutingApp202020TeleOpViewControllerC15climbingClickedyyF">climbingClicked()</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">func</span> <span class="nf">climbingClicked</span><span class="p">()</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:15ScoutingApp202020TeleOpViewControllerC9shootHighyyF"></a>
+                    <a name="//apple_ref/swift/Method/shootHigh()" class="dashAnchor"></a>
+                    <a class="token" href="#/s:15ScoutingApp202020TeleOpViewControllerC9shootHighyyF">shootHigh()</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">func</span> <span class="nf">shootHigh</span><span class="p">()</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:15ScoutingApp202020TeleOpViewControllerC8shootLowyyF"></a>
+                    <a name="//apple_ref/swift/Method/shootLow()" class="dashAnchor"></a>
+                    <a class="token" href="#/s:15ScoutingApp202020TeleOpViewControllerC8shootLowyyF">shootLow()</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">func</span> <span class="nf">shootLow</span><span class="p">()</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:15ScoutingApp202020TeleOpViewControllerC19controlPanelClickedyyF"></a>
+                    <a name="//apple_ref/swift/Method/controlPanelClicked()" class="dashAnchor"></a>
+                    <a class="token" href="#/s:15ScoutingApp202020TeleOpViewControllerC19controlPanelClickedyyF">controlPanelClicked()</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">func</span> <span class="nf">controlPanelClicked</span><span class="p">()</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:@M@ScoutingApp2020@objc(cs)TeleOpViewController(im)viewDidLoad"></a>
+                    <a name="//apple_ref/swift/Method/viewDidLoad()" class="dashAnchor"></a>
+                    <a class="token" href="#/c:@M@ScoutingApp2020@objc(cs)TeleOpViewController(im)viewDidLoad">viewDidLoad()</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="k">override</span> <span class="kd">func</span> <span class="nf">viewDidLoad</span><span class="p">()</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+          </section>
+        </section>
+        <section id="footer">
+          <p>Copyright © 2020 Team 2170. All rights reserved.</p>
+          <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.13.1</a>, a <a class="link" href="https://realm.io" target="_blank" rel="external">Realm</a> project.</p>
+        </section>
+      </article>
+    </div>
+  </body>
+</div>
+</html>

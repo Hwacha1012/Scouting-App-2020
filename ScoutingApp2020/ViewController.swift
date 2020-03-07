@@ -7,35 +7,66 @@
 //
 
 import UIKit
+/// List of all the teams recorded on your device, used by MatchData, e.g., (example array needed)
 var teamList = [String]()
+/// List of all the teams recorded on your device, used by PitScouting, e.g.,(example array needed)
 var pitScoutList = [String]()
-
-var scoutName = "" //Name of the Scout
-var teamNumber = 0 //ex;2170
-var matchNumber = 0 //ex;69
-var teamColor = true //true is blue, false is red
-
-var intakeType = "" //from floor or feeding station
-var runType = 1 //running as ipad
-//
-
-
+/// Name of the Scout, e.g., Manav Mittal
+var scoutName = ""
+/// The number of the team that you are scouting, e.g., 2170.
+var teamNumber = 0
+/// The number of the match the team that you are scouting is playing in, e.g., 69
+var matchNumber = 0
+/// The color the team scouted is competing under, where true is blue and false is red, e.g., true
+var teamColor = true
+/// The intake type the robot uses to collect balls from the playing field, e.g., floor, feeding station
+var intakeType = ""
+/// Whether the decive running is an iPhone or iPad, where 2 is iPhone and 1 is iPad, e.g., 1
+var runType = 1 //default is running as iPad
+/// Whether the Team Scouted crosses the line in auto, e.g., 1
 var autoLine = false //do they cross the line in auto
+/// The amount of low goals scored in auto, e.g., 7
 var autoLowGoal = 0 //low goals scored in auto
+/// The amount of high goals scored in auto, e.g., 7
 var autoHighGoal = 0 //high goals scored in auto
+/// The amount of trench balls picked up in auto, e.g., 7
 var autoTrenchBalls = 0 //trench balls picked up in auto
-var autoShieldBalls = 0 //balls you get from sheild generator
-
+/// The amount of balls obtained from shield generator, e.g., 7
+var autoShieldBalls = 0 //balls you get from shield generator
+/// The action excercised on the control panel, e.g., nothing, spin, select
 var controlPanel = "" //what did they do with the control panel ex. no, spin, select
+/// The amount of low goals scored in teleop, e.g., 7
 var lowGoalMade = 0 //low goals made in teleop
+/// The amount of low goals shots taken in teleop, e.g., 7
 var lowGoalTaken = 0 //shots taken intended for low goal taken in teleop
-var highGoalMade = [0, 0, 0, 0] //low goals made in teleop array specifies location shot was taken from
+/// The amount of high goal shots made from each section of the field, e.g., [opponent's sector, close shield generator, trench run, far shield generator]
+var highGoalMade = [0, 0, 0, 0] //low goals made in teleop array specifies location shot was
+/// The amount of high goal shots taken from each section of the field, e.g., [opponent's sector, close shield generator, trench run, far shield generator]
 var highGoalTaken = [0, 0, 0, 0] //shots taken intended for low goal taken in teleop array specifies location shot was taken from
-var defenseTime = 0 //amount of time playing defense in seconds(increments of 5)
-var climbing = false //do they climb
+/// Whether or not the robot climbs, e.g., true
+var climbing = "" //do they climb
+/// The amount of other robots they climbed with, e.g., 2
 var climbingOtherRobots = 0 //how many other robots they climbed with
+/// Whether or not the climb was balanced, e.g., true
 var climbBalanced = false //was the climb balanced
+/// Any notes written about a robot/match, e.g., Climbed quickly
+var notes = "" //notes about the robot
+/// The position of the user in the app, where 1 is Match Data, 2 is Enter Data, and 3 is TeleOp, e.g., 3
 var matchPosition = 0 // 1 is Match Data, 2 is Enter Data, 3 teleop
+/// boolean that indicates if prior match or pit scouting data is being edited
+var changeData = false //changing data from tableView?
+/// image that will be displayed as the QR code to be scanned
+var qrImage: UIImage!
+
+var innerMade = 0
+var innerMissed = 0
+var outerMade = 0
+var outerMissed = 0
+var rotationControl = ""
+var positionControl = ""
+var shootingLocation = ""
+var fouls = 0
+var techFouls = 0
 
 
 
@@ -45,7 +76,10 @@ var matchPosition = 0 // 1 is Match Data, 2 is Enter Data, 3 teleop
 
 //UIColor teamColor = UIColor.init(red: 0.0431372549, green: 0.1294117647, blue: 0.50196078431, alpha: 1.0)
 
+/// The original object that manages a view hierarchy for your UIKit app. Extends UIViewController
 class ViewController: UIViewController {
+/// Integer that is changed when one of the four buttons is pressed, where when popup1Clicked is activated, 1 is MatchDataSegue, 2 is QRExportSegue, and 3 is viewDataSegue, and where popup2Clicked is activated, 1 is PitScoutSegue, 2 is WebExportSegue, and 3 is a UIApplication open command to open a website, e.g., 1
+    var selectedMode = 0
     @IBOutlet weak var titleLabel: UILabel!
     @IBOutlet weak var titleLabel2: UILabel!
     @IBOutlet weak var imageView: UIImageView!
@@ -54,26 +88,119 @@ class ViewController: UIViewController {
     @IBOutlet weak var importData: UIButton!
  
     @IBOutlet weak var exportData: UIButton!
+    
+    @IBOutlet weak var popupView: UIView!
+    @IBOutlet weak var popupLabel: UILabel!
+
+    @IBOutlet weak var popupButton1: UIButton!
+    @IBOutlet weak var popupButton2: UIButton!
+    
+    /**
+     Controls the first button when the popup appears in the scouting app
+    -  Parameter sender: The user that presses the button
+     */
+    @IBAction func popup1Clicked(_ sender: Any) {
+        popupView.isHidden = true
+        if(selectedMode == 1){
+            matchPosition = 1
+            performSegue(withIdentifier: "MatchDataSegue", sender: nil)
+        }
+        else if(selectedMode == 2){
+            performSegue(withIdentifier: "QRExportSegue", sender: nil)
+        }
+        else if (selectedMode == 3){
+            performSegue(withIdentifier: "viewDataSegue", sender: nil)
+        }
+    }
+    /**
+     Controls the second button when the popup appears in the scouting app
+    -  Parameter sender: The user that presses the button
+     */
+    @IBAction func popup2Clicked(_ sender: Any) {
+        popupView.isHidden = true
+        if(selectedMode == 1){
+            
+            performSegue(withIdentifier: "PitScoutSegue", sender: nil)
+        }
+        else if(selectedMode == 2){
+            
+            performSegue(withIdentifier: "WebExportSegue", sender: nil)
+        }
+        else if(selectedMode == 3){
+            if let url = URL(string: "http://ec2-52-71-196-37.compute-1.amazonaws.com/matchdata/html") {
+                UIApplication.shared.open(url)
+            }
+        }
+    }
+    /**
+     Controls the actions that take place when the button "Enter Data" is presssed
+    -  Parameter sender: The user that presses the button
+     */
     @IBAction func enterDataPressed(_ sender: Any) {
-        //EnterData1ViewController.present(<#T##self: UIViewController##UIViewController#>)
-        //EnterData1ViewController.modalPresentationStyle = .fullScreen
-        //present(EnterData1ViewController, animated: true)
-        matchPosition = 0
-       performSegue(withIdentifier: "viewToEnterData1", sender: nil)
+
+        //hides the popup view
+        popupView.isHidden = false
+        popupLabel.text = "Enter Data"
+        popupButton1.setTitle("Match Data", for: .normal)
+        popupButton2.setTitle("Pit Scouting Data", for: .normal)
+        selectedMode = 1
+        
+        
     }
+    /**
+     Controls the actions that take place when the button "View Data" is presssed
+    -  Parameter sender: The user that presses the button
+     */
     @IBAction func viewDataPressed(_ sender: Any) {
+      //  let x = "Bruh" + "hsdf"
+        popupView.isHidden = false
+        popupLabel.text = "View Data"
+        popupButton1.setTitle("View Local Data", for: .normal)
+        popupButton2.setTitle("View Cloud Data", for: .normal)
+        selectedMode = 3
+        
+        
     }
+    /**
+       Controls the actions that take place when the button "Import Data" is presssed
+      -  Parameter sender: The user that presses the button
+       */
     @IBAction func importDataPressed(_ sender: Any) {
+        performSegue(withIdentifier: "qrReaderSegue", sender: nil)
     }
+    /**
+     Controls the actions that take place when the button "Export Data" is presssed
+    -  Parameter sender: The user that presses the button
+     */
     @IBAction func exportDataPressed(_ sender: Any) {
+        popupView.isHidden = false
+        popupLabel.text = "Export Data"
+        popupButton1.setTitle("QR Export", for: .normal)
+        popupButton2.setTitle("Web Server Export", for: .normal)
+        selectedMode = 2
+       // performSegue(withIdentifier: "QRExportSegue", sender: nil)
     }
     
+    
+    /**
+     Hides the popup when anywhere else on the screen is clicked
+     */
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        popupView.isHidden = true
+    }
+
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
-        
+        /*
+      let d =  UserDefaults.standard
+      d.removeObject(forKey: "pitScoutList")
+        d.removeObject(forKey: "teamList")
+       d.synchronize()
+        */
         // MARK: - RunType is set
         
+      
         if UIDevice.current.model.range(of:"iPad") != nil{
             //device is iPad
             runType = 1
@@ -93,6 +220,14 @@ class ViewController: UIViewController {
            // pitScoutingButton.titleLabel!.font = UIFont.init(name: "Optima-BoldItalic", size: 65)
             titleLabel.font = UIFont.init(name: "Futura-MediumItalic", size: 120)
             titleLabel2.font = UIFont.init(name: "Futura-MediumItalic", size: 120)
+            
+            
+                popupButton1.titleLabel!.font = UIFont.init( name: "Optima-BoldItalic", size: 65)
+                popupButton2.titleLabel!.font = UIFont.init( name: "Optima-BoldItalic", size: 65)
+                popupLabel.font = UIFont.init( name: "Futura-MediumItalic", size: 70)
+            
+      
+            
         }
         else{
             enterData.titleLabel!.font = UIFont.init(name: "Optima-BoldItalic", size: 40)
@@ -100,9 +235,14 @@ class ViewController: UIViewController {
             exportData.titleLabel!.font = UIFont.init(name: "Optima-BoldItalic", size: 40)
             importData.titleLabel!.font = UIFont.init(name: "Optima-BoldItalic", size: 40)
             // pitScoutingButton.titleLabel!.font = UIFont.init(name: "Optima-BoldItalic", size: 65)
-            titleLabel.font = UIFont.init(name: "Futura-MediumItalic", size: 75)
+            titleLabel.font = UIFont.init(name: "Futura-MediumItalic", size: 60)
             titleLabel2.font = UIFont.init(name: "Futura-MediumItalic", size: 75)
+            popupButton1.titleLabel!.font = UIFont.init( name: "Optima-BoldItalic", size: 20)
+            popupButton2.titleLabel!.font = UIFont.init( name: "Optima-BoldItalic", size: 20)
+            popupLabel.font = UIFont.init( name: "Futura-MediumItalic", size: 40)
         }
+        
+        
         
        // var bColor = UIColor.init(red: 0.0431372549, green: 0.1294117647, blue: 0.50196078431, alpha: 1.0)
 
@@ -141,10 +281,19 @@ class ViewController: UIViewController {
         exportData.titleLabel!.textAlignment = NSTextAlignment.center
         exportData.setTitleColor(UIColor.init(red: 0, green: 0, blue: 0.5, alpha: 1.0), for: .normal)
         
+        changeData = false
+        
+        
+        popupView.isHidden = true
+        
         
     
     }
 
 
 }
+
+
+
+
 

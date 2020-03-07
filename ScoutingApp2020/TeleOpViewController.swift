@@ -45,10 +45,13 @@ class TeleOpViewController: UIViewController {
         shootHigh()
     }
     @IBAction func climbingButtonPressed(_ sender: Any) {
+        location = 6
+        climbingClicked()
     }
     
     @IBAction func controlPanelButtonPressed(_ sender: Any) {
-        controlPanel()
+        location = 5
+        controlPanelClicked()
         
     }
     @IBAction func lowGoalButtonPressed(_ sender: Any) {
@@ -57,6 +60,12 @@ class TeleOpViewController: UIViewController {
         
     }
     @IBAction func nextButtonPressed(_ sender: Any) {
+        location = 5
+        if(controlPanel == ""){
+            controlPanel = "None"
+        }
+        performSegue(withIdentifier: "TeleOpToFinish", sender: nil)
+        
     }
     @IBOutlet weak var popupView: UIView!
     @IBOutlet weak var popupLabel1: UILabel!
@@ -103,6 +112,15 @@ class TeleOpViewController: UIViewController {
             tempMade += 1
             popupLabel3.text = "Number of Balls Made: \(lowGoalMade + tempMade)"
         }
+        else if (location == 6){
+            if(climbingOtherRobots < 2){
+                climbingOtherRobots = climbingOtherRobots + 1
+                popupLabel3.text = "Number of Additional Robots Climbing: \(climbingOtherRobots)"
+            }
+            
+           
+        }
+        
     }
     @IBAction func popupMinus2Pressed(_ sender: Any) {
         if(location < 4){
@@ -118,6 +136,13 @@ class TeleOpViewController: UIViewController {
             }
             
         }
+        else if (location == 6){
+            if(climbingOtherRobots > 0){
+                climbingOtherRobots = climbingOtherRobots - 1
+                popupLabel3.text = "Number of Additional Robots Climbing: \(climbingOtherRobots)"
+            }
+        }
+        
     }
     
     @IBAction func enterPressed(_ sender: Any) {
@@ -143,9 +168,64 @@ class TeleOpViewController: UIViewController {
         
     }
     @IBAction func wheelControlChanged(_ sender: Any) {
-        if(wheelSegmentedControl.selectedSegmentIndex == 0){
+        if(location == 5){
+            //control panel
+            if(wheelSegmentedControl.selectedSegmentIndex == 0){
+                controlPanel = "None"
+            }
+            else if(wheelSegmentedControl.selectedSegmentIndex == 1){
+                controlPanel = "Rotation"
+            }
+            else{
+                controlPanel = "Position"
+            }
+            popupLabel2.isHidden = true
+            popupLabel3.isHidden = true
+        }
+        else{
+            //climbing
+            if(wheelSegmentedControl.selectedSegmentIndex == 0){
+                climbing = false
+                climbBalanced = false
+            }
+            else if(wheelSegmentedControl.selectedSegmentIndex == 1){
+                climbing = true
+                climbBalanced = false
+            }
+            else{
+                climbing = true
+                climbBalanced = true
+            }
+            popupLabel2.isHidden = true
+            popupLabel3.isHidden = false
             
         }
+        
+        
+        
+        
+        
+    }
+    
+    func climbingClicked(){
+        popupView.isHidden = false
+        wheelSegmentedControl.isHidden = false
+        popupAdd1.isHidden = true
+        popupMinus1.isHidden = true
+        popupAdd2.isHidden = false
+        popupMinus2.isHidden = false
+        popupLabel1.text = "Climbing"
+        
+        wheelSegmentedControl.setTitle("No Climb", forSegmentAt: 0)
+        wheelSegmentedControl.setTitle("Climbing", forSegmentAt: 1)
+        wheelSegmentedControl.setTitle("Climbing + Balanced", forSegmentAt: 2)
+        
+        
+       
+        popupLabel3.text = "Number of Additional Robots Climbing: \(climbingOtherRobots)"
+        popupLabel2.isHidden = true
+        popupLabel3.isHidden = false
+        
         
     }
     
@@ -173,6 +253,10 @@ class TeleOpViewController: UIViewController {
         
         popupLabel2.text = "Number of Balls Shot: \(highGoalTaken[location])"
         popupLabel3.text = "Number of Balls Made: \(highGoalMade[location])"
+        popupLabel2.isHidden = false
+        popupLabel3.isHidden = false
+        popupAdd2.isHidden = false
+        popupMinus2.isHidden = false
 
     }
     
@@ -184,14 +268,27 @@ class TeleOpViewController: UIViewController {
         popupLabel1.text = "Low Goal Shooting"
         popupLabel2.text = "Number of Balls Shot: \(lowGoalTaken)"
         popupLabel3.text = "Number of Balls Made: \(lowGoalMade)"
-        
+        popupLabel2.isHidden = false
+        popupLabel3.isHidden = false
+        popupAdd2.isHidden = false
+        popupMinus2.isHidden = false
     }
     
-    func controlPanel(){
+    func controlPanelClicked(){
         popupView.isHidden = false
         wheelSegmentedControl.isHidden = false
         popupAdd1.isHidden = true
         popupMinus1.isHidden = true
+        popupAdd2.isHidden = true
+        popupMinus2.isHidden = true
+        popupLabel1.text = "Control Panel"
+        popupLabel2.isHidden = true
+        popupLabel3.isHidden = true
+       // popupLabel2.text = "Control Panel"
+        
+        wheelSegmentedControl.setTitle("None", forSegmentAt: 0)
+        wheelSegmentedControl.setTitle("Rotation", forSegmentAt: 1)
+        wheelSegmentedControl.setTitle("Position", forSegmentAt: 2)
         
         
     }
@@ -214,25 +311,64 @@ class TeleOpViewController: UIViewController {
             backgroundImage.image = UIImage(named: "TopViewRed.png")
         }
         
-        
-        if (matchPosition > 3){
-            //load previous data
-            //updateLabels()
+        if(changeData){
             
         }
         else{
-            //have new data
-            for i in 0...3{
-                highGoalMade[i] = 0
-                highGoalTaken[i] = 0
+            if (matchPosition > 3){
+                //load previous data
+                //updateLabels()
+                
+            }
+            else{
+                //have new data
+                for i in 0...3{
+                    highGoalMade[i] = 0
+                    highGoalTaken[i] = 0
+                }
             }
         }
+        
+        
+        if(runType == 1){
+                   controlPanelButton.titleLabel!.font = UIFont.init(name: "Optima-BoldItalic", size: 24)
+                   lowGoalButton.titleLabel!.font = UIFont.init(name: "Optima-BoldItalic", size: 24)
+                   nextButton.titleLabel!.font = UIFont.init(name: "Optima-BoldItalic", size: 24)
+                    popupLabel1.font = UIFont.init(name: "Futura-MediumItalic", size: 30)
+                   popupLabel2.font = UIFont.init(name: "Futura-MediumItalic", size: 30)
+                   popupLabel3.font = UIFont.init(name: "Futura-MediumItalic", size: 30)
+            let font = UIFont.systemFont(ofSize: 20)
+            let attributes = [NSAttributedString.Key.font: font]
+            wheelSegmentedControl.setTitleTextAttributes(attributes, for: .normal)
+                   
+   
+                   
+             
+                   
+               }
+               else{
+                   controlPanelButton.titleLabel!.font = UIFont.init(name: "Optima-BoldItalic", size: 20)
+                   lowGoalButton.titleLabel!.font = UIFont.init(name: "Optima-BoldItalic", size: 20)
+                   nextButton.titleLabel!.font = UIFont.init(name: "Optima-BoldItalic", size: 20)
+                    popupLabel1.font = UIFont.init(name: "Futura-MediumItalic", size: 15)
+                   popupLabel2.font = UIFont.init(name: "Futura-MediumItalic", size: 15)
+                   popupLabel3.font = UIFont.init(name: "Futura-MediumItalic", size: 15)
+            let font = UIFont.systemFont(ofSize: 10)
+            let attributes = [NSAttributedString.Key.font: font]
+            wheelSegmentedControl.setTitleTextAttributes(attributes, for: .normal)
+               }
         
         
         
        
         
         // Do any additional setup after loading the view.
+    }
+    
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        tempTaken = 0
+        tempMade = 0
+        popupView.isHidden = true
     }
     
 
